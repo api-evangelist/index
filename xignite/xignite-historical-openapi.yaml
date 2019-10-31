@@ -1,0 +1,827 @@
+swagger: "2.0"
+x-collection-name: Xignite
+x-complete: 1
+info:
+  title: Xignite Historical
+  description: this-web-service-provides-historical-security-pricing-for-us-equities-
+  version: 1.0.0
+host: www.xignite.com
+basePath: xHistorical.json/XigniteHistorical
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /GetHistoricalQuoteAdjusted:
+    get:
+      summary: Get Historical Quote Adjusted
+      description: Returns a quote as of a historical date. This includes split and
+        dividends adjusted price.
+      operationId: postGethistoricalquoteadjusted
+      x-api-path-slug: gethistoricalquoteadjusted-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Quote
+      - Adjusted
+  /GetHistoricalQuotesAdjusted:
+    get:
+      summary: Get Historical Quotes Adjusted
+      description: Returns a quote as of a historical date. This includes split and
+        dividends adjusted price.
+      operationId: postGethistoricalquotesadjusted
+      x-api-path-slug: gethistoricalquotesadjusted-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Quotes
+      - Adjusted
+  /GetHistoricalMonthlyQuotesRangeAdjusted:
+    get:
+      summary: Get Historical Monthly Quotes Range Adjusted
+      description: This operation returns end of month quotes for a US equity. This
+        includes split and dividends adjusted price.
+      operationId: postGethistoricalmonthlyquotesrangeadjusted
+      x-api-path-slug: gethistoricalmonthlyquotesrangeadjusted-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Monthly
+      - Quotes
+      - Range
+      - Adjusted
+  /GetHistoricalQuotesAsOfAdjusted:
+    get:
+      summary: Get Historical Quotes As Of Adjusted
+      description: This operation returns a range of quotes for a security. This includes
+        split and dividends adjusted price.
+      operationId: postGethistoricalquotesasofadjusted
+      x-api-path-slug: gethistoricalquotesasofadjusted-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Quotes
+      - As
+      - Adjusted
+  /GetHistoricalQuotesRangeAdjusted:
+    get:
+      summary: Get Historical Quotes Range Adjusted
+      description: This operation returns a complete range of stock quotes for a US
+        equity. This includes and dividends adjusted price.
+      operationId: postGethistoricalquotesrangeadjusted
+      x-api-path-slug: gethistoricalquotesrangeadjusted-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Quotes
+      - Range
+      - Adjusted
+  /GetHistoricalWeeklyQuotesRangeAdjusted:
+    get:
+      summary: Get Historical Weekly Quotes Range Adjusted
+      description: This operation returns end of week quotes for a US equity. This
+        includes split and dividends adjusted price.
+      operationId: postGethistoricalweeklyquotesrangeadjusted
+      x-api-path-slug: gethistoricalweeklyquotesrangeadjusted-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Weekly
+      - Quotes
+      - Range
+      - Adjusted
+  /GetHistoricalQuarterlyQuotesRangeAdjusted:
+    get:
+      summary: Get Historical Quarterly Quotes Range Adjusted
+      description: This operation returns end of quarter quotes for a US equity. This
+        includes split and dividends adjusted price.
+      operationId: postGethistoricalquarterlyquotesrangeadjusted
+      x-api-path-slug: gethistoricalquarterlyquotesrangeadjusted-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Quarterly
+      - Quotes
+      - Range
+      - Adjusted
+  /GetLastClosingPrice:
+    get:
+      summary: Get Last Closing Price
+      description: Returns last closing price for a security.
+      operationId: postGetlastclosingprice
+      x-api-path-slug: getlastclosingprice-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Last
+      - Closing
+      - Price
+  /GetLastClosingPriceAdjusted:
+    get:
+      summary: Get Last Closing Price Adjusted
+      description: Returns last closing price for a security. This include the splits
+        and dividends adjusted price
+      operationId: postGetlastclosingpriceadjusted
+      x-api-path-slug: getlastclosingpriceadjusted-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Last
+      - Closing
+      - Price
+      - Adjusted
+  /GetLastClosingPrices:
+    get:
+      summary: Get Last Closing Prices
+      description: Returns last closing price for a collection of securities.
+      operationId: postGetlastclosingprices
+      x-api-path-slug: getlastclosingprices-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Last
+      - Closing
+      - Prices
+  /GetLastClosingPricesAdjusted:
+    get:
+      summary: Get Last Closing Prices Adjusted
+      description: Returns last closing price for a collection of securities.This
+        include the splits and dividends adjusted price
+      operationId: postGetlastclosingpricesadjusted
+      x-api-path-slug: getlastclosingpricesadjusted-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Last
+      - Closing
+      - Prices
+      - Adjusted
+  /GetLastClosingPricesOrdered:
+    get:
+      summary: Get Last Closing Prices Ordered
+      description: Returns last closing price for a collection of securities.
+      operationId: postGetlastclosingpricesordered
+      x-api-path-slug: getlastclosingpricesordered-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Last
+      - Closing
+      - Prices
+      - Ordered
+  /GetLastClosingPricesOrderedAdjusted:
+    get:
+      summary: Get Last Closing Prices Ordered Adjusted
+      description: Returns last closing price for a collection of securities.This
+        include the splits and dividends adjusted price
+      operationId: postGetlastclosingpricesorderedadjusted
+      x-api-path-slug: getlastclosingpricesorderedadjusted-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Last
+      - Closing
+      - Prices
+      - Ordered
+      - Adjusted
+  /GetHistoricalHighLow:
+    get:
+      summary: Get Historical High Low
+      description: Returns a historical high low for a time range.
+      operationId: postGethistoricalhighlow
+      x-api-path-slug: gethistoricalhighlow-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - High
+      - Low
+  /GetHistoricalQuote:
+    get:
+      summary: Get Historical Quote
+      description: Returns a quote as of a historical date. This includes split adjusted
+        price.
+      operationId: postGethistoricalquote
+      x-api-path-slug: gethistoricalquote-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Quote
+  /GetHistoricalQuotes:
+    get:
+      summary: Get Historical Quotes
+      description: Returns a quote as of a historical date. This includes split adjusted
+        price.
+      operationId: postGethistoricalquotes
+      x-api-path-slug: gethistoricalquotes-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Quotes
+  /GetHistoricalQuotesAsOf:
+    get:
+      summary: Get Historical Quotes As Of
+      description: This operation returns a range of quotes for a security.
+      operationId: postGethistoricalquotesasof
+      x-api-path-slug: gethistoricalquotesasof-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Quotes
+      - As
+      - Of
+  /GetHistoricalQuotesRange:
+    get:
+      summary: Get Historical Quotes Range
+      description: This operation returns a complete range of stock quotes for a US
+        equity. This includes split adjusted price.
+      operationId: postGethistoricalquotesrange
+      x-api-path-slug: gethistoricalquotesrange-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Quotes
+      - Range
+  /GetHistoricalMonthlyQuotesRange:
+    get:
+      summary: Get Historical Monthly Quotes Range
+      description: This operation returns end of month quotes for a US equity. This
+        includes split adjusted price.
+      operationId: postGethistoricalmonthlyquotesrange
+      x-api-path-slug: gethistoricalmonthlyquotesrange-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Monthly
+      - Quotes
+      - Range
+  /GetHistoricalWeeklyQuotesRange:
+    get:
+      summary: Get Historical Weekly Quotes Range
+      description: This operation returns end of week quotes for a US equity. This
+        includes split adjusted price.
+      operationId: postGethistoricalweeklyquotesrange
+      x-api-path-slug: gethistoricalweeklyquotesrange-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Weekly
+      - Quotes
+      - Range
+  /GetHistoricalQuarterlyQuotesRange:
+    get:
+      summary: Get Historical Quarterly Quotes Range
+      description: This operation returns end of quarter quotes for a US equity. This
+        includes split adjusted price.
+      operationId: postGethistoricalquarterlyquotesrange
+      x-api-path-slug: gethistoricalquarterlyquotesrange-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Quarterly
+      - Quotes
+      - Range
+  /GetTopMovers:
+    get:
+      summary: Get Top Movers
+      description: This operation returns quote information about the top moving equities
+        from NYSE, NASDAQ and AMEX.
+      operationId: postGettopmovers
+      x-api-path-slug: gettopmovers-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Top
+      - Movers
+  /GetTopMoversByExchange:
+    get:
+      summary: Get Top Movers By Exchange
+      description: This operation returns quote information about the top moving equities
+        from NYSE, NASDAQ and AMEX.
+      operationId: postGettopmoversbyexchange
+      x-api-path-slug: gettopmoversbyexchange-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Top
+      - Movers
+      - Exchange
+  /GetTopGainers:
+    get:
+      summary: Get Top Gainers
+      description: This operation returns quote information about the top gaining
+        equities from NYSE, NASDAQ and AMEX.
+      operationId: postGettopgainers
+      x-api-path-slug: gettopgainers-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Top
+      - Gainers
+  /GetTopLosers:
+    get:
+      summary: Get Top Losers
+      description: This operation returns quote information about the top losing equities
+        from NYSE, NASDAQ and AMEX.
+      operationId: postGettoplosers
+      x-api-path-slug: gettoplosers-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Top
+      - Losers
+  /GetTopMoversByMarketCapitalization:
+    get:
+      summary: Get Top Movers By Market Capitalization
+      description: This operation returns quote information about the top moving equities
+        filtered by market capitalization from NYSE, NASDAQ and AMEX.
+      operationId: postGettopmoversbymarketcapitalization
+      x-api-path-slug: gettopmoversbymarketcapitalization-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Top
+      - Movers
+      - Market
+      - Capitalization
+  /GetTopGainersByMarketCapitalization:
+    get:
+      summary: Get Top Gainers By Market Capitalization
+      description: This operation returns quote information about the top gaining
+        equities filtered by market capitalization from NYSE, NASDAQ and AMEX.
+      operationId: postGettopgainersbymarketcapitalization
+      x-api-path-slug: gettopgainersbymarketcapitalization-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Top
+      - Gainers
+      - Market
+      - Capitalization
+  /GetTopLosersByMarketCapitalization:
+    get:
+      summary: Get Top Losers By Market Capitalization
+      description: This operation returns quote information about the top losing equities
+        filtered by market capitalization from NYSE, NASDAQ and AMEX.
+      operationId: postGettoplosersbymarketcapitalization
+      x-api-path-slug: gettoplosersbymarketcapitalization-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Top
+      - Losers
+      - Market
+      - Capitalization
+  /GetDividendHistory:
+    get:
+      summary: Get Dividend History
+      description: Get dividend history for a stock.
+      operationId: postGetdivendhistory
+      x-api-path-slug: getdividendhistory-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Dividend
+      - History
+  /GetDividendHistoryRange:
+    get:
+      summary: Get Dividend History Range
+      description: Get dividend history for a stock.
+      operationId: postGetdivendhistoryrange
+      x-api-path-slug: getdividendhistoryrange-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Dividend
+      - History
+      - Range
+  /GetExtendedDividendHistory:
+    get:
+      summary: Get Extended Dividend History
+      description: Get extended dividend history for a stock.
+      operationId: postGetextendeddivendhistory
+      x-api-path-slug: getextendeddividendhistory-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Extended
+      - Dividend
+      - History
+  /GetExtendedDividendHistoryRange:
+    get:
+      summary: Get Extended Dividend History Range
+      description: Get extended dividend history range for a stock.
+      operationId: postGetextendeddivendhistoryrange
+      x-api-path-slug: getextendeddividendhistoryrange-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Extended
+      - Dividend
+      - History
+      - Range
+  /GetCompleteDividendHistoryRange:
+    get:
+      summary: Get Complete Dividend History Range
+      description: Get extended dividend history range for a stock.
+      operationId: postGetcompletedivendhistoryrange
+      x-api-path-slug: getcompletedividendhistoryrange-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Complete
+      - Dividend
+      - History
+      - Range
+  /GetSplitHistory:
+    get:
+      summary: Get Split History
+      description: Get split history for a stock for a date range.
+      operationId: postGetsplithistory
+      x-api-path-slug: getsplithistory-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Split
+      - History
+  /GetAllSplits:
+    get:
+      summary: Get All Splits
+      description: Get all splits for a date range.
+      operationId: postGetallsplits
+      x-api-path-slug: getallsplits-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Splits
+  /GetAllExtendedDividends:
+    get:
+      summary: Get All Extended Dividends
+      description: Get all extended dividend for a date range.
+      operationId: postGetallextendeddivends
+      x-api-path-slug: getallextendeddividends-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Extended
+      - Dividends
+  /GetAllDividends:
+    get:
+      summary: Get All Dividends
+      description: Get all splits for a date range.
+      operationId: postGetalldivends
+      x-api-path-slug: getalldividends-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Dividends
+  /GetSplitRatio:
+    get:
+      summary: Get Split Ratio
+      description: Return the cumulative split ratio for a security between two dates.
+        For instance, if a security saw a 3:1 split and 2:1 split during the period,
+        the split ratio 6 is returned. Returns 1 if no split occurred.
+      operationId: postGetsplitratio
+      x-api-path-slug: getsplitratio-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Split
+      - Ratio
+  /GetSymbols:
+    get:
+      summary: Get Symbols
+      description: Returns a list of symbols available in the historical database.
+      operationId: postGetsymbols
+      x-api-path-slug: getsymbols-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Symbols
+  /GetAdvancesAndDeclines:
+    get:
+      summary: Get Advances And Declines
+      description: Returns numbers of advancing and declining stocks by price and
+        volume across exchanges. For more information, go to http://www.xignite.com/
+      operationId: postGetadvancesanddeclines
+      x-api-path-slug: getadvancesanddeclines-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Advances
+      - Declines
+  /GetHistoricalStatistics:
+    get:
+      summary: Get Historical Statistics
+      description: Returns Historical statistics for a security. For more information,
+        go to http://www.xignite.com/
+      operationId: postGethistoricalstatistics
+      x-api-path-slug: gethistoricalstatistics-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Statistics

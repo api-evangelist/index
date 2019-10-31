@@ -1,0 +1,63 @@
+name: Expedia Partner Solutions
+x-slug: expedia-partner-solutions
+description: Expedia Partner Solutions is the B2B partnership brand of Expedia Group.
+  Our mission is to fuel our partners growth through our unparalleled technology,
+  travel supply and support services.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/195-expedia.jpg
+x-kinRank: "9"
+x-alexaRank: "522533"
+tags: API Provider,Bookings,Enterprise,Flights,General Data,Hotels,Networks,New,Pedestal,Profiles,Relative
+  Data,Reservations,Stack,Stack Network,Technology,Transportation,Travel,Travel,Travel
+created: "2019-02-03"
+modified: "2019-02-03"
+url: expedia-partner-solutions/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Expedia
+  x-api-slug: expedia
+  description: Expedia is the leader in travel and technology and is the worlds largest
+    travel company. The EAN Developer Hub gives developers FREE access to our highly
+    flexible APIs that power cutting-edge websites, mobile apps, and much more. Some
+    of the best travel applications on the market are powered by the EAN API. Learn
+    more reasons to partner with EAN by taking a look at our brochure and watching
+    our video. The world of travel awaits you!
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/195-expedia.jpg
+  humanURL: http://developer.ean.com/
+  baseURL: https://apim.expedia.com/x/
+  tags: API Provider,Bookings,Enterprise,Flights,General Data,Hotels,Networks,New,Pedestal,Profiles,Relative
+    Data,Reservations,Stack,Stack Network,Technology,Transportation,Travel,Travel,Travel
+  properties:
+  - type: x-postman-collection
+    url: /expedia-partner-solutions/mapihotelsearchv3-get-postman.json
+  - type: x-openapi-spec
+    url: /expedia-partner-solutions/expedia-openapi.yaml
+x-common:
+- type: x-base
+  url: http://api.ean.com
+- type: x-crunchbase
+  url: http://www.crunchbase.com/company/expedia
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/ean-upc-codes-com
+- type: x-documentation
+  url: https://www.expedia.com/static/mobile/swaggerui/
+- type: x-email
+  url: support@ean.com
+- type: x-email
+  url: support@expediapartnersolutions.com
+- type: x-github
+  url: https://github.com/Expedia
+- type: x-swagger--original
+  url: https://www.expedia.com/static/mobile/swaggerui/swagger.json
+- type: x-twitter
+  url: https://twitter.com/ExpediaEAN
+- type: x-twitter
+  url: https://twitter.com/expediapartners
+- type: x-website
+  url: http://developer.ean.com/
+- type: x-website
+  url: http://expedia.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

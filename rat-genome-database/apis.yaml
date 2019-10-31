@@ -1,0 +1,32 @@
+name: Rat Genome Database
+x-slug: rat-genome-database
+description: ""
+image: ""
+x-kinRank: "7"
+x-alexaRank: "0"
+tags: General Data,Science
+created: "2019-02-03"
+modified: "2019-02-03"
+url: rat-genome-database/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Rat Genome Database
+  x-api-slug: rat-genome-database
+  description: ""
+  image: ""
+  humanURL: http://rest.rgd.mcw.edu
+  baseURL: https://rest.rgd.mcw.edu//rgdws
+  tags: General Data,Science
+  properties:
+  - type: x-postman-collection
+    url: /rat-genome-database/strainsrgdid-get-postman.json
+  - type: x-openapi-spec
+    url: /rat-genome-database/rat-genome-database-openapi.yaml
+x-common:
+- type: x-website
+  url: http://rest.rgd.mcw.edu
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

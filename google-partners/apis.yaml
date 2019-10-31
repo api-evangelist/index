@@ -1,0 +1,38 @@
+name: Google Partners
+x-slug: google-partners
+description: Google Partners is Googles program for advertising agencies, digital
+  marketing professionals, and other online consultants who manage AdWords accounts.
+  The Google Partners API lets advertisers search certified companies and create contact
+  leads with them, and also audits the usage of clients.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Google-Partner.jpg
+x-kinRank: "9"
+x-alexaRank: "0"
+tags: API Provider,API Service Provider,Google APIs,Profiles,Relative Data,Service
+  API,Stack Network
+created: "2019-02-03"
+modified: "2019-02-03"
+url: google-partners/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Google Partners API
+  x-api-slug: google-partners-api
+  description: Google Partners is Googles program for advertising agencies, digital
+    marketing professionals, and other online consultants who manage AdWords accounts.
+    The Google Partners API lets advertisers search certified companies and create
+    contact leads with them, and also audits the usage of clients.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Google-Partner.jpg
+  humanURL: https://developers.google.com/partners/
+  baseURL: ://partners.googleapis.com//
+  tags: API Provider,API Service Provider,Google APIs,Profiles,Relative Data,Service
+    API,Stack Network
+  properties:
+  - type: x-openapi-spec
+    url: /google-partners/google-partners-api-openapi.yaml
+x-common:
+- type: x-website
+  url: https://developers.google.com/partners/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

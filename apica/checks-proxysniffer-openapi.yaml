@@ -1,0 +1,86 @@
+swagger: "2.0"
+x-collection-name: Apica
+x-complete: 1
+info:
+  title: Checks Proxysniffer
+  version: 1.0.0
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  '/checks/proxysniffer ':
+    ' post ':
+      summary: Checks Proxy Sniffer
+      description: Creates a new ProxySniffer check.
+      operationId: -checks-proxysniffer-
+      x-api-path-slug: checksproxysniffer-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Checks
+      - Proxy
+  '/checks/proxysniffer/{checkId} ':
+    ' put ':
+      summary: Checks Proxy Sniffer
+      description: Updates a proxy sniffer check.
+      operationId: -checks-proxysniffer-checkid-
+      x-api-path-slug: checksproxysniffercheckid-put
+      responses:
+        200:
+          description: OK
+      tags:
+      - Checks
+      - Proxy
+  '/checks/proxysniffer/locations ':
+    ' get ':
+      summary: Checks Proxy Sniffer Locations
+      description: Gets a list of all locations that are available for ProxySniffer
+        checks.
+      operationId: -checks-proxysniffer-locations-
+      x-api-path-slug: checksproxysnifferlocations-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Checks
+      - Proxy
+  '/checks/proxysniffer/{checkId}/results/{resultId}/urldata?format={format} ':
+    ' get ':
+      summary: Checks Proxysniffer Results
+      description: Gets a file that contains ProxySniffer check result data.
+      operationId: -checks-proxysniffer-checkid-results-resultid-urldataformatformat-
+      x-api-path-slug: checksproxysniffercheckidresultsresultidurldataformatformat-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Checks
+      - Proxy
+  '/checks/proxysniffer/{checkId}/results/urldata ':
+    ' post ':
+      summary: Checks Proxy Sniffer Results URLdata
+      description: Gets ProxySniffer check results in json format by result ids.
+      operationId: -checks-proxysniffer-checkid-results-urldata-
+      x-api-path-slug: checksproxysniffercheckidresultsurldata-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Checks
+      - Proxy
+  '/checks/proxysniffer/{checkId}/results/{resultId}/errorlog ':
+    ' get ':
+      summary: Checks Proxy Sniffer Results Error Log
+      description: Gets an error log of the given ProxySniffer check result.
+      operationId: -checks-proxysniffer-checkid-results-resultid-errorlog-
+      x-api-path-slug: checksproxysniffercheckidresultsresultiderrorlog-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Checks
+      - Proxy

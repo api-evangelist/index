@@ -1,0 +1,40 @@
+name: Azure Billing API
+x-slug: azure-billing-api
+description: Use Azure Billing APIs to pull usage and resource data into your preferred
+  data analysis tools. The Azure Resource Usage and RateCard APIs can help you accurately
+  predict and manage your costs. The APIs are implemented as a Resource Provider and
+  part of the family of APIs exposed by the Azure Resource Manager.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/azure-billing-api.png
+x-kinRank: "10"
+x-alexaRank: "0"
+tags: API Provider,API Service Provider,Billing,Management,Microsoft,Profiles,Relative
+  Data,Service API,Stack Network
+created: "2019-02-03"
+modified: "2019-02-03"
+url: azure-billing-api/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Azure Billing API
+  x-api-slug: azure-billing-api
+  description: Use Azure Billing APIs to pull usage and resource data into your preferred
+    data analysis tools. The Azure Resource Usage and RateCard APIs can help you accurately
+    predict and manage your costs. The APIs are implemented as a Resource Provider
+    and part of the family of APIs exposed by the Azure Resource Manager.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/azure-billing-api.png
+  humanURL: https://docs.microsoft.com/en-us/azure/billing/billing-usage-rate-card-overview
+  baseURL: ://management.azure.com//
+  tags: API Provider,API Service Provider,Billing,Management,Microsoft,Profiles,Relative
+    Data,Service API,Stack Network
+  properties:
+  - type: x-postman-collection
+    url: /azure-billing-api/providersmicrosoft-consumptionoperations-get-postman.json
+  - type: x-openapi-spec
+    url: /azure-billing-api/azure-billing-api-openapi.yaml
+x-common:
+- type: x-website
+  url: https://docs.microsoft.com/en-us/azure/billing/billing-usage-rate-card-overview
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

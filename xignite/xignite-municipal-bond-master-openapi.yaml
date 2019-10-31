@@ -1,0 +1,35 @@
+swagger: "2.0"
+x-collection-name: Xignite
+x-complete: 1
+info:
+  title: Xignite Municipal Bond Master
+  description: xignitemunicipalbondmaster-web-service-provides-security-master-data-and-associated-reference-data-for-municipal-bonds-issued-by-states-counties-cities-and-special-tax-districts-along-with-special-agencies-of-state-and-local-governments-
+  version: 1.0.0
+host: municipalbondmaster.xignite.com
+basePath: xmunicipalbondmaster.json/XigniteMunicipalBondMaster
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /GetBondDescription:
+    get:
+      summary: Get Bond Description
+      description: This service returns description of one or more Municipal Bonds
+        that match the identifier provided. If a CUSIP is provided in the input one
+        Municipal Bond is returned, if IssueIdentifier is provided one or more bonds
+        related to that Issue are returned.
+      operationId: GetBondDescription
+      x-api-path-slug: getbonddescription-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Bond

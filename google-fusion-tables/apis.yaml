@@ -1,0 +1,38 @@
+name: Google Fusion Tables
+x-slug: google-fusion-tables
+description: Fusion Tables is an experimental data visualization web application to
+  gather, visualize, and share data tables.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-fusion-tables.jpg
+x-kinRank: "9"
+x-alexaRank: "0"
+tags: API Provider,API Service Provider,Data,Databases,Embeddable,Google APIs,Profiles,Relative
+  Data,Service API,Spreadsheets,Stack Network,Visualizations
+created: "2019-02-03"
+modified: "2019-02-03"
+url: google-fusion-tables/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Google Fusion Tables API
+  x-api-slug: google-fusion-tables-api
+  description: Fusion Tables is an experimental data visualization web application
+    to gather, visualize, and share data tables.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-fusion-tables.jpg
+  humanURL: https://developers.google.com/fusiontables/
+  baseURL: ://www.googleapis.com//fusiontables/v2
+  tags: API Provider,API Service Provider,Data,Databases,Embeddable,Google APIs,Profiles,Relative
+    Data,Service API,Spreadsheets,Stack Network,Visualizations
+  properties:
+  - type: x-openapi-spec
+    url: /google-fusion-tables/google-fusion-tables-api-openapi.yaml
+x-common:
+- type: x-documentation
+  url: https://developers.google.com/fusiontables/docs/v2/reference/
+- type: x-forums
+  url: https://groups.google.com/forum/#!forum/fusion-tables-api-announce
+- type: x-website
+  url: https://developers.google.com/fusiontables/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

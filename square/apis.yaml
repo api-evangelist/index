@@ -1,0 +1,74 @@
+name: Square
+x-slug: square
+description: Square, Inc. is a financial services, merchant services aggregator, and
+  mobile payment company based in San Francisco, California.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2176-square.jpg
+x-kinRank: "9"
+x-alexaRank: "2002"
+tags: Commerce,Credit Cards,Financial Services,internet,Mobile,New,Payments,Payments,Relative
+  Data,Relative StreamRank,Service API,Stack Network,Streams,Streams,Streams,Technology,Webhook
+  Implementations
+created: "2019-02-03"
+modified: "2019-02-03"
+url: square/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Square Connect API
+  x-api-slug: square-connect-api
+  description: Square, Inc. is a financial services, merchant services aggregator,
+    and mobile payment company based in San Francisco, California.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2176-square.jpg
+  humanURL: http://square.com
+  baseURL: https://connect.squareup.com//
+  tags: Commerce,Credit Cards,Financial Services,internet,Mobile,New,Payments,Payments,Relative
+    Data,Relative StreamRank,Service API,Stack Network,Streams,Streams,Streams,Technology,Webhook
+    Implementations
+  properties:
+  - type: x-openapi-spec
+    url: /square/square-connect-api-openapi.yaml
+x-common:
+- type: x-website
+  url: http://square.com
+- type: x-base
+  url: https://connect.squareup.com
+- type: x-crunchbase
+  url: http://www.crunchbase.com/company/square
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/square
+- type: x-developer
+  url: https://connect.squareup.com/
+- type: x-email
+  url: press@squareup.com
+- type: x-email
+  url: security@squareup.com
+- type: x-email
+  url: lawenforcement@squareup.com
+- type: x-email
+  url: redemption@squareup.com
+- type: x-email
+  url: privacy@squareup.com
+- type: x-email
+  url: community@squareup.com
+- type: x-email
+  url: noreply@messaging.squareup.com
+- type: x-email
+  url: ir@squareup.com
+- type: x-email
+  url: takedowns@squareup.com
+- type: x-github
+  url: https://github.com/square
+- type: x-linkedin
+  url: https://www.linkedin.com/company/square--/
+- type: x-twitter
+  url: https://twitter.com/Square
+- type: x-webhook
+  url: https://docs.connect.squareup.com/basics/api101/webhooks
+- type: x-website
+  url: http://squareup.com
+- type: x-website
+  url: https://squareup.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

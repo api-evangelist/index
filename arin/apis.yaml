@@ -1,0 +1,171 @@
+name: ARIN
+x-slug: arin
+description: 'The American Registry for Internet Numbers (ARIN) is a Regional Internet
+  Registry (RIR) incorporated in the Commonwealth of Virginia, USA. ARIN is one of
+  five (5) RIRs. Like the other RIRs, ARIN:    Provides services related to the technical
+  coordinati...'
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1381-arin.jpg
+x-kinRank: "8"
+x-alexaRank: "51791"
+tags: API Provider,DNS,DNS Internet,General Data,Infrastructure,internet,ISP,Profiles,Registry,Service
+  API,Stack Network
+created: "2019-02-03"
+modified: "2019-02-03"
+url: arin/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Autonomous System Numbers (ASNs) API
+  x-api-slug: autonomous-system-numbers-asns-api
+  description: 'The American Registry for Internet Numbers (ARIN) is a Regional Internet
+    Registry (RIR) incorporated in the Commonwealth of Virginia, USA. ARIN is one
+    of five (5) RIRs. Like the other RIRs, ARIN:    Provides services related to the
+    technical coordinati...'
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1381-arin.jpg
+  humanURL: https://www.arin.net
+  baseURL: :///
+  tags: API Provider,DNS,DNS Internet,General Data,Infrastructure,internet,ISP,Profiles,Registry,Service
+    API,Stack Network
+  properties:
+  - type: x-postman-collection
+    url: /arin/asnpocs-get-postman.json
+  - type: x-openapi-spec
+    url: /arin/autonomous-system-numbers-asns-api-openapi.yaml
+- name: CIDR API
+  x-api-slug: cidr-api
+  description: 'The American Registry for Internet Numbers (ARIN) is a Regional Internet
+    Registry (RIR) incorporated in the Commonwealth of Virginia, USA. ARIN is one
+    of five (5) RIRs. Like the other RIRs, ARIN:    Provides services related to the
+    technical coordinati...'
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1381-arin.jpg
+  humanURL: https://www.arin.net
+  baseURL: :///
+  tags: POCs
+  properties:
+  - type: x-postman-collection
+    url: /arin/cidr-get-postman.json
+  - type: x-openapi-spec
+    url: /arin/cidr-api-openapi.yaml
+- name: Customers API
+  x-api-slug: customers-api
+  description: 'The American Registry for Internet Numbers (ARIN) is a Regional Internet
+    Registry (RIR) incorporated in the Commonwealth of Virginia, USA. ARIN is one
+    of five (5) RIRs. Like the other RIRs, ARIN:    Provides services related to the
+    technical coordinati...'
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1381-arin.jpg
+  humanURL: https://www.arin.net
+  baseURL: https://whois.arin.net//rest
+  tags: CIDR
+  properties:
+  - type: x-openapi-spec
+    url: /arin/customers-api-openapi.yaml
+- name: Delegation API
+  x-api-slug: delegation-api
+  description: 'The American Registry for Internet Numbers (ARIN) is a Regional Internet
+    Registry (RIR) incorporated in the Commonwealth of Virginia, USA. ARIN is one
+    of five (5) RIRs. Like the other RIRs, ARIN:    Provides services related to the
+    technical coordinati...'
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1381-arin.jpg
+  humanURL: https://www.arin.net
+  baseURL: https://www.arin.net//regrws/core/v1
+  tags: Customers
+  properties:
+  - type: x-postman-collection
+    url: /arin/delegation-delete-postman.json
+  - type: x-openapi-spec
+    url: /arin/delegation-api-openapi.yaml
+- name: Network API
+  x-api-slug: network-api
+  description: 'The American Registry for Internet Numbers (ARIN) is a Regional Internet
+    Registry (RIR) incorporated in the Commonwealth of Virginia, USA. ARIN is one
+    of five (5) RIRs. Like the other RIRs, ARIN:    Provides services related to the
+    technical coordinati...'
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1381-arin.jpg
+  humanURL: https://www.arin.net
+  baseURL: :///
+  tags: Delegation
+  properties:
+  - type: x-postman-collection
+    url: /arin/netrdns-get-postman.json
+  - type: x-openapi-spec
+    url: /arin/network-api-openapi.yaml
+- name: Organization API
+  x-api-slug: organization-api
+  description: 'The American Registry for Internet Numbers (ARIN) is a Regional Internet
+    Registry (RIR) incorporated in the Commonwealth of Virginia, USA. ARIN is one
+    of five (5) RIRs. Like the other RIRs, ARIN:    Provides services related to the
+    technical coordinati...'
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1381-arin.jpg
+  humanURL: https://www.arin.net
+  baseURL: :///
+  tags: RDNS
+  properties:
+  - type: x-postman-collection
+    url: /arin/orgnets-get-postman.json
+  - type: x-openapi-spec
+    url: /arin/organization-api-openapi.yaml
+- name: Point of Contact (POC) API
+  x-api-slug: point-of-contact-poc-api
+  description: 'The American Registry for Internet Numbers (ARIN) is a Regional Internet
+    Registry (RIR) incorporated in the Commonwealth of Virginia, USA. ARIN is one
+    of five (5) RIRs. Like the other RIRs, ARIN:    Provides services related to the
+    technical coordinati...'
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1381-arin.jpg
+  humanURL: https://www.arin.net
+  baseURL: :///
+  tags: Nets
+  properties:
+  - type: x-postman-collection
+    url: /arin/pocnets-get-postman.json
+  - type: x-openapi-spec
+    url: /arin/point-of-contact-poc-api-openapi.yaml
+- name: Reverse DNS API
+  x-api-slug: reverse-dns-api
+  description: 'The American Registry for Internet Numbers (ARIN) is a Regional Internet
+    Registry (RIR) incorporated in the Commonwealth of Virginia, USA. ARIN is one
+    of five (5) RIRs. Like the other RIRs, ARIN:    Provides services related to the
+    technical coordinati...'
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1381-arin.jpg
+  humanURL: https://www.arin.net
+  baseURL: :///
+  tags: Nets
+  properties:
+  - type: x-postman-collection
+    url: /arin/rdnsnets-get-postman.json
+  - type: x-openapi-spec
+    url: /arin/reverse-dns-api-openapi.yaml
+x-common:
+- type: x-website
+  url: https://www.arin.net
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/american-registry-for-internet-numbers
+- type: x-developer
+  url: https://www.arin.net/resources/restful-interfaces.html
+- type: x-email
+  url: hostmaster@arin.net
+- type: x-email
+  url: billing@arin.net
+- type: x-email
+  url: reassign@arin.net
+- type: x-email
+  url: info@arin.net
+- type: x-email
+  url: meetings@arin.net
+- type: x-email
+  url: members@arin.net
+- type: x-email
+  url: compliance@arin.net
+- type: x-email
+  url: mlc@arin.net
+- type: x-email
+  url: media@arin.net
+- type: x-email
+  url: noc@arin.net
+- type: x-github
+  url: https://github.com/arineng
+- type: x-twitter
+  url: https://twitter.com/TeamARIN
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

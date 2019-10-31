@@ -1,0 +1,45 @@
+name: EU BON UTIS
+x-slug: eu-bon-utis
+description: 'The EDIT Platform for Cybertaxonomy is a collection of open source tools
+  and services which together cover all aspects of the taxonomic workflow. The workflow
+  is grouped into the following areas: taxonomic editing; publishing of edited data;
+  data storage and exchange; collections and specimens; descriptions; fieldwork; literature;
+  and geography. At the heart of the Cybertaxonomy platform is the Common Data Model
+  (CDM), a repository for every conceivable type of data produced by taxonomists in
+  the course of their work, and the backend for most EDIT components.'
+image: ""
+x-kinRank: "7"
+x-alexaRank: "0"
+tags: API Provider,General Data,Profiles,Taxonomies
+created: "2019-02-03"
+modified: "2019-02-03"
+url: eu-bon-utis/apis.md
+specificationVersion: "0.14"
+apis:
+- name: EU BON UTIS
+  x-api-slug: eu-bon-utis
+  description: 'The EDIT Platform for Cybertaxonomy is a collection of open source
+    tools and services which together cover all aspects of the taxonomic workflow.
+    The workflow is grouped into the following areas: taxonomic editing; publishing
+    of edited data; data storage and exchange; collections and specimens; descriptions;
+    fieldwork; literature; and geography. At the heart of the Cybertaxonomy platform
+    is the Common Data Model (CDM), a repository for every conceivable type of data
+    produced by taxonomists in the course of their work, and the backend for most
+    EDIT components.'
+  image: ""
+  humanURL: http://cybertaxonomy.eu
+  baseURL: https://cybertaxonomy.eu//eu-bon/utis/1.0
+  tags: API Provider,General Data,Profiles,Taxonomies
+  properties:
+  - type: x-postman-collection
+    url: /eu-bon-utis/search-get-postman.json
+  - type: x-openapi-spec
+    url: /eu-bon-utis/eu-bon-utis-openapi.yaml
+x-common:
+- type: x-website
+  url: http://cybertaxonomy.eu
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

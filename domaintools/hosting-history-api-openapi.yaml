@@ -1,0 +1,34 @@
+swagger: "2.0"
+x-collection-name: DomainTools
+x-complete: 1
+info:
+  title: Hosting History API
+  description: provides-the-registrar-ip-and-name-server-history-for-a-domain-name
+  version: 1.0.0
+host: api.domaintools.com
+basePath: /v1
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /{domain}/hosting-history/:
+    get:
+      summary: Domain History
+      description: Provides the registrar, IP and name server history for a domain
+        name
+      operationId: domainHistory
+      x-api-path-slug: domainhostinghistory-get
+      parameters:
+      - in: path
+        name: domain
+        description: The domain
+        type: string
+        format: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Domain Hosting History

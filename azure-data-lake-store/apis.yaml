@@ -1,0 +1,56 @@
+name: Azure Data Lake Store
+x-slug: azure-data-lake-store
+description: The Data Lake store provides a single repository where you can capture
+  data of any size type and speed simply without forcing changes to your application
+  as the data scales. In the store, data can be shared for collaboration with enterprise-grade
+  security. It is also designed for high-performance processing and analytics from
+  HDFS applications (ie. Azure HDInsight, Data Lake analytics service, Hortonworks,
+  Cloudera, MapR) and tools, including support for low latency workloads. For example,
+  data can be ingested in real-time from sensors and devices for IoT solutions, or
+  from online shopping websites into the store without the restriction of fixed limits
+  on account or file size unlike current offerings in the market.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/azure-data-lake-store-01-petabyte.png
+x-kinRank: "10"
+x-alexaRank: "0"
+tags: API Provider,API Service Provider,Data,Databases,Microsoft,Profiles,Relative
+  Data,Service API,Stack Network,Storage
+created: "2019-02-03"
+modified: "2019-02-03"
+url: azure-data-lake-store/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Azure Data Lake Store API
+  x-api-slug: azure-data-lake-store-api
+  description: The Data Lake store provides a single repository where you can capture
+    data of any size type and speed simply without forcing changes to your application
+    as the data scales. In the store, data can be shared for collaboration with enterprise-grade
+    security. It is also designed for high-performance processing and analytics from
+    HDFS applications (ie. Azure HDInsight, Data Lake analytics service, Hortonworks,
+    Cloudera, MapR) and tools, including support for low latency workloads. For example,
+    data can be ingested in real-time from sensors and devices for IoT solutions,
+    or from online shopping websites into the store without the restriction of fixed
+    limits on account or file size unlike current offerings in the market.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/azure-data-lake-store-01-petabyte.png
+  humanURL: https://azure.microsoft.com/en-us/services/data-lake-store/
+  baseURL: :////
+  tags: API Provider,API Service Provider,Data,Databases,Microsoft,Profiles,Relative
+    Data,Service API,Stack Network,Storage
+  properties:
+  - type: x-openapi-spec
+    url: /azure-data-lake-store/azure-data-lake-store-api-openapi.yaml
+x-common:
+- type: x-documentation
+  url: https://docs.microsoft.com/en-us/azure/data-lake-store/
+- type: x-pricing
+  url: https://azure.microsoft.com/en-us/pricing/details/data-lake-store/
+- type: x-service-level-agreements
+  url: https://azure.microsoft.com/en-us/support/legal/sla/data-lake-store/
+- type: x-status
+  url: https://azure.microsoft.com/en-us/status/
+- type: x-website
+  url: https://azure.microsoft.com/en-us/services/data-lake-store/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

@@ -1,0 +1,42 @@
+name: Dezrez
+x-slug: dezrez
+description: Cloud based estate agent software , sales & letting agent software, estate
+  agent website design and property management software - Dezrez  Services
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28888-www-dezrez-com.jpg
+x-kinRank: "7"
+x-alexaRank: "385559"
+tags: Properties,Real Estate,Relative Data,SaaS,Service API,Technology
+created: "2019-02-03"
+modified: "2019-02-03"
+url: dezrez/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Dezrez
+  x-api-slug: dezrez
+  description: Cloud based estate agent software , sales & letting agent software,
+    estate agent website design and property management software - Dezrez  Services
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28888-www-dezrez-com.jpg
+  humanURL: https://www.dezrez.com
+  baseURL: https://api.dezrez.com//
+  tags: Properties,Real Estate,Relative Data,SaaS,Service API,Technology
+  properties:
+  - type: x-openapi-spec
+    url: /dezrez/dezrez-openapi.yaml
+x-common:
+- type: x-github
+  url: https://github.com/dezrez
+- type: x-openapi
+  url: https://api.dezrez.com:443/swagger/docs/v1
+- type: x-documentation
+  url: https://api.dezrez.com/swagger/ui/index#!/AccountingExport
+- type: x-support
+  url: https://www.dezrez.com/uk/estate-agency-software-support
+- type: x-twitter
+  url: https://twitter.com/dezrezsoftware
+- type: x-website
+  url: https://www.dezrez.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

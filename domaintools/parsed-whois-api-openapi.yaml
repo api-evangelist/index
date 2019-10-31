@@ -1,0 +1,28 @@
+swagger: "2.0"
+x-collection-name: DomainTools
+x-complete: 1
+info:
+  title: Parsed Whois API
+  description: the-domaintools-api-is-organized-into-distinct-products-with-queries-that-follow-a-restful-url-structure-wherever-possible--each-product-offers-free-unauthenticated-access-for-the-sample-urls-listed-with-each-product--if-you-havent-already-you-may-want-to-review-the-getting-started-document-to-learn-about-authentication-and-response-formats--the-parsed-whois-api-provides-parsed-information-extracted-from-the-raw-whois-record--the-api-is-optimized-to-quickly-retrieve-the-whois-record-group-important-data-together-and-return-a-wellstructured-format--the-parsed-whois-api-is-ideal-for-anyone-wishing-to-search-for-index-or-crossreference-data-from-one-or-multiple-whois-records-
+  version: 1.0.0
+host: api.domaintools.com
+basePath: /v1
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /{domain}/whois/parsed:
+    get:
+      summary: Parsed Whois
+      description: The Parsed Whois API provides parsed information extracted from
+        the raw Whois recor
+      operationId: parsedWhois
+      x-api-path-slug: domainwhoisparsed-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Whois

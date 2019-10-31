@@ -1,0 +1,74 @@
+{
+  "info": {
+    "name": "HERE Venue Maps Base64 Encoded Map Tiles",
+    "_postman_id": "b4277a50-c4b7-4dcd-8fe6-c37c27888537",
+    "description": "*Request a base64 encoded map tile and associated room definitions with a single request*\n\nA base64 encoded map tile together with the room definitions, is requested by passing `tiles-ia-b64` in the path of the request URL, along with a known `floor` and `quadkey` and associated authentication credentials.\n\n\n\n* **app_id**  `text`\n \\- A 20 byte Base64 URL-safe encoded string used for the authentication of the client application.    You must include an `app_id` with every request.\n\n* **app_code**  `text`\n \\- A 20 byte Base64 URL-safe encoded string used for the authentication of the client application.    You must include an `app_code` with every request.\n\n* **Signature**  `text`\n \\- Signature\n\n* **Policy**  `text`\n \\- Policy\n\n* **Key-Pair-Id**  `text`\n \\- Key-Pair-Id",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/"
+  },
+  "item": [
+    {
+      "name": "Venue",
+      "item": [
+        {
+          "id": "cb462e21-8752-49fe-a36e-8c5bf9d06daf",
+          "name": "0TilesPngL112022001101210030210PngGet",
+          "request": {
+            "url": "http://signature.venue.maps.cit.api.here.com/venues/signature/0/tiles-png/L1/12022001101210030210.png?app_code=%7B%7D&app_id=%7B%7D&Key-Pair-Id=%7B%7D&Policy=%7B%7D&Signature=%7B%7D",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "*Request an individual venue map tile*\n\nIn addition to the usual `app_id` and `app_code`, three additional parameters are required for authentication purposes. The `Signature`, `Policy` and `Key-Pair-Id` parameters have been obtained from a prior request to the `Signature` endpoint.\n\n\n\n* **app_id**  `text`\n \\- A 20 byte Base64 URL-safe encoded string used for the authentication of the client application.    You must include an `app_id` with every request.\n\n* **app_code**  `text`\n \\- A 20 byte Base64 URL-safe encoded string used for the authentication of the client application.    You must include an `app_code` with every request.\n\n* **Signature**  `text`\n \\- Signature\n\n* **Policy**  `text`\n \\- Policy\n\n* **Key-Pair-Id**  `text`\n \\- Key-Pair-Id"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "dcde5a05-65f4-403b-9485-f6eef06fd869"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Base64",
+      "item": [
+        {
+          "id": "8e6b6015-e486-4737-bae8-a246efb101bf",
+          "name": "0TilesIaB64L112022001101210030210JsGet",
+          "request": {
+            "url": "http://signature.venue.maps.cit.api.here.com/venues/signature/0/tiles-ia-b64/L1/12022001101210030210.js?app_code=%7B%7D&app_id=%7B%7D&Key-Pair-Id=%7B%7D&Policy=%7B%7D&Signature=%7B%7D",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "*Request a base64 encoded map tile and associated room definitions with a single request*\n\nA base64 encoded map tile together with the room definitions, is requested by passing `tiles-ia-b64` in the path of the request URL, along with a known `floor` and `quadkey` and associated authentication credentials.\n\n\n\n* **app_id**  `text`\n \\- A 20 byte Base64 URL-safe encoded string used for the authentication of the client application.    You must include an `app_id` with every request.\n\n* **app_code**  `text`\n \\- A 20 byte Base64 URL-safe encoded string used for the authentication of the client application.    You must include an `app_code` with every request.\n\n* **Signature**  `text`\n \\- Signature\n\n* **Policy**  `text`\n \\- Policy\n\n* **Key-Pair-Id**  `text`\n \\- Key-Pair-Id"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "c452e2e5-398d-4dc0-8de6-9b593d8d4eb2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

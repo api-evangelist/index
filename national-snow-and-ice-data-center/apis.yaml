@@ -1,0 +1,36 @@
+name: National Snow and Ice Data Center
+x-slug: national-snow-and-ice-data-center
+description: NSIDC manages and distributes scientific data, creates tools for data
+  access, supports data users, performs scientific research, and educates the public
+  about the cryosphere.
+image: ""
+x-kinRank: "7"
+x-alexaRank: "0"
+tags: API Provider,Environment,General Data,Profiles,Sensors,Water,Weather
+created: "2019-02-03"
+modified: "2019-02-03"
+url: national-snow-and-ice-data-center/apis.md
+specificationVersion: "0.14"
+apis:
+- name: NSIDC Web Service Documentation Index
+  x-api-slug: nsidc-web-service-documentation-index
+  description: NSIDC manages and distributes scientific data, creates tools for data
+    access, supports data users, performs scientific research, and educates the public
+    about the cryosphere.
+  image: ""
+  humanURL: http://nsidc.org
+  baseURL: https://nsidc.org//api/dataset/2
+  tags: API Provider,Environment,General Data,Profiles,Sensors,Water,Weather
+  properties:
+  - type: x-postman-collection
+    url: /national-snow-and-ice-data-center/suggest-get-postman.json
+  - type: x-openapi-spec
+    url: /national-snow-and-ice-data-center/nsidc-web-service-documentation-index-openapi.yaml
+x-common:
+- type: x-website
+  url: http://nsidc.org
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

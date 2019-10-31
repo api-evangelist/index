@@ -1,0 +1,44 @@
+name: Logicbroker
+x-slug: logicbroker
+description: Logicbroker provides beautiful technology that unites brands, retailers,
+  and the systems they rely on. Harness the latest in cloud and supply chain automation
+  technology with unrivaled speed and integration flexibility. We craft the connections
+  that enable digital commerce.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/logicbroker-logo.png
+x-kinRank: "7"
+x-alexaRank: ""
+tags: Commerce,Retail
+created: "2019-02-03"
+modified: "2019-02-03"
+url: logicbroker/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Logic Broker CommerceAPI
+  x-api-slug: logic-broker-commerceapi
+  description: Logicbroker provides beautiful technology that unites brands, retailers,
+    and the systems they rely on. Harness the latest in cloud and supply chain automation
+    technology with unrivaled speed and integration flexibility. We craft the connections
+    that enable digital commerce.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/logicbroker-logo.png
+  humanURL: https://www.logicbroker.com/
+  baseURL: https://stage.commerceapi.io//
+  tags: Commerce,Retail
+  properties:
+  - type: x-openapi-spec
+    url: /logicbroker/logic-broker-commerceapi-openapi.yaml
+x-common:
+- type: x-blog-rss
+  url: https://www.logicbroker.com/feed/
+- type: x-developer
+  url: https://dev.logicbroker.com/
+- type: x-openapi
+  url: https://stage.commerceapi.io/swagger/docs/v1
+- type: x-documentation
+  url: https://stage.commerceapi.io/swagger/ui/index
+- type: x-website
+  url: https://www.logicbroker.com/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

@@ -1,0 +1,50 @@
+name: Sensr.net
+x-slug: sensr-net
+description: Sensr.net keeps track of interesting images and alert you when something
+  happens. Were starting off with basic motion detection. We keep the images around
+  and organize them by time and day. Well send you an email or a text message if youd
+  like when ...
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/924-sensr-net.jpg
+x-kinRank: "7"
+x-alexaRank: "766070"
+tags: Cameras,Devices,internet,Internet of Things,Mobile,Relative Data,Sensors,Service
+  API,Surveillance,Technology,Webcams
+created: "2019-02-03"
+modified: "2019-02-03"
+url: sensr-net/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Devices API
+  x-api-slug: devices-api
+  description: Sensr.net keeps track of interesting images and alert you when something
+    happens. Were starting off with basic motion detection. We keep the images around
+    and organize them by time and day. Well send you an email or a text message if
+    youd like when ...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/924-sensr-net.jpg
+  humanURL: https://sensr.net/api
+  baseURL: ://api.serverdensity.io./
+  tags: Cameras,Devices,internet,Internet of Things,Mobile,Relative Data,Sensors,Service
+    API,Surveillance,Technology,Webcams
+  properties:
+  - type: x-openapi-spec
+    url: /sensr-net/devices-api-openapi.yaml
+x-common:
+- type: x-website
+  url: https://sensr.net/api
+- type: x-blog
+  url: http://sensr.net/blog
+- type: x-blog-rss
+  url: http://sensr.net/blog/feed/
+- type: x-crunchbase
+  url: http://www.crunchbase.com/company/sensr-net
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/sensr-net
+- type: x-documentation
+  url: https://api.sensr.net/doc/v3/index.html
+- type: x-twitter
+  url: https://twitter.com/sensr
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

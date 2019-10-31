@@ -1,0 +1,9 @@
+{
+  "info": {
+    "name": "7digital Catalogue API track/chart",
+    "_postman_id": "42b2f1f6-a72e-4f61-8b72-7ea780d2637c",
+    "description": "This endpoint returns a chart of the most purchased tracks for given week. To retrieve the most recent charts as published on 7digital.com the toDate parameter should be omitted.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/"
+  },
+  "item": []
+}

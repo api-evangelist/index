@@ -1,0 +1,54 @@
+name: GitLab
+x-slug: gitlab
+description: GitLab is a web-based Git-repository manager with wiki, issue-tracking
+  and CI/CD pipelines features, using an open-source license, developed by GitLab
+  Inc.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/githlab-logo.png
+x-kinRank: "8"
+x-alexaRank: ""
+tags: Code,Orchestration,Relative Data,Service API,Static,Versions,Webhook Implementations
+created: "2019-02-03"
+modified: "2019-02-03"
+url: gitlab/apis.md
+specificationVersion: "0.14"
+apis:
+- name: GitLab
+  x-api-slug: gitlab
+  description: GitLab is a web-based Git-repository manager with wiki, issue-tracking
+    and CI/CD pipelines features, using an open-source license, developed by GitLab
+    Inc.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/githlab-logo.png
+  humanURL: http://gitlab.com
+  baseURL: https://localhost:3000//api
+  tags: Code,Orchestration,Relative Data,Service API,Static,Versions,Webhook Implementations
+  properties:
+  - type: x-postman-collection
+    url: /gitlab/v3version-get-postman.json
+  - type: x-openapi-spec
+    url: /gitlab/gitlab-openapi.yaml
+x-common:
+- type: x-documentation
+  url: https://docs.gitlab.com/
+- type: x-github
+  url: https://github.com/gitlab
+- type: x-openapi
+  url: https://axil.gitlab.io/swaggerapi/static/swagger.json
+- type: x-pricing
+  url: https://about.gitlab.com/pricing/
+- type: x-privacy-policy
+  url: https://about.gitlab.com/privacy/
+- type: x-support
+  url: https://about.gitlab.com/getting-help/
+- type: x-terms-of-service
+  url: https://about.gitlab.com/terms/
+- type: x-twitter
+  url: https://twitter.com/gitlab
+- type: x-webhook
+  url: https://docs.gitlab.com/ce/user/project/integrations/webhooks.html
+- type: x-website
+  url: http://gitlab.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

@@ -1,0 +1,32 @@
+swagger: "2.0"
+x-collection-name: Bureau of Alcohol, Tobacco, Firearms, and Explosives
+x-complete: 1
+info:
+  title: API for Federal Firearms Licensees By State
+  description: api-for-exhibit-11-of-annual-atf-commerce-report
+  version: v1
+host: data.atf.gov
+basePath: /resource/
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  federal-firearms-licensees-by-state.json:
+    get:
+      summary: Federal Firearms Licensees
+      description: Federal Firearms Licensees
+      operationId: ""
+      x-api-path-slug: federalfirearmslicenseesbystate-json-get
+      parameters:
+      - in: query
+        name: ffl_population
+      - in: query
+        name: state
+      responses:
+        200:
+          description: OK
+      tags:
+      - ""

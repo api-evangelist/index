@@ -1,0 +1,373 @@
+swagger: "2.0"
+x-collection-name: SAP
+x-complete: 1
+info:
+  title: Manufacturing Network Partner APIs
+  description: a-partner-api-is-used-to-retrieve-or-operate-on-the-data-of-other-organizations--the-client-oauth-2-0-client-making-api-requests-require-explicit-authorization-from-these-organizations-to-make-an-api-request-you-need-to-get-an-access-token-using-your-oauth-2-0-client-credentials--for-more-information-see-make-an-api-requesthttpshelp-sap-comviewerdmcmndevguide15b2822c62d9489c8e47034665eadda7-html-please-be-aware-that-the-version-of-most-apis-is-v1-but-the-version-of-the-documents-apis-is-v2-
+  version: 1.0.0
+host: hostname
+basePath: /dim/api
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /callback:
+    post:
+      summary: Sends a callback message
+      description: |-
+        Upon the receipt of an event, send a response in an async way to the event framework of Manufacturing Network.
+
+        In the callback message, be sure to include the event ID. Add other information as appropriate.
+      operationId: upon-the-receipt-of-an-event-send-a-response-in-an-async-way-to-the-event-framework-of-manufacturing
+      x-api-path-slug: callback-post
+      parameters:
+      - in: body
+        name: Callback
+        description: A callback message
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Sends
+      - Callback
+      - Message
+  /collaborationRooms/{collaborationRoomId}:
+    get:
+      summary: Retrieves a collaboration room
+      description: Retrieves the information of a collaboration room by its ID.
+      operationId: retrieves-the-information-of-a-collaboration-room-by-its-id
+      x-api-path-slug: collaborationroomscollaborationroomid-get
+      parameters:
+      - in: path
+        name: collaborationRoomId
+        description: The ID of a collaboration room
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Retrieves
+      - Collaboration
+      - Room
+  /collaborationRooms/{collaborationRoomId}/basic:
+    get:
+      summary: Retrieves basic info of a collaboration room
+      description: Retrieves the information of a collaboration room in a simplified
+        form.
+      operationId: retrieves-the-information-of-a-collaboration-room-in-a-simplified-form
+      x-api-path-slug: collaborationroomscollaborationroomidbasic-get
+      parameters:
+      - in: path
+        name: collaborationRoomId
+        description: The ID of a collaboration room
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Retrieves
+      - Basic
+      - Info
+      - Of
+      - Collaboration
+      - Room
+  /collaborationRooms/{collaborationRoomId}/documents:
+    get:
+      summary: Retrieves documents in a collaboration room
+      description: Retrieves the information of all documents in a collaboration room,
+        such as design files and specifications.
+      operationId: retrieves-the-information-of-all-documents-in-a-collaboration-room-such-as-design-files-and-specific
+      x-api-path-slug: collaborationroomscollaborationroomiddocuments-get
+      parameters:
+      - in: path
+        name: collaborationRoomId
+        description: The ID of a collaboration room
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Retrieves
+      - Documents
+      - In
+      - Collaboration
+      - Room
+  /collaborationRooms/{collaborationRoomId}/documents/{fileId}:
+    get:
+      summary: Retrieves a document
+      description: Retrieves the information of a document by its ID.
+      operationId: retrieves-the-information-of-a-document-by-its-id
+      x-api-path-slug: collaborationroomscollaborationroomiddocumentsfileid-get
+      parameters:
+      - in: path
+        name: collaborationRoomId
+        description: The ID of a collaboration room
+      - in: path
+        name: fileId
+        description: The ID of a file
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Retrieves
+      - Document
+    delete:
+      summary: Deletes a document
+      description: "Deletes a document.  \nThe login technical user must be the one
+        who uploaded the document."
+      operationId: deletes-a-document--the-login-technical-user-must-be-the-one-who-uploaded-the-document
+      x-api-path-slug: collaborationroomscollaborationroomiddocumentsfileid-delete
+      parameters:
+      - in: path
+        name: collaborationRoomId
+        description: The ID of a collaboration room
+      - in: path
+        name: fileId
+        description: The ID of a file
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - S
+      - Document
+  /collaborationRooms/{collaborationRoomId}/productionData:
+    get:
+      summary: Retrieves the production data
+      description: Retrieves the production data in a collaboration room, including
+        the currency, all the production options, and the initial pricings provided
+        by the supplier.
+      operationId: retrieves-the-production-data-in-a-collaboration-room-including-the-currency-all-the-production-opti
+      x-api-path-slug: collaborationroomscollaborationroomidproductiondata-get
+      parameters:
+      - in: path
+        name: collaborationRoomId
+        description: The ID of a collaboration room
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Retrieves
+      - Production
+      - Data
+  /documents/collaborationRooms/{collaborationRoomId}/download:
+    get:
+      summary: Downloads a file
+      description: Downloads a file from a collaboration room.
+      operationId: downloads-a-file-from-a-collaboration-room
+      x-api-path-slug: documentscollaborationroomscollaborationroomiddownload-get
+      parameters:
+      - in: path
+        name: collaborationRoomId
+        description: The ID of a collaboration room
+      - in: query
+        name: fileId
+        description: The ID of a file
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Downloads
+      - File
+  /documents/collaborationRooms/{collaborationRoomId}/upload:
+    post:
+      summary: Uploads a file
+      description: Uploads a file to a collaboration room.
+      operationId: uploads-a-file-to-a-collaboration-room
+      x-api-path-slug: documentscollaborationroomscollaborationroomidupload-post
+      parameters:
+      - in: path
+        name: collaborationRoomId
+        description: The ID of a collaboration room
+      - in: formData
+        name: fileUpload
+        description: A file to be uploaded
+      - in: formData
+        name: originFileDisplay
+        description: Indicates if a file is visible to all participants in the collaboration
+          room (public) or to the uploader only (private)
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Uploads
+      - File
+  /documents/collaborationRooms/{collaborationRoomId}/thumbnail/download:
+    get:
+      summary: Downloads the thumbnail of a design file
+      description: Downloads the thumbnail selected as the icon for a collaboration
+        room.
+      operationId: downloads-the-thumbnail-selected-as-the-icon-for-a-collaboration-room
+      x-api-path-slug: documentscollaborationroomscollaborationroomidthumbnaildownload-get
+      parameters:
+      - in: path
+        name: collaborationRoomId
+        description: The ID of a collaboration room
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Downloads
+      - Thumbnail
+      - Of
+      - Design
+      - File
+  /extensions:
+    get:
+      summary: Retrieves all extensions
+      description: "Retrieves all the extensions that have been registered with Manufacturing
+        Network.  \nThese extensions are developed by Manufacturing Network customers
+        or partners to enhance the functionality of the application."
+      operationId: retrieves-all-the-extensions-that-have-been-registered-with-manufacturing-network--these-extensions-
+      x-api-path-slug: extensions-get
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Retrieves
+      - ""
+      - Extensions
+  /organizations/{organizationId}:
+    get:
+      summary: Retrieves an organization
+      description: Retrieves an organization by its ID.
+      operationId: retrieves-an-organization-by-its-id
+      x-api-path-slug: organizationsorganizationid-get
+      parameters:
+      - in: path
+        name: organizationId
+        description: The ID of an organization
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Retrieves
+      - Organization
+  /organizations/{organizationId}/collaborationRooms:
+    get:
+      summary: Retrieves the collaboration rooms of an organization
+      description: Retrieves the collaboration rooms where an organization is a collaboration
+        party.
+      operationId: retrieves-the-collaboration-rooms-where-an-organization-is-a-collaboration-party---
+      x-api-path-slug: organizationsorganizationidcollaborationrooms-get
+      parameters:
+      - in: path
+        name: organizationId
+        description: The ID of an organization
+      - in: query
+        name: organizationIds
+        description: The IDs of other organizations
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Retrieves
+      - Collaboration
+      - Rooms
+      - Of
+      - Organization
+  /organizations/{organizationId}/collaborationRooms/owned:
+    get:
+      summary: Retrieves the collaboration rooms created by an organization
+      description: Retrieves the collaboration rooms created and owned by an organization.
+      operationId: retrieves-the-collaboration-rooms-created-and-owned-by-an-organization--
+      x-api-path-slug: organizationsorganizationidcollaborationroomsowned-get
+      parameters:
+      - in: path
+        name: organizationId
+        description: The ID of the owner organization
+      - in: query
+        name: organizationIds
+        description: The IDs of other organizations
+      - in: query
+        name: partId
+        description: The ID of a part
+      - in: query
+        name: serviceType
+        description: The type of service that a supplier organization provides during
+          the collaboration
+      - in: query
+        name: status
+        description: The status of a collaboration
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Retrieves
+      - Collaboration
+      - Rooms
+      - Created
+      - By
+      - Organization
+  /partsAnalysis/worklists/{worklistId}:
+    get:
+      summary: Retrieves a parts analysis worklist
+      description: "Retrieves a parts analysis worklist.  \nThe analysis is made to
+        identify parts that are suitable for additive manufacturing."
+      operationId: retrieves-a-parts-analysis-worklist--the-analysis-is-made-to-identify-parts-that-are-suitable-for-ad
+      x-api-path-slug: partsanalysisworklistsworklistid-get
+      parameters:
+      - in: query
+        name: $format
+        description: Specifies the response format
+      - in: path
+        name: worklistId
+        description: The UUID for a published worklist
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Retrieves
+      - Parts
+      - Analysis
+      - Worklist
+  /partsAnalysis/worklists/{worklistId}/parts/{partId}:
+    put:
+      summary: Updates a part
+      description: Updates a part in a worklist
+      operationId: updates-a-part-in-a-worklist
+      x-api-path-slug: partsanalysisworklistsworklistidpartspartid-put
+      parameters:
+      - in: path
+        name: partId
+        description: A self-generated ID for a part in the worklist
+      - in: body
+        name: PartsAnalysisUpdateDTO
+        description: A request about updating a parts analysis worklist
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: worklistId
+        description: The UUID for a published worklist
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - S
+      - Part
+  /partsAnalysis/worklists/{worklistId}/parts/{partId}/designFiles/{designFileId}:
+    get:
+      summary: Downloads the design file of a part
+      description: Downloads the design file for a part
+      operationId: downloads-the-design-file-for-a-part
+      x-api-path-slug: partsanalysisworklistsworklistidpartspartiddesignfilesdesignfileid-get
+      parameters:
+      - in: path
+        name: designFileId
+        description: A self-generated ID for a design file
+      - in: path
+        name: partId
+        description: A self-generated ID for a part in the worklist
+      - in: path
+        name: worklistId
+        description: The UUID for a published worklist
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Downloads
+      - Design
+      - File
+      - Of
+      - Part

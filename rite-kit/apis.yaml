@@ -1,0 +1,40 @@
+name: Rite Kit
+x-slug: rite-kit
+description: ""
+image: ""
+x-kinRank: "7"
+x-alexaRank: "0"
+tags: General Data,Links,Publish,Relative Data,Service API,Social
+created: "2019-02-03"
+modified: "2019-02-03"
+url: rite-kit/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Rite Kit
+  x-api-slug: rite-kit
+  description: ""
+  image: ""
+  humanURL: http://ritekit.com
+  baseURL: https://api.ritekit.com//
+  tags: General Data,Links,Publish,Relative Data,Service API,Social
+  properties:
+  - type: x-postman-collection
+    url: /rite-kit/v1statsmultiplehashtags-get-postman.json
+  - type: x-openapi-spec
+    url: /rite-kit/rite-kit-openapi.yaml
+x-common:
+- type: x-blog
+  url: https://blog.ritekit.com/
+- type: x-developer
+  url: https://ritekit.docs.apiary.io/#
+- type: x-github
+  url: https://github.com/RiteKit
+- type: x-twitter
+  url: https://twitter.com/RiteTag
+- type: x-website
+  url: http://ritekit.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

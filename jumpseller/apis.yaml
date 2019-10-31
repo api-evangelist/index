@@ -1,0 +1,46 @@
+name: Jumpseller
+x-slug: jumpseller
+description: We founded Jumpseller.com in 2009 in Europe  we called it Vendder back
+  then  and released our first version of the Jumpseller product in September 2010.
+  After releasing the product we quickly grew to thousands of customers. In November
+  2010, we recei...
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28432-jumpseller-api.jpg
+x-kinRank: "7"
+x-alexaRank: "153745"
+tags: Affiliates,API Provider,Commerce,General Data,Profiles,Relative Data,Service
+  API,Stores,Technology
+created: "2019-02-03"
+modified: "2019-02-03"
+url: jumpseller/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Jumpseller
+  x-api-slug: jumpseller
+  description: We founded Jumpseller.com in 2009 in Europe  we called it Vendder back
+    then  and released our first version of the Jumpseller product in September 2010.
+    After releasing the product we quickly grew to thousands of customers. In November
+    2010, we recei...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28432-jumpseller-api.jpg
+  humanURL: http://jumpseller.com
+  baseURL: https://api.jumpseller.com//v1
+  tags: Affiliates,API Provider,Commerce,General Data,Profiles,Relative Data,Service
+    API,Stores,Technology
+  properties:
+  - type: x-openapi-spec
+    url: /jumpseller/jumpseller-openapi.yaml
+x-common:
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/vendder
+- type: x-email
+  url: info@jumpseller.com
+- type: x-email
+  url: support@jumpseller.com
+- type: x-twitter
+  url: https://twitter.com/Jumpseller
+- type: x-website
+  url: http://jumpseller.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

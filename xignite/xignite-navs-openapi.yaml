@@ -1,0 +1,69 @@
+swagger: "2.0"
+x-collection-name: Xignite
+x-complete: 1
+info:
+  title: Xignite NAVs
+  description: this-web-service-provides-latest-nav-information-for-all-funds-
+  version: 1.0.0
+host: navs.xignite.com
+basePath: v2/xNAVs.json/XigniteNAVs
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /GetLatestNAV:
+    get:
+      summary: Get Latest NAV
+      description: This operation returns the latest NAV information for a funds.
+      operationId: GetLatestNAV
+      x-api-path-slug: getlatestnav-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Latest
+      - NAV
+  /GetLatestNAVs:
+    get:
+      summary: Get Latest NAVs
+      description: This operation returns the latest NAV information for a list of
+        funds.
+      operationId: GetLatestNAVs
+      x-api-path-slug: getlatestnavs-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Latest
+      - NAVs
+  /ListFundsBySymbol:
+    get:
+      summary: List Funds By Symbol
+      description: This operation returns a list of funds descreptive information.
+      operationId: ListFundsBySymbol
+      x-api-path-slug: listfundsbysymbol-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+      - Funds
+      - Symbol

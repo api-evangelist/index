@@ -1,0 +1,36 @@
+swagger: "2.0"
+x-collection-name: Bureau of Alcohol, Tobacco, Firearms, and Explosives
+x-complete: 1
+info:
+  title: API for Firearms Imports
+  description: api-for-exhibit-3-of-annual-atf-commerce-report
+  version: v1
+host: data.atf.gov
+basePath: /resource/
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  firearms-imports.json:
+    get:
+      summary: Firearms Imports
+      description: Firearms Imports
+      operationId: ""
+      x-api-path-slug: firearmsimports-json-get
+      parameters:
+      - in: query
+        name: calendar_year
+      - in: query
+        name: handguns
+      - in: query
+        name: rifles
+      - in: query
+        name: shotguns
+      responses:
+        200:
+          description: OK
+      tags:
+      - ""

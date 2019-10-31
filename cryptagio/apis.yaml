@@ -1,0 +1,50 @@
+name: Cryptagio
+x-slug: cryptagio
+description: Cryptagio is a global crypto exchange, providing a simple, fast and secure
+  way to buy, sell or trade the world&rsquo;s most eminent digital assets.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28851-api-cryptagio-com.jpg
+x-kinRank: "7"
+x-alexaRank: "892881"
+tags: Blockchain,Cryptocurrency,General Data
+created: "2019-02-03"
+modified: "2019-02-03"
+url: cryptagio/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Cryptagio
+  x-api-slug: cryptagio
+  description: Cryptagio is a global crypto exchange, providing a simple, fast and
+    secure way to buy, sell or trade the world&rsquo;s most eminent digital assets.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28851-api-cryptagio-com.jpg
+  humanURL: http://www.cryptagio.com
+  baseURL: https:////
+  tags: Blockchain,Cryptocurrency,General Data
+  properties:
+  - type: x-postman-collection
+    url: /cryptagio/ordersuuid-delete-postman.json
+  - type: x-openapi-spec
+    url: /cryptagio/cryptagio-openapi.yaml
+x-common:
+- type: x-blog
+  url: https://medium.com/@cryptagio
+- type: x-blog-rss
+  url: view-source:https://medium.com/feed/@cryptagio
+- type: x-openapi
+  url: https://api.cryptagio.com/docs/CryptagioAPI.json
+- type: x-website
+  url: http://www.cryptagio.com
+- type: x-documentation
+  url: https://api.cryptagio.com/docs/
+- type: x-security
+  url: https://cryptagio.com/about
+- type: x-support
+  url: https://support.cryptagio.com/hc/en-us
+- type: x-twitter
+  url: https://twitter.com/cryptagio
+- type: x-website
+  url: https://api.cryptagio.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

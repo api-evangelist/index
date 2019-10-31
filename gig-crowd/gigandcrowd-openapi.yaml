@@ -1,0 +1,4863 @@
+swagger: "2.0"
+x-collection-name: GIG & CROWD
+x-complete: 1
+info:
+  title: GIG & Crowd
+  version: 1.0.0
+host: gigandcrowd.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /api/v1/account/user:
+    get:
+      summary: Get Account User
+      description: Get account user.
+      operationId: getApiV1AccountUser
+      x-api-path-slug: apiv1accountuser-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Account
+      - User
+  /api/v1/account/register/org:
+    post:
+      summary: Post Account Register Org
+      description: Post account register org.
+      operationId: postApiV1AccountRegisterOrg
+      x-api-path-slug: apiv1accountregisterorg-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Account
+      - Register
+      - Org
+  /api/v1/account/register/art:
+    post:
+      summary: Post Account Register Art
+      description: Post account register art.
+      operationId: postApiV1AccountRegisterArt
+      x-api-path-slug: apiv1accountregisterart-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Account
+      - Register
+      - Art
+  /api/v1/invitations/{inviteId}:
+    get:
+      summary: Get Invitations Inviteid
+      description: Get invitations inviteid.
+      operationId: getApiV1InvitationsInvite
+      x-api-path-slug: apiv1invitationsinviteid-get
+      parameters:
+      - in: path
+        name: inviteId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Invitations
+      - Inviteid
+  /api/v1/account/register/invite:
+    post:
+      summary: Post Account Register Invite
+      description: Post account register invite.
+      operationId: postApiV1AccountRegisterInvite
+      x-api-path-slug: apiv1accountregisterinvite-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Account
+      - Register
+      - Invite
+  /api/v1/account/logout:
+    post:
+      summary: Post Account Logout
+      description: Post account logout.
+      operationId: postApiV1AccountLogout
+      x-api-path-slug: apiv1accountlogout-post
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Account
+      - Logout
+  /api/v1/account/avatar:
+    post:
+      summary: Post Account Avatar
+      description: Post account avatar.
+      operationId: postApiV1AccountAvatar
+      x-api-path-slug: apiv1accountavatar-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Account
+      - Avatar
+  /api/v1/account/devicetoken:
+    post:
+      summary: Post Account Devicetoken
+      description: Post account devicetoken.
+      operationId: postApiV1AccountDevicetoken
+      x-api-path-slug: apiv1accountdevicetoken-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: model
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Account
+      - Devicetoken
+  /api/v1/account/culture:
+    post:
+      summary: Post Account Culture
+      description: Post account culture.
+      operationId: postApiV1AccountCulture
+      x-api-path-slug: apiv1accountculture-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: culture
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Account
+      - Culture
+  /api/v1/account/external/register/{userSocialId}:
+    post:
+      summary: Post Account External Register Usersocialid
+      description: Post account external register usersocialid.
+      operationId: postApiV1AccountExternalRegisterUsersocial
+      x-api-path-slug: apiv1accountexternalregisterusersocialid-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: userSocialId
+        description: id UserSocial
+      responses:
+        200:
+          description: OK
+      tags:
+      - Account
+      - External
+      - Register
+      - Usersocialid
+  /api/v1/account/external/link/{provider}:
+    get:
+      summary: Get Account External Link Prover
+      description: Get account external link prover.
+      operationId: getApiV1AccountExternalLinkProver
+      x-api-path-slug: apiv1accountexternallinkprovider-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: code
+      - in: path
+        name: provider
+      - in: query
+        name: redirectUri
+      responses:
+        200:
+          description: OK
+      tags:
+      - Account
+      - External
+      - Link
+      - Prover
+  /api/v1/admin/event/{page}:
+    get:
+      summary: Get Admin Event Page
+      description: Get admin event page.
+      operationId: getApiV1AdminEventPage
+      x-api-path-slug: apiv1admineventpage-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: page
+      - in: query
+        name: request.cityId
+      - in: query
+        name: request.from
+      - in: query
+        name: request.isRecommended
+      - in: query
+        name: request.placeId
+      - in: query
+        name: request.placeName
+      - in: query
+        name: request.query
+      - in: query
+        name: request.status
+      - in: query
+        name: request.to
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Event
+      - Page
+  /api/v1/admin/event/approve/{eventId}:
+    post:
+      summary: Post Admin Event Approve Eventid
+      description: Post admin event approve eventid.
+      operationId: postApiV1AdminEventApproveEvent
+      x-api-path-slug: apiv1admineventapproveeventid-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: eventId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Event
+      - Approve
+      - Eventid
+  /api/v1/admin/event/reject:
+    post:
+      summary: Post Admin Event Reject
+      description: Post admin event reject.
+      operationId: postApiV1AdminEventReject
+      x-api-path-slug: apiv1admineventreject-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Event
+      - Reject
+  /api/v1/admin/event/defer:
+    post:
+      summary: Post Admin Event Defer
+      description: Post admin event defer.
+      operationId: postApiV1AdminEventDefer
+      x-api-path-slug: apiv1admineventdefer-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Event
+      - Defer
+  /api/v1/admin/event/add:
+    post:
+      summary: Post Admin Event Add
+      description: Post admin event add.
+      operationId: postApiV1AdminEventAdd
+      x-api-path-slug: apiv1admineventadd-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: event
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Event
+  /api/v1/admin/event/tags/main:
+    get:
+      summary: Get Admin Event Tags Main
+      description: Get admin event tags main.
+      operationId: getApiV1AdminEventTagsMain
+      x-api-path-slug: apiv1admineventtagsmain-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Event
+      - Tags
+      - Main
+  /api/v1/admin/event/tags/additional:
+    get:
+      summary: Get Admin Event Tags Additional
+      description: Get admin event tags additional.
+      operationId: getApiV1AdminEventTagsAdditional
+      x-api-path-slug: apiv1admineventtagsadditional-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Event
+      - Tags
+      - Itional
+  /api/v1/admin/event/{eventId}/thumbnail/url:
+    post:
+      summary: Post Admin Event Eventid Thumbnail Url
+      description: Post admin event eventid thumbnail url.
+      operationId: postApiV1AdminEventEventThumbnailUrl
+      x-api-path-slug: apiv1admineventeventidthumbnailurl-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: eventId
+      - in: body
+        name: url
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Event
+      - Eventid
+      - Thumbnail
+      - Url
+  /api/v1/admin/event/{primaryId}/merge/{secondaryId}:
+    get:
+      summary: Get Admin Event Primaryid Merge Secondaryid
+      description: Get admin event primaryid merge secondaryid.
+      operationId: getApiV1AdminEventPrimaryMergeSecondary
+      x-api-path-slug: apiv1admineventprimaryidmergesecondaryid-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: primaryId
+      - in: path
+        name: secondaryId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Event
+      - Primaryid
+      - Merge
+      - Secondaryid
+  /api/v1/admin/event/statistic:
+    get:
+      summary: Get Admin Event Statistic
+      description: Get admin event statistic.
+      operationId: getApiV1AdminEventStatistic
+      x-api-path-slug: apiv1admineventstatistic-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Event
+      - Statistic
+  /api/v1/admin/moderator/statistic:
+    get:
+      summary: Get Admin Moderator Statistic
+      description: Get admin moderator statistic.
+      operationId: getApiV1AdminModeratorStatistic
+      x-api-path-slug: apiv1adminmoderatorstatistic-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Moderator
+      - Statistic
+  /api/v1/admin/parser/config:
+    get:
+      summary: Get Admin Parser Config
+      description: Get admin parser config.
+      operationId: getApiV1AdminParserConfig
+      x-api-path-slug: apiv1adminparserconfig-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Parser
+      - Config
+  /api/v1/admin/parser/all:
+    get:
+      summary: Get Admin Parser All
+      description: Get admin parser all.
+      operationId: getApiV1AdminParserAll
+      x-api-path-slug: apiv1adminparserall-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Parser
+  /api/v1/admin/parser/logs:
+    get:
+      summary: Get Admin Parser Logs
+      description: Get admin parser logs.
+      operationId: getApiV1AdminParserLogs
+      x-api-path-slug: apiv1adminparserlogs-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: request.from
+      - in: query
+        name: request.query
+      - in: query
+        name: request.to
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Parser
+      - Logs
+  /api/v1/admin/parser/statistic:
+    get:
+      summary: Get Admin Parser Statistic
+      description: Get admin parser statistic.
+      operationId: getApiV1AdminParserStatistic
+      x-api-path-slug: apiv1adminparserstatistic-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Parser
+      - Statistic
+  /api/v1/admin/parser/log/error:
+    post:
+      summary: Post Admin Parser Log Error
+      description: Post admin parser log error.
+      operationId: postApiV1AdminParserLogError
+      x-api-path-slug: apiv1adminparserlogerror-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Parser
+      - Log
+      - Error
+  /api/v1/admin/place/{page}:
+    get:
+      summary: Get Admin Place Page
+      description: Get admin place page.
+      operationId: getApiV1AdminPlacePage
+      x-api-path-slug: apiv1adminplacepage-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: page
+      - in: query
+        name: request.cityId
+      - in: query
+        name: request.isRecommended
+      - in: query
+        name: request.query
+      - in: query
+        name: request.status
+      - in: query
+        name: request.url
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Place
+      - Page
+  /api/v1/admin/place/{placeId}:
+    put:
+      summary: Put Admin Place Placeid
+      description: Put admin place placeid.
+      operationId: putApiV1AdminPlacePlace
+      x-api-path-slug: apiv1adminplaceplaceid-put
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: placeId
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Place
+      - Placeid
+    delete:
+      summary: Delete Admin Place Placeid
+      description: Delete admin place placeid.
+      operationId: deleteApiV1AdminPlacePlace
+      x-api-path-slug: apiv1adminplaceplaceid-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: placeId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Place
+      - Placeid
+  /api/v1/admin/place:
+    post:
+      summary: Post Admin Place
+      description: Post admin place.
+      operationId: postApiV1AdminPlace
+      x-api-path-slug: apiv1adminplace-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Place
+  /api/v1/admin/place/{placeId}/thumbnail:
+    post:
+      summary: Post Admin Place Placeid Thumbnail
+      description: Post admin place placeid thumbnail.
+      operationId: postApiV1AdminPlacePlaceThumbnail
+      x-api-path-slug: apiv1adminplaceplaceidthumbnail-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Place
+      - Placeid
+      - Thumbnail
+  /api/v1/admin/place/{placeId}/photos:
+    post:
+      summary: Post Admin Place Placeid Photos
+      description: Post admin place placeid photos.
+      operationId: postApiV1AdminPlacePlacePhotos
+      x-api-path-slug: apiv1adminplaceplaceidphotos-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Place
+      - Placeid
+      - Photos
+  /api/v1/admin/place/{placeId}/photo/{photoId}:
+    delete:
+      summary: Delete Admin Place Placeid Photo Photoid
+      description: Delete admin place placeid photo photoid.
+      operationId: deleteApiV1AdminPlacePlacePhotoPhoto
+      x-api-path-slug: apiv1adminplaceplaceidphotophotoid-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: photoId
+      - in: path
+        name: placeId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Place
+      - Placeid
+      - Photo
+      - Photoid
+  /api/v1/admin/place/{placeId}/confirm:
+    put:
+      summary: Put Admin Place Placeid Confirm
+      description: Put admin place placeid confirm.
+      operationId: putApiV1AdminPlacePlaceConfirm
+      x-api-path-slug: apiv1adminplaceplaceidconfirm-put
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: placeId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Place
+      - Placeid
+      - Confirm
+  /api/v1/admin/place/tags/main:
+    get:
+      summary: Get Admin Place Tags Main
+      description: Get admin place tags main.
+      operationId: getApiV1AdminPlaceTagsMain
+      x-api-path-slug: apiv1adminplacetagsmain-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Place
+      - Tags
+      - Main
+  /api/v1/admin/place/tags/additional:
+    get:
+      summary: Get Admin Place Tags Additional
+      description: Get admin place tags additional.
+      operationId: getApiV1AdminPlaceTagsAdditional
+      x-api-path-slug: apiv1adminplacetagsadditional-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Place
+      - Tags
+      - Itional
+  /api/v1/admin/place/{primaryId}/merge/{secondaryId}:
+    get:
+      summary: Get Admin Place Primaryid Merge Secondaryid
+      description: Get admin place primaryid merge secondaryid.
+      operationId: getApiV1AdminPlacePrimaryMergeSecondary
+      x-api-path-slug: apiv1adminplaceprimaryidmergesecondaryid-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: primaryId
+      - in: path
+        name: secondaryId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Place
+      - Primaryid
+      - Merge
+      - Secondaryid
+  /api/v1/admin/place/statistic:
+    get:
+      summary: Get Admin Place Statistic
+      description: Get admin place statistic.
+      operationId: getApiV1AdminPlaceStatistic
+      x-api-path-slug: apiv1adminplacestatistic-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Place
+      - Statistic
+  /api/v1/admin/placeReview/{page}:
+    get:
+      summary: Get Admin Placereview Page
+      description: Get admin placereview page.
+      operationId: getApiV1AdminPlacereviewPage
+      x-api-path-slug: apiv1adminplacereviewpage-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: page
+      - in: query
+        name: request.placeName
+      - in: query
+        name: request.status
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Placereview
+      - Page
+  /api/v1/admin/placeReview/{reviewId}/confirm:
+    post:
+      summary: Post Admin Placereview Reviewid Confirm
+      description: Post admin placereview reviewid confirm.
+      operationId: postApiV1AdminPlacereviewReviewConfirm
+      x-api-path-slug: apiv1adminplacereviewreviewidconfirm-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: reviewId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Placereview
+      - Reviewid
+      - Confirm
+  /api/v1/admin/placeReview/{reviewId}/reject:
+    post:
+      summary: Post Admin Placereview Reviewid Reject
+      description: Post admin placereview reviewid reject.
+      operationId: postApiV1AdminPlacereviewReviewReject
+      x-api-path-slug: apiv1adminplacereviewreviewidreject-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: reason
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: reviewId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Placereview
+      - Reviewid
+      - Reject
+  /api/v1/admin/promocode/generate:
+    get:
+      summary: Get Admin Promocode Generate
+      description: Get admin promocode generate.
+      operationId: getApiV1AdminPromocodeGenerate
+      x-api-path-slug: apiv1adminpromocodegenerate-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Promocode
+      - Generate
+  /api/v1/admin/promocode/{page}:
+    get:
+      summary: Get Admin Promocode Page
+      description: Get admin promocode page.
+      operationId: getApiV1AdminPromocodePage
+      x-api-path-slug: apiv1adminpromocodepage-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: page
+      - in: query
+        name: request.used
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Promocode
+      - Page
+  /api/v1/admin/promocode:
+    post:
+      summary: Post Admin Promocode
+      description: Post admin promocode.
+      operationId: postApiV1AdminPromocode
+      x-api-path-slug: apiv1adminpromocode-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Promocode
+  /api/v1/admin/promocode/{promoCodeId}:
+    put:
+      summary: Put Admin Promocode Promocodeid
+      description: Put admin promocode promocodeid.
+      operationId: putApiV1AdminPromocodePromocode
+      x-api-path-slug: apiv1adminpromocodepromocodeid-put
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: promoCodeId
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Promocode
+      - Promocodeid
+    delete:
+      summary: Delete Admin Promocode Promocodeid
+      description: Delete admin promocode promocodeid.
+      operationId: deleteApiV1AdminPromocodePromocode
+      x-api-path-slug: apiv1adminpromocodepromocodeid-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: promoCodeId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Promocode
+      - Promocodeid
+  /api/v1/admin/settings/{userId}:
+    get:
+      summary: Get Admin Settings Userid
+      description: Get admin settings userid.
+      operationId: getApiV1AdminSettingsUser
+      x-api-path-slug: apiv1adminsettingsuserid-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: userId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Settings
+      - Userid
+    post:
+      summary: Post Admin Settings Userid
+      description: Post admin settings userid.
+      operationId: postApiV1AdminSettingsUser
+      x-api-path-slug: apiv1adminsettingsuserid-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: userId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Settings
+      - Userid
+  /api/v1/admin/statistics:
+    get:
+      summary: Get Admin Statistics
+      description: Get admin statistics.
+      operationId: getApiV1AdminStatistics
+      x-api-path-slug: apiv1adminstatistics-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Statistics
+  /api/v1/admin/statistics/{type}:
+    get:
+      summary: Get Admin Statistics Type
+      description: Get admin statistics type.
+      operationId: getApiV1AdminStatisticsType
+      x-api-path-slug: apiv1adminstatisticstype-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: type
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Statistics
+      - Type
+  /api/v1/admin/transactions:
+    get:
+      summary: Get Admin Transactions
+      description: Get admin transactions.
+      operationId: getApiV1AdminTransactions
+      x-api-path-slug: apiv1admintransactions-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Transactions
+  /api/v1/admin/transactions/{filter}:
+    get:
+      summary: Get Admin Transactions Filter
+      description: Get admin transactions filter.
+      operationId: getApiV1AdminTransactionsFilter
+      x-api-path-slug: apiv1admintransactionsfilter-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: filter
+      - in: query
+        name: range.from
+      - in: query
+        name: range.to
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - Transactions
+      - Filter
+  /api/v1/admin/user:
+    get:
+      summary: Get Admin User
+      description: Get admin user.
+      operationId: getApiV1AdminUser
+      x-api-path-slug: apiv1adminuser-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: filter.email
+      - in: query
+        name: filter.emailConfirmed
+      - in: query
+        name: filter.phoneConfirmed
+      - in: query
+        name: filter.phoneNumber
+      - in: query
+        name: filter.roleId
+      - in: query
+        name: filter.status
+      - in: query
+        name: filter.userName
+      - in: query
+        name: page
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - User
+  /api/v1/admin/user/{userId}/avatar:
+    post:
+      summary: Post Admin User Userid Avatar
+      description: Post admin user userid avatar.
+      operationId: postApiV1AdminUserUserAvatar
+      x-api-path-slug: apiv1adminuseruseridavatar-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - User
+      - Userid
+      - Avatar
+  /api/v1/admin/user/roles/{userId}:
+    get:
+      summary: Get Admin User Roles Userid
+      description: Get admin user roles userid.
+      operationId: getApiV1AdminUserRolesUser
+      x-api-path-slug: apiv1adminuserrolesuserid-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: userId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - User
+      - Roles
+      - Userid
+    post:
+      summary: Post Admin User Roles Userid
+      description: Post admin user roles userid.
+      operationId: postApiV1AdminUserRolesUser
+      x-api-path-slug: apiv1adminuserrolesuserid-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: roles
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: userId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - User
+      - Roles
+      - Userid
+  /api/v1/admin/user/roles:
+    get:
+      summary: Get Admin User Roles
+      description: Get admin user roles.
+      operationId: getApiV1AdminUserRoles
+      x-api-path-slug: apiv1adminuserroles-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - User
+      - Roles
+  /api/v1/admin/user/empty/{role}:
+    get:
+      summary: Get Admin User Empty Role
+      description: Get admin user empty role.
+      operationId: getApiV1AdminUserEmptyRole
+      x-api-path-slug: apiv1adminuseremptyrole-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: role
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - User
+      - Empty
+      - Role
+  /api/v1/admin/user/client/{userId}:
+    get:
+      summary: Get Admin User Client Userid
+      description: Get admin user client userid.
+      operationId: getApiV1AdminUserClientUser
+      x-api-path-slug: apiv1adminuserclientuserid-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: userId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - User
+      - Client
+      - Userid
+    post:
+      summary: Post Admin User Client Userid
+      description: Post admin user client userid.
+      operationId: postApiV1AdminUserClientUser
+      x-api-path-slug: apiv1adminuserclientuserid-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: userId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - User
+      - Client
+      - Userid
+  /api/v1/admin/user/emailAndPhone/{userId}:
+    post:
+      summary: Post Admin User Emailandphone Userid
+      description: Post admin user emailandphone userid.
+      operationId: postApiV1AdminUserEmailandphoneUser
+      x-api-path-slug: apiv1adminuseremailandphoneuserid-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: userId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Admin
+      - User
+      - Emailandphone
+      - Userid
+  /api/v1/art/{unique}/details:
+    get:
+      summary: Get Art Unique Details
+      description: Get art unique details.
+      operationId: getApiV1ArtUniqueDetails
+      x-api-path-slug: apiv1artuniquedetails-get
+      parameters:
+      - in: path
+        name: unique
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Unique
+      - Details
+  /api/v1/art/{id}/videos:
+    get:
+      summary: Get Art Veos
+      description: Get art veos.
+      operationId: getApiV1ArtVeos
+      x-api-path-slug: apiv1artidvideos-get
+      parameters:
+      - in: path
+        name: id
+        description: Id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Veos
+  /api/v1/art/{id}/events/past:
+    get:
+      summary: Get Art Events Past
+      description: Get art events past.
+      operationId: getApiV1ArtEventsPast
+      x-api-path-slug: apiv1artideventspast-get
+      parameters:
+      - in: path
+        name: id
+        description: Id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Events
+      - Past
+  /api/v1/art/invited/{artistId}/{eventId}:
+    get:
+      summary: Get Art Invited Artistid Eventid
+      description: Get art invited artistid eventid.
+      operationId: getApiV1ArtInvitedArtistEvent
+      x-api-path-slug: apiv1artinvitedartistideventid-get
+      parameters:
+      - in: path
+        name: artistId
+      - in: path
+        name: eventId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Invited
+      - Artistid
+      - Eventid
+  /api/v1/art/search/{page}:
+    post:
+      summary: Post Art Search Page
+      description: Post art search page.
+      operationId: postApiV1ArtSearchPage
+      x-api-path-slug: apiv1artsearchpage-post
+      parameters:
+      - in: path
+        name: page
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Search
+      - Page
+  /api/v1/art/info:
+    post:
+      summary: Post Art Info
+      description: Post art info.
+      operationId: postApiV1ArtInfo
+      x-api-path-slug: apiv1artinfo-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Info
+  /api/v1/art/riderinfo:
+    post:
+      summary: Post Art Rerinfo
+      description: Post art rerinfo.
+      operationId: postApiV1ArtRerinfo
+      x-api-path-slug: apiv1artriderinfo-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Rerinfo
+  /api/v1/art/rider:
+    get:
+      summary: Get Art Rer
+      description: Get art rer.
+      operationId: getApiV1ArtRer
+      x-api-path-slug: apiv1artrider-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Rer
+    post:
+      summary: Post Art Rer
+      description: Post art rer.
+      operationId: postApiV1ArtRer
+      x-api-path-slug: apiv1artrider-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Rer
+    delete:
+      summary: Delete Art Rer
+      description: Delete art rer.
+      operationId: deleteApiV1ArtRer
+      x-api-path-slug: apiv1artrider-delete
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Rer
+  /api/v1/art/rider/home:
+    get:
+      summary: Get Art Rer Home
+      description: Get art rer home.
+      operationId: getApiV1ArtRerHome
+      x-api-path-slug: apiv1artriderhome-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Rer
+      - Home
+    post:
+      summary: Post Art Rer Home
+      description: Post art rer home.
+      operationId: postApiV1ArtRerHome
+      x-api-path-slug: apiv1artriderhome-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Rer
+      - Home
+    delete:
+      summary: Delete Art Rer Home
+      description: Delete art rer home.
+      operationId: deleteApiV1ArtRerHome
+      x-api-path-slug: apiv1artriderhome-delete
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Rer
+      - Home
+  /api/v1/art/background:
+    post:
+      summary: Post Art Background
+      description: Post art background.
+      operationId: postApiV1ArtBackground
+      x-api-path-slug: apiv1artbackground-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Background
+  /api/v1/art/photo/{photoId}:
+    get:
+      summary: Get Art Photo Photoid
+      description: Get art photo photoid.
+      operationId: getApiV1ArtPhotoPhoto
+      x-api-path-slug: apiv1artphotophotoid-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: photoId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Photo
+      - Photoid
+  /api/v1/art/photo/{photoId}/thumb:
+    get:
+      summary: Get Art Photo Photoid Thumb
+      description: Get art photo photoid thumb.
+      operationId: getApiV1ArtPhotoPhotoThumb
+      x-api-path-slug: apiv1artphotophotoidthumb-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: photoId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Photo
+      - Photoid
+      - Thumb
+  /api/v1/art/photo/{type}:
+    post:
+      summary: Post Art Photo Type
+      description: Post art photo type.
+      operationId: postApiV1ArtPhotoType
+      x-api-path-slug: apiv1artphototype-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Photo
+      - Type
+  /api/v1/art/link:
+    post:
+      summary: Post Art Link
+      description: Post art link.
+      operationId: postApiV1ArtLink
+      x-api-path-slug: apiv1artlink-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: model
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Link
+  /api/v1/art/photo/{id}:
+    delete:
+      summary: Delete Art Photo
+      description: Delete art photo.
+      operationId: deleteApiV1ArtPhoto
+      x-api-path-slug: apiv1artphotoid-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Photo
+  /api/v1/art/link/{id}:
+    delete:
+      summary: Delete Art Link
+      description: Delete art link.
+      operationId: deleteApiV1ArtLink
+      x-api-path-slug: apiv1artlinkid-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Link
+  /api/v1/art/video:
+    post:
+      summary: Post Art Veo
+      description: Post art veo.
+      operationId: postApiV1ArtVeo
+      x-api-path-slug: apiv1artvideo-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Veo
+  /api/v1/art/video/{id}:
+    delete:
+      summary: Delete Art Veo
+      description: Delete art veo.
+      operationId: deleteApiV1ArtVeo
+      x-api-path-slug: apiv1artvideoid-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Veo
+  /api/v1/art/video/{id}/main:
+    post:
+      summary: Post Art Veo Main
+      description: Post art veo main.
+      operationId: postApiV1ArtVeoMain
+      x-api-path-slug: apiv1artvideoidmain-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+      - Veo
+      - Main
+  /api/v1/Art:
+    get:
+      summary: Get Art
+      description: Get art.
+      operationId: getApiV1Art
+      x-api-path-slug: apiv1art-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Art
+  /api/v1/ArtistRequest:
+    post:
+      summary: Post Artistrequest
+      description: Post artistrequest.
+      operationId: postApiV1Artistrequest
+      x-api-path-slug: apiv1artistrequest-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Artistrequest
+  /api/v1/city/events:
+    get:
+      summary: Get City Events
+      description: Get city events.
+      operationId: getApiV1CityEvents
+      x-api-path-slug: apiv1cityevents-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - City
+      - Events
+  /api/v1/city/current:
+    get:
+      summary: Get City Current
+      description: Get city current.
+      operationId: getApiV1CityCurrent
+      x-api-path-slug: apiv1citycurrent-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - City
+      - Current
+  /api/v1/city/{query}:
+    get:
+      summary: Get City Query
+      description: Get city query.
+      operationId: getApiV1CityQuery
+      x-api-path-slug: apiv1cityquery-get
+      parameters:
+      - in: path
+        name: query
+      responses:
+        200:
+          description: OK
+      tags:
+      - City
+      - Query
+  /api/v1/Config:
+    get:
+      summary: Get Config
+      description: Get config.
+      operationId: getApiV1Config
+      x-api-path-slug: apiv1config-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Config
+  /api/v1/country/{query}:
+    get:
+      summary: Get Country Query
+      description: Get country query.
+      operationId: getApiV1CountryQuery
+      x-api-path-slug: apiv1countryquery-get
+      parameters:
+      - in: path
+        name: query
+      responses:
+        200:
+          description: OK
+      tags:
+      - Country
+      - Query
+  /api/v1/email/send:
+    post:
+      summary: Post Email Send
+      description: Post email send.
+      operationId: postApiV1EmailSend
+      x-api-path-slug: apiv1emailsend-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Email
+      - Send
+  /api/v1/email/confirm:
+    post:
+      summary: Post Email Confirm
+      description: Post email confirm.
+      operationId: postApiV1EmailConfirm
+      x-api-path-slug: apiv1emailconfirm-post
+      parameters:
+      - in: body
+        name: request
+        description: email
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Email
+      - Confirm
+  /api/v1/email/save:
+    put:
+      summary: Put Email Save
+      description: Put email save.
+      operationId: putApiV1EmailSave
+      x-api-path-slug: apiv1emailsave-put
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: email
+        description: Email
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Email
+      - Save
+  /api/v1/event/{id}/details:
+    get:
+      summary: Get Event Details
+      description: Get event details.
+      operationId: getApiV1EventDetails
+      x-api-path-slug: apiv1eventiddetails-get
+      parameters:
+      - in: path
+        name: id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Details
+  /api/v1/event/{unique}/details:
+    get:
+      summary: Get Event Unique Details
+      description: Get event unique details.
+      operationId: getApiV1EventUniqueDetails
+      x-api-path-slug: apiv1eventuniquedetails-get
+      parameters:
+      - in: path
+        name: unique
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Unique
+      - Details
+  /api/v1/event/{id}:
+    get:
+      summary: Get Event
+      description: Get event.
+      operationId: getApiV1Event
+      x-api-path-slug: apiv1eventid-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+  /api/v1/event/active:
+    get:
+      summary: Get Event Active
+      description: Get event active.
+      operationId: getApiV1EventActive
+      x-api-path-slug: apiv1eventactive-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Active
+  /api/v1/event/past:
+    get:
+      summary: Get Event Past
+      description: Get event past.
+      operationId: getApiV1EventPast
+      x-api-path-slug: apiv1eventpast-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Past
+  /api/v1/event/sales/{eventId}/start:
+    post:
+      summary: Post Event Sales Eventid Start
+      description: Post event sales eventid start.
+      operationId: postApiV1EventSalesEventStart
+      x-api-path-slug: apiv1eventsaleseventidstart-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: eventId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Sales
+      - Eventid
+      - Start
+  /api/v1/event/sales/{eventId}/stop:
+    post:
+      summary: Post Event Sales Eventid Stop
+      description: Post event sales eventid stop.
+      operationId: postApiV1EventSalesEventStop
+      x-api-path-slug: apiv1eventsaleseventidstop-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: eventId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Sales
+      - Eventid
+      - Stop
+  /api/v1/event/add:
+    post:
+      summary: Post Event Add
+      description: Post event add.
+      operationId: postApiV1EventAdd
+      x-api-path-slug: apiv1eventadd-post
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+  /api/v1/event/del/{id}:
+    delete:
+      summary: Delete Event Del
+      description: Delete event del.
+      operationId: deleteApiV1EventDel
+      x-api-path-slug: apiv1eventdelid-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Del
+  /api/v1/event/banner/{eventId}:
+    post:
+      summary: Post Event Banner Eventid
+      description: Post event banner eventid.
+      operationId: postApiV1EventBannerEvent
+      x-api-path-slug: apiv1eventbannereventid-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Banner
+      - Eventid
+    delete:
+      summary: Delete Event Banner Eventid
+      description: Delete event banner eventid.
+      operationId: deleteApiV1EventBannerEvent
+      x-api-path-slug: apiv1eventbannereventid-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: eventId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Banner
+      - Eventid
+  /api/v1/event/save:
+    post:
+      summary: Post Event Save
+      description: Post event save.
+      operationId: postApiV1EventSave
+      x-api-path-slug: apiv1eventsave-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        description: ','
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Save
+  /api/v1/event/promo/{eventId}:
+    post:
+      summary: Post Event Promo Eventid
+      description: Post event promo eventid.
+      operationId: postApiV1EventPromoEvent
+      x-api-path-slug: apiv1eventpromoeventid-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Promo
+      - Eventid
+    delete:
+      summary: Delete Event Promo Eventid
+      description: Delete event promo eventid.
+      operationId: deleteApiV1EventPromoEvent
+      x-api-path-slug: apiv1eventpromoeventid-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: eventId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Promo
+      - Eventid
+  /api/v1/event/{eventId}/video:
+    post:
+      summary: Post Event Eventid Veo
+      description: Post event eventid veo.
+      operationId: postApiV1EventEventVeo
+      x-api-path-slug: apiv1eventeventidvideo-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: eventId
+      - in: body
+        name: url
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Eventid
+      - Veo
+  /api/v1/event/{eventId}/video/{videoId}:
+    delete:
+      summary: Delete Event Eventid Veo Veoid
+      description: Delete event eventid veo veoid.
+      operationId: deleteApiV1EventEventVeoVeo
+      x-api-path-slug: apiv1eventeventidvideovideoid-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: eventId
+      - in: path
+        name: videoId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Eventid
+      - Veo
+      - Veoid
+  /api/v1/event/{eventId}/photo:
+    post:
+      summary: Post Event Eventid Photo
+      description: Post event eventid photo.
+      operationId: postApiV1EventEventPhoto
+      x-api-path-slug: apiv1eventeventidphoto-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Eventid
+      - Photo
+  /api/v1/event/{eventId}/photos:
+    post:
+      summary: Post Event Eventid Photos
+      description: Post event eventid photos.
+      operationId: postApiV1EventEventPhotos
+      x-api-path-slug: apiv1eventeventidphotos-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Eventid
+      - Photos
+  /api/v1/event/{eventId}/photo/{photoId}:
+    delete:
+      summary: Delete Event Eventid Photo Photoid
+      description: Delete event eventid photo photoid.
+      operationId: deleteApiV1EventEventPhotoPhoto
+      x-api-path-slug: apiv1eventeventidphotophotoid-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: eventId
+      - in: path
+        name: photoId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Eventid
+      - Photo
+      - Photoid
+  /api/v1/event/{eventId}/partner:
+    post:
+      summary: Post Event Eventid Partner
+      description: Post event eventid partner.
+      operationId: postApiV1EventEventPartner
+      x-api-path-slug: apiv1eventeventidpartner-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Eventid
+      - Partner
+    delete:
+      summary: Delete Event Eventid Partner
+      description: Delete event eventid partner.
+      operationId: deleteApiV1EventEventPartner
+      x-api-path-slug: apiv1eventeventidpartner-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: eventId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Eventid
+      - Partner
+  /api/v1/event/add/private:
+    post:
+      summary: Post Event Add Private
+      description: Post event add private.
+      operationId: postApiV1EventAddPrivate
+      x-api-path-slug: apiv1eventaddprivate-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        description: ','
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - ""
+      - Private
+  /api/v1/finance/active:
+    get:
+      summary: Get Finance Active
+      description: Get finance active.
+      operationId: getApiV1FinanceActive
+      x-api-path-slug: apiv1financeactive-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Finance
+      - Active
+  /api/v1/genre/{query}:
+    get:
+      summary: Get Genre Query
+      description: Get genre query.
+      operationId: getApiV1GenreQuery
+      x-api-path-slug: apiv1genrequery-get
+      parameters:
+      - in: path
+        name: query
+      responses:
+        200:
+          description: OK
+      tags:
+      - Genre
+      - Query
+  /api/v1/gigme/account/user:
+    get:
+      summary: Get Gigme Account User
+      description: Get gigme account user.
+      operationId: getApiV1GigmeAccountUser
+      x-api-path-slug: apiv1gigmeaccountuser-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Account
+      - User
+    post:
+      summary: Post Gigme Account User
+      description: Post gigme account user.
+      operationId: postApiV1GigmeAccountUser
+      x-api-path-slug: apiv1gigmeaccountuser-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Account
+      - User
+  /api/v1/gigme/account/user/{id}:
+    get:
+      summary: Get Gigme Account User
+      description: Get gigme account user.
+      operationId: getApiV1GigmeAccountUser
+      x-api-path-slug: apiv1gigmeaccountuserid-get
+      parameters:
+      - in: query
+        name: hash
+      - in: path
+        name: id
+      - in: query
+        name: timestamp
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Account
+      - User
+  /api/v1/gigme/account/register:
+    post:
+      summary: Post Gigme Account Register
+      description: Post gigme account register.
+      operationId: postApiV1GigmeAccountRegister
+      x-api-path-slug: apiv1gigmeaccountregister-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Account
+      - Register
+  /api/v1/gigme/account/external/register/{userSocialId}:
+    post:
+      summary: Post Gigme Account External Register Usersocialid
+      description: Post gigme account external register usersocialid.
+      operationId: postApiV1GigmeAccountExternalRegisterUsersocial
+      x-api-path-slug: apiv1gigmeaccountexternalregisterusersocialid-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: userSocialId
+        description: id UserSocial
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Account
+      - External
+      - Register
+      - Usersocialid
+  /api/v1/gigme/analytics:
+    post:
+      summary: Post Gigme Analytics
+      description: Post gigme analytics.
+      operationId: postApiV1GigmeAnalytics
+      x-api-path-slug: apiv1gigmeanalytics-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Analytics
+  /api/v1/gigme/artist/search/{page}:
+    post:
+      summary: Post Gigme Artist Search Page
+      description: Post gigme artist search page.
+      operationId: postApiV1GigmeArtistSearchPage
+      x-api-path-slug: apiv1gigmeartistsearchpage-post
+      parameters:
+      - in: path
+        name: page
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Artist
+      - Search
+      - Page
+  /api/v1/gigme/artist/searchActive:
+    post:
+      summary: Post Gigme Artist Searchactive
+      description: Post gigme artist searchactive.
+      operationId: postApiV1GigmeArtistSearchactive
+      x-api-path-slug: apiv1gigmeartistsearchactive-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Artist
+      - Searchactive
+  /api/v1/gigme/artist:
+    get:
+      summary: Get Gigme Artist
+      description: Get gigme artist.
+      operationId: getApiV1GigmeArtist
+      x-api-path-slug: apiv1gigmeartist-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Artist
+  /api/v1/gigme/artist/{unique}/details:
+    get:
+      summary: Get Gigme Artist Unique Details
+      description: Get gigme artist unique details.
+      operationId: getApiV1GigmeArtistUniqueDetails
+      x-api-path-slug: apiv1gigmeartistuniquedetails-get
+      parameters:
+      - in: path
+        name: unique
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Artist
+      - Unique
+      - Details
+  /api/v1/gigme/artist/{id}/videos:
+    get:
+      summary: Get Gigme Artist Veos
+      description: Get gigme artist veos.
+      operationId: getApiV1GigmeArtistVeos
+      x-api-path-slug: apiv1gigmeartistidvideos-get
+      parameters:
+      - in: path
+        name: id
+        description: Id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Artist
+      - Veos
+  /api/v1/gigme/artist/{id}/events/past:
+    get:
+      summary: Get Gigme Artist Events Past
+      description: Get gigme artist events past.
+      operationId: getApiV1GigmeArtistEventsPast
+      x-api-path-slug: apiv1gigmeartistideventspast-get
+      parameters:
+      - in: path
+        name: id
+        description: Id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Artist
+      - Events
+      - Past
+  /api/v1/gigme/artist/{id}/events/future:
+    get:
+      summary: Get Gigme Artist Events Future
+      description: Get gigme artist events future.
+      operationId: getApiV1GigmeArtistEventsFuture
+      x-api-path-slug: apiv1gigmeartistideventsfuture-get
+      parameters:
+      - in: path
+        name: id
+        description: Id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Artist
+      - Events
+      - Future
+  /api/v1/gigme/city/events:
+    get:
+      summary: Get Gigme City Events
+      description: Get gigme city events.
+      operationId: getApiV1GigmeCityEvents
+      x-api-path-slug: apiv1gigmecityevents-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - City
+      - Events
+  /api/v1/gigme/city/current:
+    get:
+      summary: Get Gigme City Current
+      description: Get gigme city current.
+      operationId: getApiV1GigmeCityCurrent
+      x-api-path-slug: apiv1gigmecitycurrent-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - City
+      - Current
+  /api/v1/gigme/email/save:
+    put:
+      summary: Put Gigme Email Save
+      description: Put gigme email save.
+      operationId: putApiV1GigmeEmailSave
+      x-api-path-slug: apiv1gigmeemailsave-put
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: email
+        description: Email
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Email
+      - Save
+  /api/v1/gigme/email/send:
+    post:
+      summary: Post Gigme Email Send
+      description: Post gigme email send.
+      operationId: postApiV1GigmeEmailSend
+      x-api-path-slug: apiv1gigmeemailsend-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Email
+      - Send
+  /api/v1/gigme/email/confirm:
+    post:
+      summary: Post Gigme Email Confirm
+      description: Post gigme email confirm.
+      operationId: postApiV1GigmeEmailConfirm
+      x-api-path-slug: apiv1gigmeemailconfirm-post
+      parameters:
+      - in: body
+        name: request
+        description: email
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Email
+      - Confirm
+  /api/v1/gigme/event/previews/{page}:
+    post:
+      summary: Post Gigme Event Previews Page
+      description: Post gigme event previews page.
+      operationId: postApiV1GigmeEventPreviewsPage
+      x-api-path-slug: apiv1gigmeeventpreviewspage-post
+      parameters:
+      - in: path
+        name: page
+      - in: body
+        name: preview
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Event
+      - Previews
+      - Page
+  /api/v1/gigme/event/{page}:
+    post:
+      summary: Post Gigme Event Page
+      description: Post gigme event page.
+      operationId: postApiV1GigmeEventPage
+      x-api-path-slug: apiv1gigmeeventpage-post
+      parameters:
+      - in: path
+        name: page
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Event
+      - Page
+  /api/v1/gigme/event/previews/map:
+    post:
+      summary: Post Gigme Event Previews Map
+      description: Post gigme event previews map.
+      operationId: postApiV1GigmeEventPreviewsMap
+      x-api-path-slug: apiv1gigmeeventpreviewsmap-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Event
+      - Previews
+      - Map
+  /api/v1/gigme/event/history:
+    get:
+      summary: Get Gigme Event History
+      description: Get gigme event history.
+      operationId: getApiV1GigmeEventHistory
+      x-api-path-slug: apiv1gigmeeventhistory-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Event
+      - History
+  /api/v1/gigme/event/recommended:
+    get:
+      summary: Get Gigme Event Recommended
+      description: Get gigme event recommended.
+      operationId: getApiV1GigmeEventRecommended
+      x-api-path-slug: apiv1gigmeeventrecommended-get
+      parameters:
+      - in: query
+        name: request.amount
+      - in: query
+        name: request.dateFilter
+      - in: query
+        name: request.type
+        description: Type of Preview (event or place)
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Event
+      - Recommended
+  /api/v1/gigme/event/{eventId}/related:
+    get:
+      summary: Get Gigme Event Eventid Related
+      description: Get gigme event eventid related.
+      operationId: getApiV1GigmeEventEventRelated
+      x-api-path-slug: apiv1gigmeeventeventidrelated-get
+      parameters:
+      - in: path
+        name: eventId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Event
+      - Eventid
+      - Related
+  /api/v1/gigme/event/{placeId}/upcoming:
+    get:
+      summary: Get Gigme Event Placeid Upcoming
+      description: Get gigme event placeid upcoming.
+      operationId: getApiV1GigmeEventPlaceUpcoming
+      x-api-path-slug: apiv1gigmeeventplaceidupcoming-get
+      parameters:
+      - in: path
+        name: placeId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Event
+      - Placeid
+      - Upcoming
+  /api/v1/gigme/event/{id}/details:
+    get:
+      summary: Get Gigme Event Details
+      description: Get gigme event details.
+      operationId: getApiV1GigmeEventDetails
+      x-api-path-slug: apiv1gigmeeventiddetails-get
+      parameters:
+      - in: path
+        name: id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Event
+      - Details
+  /api/v1/gigme/event/{unique}/details:
+    get:
+      summary: Get Gigme Event Unique Details
+      description: Get gigme event unique details.
+      operationId: getApiV1GigmeEventUniqueDetails
+      x-api-path-slug: apiv1gigmeeventuniquedetails-get
+      parameters:
+      - in: path
+        name: unique
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Event
+      - Unique
+      - Details
+  /api/v1/gigme/genre/{query}:
+    get:
+      summary: Get Gigme Genre Query
+      description: Get gigme genre query.
+      operationId: getApiV1GigmeGenreQuery
+      x-api-path-slug: apiv1gigmegenrequery-get
+      parameters:
+      - in: path
+        name: query
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Genre
+      - Query
+  /api/v1/gigme/event/{eventId}/like:
+    get:
+      summary: Get Gigme Event Eventid Like
+      description: Get gigme event eventid like.
+      operationId: getApiV1GigmeEventEventLike
+      x-api-path-slug: apiv1gigmeeventeventidlike-get
+      parameters:
+      - in: path
+        name: eventId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Event
+      - Eventid
+      - Like
+  /api/v1/gigme/event/{eventId}/dislike:
+    get:
+      summary: Get Gigme Event Eventid Dislike
+      description: Get gigme event eventid dislike.
+      operationId: getApiV1GigmeEventEventDislike
+      x-api-path-slug: apiv1gigmeeventeventiddislike-get
+      parameters:
+      - in: path
+        name: eventId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Event
+      - Eventid
+      - Dislike
+  /api/v1/gigme/place/{placeId}/like:
+    get:
+      summary: Get Gigme Place Placeid Like
+      description: Get gigme place placeid like.
+      operationId: getApiV1GigmePlacePlaceLike
+      x-api-path-slug: apiv1gigmeplaceplaceidlike-get
+      parameters:
+      - in: path
+        name: placeId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Place
+      - Placeid
+      - Like
+  /api/v1/gigme/place/{placeId}/dislike:
+    get:
+      summary: Get Gigme Place Placeid Dislike
+      description: Get gigme place placeid dislike.
+      operationId: getApiV1GigmePlacePlaceDislike
+      x-api-path-slug: apiv1gigmeplaceplaceiddislike-get
+      parameters:
+      - in: path
+        name: placeId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Place
+      - Placeid
+      - Dislike
+  /api/v1/gigme/likes/sync:
+    post:
+      summary: Post Gigme Likes Sync
+      description: Post gigme likes sync.
+      operationId: postApiV1GigmeLikesSync
+      x-api-path-slug: apiv1gigmelikessync-post
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Likes
+      - Sync
+  /api/v1/gigme/password/forgot:
+    post:
+      summary: Post Gigme Password Forgot
+      description: Post gigme password forgot.
+      operationId: postApiV1GigmePasswordForgot
+      x-api-path-slug: apiv1gigmepasswordforgot-post
+      parameters:
+      - in: body
+        name: request
+        description: Email
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Password
+      - Forgot
+  /api/v1/gigme/password/restore:
+    post:
+      summary: Post Gigme Password Restore
+      description: Post gigme password restore.
+      operationId: postApiV1GigmePasswordRestore
+      x-api-path-slug: apiv1gigmepasswordrestore-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Password
+      - Restore
+  /api/v1/gigme/password/change:
+    post:
+      summary: Post Gigme Password Change
+      description: Post gigme password change.
+      operationId: postApiV1GigmePasswordChange
+      x-api-path-slug: apiv1gigmepasswordchange-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Password
+      - Change
+  /api/v1/gigme/phone/save:
+    put:
+      summary: Put Gigme Phone Save
+      description: Put gigme phone save.
+      operationId: putApiV1GigmePhoneSave
+      x-api-path-slug: apiv1gigmephonesave-put
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: phoneNumber
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Phone
+      - Save
+  /api/v1/gigme/phone/send:
+    post:
+      summary: Post Gigme Phone Send
+      description: Post gigme phone send.
+      operationId: postApiV1GigmePhoneSend
+      x-api-path-slug: apiv1gigmephonesend-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Phone
+      - Send
+  /api/v1/gigme/phone/confirm:
+    post:
+      summary: Post Gigme Phone Confirm
+      description: Post gigme phone confirm.
+      operationId: postApiV1GigmePhoneConfirm
+      x-api-path-slug: apiv1gigmephoneconfirm-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Phone
+      - Confirm
+  /api/v1/gigme/place/{placeUnique}:
+    get:
+      summary: Get Gigme Place Placeunique
+      description: Get gigme place placeunique.
+      operationId: getApiV1GigmePlacePlaceunique
+      x-api-path-slug: apiv1gigmeplaceplaceunique-get
+      parameters:
+      - in: path
+        name: placeUnique
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Place
+      - Placeunique
+  /api/v1/gigme/place/{placeId}/related:
+    get:
+      summary: Get Gigme Place Placeid Related
+      description: Get gigme place placeid related.
+      operationId: getApiV1GigmePlacePlaceRelated
+      x-api-path-slug: apiv1gigmeplaceplaceidrelated-get
+      parameters:
+      - in: path
+        name: placeId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Place
+      - Placeid
+      - Related
+  /api/v1/gigme/place/{placeId}/reviews/{page}/{pageSize}:
+    get:
+      summary: Get Gigme Place Placeid Reviews Page Pagesize
+      description: Get gigme place placeid reviews page pagesize.
+      operationId: getApiV1GigmePlacePlaceReviewsPagePagesize
+      x-api-path-slug: apiv1gigmeplaceplaceidreviewspagepagesize-get
+      parameters:
+      - in: path
+        name: page
+      - in: path
+        name: pageSize
+      - in: path
+        name: placeId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Place
+      - Placeid
+      - Reviews
+      - Page
+      - Pagesize
+  /api/v1/gigme/place/reviews/add:
+    post:
+      summary: Post Gigme Place Reviews Add
+      description: Post gigme place reviews add.
+      operationId: postApiV1GigmePlaceReviewsAdd
+      x-api-path-slug: apiv1gigmeplacereviewsadd-post
+      parameters:
+      - in: body
+        name: reviewRequest
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Gigme
+      - Place
+      - Reviews
+  /api/v1/images/temp/save:
+    post:
+      summary: Post Images Temp Save
+      description: Post images temp save.
+      operationId: postApiV1ImagesTempSave
+      x-api-path-slug: apiv1imagestempsave-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: url
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Images
+      - Temp
+      - Save
+  /api/v1/images/temp/remove:
+    post:
+      summary: Post Images Temp Remove
+      description: Post images temp remove.
+      operationId: postApiV1ImagesTempRemove
+      x-api-path-slug: apiv1imagestempremove-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: url
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Images
+      - Temp
+      - Remove
+  /api/v1/manager/artists:
+    get:
+      summary: Get Manager Artists
+      description: Get manager artists.
+      operationId: getApiV1ManagerArtists
+      x-api-path-slug: apiv1managerartists-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: page
+        description: The page number
+      - in: query
+        name: request.query
+      responses:
+        200:
+          description: OK
+      tags:
+      - Manager
+      - Artists
+  /api/v1/managers/settings:
+    get:
+      summary: Get Managers Settings
+      description: Get managers settings.
+      operationId: getApiV1ManagersSettings
+      x-api-path-slug: apiv1managerssettings-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Managers
+      - Settings
+  /api/v1/managers/search:
+    get:
+      summary: Get Managers Search
+      description: Get managers search.
+      operationId: getApiV1ManagersSearch
+      x-api-path-slug: apiv1managerssearch-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: request.query
+      responses:
+        200:
+          description: OK
+      tags:
+      - Managers
+      - Search
+  /api/v1/managers/{managerId}/permissions:
+    put:
+      summary: Put Managers Managerid Permissions
+      description: Put managers managerid permissions.
+      operationId: putApiV1ManagersManagerPermissions
+      x-api-path-slug: apiv1managersmanageridpermissions-put
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: managerId
+      - in: body
+        name: model
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Managers
+      - Managerid
+      - Permissions
+  /api/v1/managers/{managerId}:
+    delete:
+      summary: Delete Managers Managerid
+      description: Delete managers managerid.
+      operationId: deleteApiV1ManagersManager
+      x-api-path-slug: apiv1managersmanagerid-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: managerId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Managers
+      - Managerid
+  /api/v1/manager/artists/{artistId}:
+    delete:
+      summary: Delete Manager Artists Artistid
+      description: Delete manager artists artistid.
+      operationId: deleteApiV1ManagerArtistsArtist
+      x-api-path-slug: apiv1managerartistsartistid-delete
+      parameters:
+      - in: path
+        name: artistId
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Manager
+      - Artists
+      - Artistid
+  /api/v1/managers/accept/{artistId}:
+    post:
+      summary: Post Managers Accept Artistid
+      description: Post managers accept artistid.
+      operationId: postApiV1ManagersAcceptArtist
+      x-api-path-slug: apiv1managersacceptartistid-post
+      parameters:
+      - in: path
+        name: artistId
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Managers
+      - Accept
+      - Artistid
+  /api/v1/managers/approve/{artistId}:
+    post:
+      summary: Post Managers Approve Artistid
+      description: Post managers approve artistid.
+      operationId: postApiV1ManagersApproveArtist
+      x-api-path-slug: apiv1managersapproveartistid-post
+      parameters:
+      - in: path
+        name: artistId
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Managers
+      - Approve
+      - Artistid
+  /api/v1/managers/combine/{oldid}/{newid}:
+    post:
+      summary: Post Managers Combine Old New
+      description: Post managers combine old new.
+      operationId: postApiV1ManagersCombineOldNew
+      x-api-path-slug: apiv1managerscombineoldidnewid-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: newid
+      - in: path
+        name: oldid
+      responses:
+        200:
+          description: OK
+      tags:
+      - Managers
+      - Combine
+      - Old
+      - New
+  /api/v1/managers/reject/{artistId}/{reason}:
+    post:
+      summary: Post Managers Reject Artistid Reason
+      description: Post managers reject artistid reason.
+      operationId: postApiV1ManagersRejectArtistReason
+      x-api-path-slug: apiv1managersrejectartistidreason-post
+      parameters:
+      - in: path
+        name: artistId
+      - in: header
+        name: Authorization
+      - in: path
+        name: reason
+      responses:
+        200:
+          description: OK
+      tags:
+      - Managers
+      - Reject
+      - Artistid
+      - Reason
+  /api/v1/Managers:
+    get:
+      summary: Get Managers
+      description: Get managers.
+      operationId: getApiV1Managers
+      x-api-path-slug: apiv1managers-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Managers
+    put:
+      summary: Put Managers
+      description: Put managers.
+      operationId: putApiV1Managers
+      x-api-path-slug: apiv1managers-put
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: model
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Managers
+    post:
+      summary: Post Managers
+      description: Post managers.
+      operationId: postApiV1Managers
+      x-api-path-slug: apiv1managers-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: model
+        description: ','
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Managers
+  /api/v1/message/new/{withUserId}/{lastMessageId}:
+    get:
+      summary: Get Message New Withuserid Lastmessageid
+      description: Get message new withuserid lastmessageid.
+      operationId: getApiV1MessageNewWithuserLastmessage
+      x-api-path-slug: apiv1messagenewwithuseridlastmessageid-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: lastMessageId
+      - in: path
+        name: withUserId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Message
+      - New
+      - Withuserid
+      - Lastmessageid
+  /api/v1/message/chats/{pageNumber}/{search}:
+    get:
+      summary: Get Message Chats Pagenumber Search
+      description: Get message chats pagenumber search.
+      operationId: getApiV1MessageChatsPagenumberSearch
+      x-api-path-slug: apiv1messagechatspagenumbersearch-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: pageNumber
+      - in: path
+        name: search
+      - in: query
+        name: unread
+      responses:
+        200:
+          description: OK
+      tags:
+      - Message
+      - Chats
+      - Pagenumber
+      - Search
+  /api/v1/message/send:
+    post:
+      summary: Post Message Send
+      description: Post message send.
+      operationId: postApiV1MessageSend
+      x-api-path-slug: apiv1messagesend-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: message
+        description: ID
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Message
+      - Send
+  /api/v1/message/chat/{id}/{from}:
+    get:
+      summary: Get Message Chat From
+      description: Get message chat from.
+      operationId: getApiV1MessageChatFrom
+      x-api-path-slug: apiv1messagechatidfrom-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: from
+        description: "20"
+      - in: path
+        name: id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Message
+      - Chat
+      - From
+  /api/v1/message/count/{userId}:
+    get:
+      summary: Get Message Count Userid
+      description: Get message count userid.
+      operationId: getApiV1MessageCountUser
+      x-api-path-slug: apiv1messagecountuserid-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: userId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Message
+      - Count
+      - Userid
+  /api/v1/message/delete:
+    post:
+      summary: Post Message Delete
+      description: Post message delete.
+      operationId: postApiV1MessageDelete
+      x-api-path-slug: apiv1messagedelete-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Message
+  /api/v1/message/feedback:
+    post:
+      summary: Post Message Feedback
+      description: Post message feedback.
+      operationId: postApiV1MessageFeedback
+      x-api-path-slug: apiv1messagefeedback-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Message
+      - Feedback
+  /api/v1/notify/unpayed:
+    get:
+      summary: Get Notify Unpayed
+      description: Get notify unpayed.
+      operationId: getApiV1NotifyUnpayed
+      x-api-path-slug: apiv1notifyunpayed-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Notify
+      - Unpayed
+  /api/v1/notify/artists:
+    get:
+      summary: Get Notify Artists
+      description: Get notify artists.
+      operationId: getApiV1NotifyArtists
+      x-api-path-slug: apiv1notifyartists-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Notify
+      - Artists
+  /api/v1/notify/manager:
+    get:
+      summary: Get Notify Manager
+      description: Get notify manager.
+      operationId: getApiV1NotifyManager
+      x-api-path-slug: apiv1notifymanager-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Notify
+      - Manager
+  /api/v1/notify/artists/new:
+    get:
+      summary: Get Notify Artists New
+      description: Get notify artists new.
+      operationId: getApiV1NotifyArtistsNew
+      x-api-path-slug: apiv1notifyartistsnew-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Notify
+      - Artists
+      - New
+  /api/v1/notify/requests:
+    get:
+      summary: Get Notify Requests
+      description: Get notify requests.
+      operationId: getApiV1NotifyRequests
+      x-api-path-slug: apiv1notifyrequests-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Notify
+      - Requests
+  /api/v1/notify/messages:
+    get:
+      summary: Get Notify Messages
+      description: Get notify messages.
+      operationId: getApiV1NotifyMessages
+      x-api-path-slug: apiv1notifymessages-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Notify
+      - Messages
+  /api/v1/notify/{userId}:
+    get:
+      summary: Get Notify Userid
+      description: Get notify userid.
+      operationId: getApiV1NotifyUser
+      x-api-path-slug: apiv1notifyuserid-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: userId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Notify
+      - Userid
+    post:
+      summary: Post Notify Userid
+      description: Post notify userid.
+      operationId: postApiV1NotifyUser
+      x-api-path-slug: apiv1notifyuserid-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: notificationIds
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: userId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Notify
+      - Userid
+  /api/v1/org/{userId}:
+    get:
+      summary: Get Org Userid
+      description: Get org userid.
+      operationId: getApiV1OrgUser
+      x-api-path-slug: apiv1orguserid-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: userId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Org
+      - Userid
+    post:
+      summary: Post Org Userid
+      description: Post org userid.
+      operationId: postApiV1OrgUser
+      x-api-path-slug: apiv1orguserid-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: userId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Org
+      - Userid
+  /api/v1/password/forgot:
+    post:
+      summary: Post Password Forgot
+      description: Post password forgot.
+      operationId: postApiV1PasswordForgot
+      x-api-path-slug: apiv1passwordforgot-post
+      parameters:
+      - in: body
+        name: request
+        description: Email
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Password
+      - Forgot
+  /api/v1/password/restore:
+    post:
+      summary: Post Password Restore
+      description: Post password restore.
+      operationId: postApiV1PasswordRestore
+      x-api-path-slug: apiv1passwordrestore-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Password
+      - Restore
+  /api/v1/password/change:
+    post:
+      summary: Post Password Change
+      description: Post password change.
+      operationId: postApiV1PasswordChange
+      x-api-path-slug: apiv1passwordchange-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Password
+      - Change
+  /api/v1/payment/add:
+    post:
+      summary: Post Payment Add
+      description: Post payment add.
+      operationId: postApiV1PaymentAdd
+      x-api-path-slug: apiv1paymentadd-post
+      parameters:
+      - in: body
+        name: payRequest
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Payment
+  /api/v1/payment/promocode/price:
+    post:
+      summary: Post Payment Promocode Price
+      description: Post payment promocode price.
+      operationId: postApiV1PaymentPromocodePrice
+      x-api-path-slug: apiv1paymentpromocodeprice-post
+      parameters:
+      - in: body
+        name: model
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Payment
+      - Promocode
+      - Price
+  /api/v1/payment/promocode/{requestId}:
+    post:
+      summary: Post Payment Promocode Requestid
+      description: Post payment promocode requestid.
+      operationId: postApiV1PaymentPromocodeRequest
+      x-api-path-slug: apiv1paymentpromocoderequestid-post
+      parameters:
+      - in: body
+        name: model
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: requestId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Payment
+      - Promocode
+      - Requestid
+  /api/v1/performanceformats:
+    get:
+      summary: Get Performanceformats
+      description: Get performanceformats.
+      operationId: getApiV1Performanceformats
+      x-api-path-slug: apiv1performanceformats-get
+      parameters:
+      - in: query
+        name: startWith
+      responses:
+        200:
+          description: OK
+      tags:
+      - Performanceformats
+  /api/v1/phone/send:
+    post:
+      summary: Post Phone Send
+      description: Post phone send.
+      operationId: postApiV1PhoneSend
+      x-api-path-slug: apiv1phonesend-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Phone
+      - Send
+  /api/v1/phone/confirm:
+    post:
+      summary: Post Phone Confirm
+      description: Post phone confirm.
+      operationId: postApiV1PhoneConfirm
+      x-api-path-slug: apiv1phoneconfirm-post
+      parameters:
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Phone
+      - Confirm
+  /api/v1/phone/save:
+    put:
+      summary: Put Phone Save
+      description: Put phone save.
+      operationId: putApiV1PhoneSave
+      x-api-path-slug: apiv1phonesave-put
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: phoneNumber
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Phone
+      - Save
+  /api/v1/phone/check/{smsId}:
+    get:
+      summary: Get Phone Check Smsid
+      description: Get phone check smsid.
+      operationId: getApiV1PhoneCheckSms
+      x-api-path-slug: apiv1phonechecksmsid-get
+      parameters:
+      - in: path
+        name: smsId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Phone
+      - Check
+      - Smsid
+  /api/v1/place/{placeId}:
+    get:
+      summary: Get Place Placeid
+      description: Get place placeid.
+      operationId: getApiV1PlacePlace
+      x-api-path-slug: apiv1placeplaceid-get
+      parameters:
+      - in: path
+        name: placeId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Place
+      - Placeid
+  /api/v1/place/{placeUnique}:
+    get:
+      summary: Get Place Placeunique
+      description: Get place placeunique.
+      operationId: getApiV1PlacePlaceunique
+      x-api-path-slug: apiv1placeplaceunique-get
+      parameters:
+      - in: path
+        name: placeUnique
+      responses:
+        200:
+          description: OK
+      tags:
+      - Place
+      - Placeunique
+  /api/v1/place/{placeId}/related:
+    get:
+      summary: Get Place Placeid Related
+      description: Get place placeid related.
+      operationId: getApiV1PlacePlaceRelated
+      x-api-path-slug: apiv1placeplaceidrelated-get
+      parameters:
+      - in: path
+        name: placeId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Place
+      - Placeid
+      - Related
+  /api/v1/place/search:
+    get:
+      summary: Get Place Search
+      description: Get place search.
+      operationId: getApiV1PlaceSearch
+      x-api-path-slug: apiv1placesearch-get
+      parameters:
+      - in: query
+        name: request.cities
+      - in: query
+        name: request.query
+      responses:
+        200:
+          description: OK
+      tags:
+      - Place
+      - Search
+  /api/v1/place/{cityId}/search/{query}:
+    get:
+      summary: Get Place Cityid Search Query
+      description: Get place cityid search query.
+      operationId: getApiV1PlaceCitySearchQuery
+      x-api-path-slug: apiv1placecityidsearchquery-get
+      parameters:
+      - in: path
+        name: cityId
+      - in: path
+        name: query
+      responses:
+        200:
+          description: OK
+      tags:
+      - Place
+      - Cityid
+      - Search
+      - Query
+  /api/v1/place:
+    post:
+      summary: Post Place
+      description: Post place.
+      operationId: postApiV1Place
+      x-api-path-slug: apiv1place-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Place
+  /api/v1/place/scheme/{placeId}:
+    post:
+      summary: Post Place Scheme Placeid
+      description: Post place scheme placeid.
+      operationId: postApiV1PlaceSchemePlace
+      x-api-path-slug: apiv1placeschemeplaceid-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Place
+      - Scheme
+      - Placeid
+  /api/v1/place/empty:
+    post:
+      summary: Post Place Empty
+      description: Post place empty.
+      operationId: postApiV1PlaceEmpty
+      x-api-path-slug: apiv1placeempty-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Place
+      - Empty
+  /api/v1/place/{placeId}/reviews/{page}/{pageSize}:
+    get:
+      summary: Get Place Placeid Reviews Page Pagesize
+      description: Get place placeid reviews page pagesize.
+      operationId: getApiV1PlacePlaceReviewsPagePagesize
+      x-api-path-slug: apiv1placeplaceidreviewspagepagesize-get
+      parameters:
+      - in: path
+        name: page
+      - in: path
+        name: pageSize
+      - in: path
+        name: placeId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Place
+      - Placeid
+      - Reviews
+      - Page
+      - Pagesize
+  /api/v1/place/reviews/add:
+    post:
+      summary: Post Place Reviews Add
+      description: Post place reviews add.
+      operationId: postApiV1PlaceReviewsAdd
+      x-api-path-slug: apiv1placereviewsadd-post
+      parameters:
+      - in: body
+        name: reviewRequest
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Place
+      - Reviews
+  /api/v1/rating/artists:
+    post:
+      summary: Post Rating Artists
+      description: Post rating artists.
+      operationId: postApiV1RatingArtists
+      x-api-path-slug: apiv1ratingartists-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Rating
+      - Artists
+  /api/v1/rating/{eventId}/artists:
+    get:
+      summary: Get Rating Eventid Artists
+      description: Get rating eventid artists.
+      operationId: getApiV1RatingEventArtists
+      x-api-path-slug: apiv1ratingeventidartists-get
+      parameters:
+      - in: path
+        name: eventId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Rating
+      - Eventid
+      - Artists
+  /api/v1/Rating:
+    post:
+      summary: Post Rating
+      description: Post rating.
+      operationId: postApiV1Rating
+      x-api-path-slug: apiv1rating-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Rating
+  /api/v1/request/org/invite:
+    post:
+      summary: Post Request Org Invite
+      description: Post request org invite.
+      operationId: postApiV1RequestOrgInvite
+      x-api-path-slug: apiv1requestorginvite-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Org
+      - Invite
+  /api/v1/request/org/out:
+    get:
+      summary: Get Request Org Out
+      description: Get request org out.
+      operationId: getApiV1RequestOrgOut
+      x-api-path-slug: apiv1requestorgout-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Org
+      - Out
+  /api/v1/request/org/archive:
+    get:
+      summary: Get Request Org Archive
+      description: Get request org archive.
+      operationId: getApiV1RequestOrgArchive
+      x-api-path-slug: apiv1requestorgarchive-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Org
+      - Archive
+  /api/v1/request/org/reject:
+    post:
+      summary: Post Request Org Reject
+      description: Post request org reject.
+      operationId: postApiV1RequestOrgReject
+      x-api-path-slug: apiv1requestorgreject-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Org
+      - Reject
+  /api/v1/request/org/accept:
+    post:
+      summary: Post Request Org Accept
+      description: Post request org accept.
+      operationId: postApiV1RequestOrgAccept
+      x-api-path-slug: apiv1requestorgaccept-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Org
+      - Accept
+  /api/v1/request/price:
+    post:
+      summary: Post Request Price
+      description: Post request price.
+      operationId: postApiV1RequestPrice
+      x-api-path-slug: apiv1requestprice-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Price
+  /api/v1/request/performanceDate:
+    post:
+      summary: Post Request Performancedate
+      description: Post request performancedate.
+      operationId: postApiV1RequestPerformancedate
+      x-api-path-slug: apiv1requestperformancedate-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Performancedate
+  /api/v1/request/art/invite:
+    post:
+      summary: Post Request Art Invite
+      description: Post request art invite.
+      operationId: postApiV1RequestArtInvite
+      x-api-path-slug: apiv1requestartinvite-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Art
+      - Invite
+  /api/v1/request/key/{key}:
+    get:
+      summary: Get Request Key Key
+      description: Get request key key.
+      operationId: getApiV1RequestKeyKey
+      x-api-path-slug: apiv1requestkeykey-get
+      parameters:
+      - in: path
+        name: key
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Key
+      - Key
+  /api/v1/request/art/in:
+    get:
+      summary: Get Request Art In
+      description: Get request art in.
+      operationId: getApiV1RequestArtIn
+      x-api-path-slug: apiv1requestartin-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Art
+      - In
+  /api/v1/request/art/calendar:
+    get:
+      summary: Get Request Art Calendar
+      description: Get request art calendar.
+      operationId: getApiV1RequestArtCalendar
+      x-api-path-slug: apiv1requestartcalendar-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: request.from
+      - in: query
+        name: request.to
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Art
+      - Calendar
+  /api/v1/request/art/archive:
+    get:
+      summary: Get Request Art Archive
+      description: Get request art archive.
+      operationId: getApiV1RequestArtArchive
+      x-api-path-slug: apiv1requestartarchive-get
+      parameters:
+      - in: header
+        name: Authorization
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Art
+      - Archive
+  /api/v1/request/art/reject:
+    post:
+      summary: Post Request Art Reject
+      description: Post request art reject.
+      operationId: postApiV1RequestArtReject
+      x-api-path-slug: apiv1requestartreject-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Art
+      - Reject
+  /api/v1/request/art/accept:
+    post:
+      summary: Post Request Art Accept
+      description: Post request art accept.
+      operationId: postApiV1RequestArtAccept
+      x-api-path-slug: apiv1requestartaccept-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Art
+      - Accept
+  /api/v1/request/art/accept/performanceDate:
+    post:
+      summary: Post Request Art Accept Performancedate
+      description: Post request art accept performancedate.
+      operationId: postApiV1RequestArtAcceptPerformancedate
+      x-api-path-slug: apiv1requestartacceptperformancedate-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        description: /
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Art
+      - Accept
+      - Performancedate
+  /api/v1/request/art/reject/performanceDate:
+    post:
+      summary: Post Request Art Reject Performancedate
+      description: Post request art reject performancedate.
+      operationId: postApiV1RequestArtRejectPerformancedate
+      x-api-path-slug: apiv1requestartrejectperformancedate-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        description: /
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Art
+      - Reject
+      - Performancedate
+  /api/v1/request/{requestId}:
+    get:
+      summary: Get Request Requestid
+      description: Get request requestid.
+      operationId: getApiV1RequestRequest
+      x-api-path-slug: apiv1requestrequestid-get
+      parameters:
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+  /api/v1/request/{requestId}/history:
+    get:
+      summary: Get Request Requestid History
+      description: Get request requestid history.
+      operationId: getApiV1RequestRequestHistory
+      x-api-path-slug: apiv1requestrequestidhistory-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - History
+  /api/v1/request/{requestId}/comments:
+    get:
+      summary: Get Request Requestid Comments
+      description: Get request requestid comments.
+      operationId: getApiV1RequestRequestComments
+      x-api-path-slug: apiv1requestrequestidcomments-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Comments
+    post:
+      summary: Post Request Requestid Comments
+      description: Post request requestid comments.
+      operationId: postApiV1RequestRequestComments
+      x-api-path-slug: apiv1requestrequestidcomments-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: model
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Comments
+  /api/v1/request/{requestId}/files:
+    get:
+      summary: Get Request Requestid Files
+      description: Get request requestid files.
+      operationId: getApiV1RequestRequestFiles
+      x-api-path-slug: apiv1requestrequestidfiles-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Files
+    post:
+      summary: Post Request Requestid Files
+      description: Post request requestid files.
+      operationId: postApiV1RequestRequestFiles
+      x-api-path-slug: apiv1requestrequestidfiles-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Files
+  /api/v1/request/{requestId}/files/{fileId}:
+    get:
+      summary: Get Request Requestid Files Fileid
+      description: Get request requestid files fileid.
+      operationId: getApiV1RequestRequestFilesFile
+      x-api-path-slug: apiv1requestrequestidfilesfileid-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: fileId
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Files
+      - Fileid
+    delete:
+      summary: Delete Request Requestid Files Fileid
+      description: Delete request requestid files fileid.
+      operationId: deleteApiV1RequestRequestFilesFile
+      x-api-path-slug: apiv1requestrequestidfilesfileid-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: fileId
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Files
+      - Fileid
+  /api/v1/request/{requestId}/condition/visa:
+    get:
+      summary: Get Request Requestid Condition Visa
+      description: Get request requestid condition visa.
+      operationId: getApiV1RequestRequestConditionVisa
+      x-api-path-slug: apiv1requestrequestidconditionvisa-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Condition
+      - Visa
+    post:
+      summary: Post Request Requestid Condition Visa
+      description: Post request requestid condition visa.
+      operationId: postApiV1RequestRequestConditionVisa
+      x-api-path-slug: apiv1requestrequestidconditionvisa-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: model
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Condition
+      - Visa
+  /api/v1/request/{requestId}/condition/travel:
+    get:
+      summary: Get Request Requestid Condition Travel
+      description: Get request requestid condition travel.
+      operationId: getApiV1RequestRequestConditionTravel
+      x-api-path-slug: apiv1requestrequestidconditiontravel-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Condition
+      - Travel
+    post:
+      summary: Post Request Requestid Condition Travel
+      description: Post request requestid condition travel.
+      operationId: postApiV1RequestRequestConditionTravel
+      x-api-path-slug: apiv1requestrequestidconditiontravel-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: model
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Condition
+      - Travel
+  /api/v1/request/{requestId}/condition/residence:
+    get:
+      summary: Get Request Requestid Condition Resence
+      description: Get request requestid condition resence.
+      operationId: getApiV1RequestRequestConditionResence
+      x-api-path-slug: apiv1requestrequestidconditionresidence-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Condition
+      - Resence
+    post:
+      summary: Post Request Requestid Condition Resence
+      description: Post request requestid condition resence.
+      operationId: postApiV1RequestRequestConditionResence
+      x-api-path-slug: apiv1requestrequestidconditionresidence-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: model
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Condition
+      - Resence
+  /api/v1/request/{requestId}/condition/delivery:
+    get:
+      summary: Get Request Requestid Condition Delivery
+      description: Get request requestid condition delivery.
+      operationId: getApiV1RequestRequestConditionDelivery
+      x-api-path-slug: apiv1requestrequestidconditiondelivery-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Condition
+      - Delivery
+    post:
+      summary: Post Request Requestid Condition Delivery
+      description: Post request requestid condition delivery.
+      operationId: postApiV1RequestRequestConditionDelivery
+      x-api-path-slug: apiv1requestrequestidconditiondelivery-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: model
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Condition
+      - Delivery
+  /api/v1/request/{requestId}/condition/{condition}/confirm:
+    post:
+      summary: Post Request Requestid Condition Condition Confirm
+      description: Post request requestid condition condition confirm.
+      operationId: postApiV1RequestRequestConditionConditionConfirm
+      x-api-path-slug: apiv1requestrequestidconditionconditionconfirm-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: condition
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Condition
+      - Condition
+      - Confirm
+  /api/v1/request/{requestId}/condition/{condition}/reject:
+    post:
+      summary: Post Request Requestid Condition Condition Reject
+      description: Post request requestid condition condition reject.
+      operationId: postApiV1RequestRequestConditionConditionReject
+      x-api-path-slug: apiv1requestrequestidconditionconditionreject-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: condition
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Condition
+      - Condition
+      - Reject
+  /api/v1/request/{requestId}/condition/{condition}/documents:
+    get:
+      summary: Get Request Requestid Condition Condition Documents
+      description: Get request requestid condition condition documents.
+      operationId: getApiV1RequestRequestConditionConditionDocuments
+      x-api-path-slug: apiv1requestrequestidconditionconditiondocuments-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: condition
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Condition
+      - Condition
+      - Documents
+    post:
+      summary: Post Request Requestid Condition Condition Documents
+      description: Post request requestid condition condition documents.
+      operationId: postApiV1RequestRequestConditionConditionDocuments
+      x-api-path-slug: apiv1requestrequestidconditionconditiondocuments-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: file
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Condition
+      - Condition
+      - Documents
+  /api/v1/request/requests/{requestId}/logs:
+    get:
+      summary: Get Request Requests Requestid Logs
+      description: Get request requests requestid logs.
+      operationId: getApiV1RequestRequestsRequestLogs
+      x-api-path-slug: apiv1requestrequestsrequestidlogs-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: requestId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requests
+      - Requestid
+      - Logs
+  /api/v1/request/{requestId}/art/{artistId}/rider:
+    get:
+      summary: Get Request Requestid Art Artistid Rer
+      description: Get request requestid art artistid rer.
+      operationId: getApiV1RequestRequestArtArtistRer
+      x-api-path-slug: apiv1requestrequestidartartistidrider-get
+      parameters:
+      - in: path
+        name: artistId
+      - in: header
+        name: Authorization
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Art
+      - Artistid
+      - Rer
+  /api/v1/request/{requestId}/art/{artistId}/rider/home:
+    get:
+      summary: Get Request Requestid Art Artistid Rer Home
+      description: Get request requestid art artistid rer home.
+      operationId: getApiV1RequestRequestArtArtistRerHome
+      x-api-path-slug: apiv1requestrequestidartartistidriderhome-get
+      parameters:
+      - in: path
+        name: artistId
+      - in: header
+        name: Authorization
+      - in: path
+        name: requestId
+        description: /
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Art
+      - Artistid
+      - Rer
+      - Home
+  /api/v1/request/{requestId}/art/{artistId}/presskit/{photoId}:
+    get:
+      summary: Get Request Requestid Art Artistid Presskit Photoid
+      description: Get request requestid art artistid presskit photoid.
+      operationId: getApiV1RequestRequestArtArtistPresskitPhoto
+      x-api-path-slug: apiv1requestrequestidartartistidpresskitphotoid-get
+      parameters:
+      - in: path
+        name: artistId
+      - in: header
+        name: Authorization
+      - in: path
+        name: photoId
+      - in: path
+        name: requestId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+      - Requestid
+      - Art
+      - Artistid
+      - Presskit
+      - Photoid
+  /api/v1/ticket/{ticketId}:
+    get:
+      summary: Get Ticket Ticketid
+      description: Get ticket ticketid.
+      operationId: getApiV1TicketTicket
+      x-api-path-slug: apiv1ticketticketid-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: ticketId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Ticket
+      - Ticketid
+  /api/v1/ticket/{eventId}/{ticketId}:
+    delete:
+      summary: Delete Ticket Eventid Ticketid
+      description: Delete ticket eventid ticketid.
+      operationId: deleteApiV1TicketEventTicket
+      x-api-path-slug: apiv1ticketeventidticketid-delete
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: eventId
+      - in: path
+        name: ticketId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Ticket
+      - Eventid
+      - Ticketid
+  /api/v1/ticket/{eventId}:
+    get:
+      summary: Get Ticket Eventid
+      description: Get ticket eventid.
+      operationId: getApiV1TicketEvent
+      x-api-path-slug: apiv1ticketeventid-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: eventId
+      - in: query
+        name: from
+      - in: query
+        name: to
+      responses:
+        200:
+          description: OK
+      tags:
+      - Ticket
+      - Eventid
+  /api/v1/ticket/{eventId}/export:
+    get:
+      summary: Get Ticket Eventid Export
+      description: Get ticket eventid export.
+      operationId: getApiV1TicketEventExport
+      x-api-path-slug: apiv1ticketeventidexport-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: path
+        name: eventId
+      - in: query
+        name: from
+      - in: query
+        name: to
+      responses:
+        200:
+          description: OK
+      tags:
+      - Ticket
+      - Eventid
+      - Export
+  /api/v1/Ticket:
+    get:
+      summary: Get Ticket
+      description: Get ticket.
+      operationId: getApiV1Ticket
+      x-api-path-slug: apiv1ticket-get
+      parameters:
+      - in: header
+        name: Authorization
+      - in: query
+        name: from
+      - in: query
+        name: to
+      responses:
+        200:
+          description: OK
+      tags:
+      - Ticket
+    post:
+      summary: Post Ticket
+      description: Post ticket.
+      operationId: postApiV1Ticket
+      x-api-path-slug: apiv1ticket-post
+      parameters:
+      - in: header
+        name: Authorization
+      - in: body
+        name: request
+        description: ','
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Ticket

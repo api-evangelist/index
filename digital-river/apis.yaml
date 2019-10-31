@@ -1,0 +1,56 @@
+name: Digital River
+x-slug: digital-river
+description: Digital Riveris a public company that provides global ecommerce, payments
+  and marketing services. In 2013, Digital River processed more than $30 billion in
+  online transactions.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/DigitalRiver_corp_logo_4c2.png
+x-kinRank: "8"
+x-alexaRank: "0"
+tags: API Service Provider,Commerce,Commerce,Products,Products,Profiles,Relative Data,Service
+  API,Stack Network
+created: "2019-02-03"
+modified: "2019-02-03"
+url: digital-river/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Digital River Shopper API
+  x-api-slug: digital-river-shopper-api
+  description: Digital Riveris a public company that provides global ecommerce, payments
+    and marketing services. In 2013, Digital River processed more than $30 billion
+    in online transactions.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/DigitalRiver_corp_logo_4c2.png
+  humanURL: https://digitalriver.com
+  baseURL: https://store.digitalriver.com//store/{mysite}
+  tags: API Service Provider,Commerce,Commerce,Products,Products,Profiles,Relative
+    Data,Service API,Stack Network
+  properties:
+  - type: x-postman-collection
+    url: /digital-river/v1shopperstoken-get-postman.json
+  - type: x-openapi-spec
+    url: /digital-river/digital-river-shopper-api-openapi.yaml
+x-common:
+- type: x-blog
+  url: https://developers.digitalriver.com/blog
+- type: x-blog-rss
+  url: https://developers.digitalriver.com/blog/feed
+- type: x-console
+  url: https://developers.digitalriver.com/api-console
+- type: x-developer
+  url: https://developers.digitalriver.com
+- type: x-faq
+  url: https://developers.digitalriver.com/faq-page
+- type: x-selfservice-registration
+  url: https://developers.digitalriver.com/user/register
+- type: x-terms-of-service
+  url: https://developers.digitalriver.com/terms-use
+- type: x-twitter
+  url: https://twitter.com/DigitalRiverInc
+- type: x-website
+  url: https://digitalriver.com
+- type: x-website
+  url: http://digitalriver.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

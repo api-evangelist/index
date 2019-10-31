@@ -1,0 +1,25 @@
+swagger: "2.0"
+x-collection-name: ARIN
+x-complete: 1
+info:
+  title: CIDR API
+  description: managing-ip-address-and-cidr-details-
+  version: 1.0.0
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  cidr/:
+    get:
+      summary: IP and CIDR Queries
+      description: ""
+      operationId: cidr
+      x-api-path-slug: cidr-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - CIDR

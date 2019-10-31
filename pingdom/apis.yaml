@@ -1,0 +1,201 @@
+name: Pingdom
+x-slug: pingdom
+description: Monitor your websites availability and performance for free with Pingdom
+  and always be the first to know when your website is down. No installation required.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/456-pingdom.jpg
+x-kinRank: "7"
+x-alexaRank: "5876"
+tags: internet,Monitoring,Performance,Relative Data,Relative StreamRank,SaaS,Service
+  API,Streams,Streams,Streams,Technology,Webhook Implementations
+created: "2019-02-03"
+modified: "2019-02-03"
+url: pingdom/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Analysis API
+  x-api-slug: analysis-api
+  description: Monitor your websites availability and performance for free with Pingdom
+    and always be the first to know when your website is down. No installation required.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/456-pingdom.jpg
+  humanURL: http://www.pingdom.com
+  baseURL: :///
+  tags: internet,Monitoring,Performance,Relative Data,Relative StreamRank,SaaS,Service
+    API,Streams,Streams,Streams,Technology,Webhook Implementations
+  properties:
+  - type: x-postman-collection
+    url: /pingdom/apiversionanalysischeckid-get-postman.json
+  - type: x-openapi-spec
+    url: /pingdom/analysis-api-openapi.yaml
+- name: Checks API
+  x-api-slug: checks-api
+  description: Monitor your websites availability and performance for free with Pingdom
+    and always be the first to know when your website is down. No installation required.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/456-pingdom.jpg
+  humanURL: http://www.pingdom.com
+  baseURL: https://api.pingdom.com//
+  tags: Analysis
+  properties:
+  - type: x-openapi-spec
+    url: /pingdom/checks-api-openapi.yaml
+- name: Credits API
+  x-api-slug: credits-api
+  description: Monitor your websites availability and performance for free with Pingdom
+    and always be the first to know when your website is down. No installation required.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/456-pingdom.jpg
+  humanURL: http://www.pingdom.com
+  baseURL: https://api.pingdom.com//
+  tags: Checks
+  properties:
+  - type: x-postman-collection
+    url: /pingdom/apiversioncredits-get-postman.json
+  - type: x-openapi-spec
+    url: /pingdom/credits-api-openapi.yaml
+- name: Probes API
+  x-api-slug: probes-api
+  description: Monitor your websites availability and performance for free with Pingdom
+    and always be the first to know when your website is down. No installation required.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/456-pingdom.jpg
+  humanURL: http://www.pingdom.com
+  baseURL: https://api.pingdom.com//
+  tags: Credits
+  properties:
+  - type: x-postman-collection
+    url: /pingdom/apiversionprobes-get-postman.json
+  - type: x-openapi-spec
+    url: /pingdom/probes-api-openapi.yaml
+- name: Reference API
+  x-api-slug: reference-api
+  description: Monitor your websites availability and performance for free with Pingdom
+    and always be the first to know when your website is down. No installation required.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/456-pingdom.jpg
+  humanURL: http://www.pingdom.com
+  baseURL: https://api.pingdom.com//
+  tags: Proves
+  properties:
+  - type: x-postman-collection
+    url: /pingdom/apiversionreference-get-postman.json
+  - type: x-openapi-spec
+    url: /pingdom/reference-api-openapi.yaml
+- name: Reports API
+  x-api-slug: reports-api
+  description: Monitor your websites availability and performance for free with Pingdom
+    and always be the first to know when your website is down. No installation required.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/456-pingdom.jpg
+  humanURL: http://www.pingdom.com
+  baseURL: https://api.pingdom.com//
+  tags: Reerence
+  properties:
+  - type: x-postman-collection
+    url: /pingdom/apiversionreports-shared-get-postman.json
+  - type: x-openapi-spec
+    url: /pingdom/reports-api-openapi.yaml
+- name: Results API
+  x-api-slug: results-api
+  description: Monitor your websites availability and performance for free with Pingdom
+    and always be the first to know when your website is down. No installation required.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/456-pingdom.jpg
+  humanURL: http://www.pingdom.com
+  baseURL: https://api.pingdom.com//
+  tags: Reports
+  properties:
+  - type: x-postman-collection
+    url: /pingdom/apiversionresultscheckid-get-postman.json
+  - type: x-openapi-spec
+    url: /pingdom/results-api-openapi.yaml
+- name: Servertime API
+  x-api-slug: servertime-api
+  description: Monitor your websites availability and performance for free with Pingdom
+    and always be the first to know when your website is down. No installation required.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/456-pingdom.jpg
+  humanURL: http://www.pingdom.com
+  baseURL: https://api.pingdom.com//
+  tags: Results
+  properties:
+  - type: x-postman-collection
+    url: /pingdom/apiversionservertime-get-postman.json
+  - type: x-openapi-spec
+    url: /pingdom/servertime-api-openapi.yaml
+- name: Settings API
+  x-api-slug: settings-api
+  description: Monitor your websites availability and performance for free with Pingdom
+    and always be the first to know when your website is down. No installation required.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/456-pingdom.jpg
+  humanURL: http://www.pingdom.com
+  baseURL: https://api.pingdom.com//
+  tags: Servertime
+  properties:
+  - type: x-postman-collection
+    url: /pingdom/apiversionsettings-get-postman.json
+  - type: x-openapi-spec
+    url: /pingdom/settings-api-openapi.yaml
+- name: Single API
+  x-api-slug: single-api
+  description: Monitor your websites availability and performance for free with Pingdom
+    and always be the first to know when your website is down. No installation required.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/456-pingdom.jpg
+  humanURL: http://www.pingdom.com
+  baseURL: https://api.pingdom.com//
+  tags: Settings
+  properties:
+  - type: x-postman-collection
+    url: /pingdom/apiversionsingle-get-postman.json
+  - type: x-openapi-spec
+    url: /pingdom/single-api-openapi.yaml
+- name: Summary API
+  x-api-slug: summary-api
+  description: Monitor your websites availability and performance for free with Pingdom
+    and always be the first to know when your website is down. No installation required.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/456-pingdom.jpg
+  humanURL: http://www.pingdom.com
+  baseURL: https://api.pingdom.com//
+  tags: Single
+  properties:
+  - type: x-postman-collection
+    url: /pingdom/apiversionsummary-probescheckid-get-postman.json
+  - type: x-openapi-spec
+    url: /pingdom/summary-api-openapi.yaml
+- name: Traceroute API
+  x-api-slug: traceroute-api
+  description: Monitor your websites availability and performance for free with Pingdom
+    and always be the first to know when your website is down. No installation required.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/456-pingdom.jpg
+  humanURL: http://www.pingdom.com
+  baseURL: https://api.pingdom.com//
+  tags: Summary
+  properties:
+  - type: x-postman-collection
+    url: /pingdom/apiversiontraceroute-get-postman.json
+  - type: x-openapi-spec
+    url: /pingdom/traceroute-api-openapi.yaml
+x-common:
+- type: x-base
+  url: https://api.pingdom.com
+- type: x-blog
+  url: http://royal.pingdom.com/
+- type: x-blog-rss
+  url: http://royal.pingdom.com/feed/
+- type: x-crunchbase
+  url: http://www.crunchbase.com/company/pingdom
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/pingdom
+- type: x-developer
+  url: https://www.pingdom.com/features/api/
+- type: x-email
+  url: sales@pingdom.com
+- type: x-github
+  url: https://github.com/Pingdom
+- type: x-linkedin
+  url: https://www.linkedin.com/company/pingdom
+- type: x-pricing
+  url: https://www.pingdom.com/pricing
+- type: x-twitter
+  url: https://twitter.com/#!/pingdom
+- type: x-webhook
+  url: https://www.pingdom.com/resources/webhooks/
+- type: x-website
+  url: http://www.pingdom.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

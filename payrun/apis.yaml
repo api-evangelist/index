@@ -1,0 +1,44 @@
+name: PayRun
+x-slug: payrun
+description: An open, scalable, transparent and HMRC accredited payroll API. Put the
+  power of payroll into your application today.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28484-payrun-io.jpg
+x-kinRank: "7"
+x-alexaRank: "0"
+tags: API Provider,Payments,Profiles,Relative Data,Relative StreamRank,SaaS,Service
+  API,Streams,Streams,Streams,Technology
+created: "2019-02-03"
+modified: "2019-02-03"
+url: payrun/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Pay Run.IO
+  x-api-slug: pay-run-io
+  description: An open, scalable, transparent and HMRC accredited payroll API. Put
+    the power of payroll into your application today.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28484-payrun-io.jpg
+  humanURL: http://www.payrun.io
+  baseURL: https://api.test.payrun.io//
+  tags: API Provider,Payments,Profiles,Relative Data,Relative StreamRank,SaaS,Service
+    API,Streams,Streams,Streams,Technology
+  properties:
+  - type: x-openapi-spec
+    url: /payrun/pay-run-io-openapi.yaml
+x-common:
+- type: x-website
+  url: http://www.payrun.io
+- type: x-documentation
+  url: https://developer.payrun.io/docs/home/index.html
+- type: x-email
+  url: support@payrun.io
+- type: x-email
+  url: info@payrun.io
+- type: x-twitter
+  url: https://twitter.com/PayRun_io
+- type: x-website
+  url: http://api.test.payrun.io
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

@@ -1,0 +1,53 @@
+name: Ship Station
+x-slug: ship-station
+description: ShipStation is a web-based shipping solution that streamlines the order
+  fulfillment process for your online business. ShipStation consolidates orders from
+  over 70 ecommerce channels, creates shipping labels, packing slips, and pick lists
+  in batch, communicates tracking information to your customers, provides endless
+  automation, filters, and views, wireless printing, a mobile app, and a lot more.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/ShipStation-stacked-blue.png
+x-kinRank: "7"
+x-alexaRank: "0"
+tags: Relative Data,Service API,Shipping
+created: "2019-02-03"
+modified: "2019-02-03"
+url: ship-station/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Ship Station
+  x-api-slug: ship-station
+  description: ShipStation is a web-based shipping solution that streamlines the order
+    fulfillment process for your online business. ShipStation consolidates orders
+    from over 70 ecommerce channels, creates shipping labels, packing slips, and pick
+    lists in batch, communicates tracking information to your customers, provides
+    endless automation, filters, and views, wireless printing, a mobile app, and a
+    lot more.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/ShipStation-stacked-blue.png
+  humanURL: http://bit.ly/_ShipStation
+  baseURL: https://ssapi.shipstation.com//
+  tags: Relative Data,Service API,Shipping
+  properties:
+  - type: x-openapi-spec
+    url: /ship-station/ship-station-openapi.yaml
+x-common:
+- type: x-website
+  url: http://bit.ly/_ShipStation
+- type: x-blog
+  url: https://www.shipstation.com/blog/
+- type: x-developer
+  url: https://shipstation.docs.apiary.io/#
+- type: x-github
+  url: https://github.com/shipstation
+- type: x-partners
+  url: https://www.shipstation.com/partners/
+- type: x-pricing
+  url: https://www.shipstation.com/pricing/
+- type: x-twitter
+  url: https://twitter.com/ShipStation
+- type: x-website
+  url: http://shipstation.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

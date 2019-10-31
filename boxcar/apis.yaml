@@ -1,0 +1,50 @@
+name: Boxcar
+x-slug: boxcar
+description: 'For Developers: a push platform with SDKs, APIs and admin console.'
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/714-boxcar.jpg
+x-kinRank: "8"
+x-alexaRank: "1280273"
+tags: API Provider,internet,Mobile,Notifications,Notifications,Profiles,Relative Data,SaaS,Service
+  API,Social,Stack Network,Technology
+created: "2019-02-03"
+modified: "2019-02-03"
+url: boxcar/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Box Car
+  x-api-slug: box-car
+  description: 'For Developers: a push platform with SDKs, APIs and admin console.'
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/714-boxcar.jpg
+  humanURL: http://boxcar.io
+  baseURL: https://boxcar.io//devices/providers/%7Bprovider_key%7D/
+  tags: API Provider,internet,Mobile,Notifications,Notifications,Profiles,Relative
+    Data,SaaS,Service API,Social,Stack Network,Technology
+  properties:
+  - type: x-postman-collection
+    url: /boxcar/notificationssubscribe-post-postman.json
+  - type: x-openapi-spec
+    url: /boxcar/box-car-openapi.yaml
+x-common:
+- type: x-blog
+  url: http://blog.boxcar.io
+- type: x-blog-rss
+  url: http://blog.boxcar.io/rss
+- type: x-crunchbase
+  url: http://www.crunchbase.com/company/boxcar
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/boxcar
+- type: x-developer
+  url: https://boxcar.io/developer
+- type: x-email
+  url: help@boxcar.io
+- type: x-github
+  url: https://github.com/boxcar
+- type: x-twitter
+  url: https://twitter.com/boxcar
+- type: x-website
+  url: http://boxcar.io
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

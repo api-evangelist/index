@@ -1,0 +1,62 @@
+name: UserVoice
+x-slug: uservoice
+description: Product management software that transforms how businesses capture and
+  analyze feedback to prioritize the roadmap and make strategic product decisions.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/86-uservoice.jpg
+x-kinRank: "8"
+x-alexaRank: "5638"
+tags: Customers,Feedback,Forum STack,Forums,Forums,Help Desk,Relative Data,SaaS,Service
+  API,Stack Network,Support,Support,Support,Technology
+created: "2019-02-03"
+modified: "2019-02-03"
+url: uservoice/apis.md
+specificationVersion: "0.14"
+apis:
+- name: The Noun Project User API
+  x-api-slug: the-noun-project-user-api
+  description: Product management software that transforms how businesses capture
+    and analyze feedback to prioritize the roadmap and make strategic product decisions.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/86-uservoice.jpg
+  humanURL: https://uservoice.com/
+  baseURL: :///user/http://api.thenounproject.com
+  tags: Customers,Feedback,Forum STack,Forums,Forums,Help Desk,Relative Data,SaaS,Service
+    API,Stack Network,Support,Support,Support,Technology
+  properties:
+  - type: x-postman-collection
+    url: /uservoice/useruser-idcollectionsslug-get-postman.json
+  - type: x-openapi-spec
+    url: /uservoice/the-noun-project-user-api-openapi.yaml
+x-common:
+- type: x-base
+  url: https://uservoice.com/api/
+- type: x-blog
+  url: https://community.uservoice.com/blog/
+- type: x-blog-rss
+  url: http://feeds.feedburner.com/UnderstandingYourCustomers
+- type: x-crunchbase
+  url: http://www.crunchbase.com/company/uservoice
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/uservoice
+- type: x-developer
+  url: https://developer.uservoice.com/
+- type: x-email
+  url: privacy@uservoice.com
+- type: x-github
+  url: https://github.com/marcusnelson
+- type: x-github
+  url: https://github.com/uservoice
+- type: x-pricing
+  url: https://www.uservoice.com/plans/product-management/
+- type: x-pricing
+  url: https://www.uservoice.com/plans/customer-support/
+- type: x-twitter
+  url: https://twitter.com/uservoice
+- type: x-website
+  url: https://uservoice.com/
+- type: x-website
+  url: http:///user
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

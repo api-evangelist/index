@@ -1,0 +1,48 @@
+name: Ulster Bank
+x-slug: ulster-bank
+description: Ulster Bank is a large commercial bank, and one of the traditional Big
+  Four Irish banks. The Ulster Bank Group is subdivided into two separate legal entities,
+  Ulster Bank Limited (UBL &ndash; registered in Northern Ireland) and Ulster Bank
+  Ireland DAC (UBIDAC &ndash; registered in the Republic of Ireland). The Groups headquarters
+  (and UBIDACs) is located on Georges Quay, Dublin, in the Republic of Ireland whilst
+  the official headquarters of UBL is in Donegall Square East, Belfast, in Northern
+  Ireland, and it maintains a large sector of the financial services in both the UK
+  and the Republic of Ireland.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Ulster-Bank-Limited-2090.png
+x-kinRank: "8"
+x-alexaRank: "0"
+tags: ATMs,Banking,General Data,Relative Data,UK Banks
+created: "2019-02-03"
+modified: "2019-02-03"
+url: ulster-bank/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Ulster Bank
+  x-api-slug: ulster-bank
+  description: Ulster Bank is a large commercial bank, and one of the traditional
+    Big Four Irish banks. The Ulster Bank Group is subdivided into two separate legal
+    entities, Ulster Bank Limited (UBL &ndash; registered in Northern Ireland) and
+    Ulster Bank Ireland DAC (UBIDAC &ndash; registered in the Republic of Ireland).
+    The Groups headquarters (and UBIDACs) is located on Georges Quay, Dublin, in the
+    Republic of Ireland whilst the official headquarters of UBL is in Donegall Square
+    East, Belfast, in Northern Ireland, and it maintains a large sector of the financial
+    services in both the UK and the Republic of Ireland.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Ulster-Bank-Limited-2090.png
+  humanURL: https://digital.ulsterbank.co.uk/
+  baseURL: https://openapi.ulsterbank.co.uk/open-banking/v2.1/
+  tags: ATMs,Banking,General Data,Relative Data,UK Banks
+  properties:
+  - type: x-postman-collection
+    url: /ulster-bank/unsecuredsmeloans-get-postman.json
+  - type: x-openapi-spec
+    url: /ulster-bank/ulster-bank-openapi.yaml
+x-common:
+- type: x-twitter
+  url: https://twitter.com/ulsterbank_help
+- type: x-website
+  url: https://digital.ulsterbank.co.uk/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

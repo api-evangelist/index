@@ -1,0 +1,58 @@
+name: Google Cloud Resource Manager
+x-slug: google-cloud-resource-manager
+description: Google Cloud Platform provides resource containers such as Organizations
+  and Projects, that allow you to group and hierarchically organize other Cloud Platform
+  resources. This hierarchical organization lets you easily manage common aspects
+  of your resources such as access control and configuration settings. The Google
+  Cloud Resource Manager service enables you to programmatically manage these resource
+  containers.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Generic-GCP.png
+x-kinRank: "9"
+x-alexaRank: "0"
+tags: API Provider,API Service Provider,Google APIs,Management,Orchestration,Profiles,Relative
+  Data,Service API,Stack Network
+created: "2019-02-03"
+modified: "2019-02-03"
+url: google-cloud-resource-manager/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Google Cloud Resource Manager API
+  x-api-slug: google-cloud-resource-manager-api
+  description: Google Cloud Platform provides resource containers such as Organizations
+    and Projects, that allow you to group and hierarchically organize other Cloud
+    Platform resources. This hierarchical organization lets you easily manage common
+    aspects of your resources such as access control and configuration settings. The
+    Google Cloud Resource Manager service enables you to programmatically manage these
+    resource containers.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Generic-GCP.png
+  humanURL: https://cloud.google.com/resource-manager/
+  baseURL: ://cloudresourcemanager.googleapis.com//
+  tags: API Provider,API Service Provider,Google APIs,Management,Orchestration,Profiles,Relative
+    Data,Service API,Stack Network
+  properties:
+  - type: x-openapi-spec
+    url: /google-cloud-resource-manager/google-cloud-resource-manager-api-openapi.yaml
+x-common:
+- type: x-authentication
+  url: https://cloud.google.com/resource-manager/docs/authorizing
+- type: x-code
+  url: https://cloud.google.com/resource-manager/docs/libraries
+- type: x-documentation
+  url: https://cloud.google.com/resource-manager/docs/
+- type: x-errors
+  url: https://cloud.google.com/resource-manager/docs/core_errors
+- type: x-how-to-guides
+  url: https://cloud.google.com/resource-manager/docs/how-to
+- type: x-performance
+  url: https://cloud.google.com/resource-manager/docs/performance
+- type: x-pricing
+  url: https://cloud.google.com/resource-manager/pricing
+- type: x-rate-limits
+  url: https://cloud.google.com/resource-manager/docs/limits
+- type: x-website
+  url: https://cloud.google.com/resource-manager/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

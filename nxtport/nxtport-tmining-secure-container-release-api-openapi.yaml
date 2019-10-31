@@ -1,0 +1,506 @@
+swagger: "2.0"
+x-collection-name: NxtPort
+x-complete: 1
+info:
+  title: T-mining Secure Container Release API (live)
+  description: this-api-allows-carriers-forwarders-and-transport-companies-to-securely-release-full-import-containers-on-a-terminal-and-to-transfer-this-release-to-the-other-parties-in-the-chain-up-to-the-truck-driver-or-the-bargerail-operator-
+  contact:
+    name: T-Mining API support
+    url: http://support.t-mining.be/
+    email: support@t-mining.be
+  version: 1.0.0
+host: api.nxtport.eu
+basePath: /blockchain
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /api/v1/releases/:
+    post:
+      summary: Create release
+      description: Serves to create a Container together with its PickupRight that
+        gets automatically transferred to the consignee.
+      operationId: postApiV1Releases
+      x-api-path-slug: apiv1releases-post
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Release
+  /api/v1/releases/{id}:
+    delete:
+      summary: Block
+      description: |-
+        Blocking a release is done by a delete. This will revoke the PickupRight from the consignee. The Container and its PickupRight are deleted. Afterwards it is still possible to release again.
+         The following conditions apply for this to work:
+        * the container must have been released, i.e. there must be a vallid PickupRight   for the Container
+        * the PickupRight should not be transferred to another Organization than the one that got the relesase initially
+        * the PickupRight should not yet be assigned (to a driver / skipper)
+      operationId: deleteApiV1Releases
+      x-api-path-slug: apiv1releasesid-delete
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: path
+        name: id
+        description: original id of the release as defined in the client system and
+          passed during the creation
+      responses:
+        200:
+          description: OK
+      tags:
+      - Block
+  /api/v1/containers:
+    get:
+      summary: List Containers
+      description: Get all containers currently in the database. Only Containers accessible
+        by the user will be reported.
+      operationId: getApiV1Containers
+      x-api-path-slug: apiv1containers-get
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+      - Containers
+    post:
+      summary: Create a new Container
+      description: |-
+        Create a new container.
+        If all goes well, a 200 status code is returned.
+        If the create fails, a 500 status code is returned.
+      operationId: postApiV1Containers
+      x-api-path-slug: apiv1containers-post
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - New
+      - Container
+  /api/v1/containers/{id}/events:
+    get:
+      summary: Get container events
+      description: Get the list of Events related to a container
+      operationId: getApiV1ContainersEvents
+      x-api-path-slug: apiv1containersidevents-get
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: path
+        name: id
+        description: id of the Container
+      responses:
+        200:
+          description: OK
+      tags:
+      - Container
+      - Events
+  /api/v1/containers/{id}/release:
+    put:
+      summary: Release
+      description: Release a container to an organization.
+      operationId: putApiV1ContainersRelease
+      x-api-path-slug: apiv1containersidrelease-put
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: id
+        description: id of the Container
+      responses:
+        200:
+          description: OK
+      tags:
+      - Release
+  /api/v1/pickup_rights/:
+    get:
+      summary: List PickupRights
+      description: Get all PickupRights that are assigned / transferred to the users's
+        Organization.
+      operationId: getApiV1PickupRights
+      x-api-path-slug: apiv1pickup-rights-get
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+      - PickupRights
+  /api/v1/pickup_rights/{id}/request:
+    get:
+      summary: Request
+      description: |-
+        When a driver needs to pickup a container, he should send a request to get
+        authorization for the pickup. This will return a **temporary pincode**.
+        If no authorization is given, http status 403 is returned
+      operationId: getApiV1PickupRightsRequest
+      x-api-path-slug: apiv1pickup-rightsidrequest-get
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: path
+        name: id
+        description: id of the PickupRight
+      responses:
+        200:
+          description: OK
+      tags:
+      - Request
+  /api/v1/pickup_rights/{id}/transfer:
+    put:
+      summary: Transfer
+      description: Transfer the PickupRight to another Organization (a subcontractor).
+      operationId: putApiV1PickupRightsTransfer
+      x-api-path-slug: apiv1pickup-rightsidtransfer-put
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: id
+        description: id of the PickupRight (as reported by List PickupRights)
+      responses:
+        200:
+          description: OK
+      tags:
+      - Transfer
+  /api/v1/pickup_rights/{id}/assign:
+    put:
+      summary: Assign
+      description: Assign the PickupRight to a truck driver.
+      operationId: putApiV1PickupRightsAssign
+      x-api-path-slug: apiv1pickup-rightsidassign-put
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: id
+        description: id of the PickupRight as reported by List PickupRights
+      responses:
+        200:
+          description: OK
+      tags:
+      - Assign
+  /api/v1/pickup_rights/{id}/revoke_assignment:
+    put:
+      summary: Revoke Assignment
+      description: Revoke the current PickupRight assignment. This must be used in
+        case you did an assign of a PickupRight to a driver and you want to cancel
+        this. This action is only possible as long as the PickupRight is not exercised.
+      operationId: putApiV1PickupRightsRevokeAssignment
+      x-api-path-slug: apiv1pickup-rightsidrevoke-assignment-put
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: path
+        name: id
+        description: id of the PickupRight as reported by List PickupRights
+      responses:
+        200:
+          description: OK
+      tags:
+      - Revoke
+      - Assignment
+  /api/v1/pickup_rights/{id}/revoke_transfer:
+    put:
+      summary: Revoke Transfer
+      description: Revoke the current PickupRight transfer. This must be used in case
+        you did a transfer of a PickupRight to another Organization and you want to
+        cancel this. This action is only possible as long as the PickupRight is not
+        assigned.
+      operationId: putApiV1PickupRightsRevokeTransfer
+      x-api-path-slug: apiv1pickup-rightsidrevoke-transfer-put
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: path
+        name: id
+        description: id of the PickupRight as reported by List PickupRights
+      responses:
+        200:
+          description: OK
+      tags:
+      - Revoke
+      - Transfer
+  /api/v1/pickups:
+    post:
+      summary: Create pickup
+      description: When the driver has picked up the container, a request should be
+        sent to the server to record (create) the pickup. The server will record the
+        datetime of the pickup.
+      operationId: postApiV1Pickups
+      x-api-path-slug: apiv1pickups-post
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      responses:
+        200:
+          description: OK
+      tags:
+      - Pickup
+  /api/v1/deliveries:
+    post:
+      summary: Record delivery
+      description: When the driver has delivered the container, a request should be
+        sent to the server to record (create) the delivery. Note that a delivery is
+        associated with a PickupRight, because the driver who gets a PickupRight,
+        will automatically get a right to deliver the container. For that reason,
+        the PickupRight must be reported.
+      operationId: postApiV1Deliveries
+      x-api-path-slug: apiv1deliveries-post
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      responses:
+        200:
+          description: OK
+      tags:
+      - Record
+      - Delivery
+  /api/v1/coordinates/:
+    get:
+      summary: Get Coordinates
+      description: Get the coordinates of the location with the given name and type.
+      operationId: getApiV1Coordinates
+      x-api-path-slug: apiv1coordinates-get
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: query
+        name: name
+        description: name of the location
+      - in: query
+        name: type
+        description: type of the Location, can be Quay, Depot, Warehouse, InlandTerminal,
+          Checkpoint
+      responses:
+        200:
+          description: OK
+      tags:
+      - Coordinates
+  /api/v1/coordinates:
+    get:
+      summary: Get all coordinates
+      description: Get the coordinates of all known locations.
+      operationId: getApiV1Coordinates
+      x-api-path-slug: apiv1coordinates-get
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      responses:
+        200:
+          description: OK
+      tags:
+      - Coordinates
+  /api/v1/locations:
+    get:
+      summary: List
+      description: List all Locations with their details. Locations have a type, name
+        and the ISRS Locode.
+      operationId: getApiV1Locations
+      x-api-path-slug: apiv1locations-get
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+    post:
+      summary: Create
+      description: Create a new Location
+      operationId: postApiV1Locations
+      x-api-path-slug: apiv1locations-post
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Create
+  /api/v1/locations/{id}:
+    get:
+      summary: Details
+      description: Get details of 1 location.
+      operationId: getApiV1Locations
+      x-api-path-slug: apiv1locationsid-get
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: path
+        name: id
+        description: id of the location
+      responses:
+        200:
+          description: OK
+      tags:
+      - Details
+  /api/v1/container_types:
+    get:
+      summary: List
+      description: List all ContainerTypes
+      operationId: getApiV1ContainerTypes
+      x-api-path-slug: apiv1container-types-get
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+  /api/v1/organizations:
+    get:
+      summary: List
+      description: List all registered organizations.
+      operationId: getApiV1Organizations
+      x-api-path-slug: apiv1organizations-get
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+    post:
+      summary: Register organization
+      description: Register an Organization with a name. The name must be unique,
+        so if one registers an Organization with a name that is already in use, an
+        error will occur.
+      operationId: postApiV1Organizations
+      x-api-path-slug: apiv1organizations-post
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Register
+      - Organization
+  /api/v1/users:
+    get:
+      summary: List
+      description: List all users registered.
+      operationId: getApiV1Users
+      x-api-path-slug: apiv1users-get
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+    post:
+      summary: Register user
+      description: |-
+        Register information of a user. Note that the "real" (human) user should have
+        an account on the blockchain (upfront). This account is represented by an address on the chain, which is based on the public key of the user. Registering therefore means defining user **properties** like a username, which can then be used to refer to users in a more human-friendly way then by using the account addresses. User registration should be done by the user who owns an account on the chain. As a result of registration, a User contract is created on the chain, which contains the user properties, and which is owned by the user account. From then on, one can use the username to refer to a user on the web/mobile app.
+      operationId: postApiV1Users
+      x-api-path-slug: apiv1users-post
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Register
+      - User
+  /api/v1/events/:
+    post:
+      summary: Create an Event
+      description: |-
+        Used to create an event for a container at a specific location and time.
+        Each event is defined by a type.
+        Currently a limited number of events (pickup and availability) are supported, but this may be extended with e.g. passage events.
+        There are 2 ways to refer to a Container: by means of its id as defined in the Blockchain (this requires recording these ids in your app), or by means of a combination of the blNumber and isoNumber. Similarly, locations can be specified in 2 ways: by means of their id as defined in the Blockchain or by means of their name. In the latter case the name must be defined in a mapping   file for the Organization you - as a user- belong to. Also note that the container may not yet be known in the Blockchain at the time
+        an availability event is created!
+      operationId: postApiV1Events
+      x-api-path-slug: apiv1events-post
+      parameters:
+      - in: query
+        name: api_token
+        description: authentication token of user making the request
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event

@@ -1,0 +1,30 @@
+name: Request Baskets
+x-slug: request-baskets
+description: ""
+image: ""
+x-kinRank: "7"
+x-alexaRank: "0"
+tags: Cache,Relative Data,Service API,Storage
+created: "2019-02-03"
+modified: "2019-02-03"
+url: request-baskets/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Request Baskets
+  x-api-slug: request-baskets
+  description: ""
+  image: ""
+  humanURL: http://rbaskets.in
+  baseURL: https://rbaskets.in//
+  tags: Cache,Relative Data,Service API,Storage
+  properties:
+  - type: x-openapi-spec
+    url: /request-baskets/request-baskets-openapi.yaml
+x-common:
+- type: x-website
+  url: http://rbaskets.in
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

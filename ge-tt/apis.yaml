@@ -1,0 +1,72 @@
+name: Ge.tt
+x-slug: ge-tt
+description: Extremely simple realtime filesharing. No signup required. Share any
+  number of photos, videos, music, anything - in seconds - no matter how large.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1012-ge-tt.jpg
+x-kinRank: "8"
+x-alexaRank: "36546"
+tags: API Provider,File,File Sharing,File Transfer,Files,Getting Started Example,internet,Mobile,Profiles,Relative
+  Data,Service API,Stack Network,Storage,Technology
+created: "2019-02-03"
+modified: "2019-02-03"
+url: ge-tt/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Ge.tt  REST API
+  x-api-slug: ge-tt--rest-api
+  description: The Ge.tt API allows you to use Ge.tt in your own applications. We
+    believe that our users should be able to access their files and share their content
+    in their platform of choice. By using the API, developers are able to easily put
+    their own content, or the content of their users online. At the same time they
+    are able to use Ge.tts unique real-time file sharing technology where files are
+    available before they are even uploaded.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1012-ge-tt.jpg
+  humanURL: http://ge.tt
+  baseURL: https://open.ge.tt//1
+  tags: API Provider,File,File Sharing,File Transfer,Files,Getting Started Example,internet,Mobile,Profiles,Relative
+    Data,Service API,Stack Network,Storage,Technology
+  properties:
+  - type: x-postman-collection
+    url: /ge-tt/1usersme-get-postman.json
+  - type: x-openapi-spec
+    url: /ge-tt/ge-tt--rest-api-openapi.yaml
+x-common:
+- type: x--net-library
+  url: http://ge.tt/developers/csharp
+- type: x-base
+  url: http://open.ge.tt
+- type: x-blog
+  url: http://ge.tt/blog
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/ge-tt
+- type: x-crunchbase
+  url: http://www.crunchbase.com/company/ge-tt
+- type: x-developer
+  url: http://ge.tt/developers
+- type: x-email
+  url: hello@ge.tt
+- type: x-facebook
+  url: https://www.facebook.com/gettsharing
+- type: x-faq
+  url: http://ge.tt/faq
+- type: x-getting-started
+  url: http://ge.tt/developers/start
+- type: x-github
+  url: https://github.com/gett
+- type: x-java-library
+  url: http://ge.tt/developers/java
+- type: x-perl-library
+  url: http://ge.tt/developers/perl
+- type: x-python-library
+  url: http://ge.tt/developers/python
+- type: x-terms-of-service
+  url: http://ge.tt/terms
+- type: x-twitter
+  url: https://twitter.com/gettsharing
+- type: x-website
+  url: http://ge.tt
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

@@ -1,0 +1,310 @@
+swagger: "2.0"
+x-collection-name: Predix
+x-complete: 1
+info:
+  title: Nurego API
+  description: -getting-started-developers--you-will-find-all-the-information-that-you-need-to-integrate-with-nurego-belownurego-is-a-webbased-application-that-provides-organizations-with-total-control-of-their-service-metering-entitlements-and-monetization-learn-how-to-integrate-your-subscription-business-with-nurego-you-can-find-more-details-explanations-and-examples-of-nurego-apis-herehttpsdocs-nurego-comreferenceintegrationsgettingstarted-want-a-quick-tutorial-with-inline-code-samples-for-java-give-our-quick-tutorialhttpsdocs-nurego-comreferencequicktutorial-a-try-if-you-have-any-question-please-dont-hesitate-to-contact-usmailtosupportticketnurego-com-or-tweet-us-nuregoinchttpstwitter-comnuregoinc-
+  contact:
+    name: support@nurego.com
+  version: 1.0.0
+host: api.nurego.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /v1/registrations:
+    post:
+      summary: Post Registrations
+      description: |-
+        The following parameters can be used to validate the user's request.
+        The parameters are optional, but the sample code includes email as part of the requestParams.post method.
+      operationId: postV1Registrations
+      x-api-path-slug: v1registrations-post
+      parameters:
+      - in: body
+        name: body
+        description: Body Parameters
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Registrations
+  /v1/registrations/{registration_id}:
+    get:
+      summary: Get Registrations
+      description: You can use a registration_id to retrieve the respective registration
+        object.
+      operationId: getV1RegistrationsRegistration
+      x-api-path-slug: v1registrationsregistration-id-get
+      parameters:
+      - in: path
+        name: registration_id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Registrations
+  /v1/accounts/{account_id}:
+    parameters:
+      summary: Parameters Accounts
+      description: Parameters accounts.
+      operationId: parametersV1AccountsAccount
+      x-api-path-slug: v1accountsaccount-id-parameters
+      responses:
+        200:
+          description: OK
+      tags:
+      - Parameters
+      - Accounts
+    get:
+      summary: Get Accounts
+      description: You can retrieve a specific account by using the account number.
+      operationId: getV1AccountsAccount
+      x-api-path-slug: v1accountsaccount-id-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Accounts
+    put:
+      summary: Put Accounts
+      description: |-
+        You can update an account using the following parameters.
+        Use this method to set the accounts payment method, credit card token (when applicable), bill to contact and custom fields.
+      operationId: putV1AccountsAccount
+      x-api-path-slug: v1accountsaccount-id-put
+      parameters:
+      - in: body
+        name: body
+        description: Body Parameters
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Accounts
+  /v1/organizations/{organization_id}:
+    parameters:
+      summary: Parameters Organizations
+      description: Parameters organizations.
+      operationId: parametersV1OrganizationsOrganization
+      x-api-path-slug: v1organizationsorganization-id-parameters
+      responses:
+        200:
+          description: OK
+      tags:
+      - Parameters
+      - Organizations
+    get:
+      summary: Get Organizations
+      description: You can retrieve an organization by GUID using the following parameters.
+      operationId: getV1OrganizationsOrganization
+      x-api-path-slug: v1organizationsorganization-id-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Organizations
+    post:
+      summary: Post Organizations
+      description: You can update an organization using the following parameters.
+      operationId: postV1OrganizationsOrganization
+      x-api-path-slug: v1organizationsorganization-id-post
+      parameters:
+      - in: body
+        name: body
+        description: Body Parameters
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Organizations
+  /v1/subscriptions/{subscription_id}:
+    parameters:
+      summary: Parameters Subscriptions
+      description: Parameters subscriptions.
+      operationId: parametersV1SubscriptionsSubscription
+      x-api-path-slug: v1subscriptionssubscription-id-parameters
+      responses:
+        200:
+          description: OK
+      tags:
+      - Parameters
+      - Subscriptions
+    get:
+      summary: Get Subscriptions
+      description: You can retrieve a specific subscription by using it's id.
+      operationId: getV1SubscriptionsSubscription
+      x-api-path-slug: v1subscriptionssubscription-id-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Subscriptions
+  /v1/organizations/{organization_id}/subscriptions:
+    parameters:
+      summary: Parameters Organizations Subscriptions
+      description: Parameters organizations subscriptions.
+      operationId: parametersV1OrganizationsOrganizationSubscriptions
+      x-api-path-slug: v1organizationsorganization-idsubscriptions-parameters
+      responses:
+        200:
+          description: OK
+      tags:
+      - Parameters
+      - Organizations
+      - Subscriptions
+    post:
+      summary: Post Organizations Subscriptions
+      description: Create a new subscription to a plan.
+      operationId: postV1OrganizationsOrganizationSubscriptions
+      x-api-path-slug: v1organizationsorganization-idsubscriptions-post
+      parameters:
+      - in: body
+        name: body
+        description: Body Parameters
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Organizations
+      - Subscriptions
+  /v1/organizations/{organization_id}/subscriptions/{subscription_id}:
+    parameters:
+      summary: Parameters Organizations Subscriptions
+      description: Parameters organizations subscriptions.
+      operationId: parametersV1OrganizationsOrganizationSubscriptionsSubscription
+      x-api-path-slug: v1organizationsorganization-idsubscriptionssubscription-id-parameters
+      responses:
+        200:
+          description: OK
+      tags:
+      - Parameters
+      - Organizations
+      - Subscriptions
+    put:
+      summary: Put Organizations Subscriptions
+      description: You can update a subscription's plan, using the following parameters.
+      operationId: putV1OrganizationsOrganizationSubscriptionsSubscription
+      x-api-path-slug: v1organizationsorganization-idsubscriptionssubscription-id-put
+      parameters:
+      - in: body
+        name: body
+        description: Body Parameters
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Organizations
+      - Subscriptions
+    delete:
+      summary: Delete Organizations Subscriptions
+      description: You can cancel a plan subscription using the following parameters.
+        When the last subscription is canceled, the customer will become canceled.
+      operationId: deleteV1OrganizationsOrganizationSubscriptionsSubscription
+      x-api-path-slug: v1organizationsorganization-idsubscriptionssubscription-id-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Organizations
+      - Subscriptions
+  /v1/subscriptions/{subscription_id}/entitlements:
+    parameters:
+      summary: Parameters Subscriptions Entitlements
+      description: Parameters subscriptions entitlements.
+      operationId: parametersV1SubscriptionsSubscriptionEntitlements
+      x-api-path-slug: v1subscriptionssubscription-identitlements-parameters
+      responses:
+        200:
+          description: OK
+      tags:
+      - Parameters
+      - Subscriptions
+      - Entitlements
+    post:
+      summary: Post Subscriptions Entitlements
+      description: You can use this method to retrieve the Entitlements associated
+        with a specific Subscription. It returns a list of entitlement objects.
+      operationId: postV1SubscriptionsSubscriptionEntitlements
+      x-api-path-slug: v1subscriptionssubscription-identitlements-post
+      parameters:
+      - in: body
+        name: body
+        description: Body Parameters
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Subscriptions
+      - Entitlements
+  /v1/usages:
+    post:
+      summary: Post Usages
+      description: You can use this method to report usage events for multiple subscriptions
+        and multiple features with a single API call.
+      operationId: postV1Usages
+      x-api-path-slug: v1usages-post
+      parameters:
+      - in: body
+        name: body
+        description: Body Parameters
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Usages
+  /v1/catalog:
+    get:
+      summary: Get Catalog
+      description: You can retrieve the service catalog for specific distribution
+        channels, segments or customers.
+      operationId: getV1Catalog
+      x-api-path-slug: v1catalog-get
+      parameters:
+      - in: body
+        name: body
+        description: Body Parameters
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Catalog
+  /v1/offerings:
+    get:
+      summary: Get Offerings
+      description: You can retrieve the available Offerings for a specific Segment
+        and/or Distribution channel, by using the following attributes in your method
+        call.
+      operationId: getV1Offerings
+      x-api-path-slug: v1offerings-get
+      parameters:
+      - in: body
+        name: body
+        description: Body Parameters
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Offerings

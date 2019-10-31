@@ -1,0 +1,550 @@
+{
+  "info": {
+    "name": "EPA Biennial Report API ",
+    "_postman_id": "1807308c-4d45-4a30-a084-c799b9be0841",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/"
+  },
+  "item": [
+    {
+      "id": "91515b9d-6932-47d2-961b-a74da343c3b4",
+      "name": "enviroFacts_BGM_Offsite_Shipment",
+      "request": {
+        "url": {
+          "protocol": "http",
+          "host": "iaspub.epa.gov",
+          "path": [
+            "enviro",
+            "efservice",
+            "BGM_OFFSITE_SHIPMENT/ROWS/:row_start::row_end/:output"
+          ],
+          "variable": [
+            {
+              "id": "output",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_end",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_start",
+              "value": "{}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw"
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "7859231f-0175-428b-9f83-47bae8a9d1bb"
+        }
+      ]
+    },
+    {
+      "id": "cd976270-371b-4b2f-a9f6-a90c8cb3d379",
+      "name": "enviroFacts_BGM_Onsite_Shipment",
+      "request": {
+        "url": {
+          "protocol": "http",
+          "host": "iaspub.epa.gov",
+          "path": [
+            "enviro",
+            "efservice",
+            "BGM_ONSITE_TREATMENT/ROWS/:row_start::row_end/:output"
+          ],
+          "variable": [
+            {
+              "id": "output",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_end",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_start",
+              "value": "{}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw"
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "de636284-5894-4275-8914-8e0067cf6072"
+        }
+      ]
+    },
+    {
+      "id": "52560437-b03b-4074-8c34-6771b3d70ca9",
+      "name": "enviroFacts_BGM_WASTE_CODE",
+      "request": {
+        "url": {
+          "protocol": "http",
+          "host": "iaspub.epa.gov",
+          "path": [
+            "enviro",
+            "efservice",
+            "BGM_WASTE_CODE/ROWS/:row_start::row_end/:output"
+          ],
+          "variable": [
+            {
+              "id": "output",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_end",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_start",
+              "value": "{}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw"
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "1e968dd8-4046-4c9e-ba70-4ebcb0a8c047"
+        }
+      ]
+    },
+    {
+      "id": "8bc42a7e-6f96-4730-8d54-9d54bc2d8793",
+      "name": "enviroFacts_BREPORT_CYCLE",
+      "request": {
+        "url": {
+          "protocol": "http",
+          "host": "iaspub.epa.gov",
+          "path": [
+            "enviro",
+            "efservice",
+            "BREPORT_CYCLE/ROWS/:row_start::row_end/:output"
+          ],
+          "variable": [
+            {
+              "id": "output",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_end",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_start",
+              "value": "{}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw"
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "a91281c4-d29b-4cbf-8606-546fd9cf43d5"
+        }
+      ]
+    },
+    {
+      "id": "24bc2975-1aae-44e4-a187-2298b7cfee64",
+      "name": "enviroFacts_BWR_BASIC",
+      "request": {
+        "url": {
+          "protocol": "http",
+          "host": "iaspub.epa.gov",
+          "path": [
+            "enviro",
+            "efservice",
+            "BWR_BASIC/ROWS/:row_start::row_end/:output"
+          ],
+          "variable": [
+            {
+              "id": "output",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_end",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_start",
+              "value": "{}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw"
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "026bac3e-9eff-406c-82bf-59b04af2845b"
+        }
+      ]
+    },
+    {
+      "id": "59f506c0-3b70-4aae-b11d-b18d0f8b2a9e",
+      "name": "enviroFacts_RCR_BGM_BASIC",
+      "request": {
+        "url": {
+          "protocol": "http",
+          "host": "iaspub.epa.gov",
+          "path": [
+            "enviro",
+            "efservice",
+            "RCR_BGM_BASIC/ROWS/:row_start::row_end/:output"
+          ],
+          "variable": [
+            {
+              "id": "output",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_end",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_start",
+              "value": "{}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw"
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "b1110e5b-19fc-44cc-bb96-4a84c70666a6"
+        }
+      ]
+    },
+    {
+      "id": "5333555d-5aa6-4dea-844d-6807fb656b34",
+      "name": "enviroFacts_RCR_BWR_WASTE_CODE",
+      "request": {
+        "url": {
+          "protocol": "http",
+          "host": "iaspub.epa.gov",
+          "path": [
+            "enviro",
+            "efservice",
+            "RCR_BWR_WASTE_CODE/ROWS/:row_start::row_end/:output"
+          ],
+          "variable": [
+            {
+              "id": "output",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_end",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_start",
+              "value": "{}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw"
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "a4ba57d2-58e8-49fd-bca6-4ed9e1b955c7"
+        }
+      ]
+    },
+    {
+      "id": "272322c7-b1ea-4024-a2d8-737003e22816",
+      "name": "enviroFacts_RCR_HHANDLER",
+      "request": {
+        "url": {
+          "protocol": "http",
+          "host": "iaspub.epa.gov",
+          "path": [
+            "enviro",
+            "efservice",
+            "RCR_HHANDLER/ROWS/:row_start::row_end/:output"
+          ],
+          "variable": [
+            {
+              "id": "output",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_end",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_start",
+              "value": "{}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw"
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "538e3934-09ba-4042-8a50-3e0156762004"
+        }
+      ]
+    },
+    {
+      "id": "bd1f1366-f5e1-46cd-93fa-dedfe2ed034d",
+      "name": "enviroFacts_RCR_LU_FORM_CODE2",
+      "request": {
+        "url": {
+          "protocol": "http",
+          "host": "iaspub.epa.gov",
+          "path": [
+            "enviro",
+            "efservice",
+            "RCR_LU_FORM_CODE2/ROWS/:row_start::row_end/:output"
+          ],
+          "variable": [
+            {
+              "id": "output",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_end",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_start",
+              "value": "{}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw"
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "1510428a-7851-4461-9a33-1d64b33a9192"
+        }
+      ]
+    },
+    {
+      "id": "bedd514f-6309-421d-a8ee-a3b80fd415a8",
+      "name": "enviroFacts_RCR_LU_MANAGEMENT_METHOD",
+      "request": {
+        "url": {
+          "protocol": "http",
+          "host": "iaspub.epa.gov",
+          "path": [
+            "enviro",
+            "efservice",
+            "RCR_LU_MANAGEMENT_METHOD/ROWS/:row_start::row_end/:output"
+          ],
+          "variable": [
+            {
+              "id": "output",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_end",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_start",
+              "value": "{}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw"
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "79c5a394-1345-4384-b3bd-8ca4e86f8102"
+        }
+      ]
+    },
+    {
+      "id": "8458dad1-1e45-4971-96f0-66d719cf7ffe",
+      "name": "enviroFacts_RCR_LU_SOURCE_CODE2",
+      "request": {
+        "url": {
+          "protocol": "http",
+          "host": "iaspub.epa.gov",
+          "path": [
+            "enviro",
+            "efservice",
+            "RCR_LU_SOURCE_CODE2/ROWS/:row_start::row_end/:output"
+          ],
+          "variable": [
+            {
+              "id": "output",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_end",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_start",
+              "value": "{}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw"
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "e8c1c041-e3e5-4766-b1a0-967609f609e9"
+        }
+      ]
+    },
+    {
+      "id": "6afca098-2ce4-4662-846f-4c0d9887f347",
+      "name": "enviroFacts_RCR_LU_WASTE_CODE",
+      "request": {
+        "url": {
+          "protocol": "http",
+          "host": "iaspub.epa.gov",
+          "path": [
+            "enviro",
+            "efservice",
+            "RCR_LU_WASTE_CODE/ROWS/:row_start::row_end/:output"
+          ],
+          "variable": [
+            {
+              "id": "output",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_end",
+              "value": "{}",
+              "type": "string"
+            },
+            {
+              "id": "row_start",
+              "value": "{}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw"
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "1b31ee89-1fb5-4b7c-81f2-9c9f3f291b65"
+        }
+      ]
+    }
+  ]
+}

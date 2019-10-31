@@ -1,0 +1,106 @@
+name: LogMeIn
+x-slug: logmein
+description: LogMeIn, Inc. is a provider of software as a service and cloud-based
+  remote connectivity services for collaboration, IT management and customer engagement,
+  founded in 2003 and based in Boston, Massachusetts.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+x-kinRank: "7"
+x-alexaRank: "7271"
+tags: Audio,Enterprise,Relative Data,SaaS,Service API,Technology,Videoconferencing,Voice,Webinars
+created: "2019-02-03"
+modified: "2019-02-03"
+url: logmein/apis.md
+specificationVersion: "0.14"
+apis:
+- name: GoToAssist Remote Support
+  x-api-slug: gotoassist-remote-support
+  description: LogMeIn, Inc. is a provider of software as a service and cloud-based
+    remote connectivity services for collaboration, IT management and customer engagement,
+    founded in 2003 and based in Boston, Massachusetts.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2A/rest/v1
+  tags: Audio,Enterprise,Relative Data,SaaS,Service API,Technology,Videoconferencing,Voice,Webinars
+  properties:
+  - type: x-postman-collection
+    url: /logmein/archiverecordingsarchivedrecordingids-put-postman.json
+  - type: x-openapi-spec
+    url: /logmein/gotoassist-remote-support-openapi.yaml
+- name: GoToMeeting
+  x-api-slug: gotomeeting
+  description: LogMeIn, Inc. is a provider of software as a service and cloud-based
+    remote connectivity services for collaboration, IT management and customer engagement,
+    founded in 2003 and based in Boston, Massachusetts.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: Mark,Recordings,As,Archived
+  properties:
+  - type: x-postman-collection
+    url: /logmein/groupsgroupkeyhistoricalmeetings-get-postman.json
+  - type: x-openapi-spec
+    url: /logmein/gotomeeting-openapi.yaml
+- name: GoToTraining
+  x-api-slug: gototraining
+  description: LogMeIn, Inc. is a provider of software as a service and cloud-based
+    remote connectivity services for collaboration, IT management and customer engagement,
+    founded in 2003 and based in Boston, Massachusetts.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2T/rest
+  tags: Historical,Meetings,By,Group
+  properties:
+  - type: x-postman-collection
+    url: /logmein/reportsorganizersorganizerkeysessionssessionkeyattendees-get-postman.json
+  - type: x-openapi-spec
+    url: /logmein/gototraining-openapi.yaml
+- name: GoToWebinar
+  x-api-slug: gotowebinar
+  description: LogMeIn, Inc. is a provider of software as a service and cloud-based
+    remote connectivity services for collaboration, IT management and customer engagement,
+    founded in 2003 and based in Boston, Massachusetts.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2W/rest/organizers
+  tags: Attendance,Details
+  properties:
+  - type: x-postman-collection
+    url: /logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-postman.json
+  - type: x-openapi-spec
+    url: /logmein/gotowebinar-openapi.yaml
+x-common:
+- type: x-github
+  url: https://github.com/logmein
+- type: x-openapi
+  url: https://www.getpostman.com/collections/94ad52bdc3d954bad52a
+- type: x-postman-collection
+  url: https://www.getpostman.com/collections/00bf4391e993c3afa7b7
+- type: x-postman-collection
+  url: https://www.getpostman.com/collections/c35d614484f21e581775
+- type: x-postman-collection
+  url: https://www.getpostman.com/collections/9c6e067461f45f7faa6b
+- type: x-postman-collection
+  url: https://drive.google.com/open?id=16WZlBkS1i8cWSfZ3mMKOwlNP-qsE7AWy
+- type: x-postman-collection
+  url: https://drive.google.com/file/d/1vI11FNCKpv6WJ_70hoqPNMmPAkASiOU_/view?usp=sharing
+- type: x-website
+  url: http://www.LogMeInInc.com
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/logmein
+- type: x-developer
+  url: https://goto-developer.logmeininc.com/
+- type: x-documentation
+  url: https://goto-developer.logmeininc.com/apis/apis-overview
+- type: x-faq
+  url: https://goto-developer.logmeininc.com/faq-page
+- type: x-support
+  url: https://goto-developer.logmeininc.com/api-support-request-template
+- type: x-twitter
+  url: https://twitter.com/LogMeIn
+- type: x-website
+  url: https://www.logmeininc.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

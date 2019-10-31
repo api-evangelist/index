@@ -1,0 +1,36 @@
+swagger: "2.0"
+x-collection-name: Bureau of Alcohol, Tobacco, Firearms, and Explosives
+x-complete: 1
+info:
+  title: API for Firearms Imported Into The United States By Country
+  description: api-for-exhibit-5-of-annual-atf-commerce-report
+  version: v1
+host: data.atf.gov
+basePath: /resource/
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  firearms-imported-into-the-united-states-by-country.json:
+    get:
+      summary: Firearms Imported Into The United States By Country
+      description: Firearms Imported Into The United States By Country
+      operationId: ""
+      x-api-path-slug: firearmsimportedintotheunitedstatesbycountry-json-get
+      parameters:
+      - in: query
+        name: country
+      - in: query
+        name: handguns
+      - in: query
+        name: rifles
+      - in: query
+        name: shotguns
+      responses:
+        200:
+          description: OK
+      tags:
+      - ""

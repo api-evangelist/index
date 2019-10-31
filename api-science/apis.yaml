@@ -1,0 +1,56 @@
+name: API Science
+x-slug: api-science
+description: Traditional monitoring services were designed long before APIs became
+  core to modern applications. API Science is designed specifically for monitoring
+  APIs. Sure, we understand REST, JSON, OAuth, XML. No problem.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/api-science-logo.png
+x-kinRank: "10"
+x-alexaRank: "0"
+tags: API LIfeyclessss,API Service Provider,Monitoring,My API Stack,Profiles,Relative
+  Data,Stack Network
+created: "2019-02-03"
+modified: "2019-02-03"
+url: api-science/apis.md
+specificationVersion: "0.14"
+apis:
+- name: API Science
+  x-api-slug: api-science
+  description: Traditional monitoring services were designed long before APIs became
+    core to modern applications. API Science is designed specifically for monitoring
+    APIs. Sure, we understand REST, JSON, OAuth, XML. No problem.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/api-science-logo.png
+  humanURL: http://apiscience.com
+  baseURL: https:///
+  tags: API LIfeyclessss,API Service Provider,Monitoring,My API Stack,Profiles,Relative
+    Data,Stack Network
+  properties:
+  - type: x-postman-collection
+    url: /api-science/monitorpoll-nowmonitor-id-get-postman.json
+  - type: x-openapi-spec
+    url: /api-science/api-science-openapi.yaml
+x-common:
+- type: x-base-url
+  url: http://api.apiscience.com
+- type: x-blog
+  url: https://www.apiscience.com/blog/
+- type: x-blog-rss
+  url: https://www.apiscience.com/blog/feed/
+- type: x-developer
+  url: https://www.apiscience.com/docs/api
+- type: x-pricing
+  url: https://www.apiscience.com/pricing
+- type: x-privacy
+  url: https://www.apiscience.com/privacy
+- type: x-terms-of-service
+  url: https://www.apiscience.com/terms
+- type: x-twitter
+  url: https://twitter.com/APIScience
+- type: x-website
+  url: http://apiscience.com
+- type: x-website
+  url: http://www.apiscience.com/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

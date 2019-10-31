@@ -1,0 +1,131 @@
+name: Washington Metropolitan Area Transit Authority
+x-slug: washington-metropolitan-area-transit-authority
+description: Official feed of Metro/WMATA, not monitored 24/7. Report emergencies
+  to Transit Police at (202) 962-2121. Service updates @metrorailinfo & @metrobusinfo.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1214-washington-metropolitan-area-transit-authority.jpg
+x-kinRank: "8"
+x-alexaRank: "24927"
+tags: General Data,Transit,Transit,Transportation
+created: "2019-02-03"
+modified: "2019-02-03"
+url: washington-metropolitan-area-transit-authority/apis.md
+specificationVersion: "0.14"
+apis:
+- name: WMATA Bus Route and Stop Methods
+  x-api-slug: wmata-bus-route-and-stop-methods
+  description: Official feed of Metro/WMATA, not monitored 24/7. Report emergencies
+    to Transit Police at (202) 962-2121. Service updates @metrorailinfo & @metrobusinfo.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1214-washington-metropolitan-area-transit-authority.jpg
+  humanURL: http://wmata.com/
+  baseURL: https://api.wmata.com//Bus.svc
+  tags: General Data,Transit,Transit,Transportation
+  properties:
+  - type: x-postman-collection
+    url: /washington-metropolitan-area-transit-authority/stops-get-postman.json
+  - type: x-openapi-spec
+    url: /washington-metropolitan-area-transit-authority/wmata-bus-route-and-stop-methods-openapi.yaml
+- name: WMATA Incidents
+  x-api-slug: wmata-incidents
+  description: Official feed of Metro/WMATA, not monitored 24/7. Report emergencies
+    to Transit Police at (202) 962-2121. Service updates @metrorailinfo & @metrobusinfo.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1214-washington-metropolitan-area-transit-authority.jpg
+  humanURL: http://wmata.com/
+  baseURL: https://api.wmata.com//Incidents.svc
+  tags: Buses,Stops
+  properties:
+  - type: x-postman-collection
+    url: /washington-metropolitan-area-transit-authority/incidents-get-postman.json
+  - type: x-openapi-spec
+    url: /washington-metropolitan-area-transit-authority/wmata-incidents-openapi.yaml
+- name: WMATA Rail Station Information
+  x-api-slug: wmata-rail-station-information
+  description: Official feed of Metro/WMATA, not monitored 24/7. Report emergencies
+    to Transit Police at (202) 962-2121. Service updates @metrorailinfo & @metrobusinfo.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1214-washington-metropolitan-area-transit-authority.jpg
+  humanURL: http://wmata.com/
+  baseURL: https://api.wmata.com//Rail.svc
+  tags: Transit,Incidents
+  properties:
+  - type: x-postman-collection
+    url: /washington-metropolitan-area-transit-authority/srcstationtodststationinfo-get-postman.json
+  - type: x-openapi-spec
+    url: /washington-metropolitan-area-transit-authority/wmata-rail-station-information-openapi.yaml
+- name: WMATA Real-Time Bus Predictions
+  x-api-slug: wmata-realtime-bus-predictions
+  description: Official feed of Metro/WMATA, not monitored 24/7. Report emergencies
+    to Transit Police at (202) 962-2121. Service updates @metrorailinfo & @metrobusinfo.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1214-washington-metropolitan-area-transit-authority.jpg
+  humanURL: http://wmata.com/
+  baseURL: https://api.wmata.com//NextBusService.svc
+  tags: Transit,Stations
+  properties:
+  - type: x-postman-collection
+    url: /washington-metropolitan-area-transit-authority/jsonjpredictions-get-postman.json
+  - type: x-openapi-spec
+    url: /washington-metropolitan-area-transit-authority/wmata-realtime-bus-predictions-openapi.yaml
+- name: WMATA Real-Time Rail Predictions
+  x-api-slug: wmata-realtime-rail-predictions
+  description: Official feed of Metro/WMATA, not monitored 24/7. Report emergencies
+    to Transit Police at (202) 962-2121. Service updates @metrorailinfo & @metrobusinfo.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1214-washington-metropolitan-area-transit-authority.jpg
+  humanURL: http://wmata.com/
+  baseURL: https://api.wmata.com//StationPrediction.svc
+  tags: Predictions
+  properties:
+  - type: x-postman-collection
+    url: /washington-metropolitan-area-transit-authority/getpredictionstationcodes-get-postman.json
+  - type: x-openapi-spec
+    url: /washington-metropolitan-area-transit-authority/wmata-realtime-rail-predictions-openapi.yaml
+- name: WMATA Train Positions
+  x-api-slug: wmata-train-positions
+  description: Official feed of Metro/WMATA, not monitored 24/7. Report emergencies
+    to Transit Police at (202) 962-2121. Service updates @metrorailinfo & @metrobusinfo.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1214-washington-metropolitan-area-transit-authority.jpg
+  humanURL: http://wmata.com/
+  baseURL: https://api.wmata.com//TrainPositions
+  tags: Transit,Rail,Prediction,Stations
+  properties:
+  - type: x-postman-collection
+    url: /washington-metropolitan-area-transit-authority/trackcircuits-get-postman.json
+  - type: x-openapi-spec
+    url: /washington-metropolitan-area-transit-authority/wmata-train-positions-openapi.yaml
+x-common:
+- type: x-base
+  url: http://api.wmata.com/
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/wmata
+- type: x-developer
+  url: http://developer.wmata.com/
+- type: x-email
+  url: boardofdirectors@wmata.com
+- type: x-email
+  url: metrotransit@wmata.com
+- type: x-email
+  url: adaassist@wmata.com
+- type: x-email
+  url: access@wmata.com
+- type: x-email
+  url: cjachles@wmata.com
+- type: x-email
+  url: writtentestimony@wmata.com
+- type: x-email
+  url: speak@wmata.com
+- type: x-email
+  url: SEBusMove@wmata.com
+- type: x-email
+  url: PARP@wmata.com
+- type: x-email
+  url: raccomments@wmata.com
+- type: x-signup
+  url: https://developer.wmata.com/signup/
+- type: x-twitter
+  url: https://twitter.com/wmata
+- type: x-website
+  url: http://wmata.com/
+- type: x-website
+  url: http://wmata.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

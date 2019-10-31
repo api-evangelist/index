@@ -1,0 +1,138 @@
+swagger: "2.0"
+x-collection-name: Azure Analysis Services
+x-complete: 1
+info:
+  title: AzureAnalysisServices
+  description: the-azure-analysis-services-web-api-provides-a-restful-set-of-web-services-that-enables-users-to-create-retrieve-update-and-delete-analysis-services-servers
+  version: "2016-05-16"
+host: management.azure.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AnalysisServices/servers/{serverName}:
+    get:
+      summary: Get Server
+      description: Gets details about the specified Analysis Services server.
+      operationId: Servers_GetDetails
+      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-analysisservicesserversservername-get
+      parameters:
+      - in: path
+        name: serverName
+        description: The name of the Analysis Services server
+      responses:
+        200:
+          description: OK
+      tags:
+      - Servers
+    put:
+      summary: Create Server
+      description: Provisions the specified Analysis Services server based on the
+        configuration specified in the request.
+      operationId: Servers_Create
+      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-analysisservicesserversservername-put
+      parameters:
+      - in: path
+        name: serverName
+        description: The name of the Analysis Services server
+      - in: body
+        name: serverParameters
+        description: Contains the information used to provision the Analysis Services
+          server
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Servers
+    delete:
+      summary: Delete Servers
+      description: Deletes the specified Analysis Services server.
+      operationId: Servers_Delete
+      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-analysisservicesserversservername-delete
+      parameters:
+      - in: path
+        name: serverName
+        description: The name of the Analysis Services server
+      responses:
+        200:
+          description: OK
+      tags:
+      - Servers
+    patch:
+      summary: Update Server
+      description: Updates the current state of the specified Analysis Services server.
+      operationId: Servers_Update
+      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-analysisservicesserversservername-patch
+      parameters:
+      - in: path
+        name: serverName
+        description: The name of the Analysis Services server
+      - in: body
+        name: serverUpdateParameters
+        description: Request object that contains the updated information for the
+          server
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Servers
+  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AnalysisServices/servers/{serverName}/suspend
+  : post:
+      summary: Suspend Server
+      description: Supends operation of the specified Analysis Services server instance.
+      operationId: Servers_Suspend
+      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-analysisservicesserversservernamesuspend-post
+      parameters:
+      - in: path
+        name: serverName
+        description: The name of the Analysis Services server
+      responses:
+        200:
+          description: OK
+      tags:
+      - Servers
+  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AnalysisServices/servers/{serverName}/resume
+  : post:
+      summary: Resume Server
+      description: Resumes operation of the specified Analysis Services server instance.
+      operationId: Servers_Resume
+      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-analysisservicesserversservernameresume-post
+      parameters:
+      - in: path
+        name: serverName
+        description: The name of the Analysis Services server
+      responses:
+        200:
+          description: OK
+      tags:
+      - Servers
+  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AnalysisServices/servers:
+    get:
+      summary: List Servers By Group
+      description: Gets all the Analysis Services servers for the given resource group.
+      operationId: Servers_ListByResourceGroup
+      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-analysisservicesservers-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Servers
+  /subscriptions/{subscriptionId}/providers/Microsoft.AnalysisServices/servers:
+    get:
+      summary: List Servers
+      description: Lists all the Analysis Services servers for the given subscription.
+      operationId: Servers_List
+      x-api-path-slug: subscriptionssubscriptionidprovidersmicrosoft-analysisservicesservers-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Servers

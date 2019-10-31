@@ -1,0 +1,416 @@
+swagger: "2.0"
+x-collection-name: Site24x7
+x-complete: 1
+info:
+  title: Report API
+  description: the-report-api-
+  version: 1.0.0
+host: www.site24x7.com.
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /customize_report:
+    get:
+      summary: Get Custom Report Settings
+      description: Retrieve Custom Report Settings.
+      operationId: get-custom-report-settings
+      x-api-path-slug: customize-report-get
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/busy_hours/{monitor_id}?period={report_period_constants}&segment_type={segment_types}:
+    get:
+      summary: Busy Hours Report
+      description: Request Example
+      operationId: busy-hours-report
+      x-api-path-slug: reportsbusy-hoursmonitor-idperiodreport-period-constantssegment-typesegment-types-get
+      parameters:
+      - in: path
+        name: monitor_id
+        description: MandatoryUnique ID of the monitor
+        type: <td>string</td>
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/outage?period={report_period_constants}:
+    get:
+      summary: Get Outage Details
+      description: Obtain the actual down period and the total down duration of your
+        monitors for a specified duration of time.
+      operationId: get-outage-details
+      x-api-path-slug: reportsoutageperiodreport-period-constants-get
+      parameters:
+      - in: path
+        name: period
+        description: Mandatory Outage details report is generated within this predefined
+          interval
+        type: <td>int</td>
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/outage/group/{monitor_group_id}?period={report_period_constants}:
+    get:
+      summary: Get Outage Details of Monitor Groups
+      description: Obtain the actual down period and the total down duration of your
+        chosen monitor group during a selected duration of time.
+      operationId: get-outage-details-of-monitor-groups
+      x-api-path-slug: reportsoutagegroupmonitor-group-idperiodreport-period-constants-get
+      parameters:
+      - in: path
+        name: monitor_group_id
+        description: MandatoryMonitor group ID
+        type: <td>string</td>
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/outage/{monitor_id}/{outage_id}:
+    delete:
+      summary: Delete Outage
+      description: Delete the faulty downtime alerts to reflect the actual available
+        state of the monitor.
+      operationId: delete-outage
+      x-api-path-slug: reportsoutagemonitor-idoutage-id-delete
+      parameters:
+      - in: path
+        name: monitor_id
+        description: MandatoryMonitor group ID
+        type: <td>string</td>
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/alarm/{monitor_id}?period={report_period_constants}:
+    get:
+      summary: Get Alarms of Monitor
+      description: Obtain the actual down, trouble and maintenance status of your
+        configured monitors. Alert types
+      operationId: get-alarms-of-monitor
+      x-api-path-slug: reportsalarmmonitor-idperiodreport-period-constants-get
+      parameters:
+      - in: path
+        name: monitor_id
+        description: MandatoryMonitor ID
+        type: <td>string</td>
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/comments/{monitor_id}?period={report_period_constants}:
+    get:
+      summary: Get comments for a monitor
+      description: Get all the comments for a monitor for the given duration.
+      operationId: get-comments-for-a-monitor
+      x-api-path-slug: reportscommentsmonitor-idperiodreport-period-constants-get
+      parameters:
+      - in: path
+        name: monitor_id
+        description: MandatoryMonitor ID
+        type: <td>string</td>
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/comments/{monitor_id}/{outage_id}:
+    put:
+      summary: Update outage comments.
+      description: Update the comment for a given monitor.
+      operationId: update-outage-comments
+      x-api-path-slug: reportscommentsmonitor-idoutage-id-put
+      parameters:
+      - in: path
+        name: monitor_id
+        description: MandatoryMonitor ID
+        type: <td>string</td>
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/comments/{monitor_id}/{outage_id}?comment_time={comment_id}:
+    delete:
+      summary: Delete comment
+      description: Delete an outage comment.
+      operationId: delete-comment
+      x-api-path-slug: reportscommentsmonitor-idoutage-idcomment-timecomment-id-delete
+      parameters:
+      - in: path
+        name: monitor_id
+        description: MandatoryMonitor ID
+        type: <td>string</td>
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/availability_summary/group/{group_id}?period=:
+    get:
+      summary: Availability Summary by monitor group
+      description: Request Example
+      operationId: availability-summary-by-monitor-group
+      x-api-path-slug: reportsavailability-summarygroupgroup-idperiod-get
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/availability_summary?period=:
+    get:
+      summary: Availability Summary for all monitors
+      description: Request Example
+      operationId: availability-summary-for-all-monitors
+      x-api-path-slug: reportsavailability-summaryperiod-get
+      parameters:
+      - in: path
+        name: period
+        description: Availability and performance details are generated within this
+          predefined interval
+        type: <td>int</td>
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/summary/group/{group_id}?period=:
+    get:
+      summary: Summary by monitor group
+      description: Request Example
+      operationId: summary-by-monitor-group
+      x-api-path-slug: reportssummarygroupgroup-idperiod-get
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/summary?period=:
+    get:
+      summary: Summary for all monitors
+      description: Request Example
+      operationId: summary-for-all-monitors
+      x-api-path-slug: reportssummaryperiod-get
+      parameters:
+      - in: path
+        name: availability_percentage
+        description: Gives the total availability percentage of the monitor for the
+          month
+        type: <td>float</td>
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/trend/group/{group_id}:
+    get:
+      summary: Health Trend Report by Monitor group
+      description: Request Example
+      operationId: health-trend-report-by-monitor-group
+      x-api-path-slug: reportstrendgroupgroup-id-get
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/trend:
+    get:
+      summary: Health trend Report for all monitors
+      description: Request Example
+      operationId: health-trend-report-for-all-monitors
+      x-api-path-slug: reportstrend-get
+      parameters:
+      - in: path
+        name: period
+        description: Top N report is generated within this predefined interval
+        type: <td>int</td>
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/top_n/{monitor_type}/{attribute_name}?limit={N}&period={report_period_constants}:
+    get:
+      summary: Top N Report by monitor and attribute type
+      description: Request Example
+      operationId: top-n-report-by-monitor-and-attribute-type
+      x-api-path-slug: reportstop-nmonitor-typeattribute-namelimitnperiodreport-period-constants-get
+      parameters:
+      - in: path
+        name: period
+        description: Performance details report is generated within this predefined
+          interval
+        type: <td>int</td>
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/performance/group/{group_id}?period=3:
+    get:
+      summary: Performance Report by Monitor group
+      description: Request Example
+      operationId: performance-report-by-monitor-group
+      x-api-path-slug: reportsperformancegroupgroup-idperiod3-get
+      parameters:
+      - in: path
+        name: name
+        description: It contains the name of all the monitors in the group
+        type: <td>string array</td>
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/performance?period=3:
+    get:
+      summary: Performance Report of all monitors
+      description: Request Example
+      operationId: performance-report-of-all-monitors
+      x-api-path-slug: reportsperformanceperiod3-get
+      parameters:
+      - in: path
+        name: period
+        description: SLA report is generated within this predefined interval
+        type: <td>int</td>
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports
+  /reports/sla_reports/response?period=3:
+    get:
+      summary: Response SLA
+      description: Request Example
+      operationId: response-sla
+      x-api-path-slug: reportssla-reportsresponseperiod3-get
+      responses:
+        Maximum record size:
+          description: 100 KiB
+        Maximum number of records per datastore:
+          description: "100,000"
+        Maximum datastore size:
+          description: 10 MiB
+        Maximum size of a delta:
+          description: 2 MiB
+      tags:
+      - Reports

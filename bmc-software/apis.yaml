@@ -1,0 +1,66 @@
+name: BMC Software
+x-slug: bmc-software
+description: Transform your digital enterprise with BMC IT solutions. From mainframe
+  to cloud to mobile, we???ll help you drive innovation and industrial efficiency.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
+x-kinRank: "8"
+x-alexaRank: "27308"
+tags: API Provider,API Service Provider,Applications,Devops,Enterprise,ISP,Monitoring,Profiles,SaaS,Service
+  API,Technology
+created: "2019-02-03"
+modified: "2019-02-03"
+url: bmc-software/apis.md
+specificationVersion: "0.14"
+apis:
+- name: BMC Software API
+  x-api-slug: bmc-software-api
+  description: Transform your digital enterprise with BMC IT solutions. From mainframe
+    to cloud to mobile, we???ll help you drive innovation and industrial efficiency.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
+  humanURL: http://www.bmc.com
+  baseURL: https:///
+  tags: API Provider,API Service Provider,Applications,Devops,Enterprise,ISP,Monitoring,Profiles,SaaS,Service
+    API,Technology
+  properties:
+  - type: x-postman-collection
+    url: /bmc-software/actions-get-postman.json
+  - type: x-openapi-spec
+    url: /bmc-software/bmc-software-api-openapi.yaml
+x-common:
+- type: x-blog
+  url: http://www.bmc.com/blogs
+- type: x-blog-rss
+  url: http://feeds.feedburner.com/BmcBlogs
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/bmc
+- type: x-documentation
+  url: https://docs.bmc.com/docs/dashboard.action
+- type: x-email
+  url: customer_support@bmc.com
+- type: x-email
+  url: NA_Accounts_Payable@bmc.com
+- type: x-email
+  url: Collections_NA@bmc.com
+- type: x-email
+  url: education@bmc.com
+- type: x-email
+  url: investor@bmc.com
+- type: x-email
+  url: global_security@bmc.com
+- type: x-email
+  url: Compliance_EthicsOffice@bmc.com
+- type: x-email
+  url: 26Ethics@bmc.com
+- type: x-email
+  url: Community_Relations@bmc.com
+- type: x-github
+  url: https://github.com/bmcsoftware
+- type: x-twitter
+  url: https://twitter.com/bmcsoftware
+- type: x-website
+  url: http://www.bmc.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

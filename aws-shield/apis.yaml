@@ -1,0 +1,58 @@
+name: AWS Shield
+x-slug: aws-shield
+description: AWS Shield is a managed Distributed Denial of Service protection service
+  that safeguards web applications running on AWS. AWS Shield provides always-on detection
+  and automatic inline mitigations that minimize application downtime and latency,
+  so there is no need to engage AWS Support to benefit from DDoS protection. There
+  are two tiers of AWS Shield, Standard and Advanced. All AWS customers benefit from
+  the automatic protections of AWS Shield Standard, at no additional charge. AWS Shield
+  Standard defends against most common, frequently occurring network and transport
+  layer DDoS attacks that target your web site or applications.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Screen
+  Shot 2016-12-30 at 10.35.48 PM.png
+x-kinRank: "10"
+x-alexaRank: "0"
+tags: Amazon Web Services,API Provider,API Service Provider,API Service Provider,Profiles,Relative
+  Data,Service API,Stack Network
+created: "2019-02-03"
+modified: "2019-02-03"
+url: aws-shield/apis.md
+specificationVersion: "0.14"
+apis:
+- name: AWS Shield API
+  x-api-slug: aws-shield-api
+  description: AWS Shield is a managed Distributed Denial of Service protection service
+    that safeguards web applications running on AWS. AWS Shield provides always-on
+    detection and automatic inline mitigations that minimize application downtime
+    and latency, so there is no need to engage AWS Support to benefit from DDoS protection.
+    There are two tiers of AWS Shield, Standard and Advanced. All AWS customers benefit
+    from the automatic protections of AWS Shield Standard, at no additional charge.
+    AWS Shield Standard defends against most common, frequently occurring network
+    and transport layer DDoS attacks that target your web site or applications.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Screen
+    Shot 2016-12-30 at 10.35.48 PM.png
+  humanURL: https://aws.amazon.com/shield/
+  baseURL: :///
+  tags: Amazon Web Services,API Provider,API Service Provider,API Service Provider,Profiles,Relative
+    Data,Service API,Stack Network
+  properties:
+  - type: x-postman-collection
+    url: /aws-shield/actionlistprotections-get-postman.json
+  - type: x-openapi-spec
+    url: /aws-shield/aws-shield-api-openapi.yaml
+x-common:
+- type: x-documentation
+  url: http://docs.aws.amazon.com/waf/latest/APIReference/
+- type: x-documentation
+  url: http://docs.aws.amazon.com/waf/latest/DDOSAPIReference/Welcome.htm
+- type: x-faq
+  url: https://aws.amazon.com/shield/faqs/
+- type: x-pricing
+  url: https://aws.amazon.com/shield/pricing/
+- type: x-website
+  url: https://aws.amazon.com/shield/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

@@ -1,0 +1,407 @@
+swagger: "2.0"
+x-collection-name: Flat
+x-complete: 1
+info:
+  title: Flat
+  description: the-flat-api-allows-you-to-easily-extend-the-abilities-of-the-flat-platformhttpsflat-io-with-a-wide-range-of-use-cases-including-the-following-creating-and-importing-new-music-scores-using-musicxml-or-midi-files--browsing-updating-copying-exporting-the-users-scores-for-example-in-mp3-wav-or-midi--managing-educational-resources-with-flat-for-education-creating-updating-the-organization-accounts-the-classes-rosters-and-assignments--the-flat-api-is-built-on-http--our-api-is-restful-it-has-predictable-resource-urls--it-returns-http-response-codes-to-indicate-errors--it-also-accepts-and-returns-json-in-the-http-body--
+  termsOfService: https://flat.io/legal
+  contact:
+    name: Flat
+    url: https://flat.io/support
+    email: developers@flat.io
+  version: 2.1.0
+host: api.flat.io
+basePath: /v2
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /groups/{group}/scores:
+    get:
+      summary: List group's scores
+      description: Get the list of scores shared with a group.
+      operationId: getGroupScores
+      x-api-path-slug: groupsgroupscores-get
+      parameters:
+      - in: path
+        name: group
+        description: Unique identifier of the group
+      - in: query
+        name: parent
+        description: Filter the score forked from the score id `parent`
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+      - Groups
+      - Scores
+  /me:
+    get:
+      summary: Get current user profile
+      description: Get details about the current authenticated User.
+      operationId: getAuthenticatedUser
+      x-api-path-slug: me-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Current
+      - User
+      - Profile
+  /scores:
+    post:
+      summary: Create a new score
+      description: |-
+        Use this API method to **create a new music score in the current User account**. You will need a MusicXML 3 (`vnd.recordare.musicxml` or `vnd.recordare.musicxml+xml`) or a MIDI (`audio/midi`) file to create the new Flat document.
+
+        This API call will automatically create the first revision of the document, the score can be modified by the using our web application or by uploading a new revision of this file (`POST /v2/scores/{score}/revisions/{revision}`).
+
+        The currently authenticated user will be granted owner of the file and will be able to add other collaborators (users and groups).
+      operationId: createScore
+      x-api-path-slug: scores-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - New
+      - Score
+  /scores/{score}:
+    delete:
+      summary: Delete a score
+      description: |-
+        This API call will schedule the deletion of the score, its revisions, and whole history.
+        The user calling this API method must have the `aclAdmin` rights on this document to process this action.
+        The score won't be accessible anymore after calling this method and the user's quota will directly be updated.
+      operationId: deleteScore
+      x-api-path-slug: scoresscore-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Score
+    get:
+      summary: Get a score's metadata
+      description: |-
+        Get the details of a score identified by the `score` parameter in the URL.
+        The currently authenticated user must have at least a read access to the document to use this API call.
+      operationId: getScore
+      x-api-path-slug: scoresscore-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Scores
+      - Metadata
+    put:
+      summary: Edit a score's metadata
+      description: |-
+        This API method allows you to change the metadata of a score document (e.g. its `title` or `privacy`), all the properties are optional.
+
+        To edit the file itself, create a new revision using the appropriate method (`POST /v2/scores/{score}/revisions/{revision}`).
+      operationId: editScore
+      x-api-path-slug: scoresscore-put
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Edit
+      - Scores
+      - Metadata
+  /scores/{score}/collaborators:
+    get:
+      summary: List the collaborators
+      description: |-
+        This API call will list the different collaborators of a score and their rights on the document. The returned list will at least contain the owner of the document.
+
+        Collaborators can be a single user (the object `user` will be populated) or a group (the object `group` will be populated).
+      operationId: getScoreCollaborators
+      x-api-path-slug: scoresscorecollaborators-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+      - Collaborators
+    post:
+      summary: Add a new collaborator
+      description: |-
+        Share a score with a single user or a group. This API call allows to add, invite and update the collaborators of a document.
+        - To add an existing Flat user to the document, specify its unique identifier in the `user` property.
+        - To invite an external user to the document, specify its email in the `userEmail` property.
+        - To add a Flat group to the document, specify its unique identifier in the `group` property.
+        - To update an existing collaborator, process the same request with different rights.
+      operationId: addScoreCollaborator
+      x-api-path-slug: scoresscorecollaborators-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - New
+      - Collaborator
+  /scores/{score}/collaborators/{collaborator}:
+    delete:
+      summary: Delete a collaborator
+      description: Remove the specified collaborator from the score
+      operationId: removeScoreCollaborator
+      x-api-path-slug: scoresscorecollaboratorscollaborator-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Collaborator
+    get:
+      summary: Get a collaborator
+      description: Get the information about a collaborator (User or Group).
+      operationId: getScoreCollaborator
+      x-api-path-slug: scoresscorecollaboratorscollaborator-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Collaborator
+  /scores/{score}/comments:
+    get:
+      summary: List comments
+      description: This method lists the different comments added on a music score
+        (documents and inline) sorted by their post dates.
+      operationId: getScoreComments
+      x-api-path-slug: scoresscorecomments-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+      - Comments
+    post:
+      summary: Post a new comment
+      description: |-
+        Post a document or a contextualized comment on a document.
+
+        Please note that this method includes an anti-spam system for public scores. We don't guarantee that your comments will be accepted and displayed to end-user. Comments are be blocked by returning a `403` HTTP error and hidden from other users when the `spam` property is `true`.
+      operationId: postScoreComment
+      x-api-path-slug: scoresscorecomments-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - New
+      - Comment
+  /scores/{score}/comments/{comment}:
+    delete:
+      summary: Delete a comment
+      description: ""
+      operationId: deleteScoreComment
+      x-api-path-slug: scoresscorecommentscomment-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Comment
+    put:
+      summary: Update an existing comment
+      description: ""
+      operationId: updateScoreComment
+      x-api-path-slug: scoresscorecommentscomment-put
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Existing
+      - Comment
+  /scores/{score}/comments/{comment}/resolved:
+    delete:
+      summary: Mark the comment as unresolved
+      description: ""
+      operationId: markScoreCommentUnresolved
+      x-api-path-slug: scoresscorecommentscommentresolved-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Mark
+      - Comment
+      - As
+      - Unresolved
+    put:
+      summary: Mark the comment as resolved
+      description: ""
+      operationId: markScoreCommentResolved
+      x-api-path-slug: scoresscorecommentscommentresolved-put
+      responses:
+        200:
+          description: OK
+      tags:
+      - Mark
+      - Comment
+      - As
+      - Resolved
+  /scores/{score}/fork:
+    post:
+      summary: Fork a score
+      description: |-
+        This API call will make a copy of the last revision of the specified score and create a new score. The copy of the score will have a privacy set to `private`.
+
+        When using a [Flat for Education](https://flat.io/edu) account, the inline and contextualized comments will be accessible in the child document.
+      operationId: forkScore
+      x-api-path-slug: scoresscorefork-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Fork
+      - Score
+  /scores/{score}/revisions:
+    get:
+      summary: List the revisions
+      description: |-
+        When creating a score or saving a new version of a score, a revision is created in our storage. This method allows you to list all of them, sorted by last modification.
+
+        Depending the plan of the account, this list can be trunked to the few last revisions.
+      operationId: getScoreRevisions
+      x-api-path-slug: scoresscorerevisions-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+      - Revisions
+    post:
+      summary: Create a new revision
+      description: Update a score by uploading a new revision for this one.
+      operationId: createScoreRevision
+      x-api-path-slug: scoresscorerevisions-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - New
+      - Revision
+  /scores/{score}/revisions/{revision}:
+    get:
+      summary: Get a score revision
+      description: |-
+        When creating a score or saving a new version of a score, a revision is created in our storage. This method allows you to get a specific
+        revision metadata.
+      operationId: getScoreRevision
+      x-api-path-slug: scoresscorerevisionsrevision-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Score
+      - Revision
+  /scores/{score}/revisions/{revision}/{format}:
+    get:
+      summary: Get a score revision data
+      description: |-
+        Retrieve the file corresponding to a score revision (the following formats are available: Flat JSON/Adagio JSON `json`, MusicXML
+        `mxl`/`xml`, MP3 `mp3`, WAV `wav`, MIDI `midi`, or a tumbnail of the first page `thumbnail.png`).
+      operationId: getScoreRevisionData
+      x-api-path-slug: scoresscorerevisionsrevisionformat-get
+      parameters:
+      - in: path
+        name: format
+        description: The format of the file you will retrieve
+      - in: query
+        name: onlyCached
+        description: Only return files already generated and cached in Flats productioncache
+      - in: query
+        name: parts
+        description: An optional a set of parts to be exported
+      responses:
+        200:
+          description: OK
+      tags:
+      - Score
+      - Revision
+      - Data
+  /users/{user}:
+    get:
+      summary: Get a public user profile
+      description: Get a public profile of a Flat User.
+      operationId: getUser
+      x-api-path-slug: usersuser-get
+      parameters:
+      - in: path
+        name: user
+        description: This route parameter is the unique identifier of the user
+      responses:
+        200:
+          description: OK
+      tags:
+      - Public
+      - User
+      - Profile
+  /users/{user}/likes:
+    get:
+      summary: List liked scores
+      description: ""
+      operationId: gerUserLikes
+      x-api-path-slug: usersuserlikes-get
+      parameters:
+      - in: query
+        name: ids
+        description: Return only the identifiers of the scores
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+      - Liked
+      - Scores
+  /users/{user}/scores:
+    get:
+      summary: List user's scores
+      description: Get the list of scores owned by the User
+      operationId: getUserScores
+      x-api-path-slug: usersuserscores-get
+      parameters:
+      - in: query
+        name: parent
+        description: Filter the score forked from the score id `parent`
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+      - Users
+      - Scores

@@ -1,0 +1,88 @@
+swagger: "2.0"
+x-collection-name: Xignite
+x-complete: 1
+info:
+  title: Xignite Global Option Master
+  description: complete-stock-option-management-application-
+  version: 1.0.0
+host: globaloptionmaster.xignite.com
+basePath: xGlobalOptionMaster.json/XigniteGlobalOptionMaster
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /GetUnderlyingForOption:
+    get:
+      summary: Get Underlying For Option
+      description: Get details on an underlying instrument for the option symbol provided.
+      operationId: GetUnderlyingForOption
+      x-api-path-slug: getunderlyingforoption-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Underlying
+      - Option
+  /GetOptionBySymbol:
+    get:
+      summary: Get Option By Symbol
+      description: Get details on an option.
+      operationId: GetOptionBySymbol
+      x-api-path-slug: getoptionbysymbol-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Option
+      - Symbol
+  /GetOptionChain:
+    get:
+      summary: Get Option Chain
+      description: Get the option chain for the underlying instrument.
+      operationId: GetOptionChain
+      x-api-path-slug: getoptionchain-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Option
+      - Chain
+  /ListExchanges:
+    get:
+      summary: List Exchanges
+      description: List supported exchanges.
+      operationId: ListExchanges
+      x-api-path-slug: listexchanges-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - List
+      - Exchanges

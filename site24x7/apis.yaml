@@ -1,0 +1,268 @@
+name: Site24x7
+x-slug: site24x7
+description: Site24x7 offers both free & paid website monitoring services. Monitor
+  websites remotely and receive instant email/sms alerts if your website becomes unavailable.
+  View uptime & performance graphs of your website monitors.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+x-kinRank: "7"
+x-alexaRank: "42122"
+tags: Monitoring,Networks,Relative Data,SaaS,Service API,Technology
+created: "2019-02-03"
+modified: "2019-02-03"
+url: site24x7/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Business Hours API
+  x-api-slug: business-hours-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Monitoring,Networks,Relative Data,SaaS,Service API,Technology
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/business-hours-get-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/business-hours-api-openapi.yaml
+- name: Current Status API
+  x-api-slug: current-status-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Business Hours
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/current-statustypemonitor-type-get-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/current-status-api-openapi.yaml
+- name: Email Template API
+  x-api-slug: email-template-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Current Status
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/email-templatestemplate-id-delete-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/email-template-api-openapi.yaml
+- name: Location Profile API
+  x-api-slug: location-profile-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Email Templates
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/location-profilesprofile-id-delete-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/location-profile-api-openapi.yaml
+- name: Maintenance API
+  x-api-slug: maintenance-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Location Profiles
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/maintenancemaintenance-id-delete-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/maintenance-api-openapi.yaml
+- name: Monitor Group API
+  x-api-slug: monitor-group-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Maintenance
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/monitor-groups-get-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/monitor-group-api-openapi.yaml
+- name: Notification Profile API
+  x-api-slug: notification-profile-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Monitor Groups
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/notification-profiles-get-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/notification-profile-api-openapi.yaml
+- name: Operation Dashboard API
+  x-api-slug: operation-dashboard-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Notification Profiles
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/operations-dashboards-get-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/operation-dashboard-api-openapi.yaml
+- name: Report API
+  x-api-slug: report-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Operation Dashboards
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/reportssla-reportsresponseperiod3-get-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/report-api-openapi.yaml
+- name: Scheduled Report API
+  x-api-slug: scheduled-report-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Reports
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/scheduled-reports-get-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/scheduled-report-api-openapi.yaml
+- name: SLA Setting API
+  x-api-slug: sla-setting-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Scheduled Reports
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/sla-settingssla-id-delete-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/sla-setting-api-openapi.yaml
+- name: Status Dashboard API
+  x-api-slug: status-dashboard-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: SLA Settings
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/status-dashboards-get-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/status-dashboard-api-openapi.yaml
+- name: Threshold Profile API
+  x-api-slug: threshold-profile-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Status Dashboards
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/threshold-profilesprofile-id-delete-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/threshold-profile-api-openapi.yaml
+- name: Update Button API
+  x-api-slug: update-button-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Threshold Profiles
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/uptime-buttonsmonitor-id-delete-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/update-button-api-openapi.yaml
+- name: User API
+  x-api-slug: user-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Uptime Buttons
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/usersuser-id-delete-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/user-api-openapi.yaml
+- name: User Group API
+  x-api-slug: user-group-api
+  description: Site24x7 offers both free & paid website monitoring services. Monitor
+    websites remotely and receive instant email/sms alerts if your website becomes
+    unavailable. View uptime & performance graphs of your website monitors.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
+  humanURL: https://www.site24x7.com/
+  baseURL: ://www.site24x7.com./
+  tags: Users
+  properties:
+  - type: x-postman-collection
+    url: /site24x7/user-groups-get-postman.json
+  - type: x-openapi-spec
+    url: /site24x7/user-group-api-openapi.yaml
+x-common:
+- type: x-website
+  url: https://www.site24x7.com/
+- type: x-blog
+  url: http://blogs.site24x7.com/
+- type: x-blog-rss
+  url: http://blogs.site24x7.com/feed
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/site24x7
+- type: x-crunchbase
+  url: http://www.crunchbase.com/company/site24x7
+- type: x-developer
+  url: https://www.site24x7.com/help/api/
+- type: x-email
+  url: support@site24x7.com
+- type: x-email
+  url: sales@site24x7.com
+- type: x-github
+  url: https://github.com/site24x7
+- type: x-partner-program
+  url: https://www.site24x7.com/partners.html
+- type: x-pricing
+  url: https://www.site24x7.com/site24x7-pricing.html
+- type: x-twitter
+  url: https://twitter.com/site24x7
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

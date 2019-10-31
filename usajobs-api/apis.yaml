@@ -1,0 +1,42 @@
+name: USAJobs API
+x-slug: usajobs-api
+description: Federal, state, and local government agencies are hiring and have thousands
+  of job openings across the country, posted on USAJobs.gov and local government jobs
+  sites. This Jobs API allows you to tap into a list of current jobs openings with
+  the government. Jobs are searchable by keyword, location, agency, schedule, or any
+  combination of these.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/usajobs.png
+x-kinRank: "9"
+x-alexaRank: "0"
+tags: Federal Government   GSA,General Data,Stack Network
+created: "2019-02-03"
+modified: "2019-02-03"
+url: usajobs-api/apis.md
+specificationVersion: "0.14"
+apis:
+- name: USAJobs API
+  x-api-slug: usajobs-api
+  description: Federal, state, and local government agencies are hiring and have thousands
+    of job openings across the country, posted on USAJobs.gov and local government
+    jobs sites. This Jobs API allows you to tap into a list of current jobs openings
+    with the government. Jobs are searchable by keyword, location, agency, schedule,
+    or any combination of these.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/usajobs.png
+  humanURL: https://search.digitalgov.gov/developer/jobs.html
+  baseURL: https://api.usa.gov//
+  tags: Federal Government   GSA,General Data,Stack Network
+  properties:
+  - type: x-postman-collection
+    url: /usajobs-api/jobssearch-json-get-postman.json
+  - type: x-openapi-spec
+    url: /usajobs-api/usajobs-api-openapi.yaml
+x-common:
+- type: x-website
+  url: https://search.digitalgov.gov/developer/jobs.html
+- type: x-terms-of-service
+  url: https://www.usa.gov/About/developer-resources/terms-of-service.shtml
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

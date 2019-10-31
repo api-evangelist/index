@@ -1,0 +1,35 @@
+{
+  "info": {
+    "name": "IP Registrant Monitor API IP Registrant Monitor",
+    "_postman_id": "376278e3-2350-4b11-b83a-86fdc860956b",
+    "description": "Receive notification when specific people or organizations are allocated new IP ranges or have existing ranges de-allocated",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/"
+  },
+  "item": [
+    {
+      "name": "IP Registrant Monitor",
+      "item": [
+        {
+          "id": "40e40d65-d18c-4ead-bbb2-a0fd891aa134",
+          "name": "ipRegistrantMonitor",
+          "request": {
+            "url": "http://api.domaintools.com/v1/ip-registrant-monitor/?country=country&include_total_count=include_total_count&page=page&query=query&search_type=search_type&server=server",
+            "method": "GET",
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Receive notification when specific people or organizations are allocated new IP ranges or have existing ranges de-allocated"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "5eca19d4-a3ea-40ec-9aa3-2871e8003fc2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+name: Google Cloud Container Builder
+x-slug: google-cloud-container-builder
+description: Google Cloud Container Builder lets you create Docker container images
+  from application source code located in Google Cloud Storage. Container images created
+  by Container Builder are automatically stored in Google Container Registry. You
+  can deploy the container images you create on Google Container Engine, Google Compute
+  Engine, Google App Engine flexible environment or other services where you can run
+  applications from Docker containers.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/container-builder-lead.png
+x-kinRank: "9"
+x-alexaRank: "0"
+tags: API Provider,API Service Provider,Containers,Deployments,Google APIs,Profiles,Relative
+  Data,Service API,Stack Network
+created: "2019-02-03"
+modified: "2019-02-03"
+url: google-cloud-container-builder/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Google Cloud Container Builder API
+  x-api-slug: google-cloud-container-builder-api
+  description: Google Cloud Container Builder lets you create Docker container images
+    from application source code located in Google Cloud Storage. Container images
+    created by Container Builder are automatically stored in Google Container Registry.
+    You can deploy the container images you create on Google Container Engine, Google
+    Compute Engine, Google App Engine flexible environment or other services where
+    you can run applications from Docker containers.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/container-builder-lead.png
+  humanURL: https://cloud.google.com/container-builder/
+  baseURL: ://cloudbuild.googleapis.com//
+  tags: API Provider,API Service Provider,Containers,Deployments,Google APIs,Profiles,Relative
+    Data,Service API,Stack Network
+  properties:
+  - type: x-openapi-spec
+    url: /google-cloud-container-builder/google-cloud-container-builder-api-openapi.yaml
+x-common:
+- type: x-documentation
+  url: https://cloud.google.com/container-builder/docs/
+- type: x-pricing
+  url: https://cloud.google.com/container-builder/pricing
+- type: x-website
+  url: https://cloud.google.com/container-builder/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

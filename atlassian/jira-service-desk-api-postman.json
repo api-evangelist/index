@@ -1,0 +1,2240 @@
+{
+  "info": {
+    "name": "Jira Service Desk API Unarchive conversation",
+    "_postman_id": "4e96cdd4-a822-483b-ae79-d2db4e755a52",
+    "description": "Authentication required, with scope manage:conversation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/"
+  },
+  "item": [
+    {
+      "name": "List",
+      "item": [
+        {
+          "id": "c46adc4d-0688-4586-b5fb-18f146347485",
+          "name": "GetAllHandler",
+          "request": {
+            "url": "{{default}}/site/",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "d8729991-4e71-4ed4-afd9-a5e027d0ef49"
+            }
+          ]
+        },
+        {
+          "id": "e0e86033-db0b-4fd1-84ec-cd53ebbd25b4",
+          "name": "ConversationGetAllHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation"
+              ],
+              "query": [
+                {
+                  "key": "cursor",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "exclude-direct",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "include-archived",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "include-private",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "limit",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "query",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "sort",
+                  "value": "%7B%7D",
+                  "disabled": false
+                }
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "The API returns the list of conversations the app has access to Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "f8b89141-016d-4f1e-8485-aa3c75d8eb98"
+            }
+          ]
+        },
+        {
+          "id": "0ddcdbb1-be6d-477d-8b0c-62737b26b1c2",
+          "name": "AppModuleChatActionTargetGetAllHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:actionTarget"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "start",
+                  "value": "%7B%7D",
+                  "disabled": false
+                }
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "e1788e9f-eac6-4bf9-8fd8-2d2ce4b51969"
+            }
+          ]
+        },
+        {
+          "id": "6af60d32-c3c4-4452-b799-777f93b24a9c",
+          "name": "AppWebhookChatBotGetAllHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:bot"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "start",
+                  "value": "%7B%7D",
+                  "disabled": false
+                }
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "962d783d-257a-4b9a-9d1e-7cd2c6773001"
+            }
+          ]
+        },
+        {
+          "id": "e0ed5936-bd7b-43e2-91aa-43ecb3afa744",
+          "name": "AppWebhookChatBotMessageGetAllHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:bot:messages"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "start",
+                  "value": "%7B%7D",
+                  "disabled": false
+                }
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "190d9aa7-1ae9-416b-b5ec-fd5d16ec02d7"
+            }
+          ]
+        },
+        {
+          "id": "b2880215-ffa7-4b8c-8033-a0374370bb33",
+          "name": "AppModuleChatDialogGetAllHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:dialog"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "start",
+                  "value": "%7B%7D",
+                  "disabled": false
+                }
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "f7e358ec-6d5b-4806-b2ac-dc0f1efc21b6"
+            }
+          ]
+        },
+        {
+          "id": "12eba501-f571-4ab4-a216-187b86bd59eb",
+          "name": "AppModuleChatExternalPageGetAllHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:externalPage"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "start",
+                  "value": "%7B%7D",
+                  "disabled": false
+                }
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "de1519e9-f59d-4d8d-8481-66ef34a89803"
+            }
+          ]
+        },
+        {
+          "id": "88b33d6a-1eef-4caa-9e3b-6b9dd03761e8",
+          "name": "AppModuleChatGlanceGetAllHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:glance"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "start",
+                  "value": "%7B%7D",
+                  "disabled": false
+                }
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "4089d3f7-adb6-41af-8cee-8a832b48844f"
+            }
+          ]
+        },
+        {
+          "id": "3709d18b-860e-41e6-9439-55ba8009606f",
+          "name": "AppModuleChatSidebarGetAllHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:sidebar"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "start",
+                  "value": "%7B%7D",
+                  "disabled": false
+                }
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "0225e197-1c7f-44f5-9498-14782647102b"
+            }
+          ]
+        },
+        {
+          "id": "339637d8-2863-4a74-9697-11edef246747",
+          "name": "AppWebhookChatWebhookGetAllHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:webhook"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "start",
+                  "value": "%7B%7D",
+                  "disabled": false
+                }
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "dee59e54-7492-4124-9bfd-523038adf215"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Conversation",
+      "item": [
+        {
+          "id": "1b11fa06-c82b-4817-8137-4f58554d2efa",
+          "name": "ConversationPostHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope manage:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "d39ed1b5-350d-486b-8311-6d7f4179c18b"
+            }
+          ]
+        },
+        {
+          "id": "746d9f1d-04e4-4b16-bccd-dcf585698105",
+          "name": "ConversationGetHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "45d82ae9-4aec-4ce9-94e9-efd96baf4a3f"
+            }
+          ]
+        },
+        {
+          "id": "16b71ba0-d21c-4132-a52a-4f1ff8757fe9",
+          "name": "ConversationPatchHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope manage:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "f3e4cbb2-a076-40ed-a14e-bd7562e368af"
+            }
+          ]
+        },
+        {
+          "id": "96307612-8a51-4c39-8d33-791d56fb8ddf",
+          "name": "ConversationMessagesGetHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/message"
+              ],
+              "query": [
+                {
+                  "key": "afterMessage",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "afterTimestamp",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "beforeMessage",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "beforeTimestamp",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "limit",
+                  "value": "%7B%7D",
+                  "disabled": false
+                }
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation This method returns messages after/before a given messageIDs or/and timestamps. If these parameters are omitted the method returns conversation’s latest messages. Max number of messages returned is 75."
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "52c6b035-2210-451a-ac69-3a968912ee3b"
+            }
+          ]
+        },
+        {
+          "id": "d52b185f-51d9-488c-88e5-fbb54bed341f",
+          "name": "ConversationContextMessagesGetHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/message/:messageId/context"
+              ],
+              "query": [
+                {
+                  "key": "after",
+                  "value": "%7B%7D",
+                  "disabled": false
+                },
+                {
+                  "key": "before",
+                  "value": "%7B%7D",
+                  "disabled": false
+                }
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "messageId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation This method returns messages after and/or before a given messageID including the message itself. Default value for 'after' and 'before' query parameters is 0. Max number of messages returned is 75."
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "38cb2507-60b8-4d14-9b13-5db760176e61"
+            }
+          ]
+        },
+        {
+          "id": "b2df5a04-70b8-4aa7-8b04-f788acf0a749",
+          "name": "ConversationRosterGetHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/roster"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "56595290-dbb9-465d-9b1e-c7812ef923c2"
+            }
+          ]
+        },
+        {
+          "id": "6194eb06-f682-4efb-b4b1-220845f2e5be",
+          "name": "PatchRosterHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/roster"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope manage:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "5e61949d-cbf0-4f14-978c-bbc412dd9fcb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Direct",
+      "item": [
+        {
+          "id": "97f51ae5-e319-4afe-b822-d6980a6cc412",
+          "name": "ConversationUserGetHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/user/:userId"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "userId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Get a direct conversation of a user."
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "a3d46601-5e13-428b-9073-54f667e8b167"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Send",
+      "item": [
+        {
+          "id": "7df1776b-e235-41e5-a6c8-591d26733cce",
+          "name": "UserMessagePostHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/user/:userId/message"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "userId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Send message to a user."
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "b19b78f4-7b09-4d09-9dbb-edbe41d06160"
+            }
+          ]
+        },
+        {
+          "id": "3d2291aa-e9db-477f-8c02-5d85754ed5a2",
+          "name": "ConversationMessagePostHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/message"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Send a message to a conversation."
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "fa9eedf6-815c-4976-beaf-66e867f76be3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Edit",
+      "item": [
+        {
+          "id": "deac3510-59f1-42e7-bd81-d92cca17348b",
+          "name": "UserMessagePutHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/user/:userId/message/:messageId"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "messageId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "userId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "4af853a0-aba4-4a4c-86a4-2696602ee959"
+            }
+          ]
+        },
+        {
+          "id": "538690e6-62ab-4697-93bb-b4f393d1eab2",
+          "name": "ConversationMessagePutHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/message/:messageId"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "messageId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "c9406db6-d476-4258-aa27-d8e48fd101b9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Message",
+      "item": [
+        {
+          "id": "ee50fc5e-83b3-48f2-a73f-8b9dff19a921",
+          "name": "UserMessageDeleteHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/user/:userId/message/:messageId"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "messageId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "userId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "0be9a4bc-98e7-4ef3-bd39-dd9db42e3f6c"
+            }
+          ]
+        },
+        {
+          "id": "d60c4af2-515d-42ff-ab63-410a3e5f8dd7",
+          "name": "ConversationMessageGetHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/message/:messageId"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "messageId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "e1399dc5-77cf-4e11-8ae9-eb16e60284e8"
+            }
+          ]
+        },
+        {
+          "id": "c1072471-3571-4790-b5b9-4765fa0d32fa",
+          "name": "ConversationMessageDeleteHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/message/:messageId"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "messageId",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "647d14e8-2bf4-4225-9fea-99649487f0e4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Update",
+      "item": [
+        {
+          "id": "26534752-856a-40ac-89ce-5e5f0cff86bc",
+          "name": "AppModuleChatActionTargetPutHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:actionTarget/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "4958ab8e-1ab1-4104-9ff5-b98373b1098b"
+            }
+          ]
+        },
+        {
+          "id": "56979d74-a373-46d4-b53a-b8ce924eba77",
+          "name": "AppWebhookChatBotPutHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:bot/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "c2cbc8e2-f8cd-4642-869d-7f5a3cf65c89"
+            }
+          ]
+        },
+        {
+          "id": "86e156fb-6b99-42e0-bfa9-2bf84a7dca46",
+          "name": "AppWebhookChatBotMessagePutHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:bot:messages/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "fb77db66-0c3f-4167-9165-20fd3bd9dd7f"
+            }
+          ]
+        },
+        {
+          "id": "55b5c9b4-b007-4422-aaf1-99fe8b87c5cc",
+          "name": "AppModuleChatDialogPutHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:dialog/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "e0b63038-d8ea-41a9-b431-8a5706e293f0"
+            }
+          ]
+        },
+        {
+          "id": "fdce37a4-1b26-46bd-b924-238980c002eb",
+          "name": "AppModuleChatExternalPagePutHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:externalPage/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "0155627b-452c-4d30-9d73-83c8fde649c1"
+            }
+          ]
+        },
+        {
+          "id": "75d0b6fc-0c0c-4c58-8b0c-c2aba2e009b5",
+          "name": "AppModuleChatGlancePutHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:glance/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "e7fbd11d-bc56-45e7-9ef0-301386828782"
+            }
+          ]
+        },
+        {
+          "id": "6a227acd-737d-4377-bdca-9842ba39050c",
+          "name": "AppModuleChatSidebarPutHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:sidebar/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "9a3f4b13-c91f-4972-88cf-99a6af82b02b"
+            }
+          ]
+        },
+        {
+          "id": "921470e2-e1b1-49cc-af1c-df5751166186",
+          "name": "AppWebhookChatWebhookPutHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:webhook/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "799954de-7485-426e-b213-b186fde78809"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chat:actionTarget",
+      "item": [
+        {
+          "id": "d5f1aba1-f67a-4c9b-8dd7-726c35cb7676",
+          "name": "AppModuleChatActionTargetDeleteHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:actionTarget/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "c478ea43-8289-42ac-913b-382116a41109"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chat:bot",
+      "item": [
+        {
+          "id": "19785f6b-a009-41c8-a2ff-9af0da16d8bb",
+          "name": "AppWebhookChatBotDeleteHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:bot/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "9a70f7f3-c8cc-4531-b88d-1f1700704afe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chat:bot:messages",
+      "item": [
+        {
+          "id": "5a09a489-d086-4ae1-a699-4aaee4df8c6f",
+          "name": "AppWebhookChatBotMessageDeleteHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:bot:messages/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "9ef791e4-8db4-4576-9450-6d317a2c603e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chat:configuration",
+      "item": [
+        {
+          "id": "69ab5907-841a-4f18-9b18-62c97040c432",
+          "name": "AppModuleChatConfigurationPutHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:configuration/:key/state"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "b0b28e2c-cac8-4b1a-87a8-6295230eca5e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chat:dialog",
+      "item": [
+        {
+          "id": "6f22ac77-fda3-40ec-8ab6-28cf3f3ef510",
+          "name": "AppModuleChatDialogDeleteHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:dialog/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "fc1faa7a-8aab-4646-a317-fa14bf912bd2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chat:externalPage",
+      "item": [
+        {
+          "id": "6af3c152-9da1-44cd-9850-f15557c4c544",
+          "name": "AppModuleChatExternalPageDeleteHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:externalPage/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "6f8c3cd3-2f27-474e-a999-c79ca8a574b5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chat:glance",
+      "item": [
+        {
+          "id": "871f537b-7710-4fd8-b4c4-9de55269cc73",
+          "name": "AppModuleChatGlanceDeleteHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:glance/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "5de1c080-543a-4f0d-8100-b1f354120c38"
+            }
+          ]
+        },
+        {
+          "id": "993726bb-a796-43af-8876-43ee42a9d84f",
+          "name": "AppModuleChatGlanceStatePutHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:glance/:key/state"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "22482c91-972b-471b-83ed-f37312586d46"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chat:sidebar",
+      "item": [
+        {
+          "id": "1be22bbb-e166-40c6-b32f-52f2ef207f02",
+          "name": "AppModuleChatSidebarDeleteHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:sidebar/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "8d9c0c3a-d157-4b6b-ae16-294ace89c1db"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chat:webhook",
+      "item": [
+        {
+          "id": "a25060c5-07c2-4ddd-8725-80a3cfe36e1f",
+          "name": "AppWebhookChatWebhookDeleteHandler",
+          "request": {
+            "url": {
+              "host": "{{default}}",
+              "path": [
+                "site/:cloudId/conversation/:conversationId/app/module/chat:webhook/:key"
+              ],
+              "variable": [
+                {
+                  "id": "cloudId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "conversationId",
+                  "value": "{}",
+                  "type": "string"
+                },
+                {
+                  "id": "key",
+                  "value": "{}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Authentication required, with scope participate:conversation"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "22f9e915-f30e-4c3e-95

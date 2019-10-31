@@ -1,0 +1,94 @@
+name: Actility
+x-slug: actility
+description: 'Actility is the leader in low power wide area (LoRaWAN and 3GPP) network
+  connectivity management for the Internet of Things: the ThingPark platform'
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28250-actility.jpg
+x-kinRank: "7"
+x-alexaRank: "637591"
+tags: API Provider,Energy,Enterprise,Industrial,Internet of Things,ISP,Networks,Parking,Profiles,Relative
+  Data,SaaS,Sensors,Technology,Telecommunications
+created: "2019-02-03"
+modified: "2019-02-03"
+url: actility/apis.md
+specificationVersion: "0.14"
+apis:
+- name: ThingPark DX Admin API
+  x-api-slug: thingpark-dx-admin-api
+  description: 'Actility is the leader in low power wide area (LoRaWAN and 3GPP) network
+    connectivity management for the Internet of Things: the ThingPark platform'
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28250-actility.jpg
+  humanURL: https://www.actility.com
+  baseURL: https://dx-api.thingpark.com//admin/v140/api
+  tags: API Provider,Energy,Enterprise,Industrial,Internet of Things,ISP,Networks,Parking,Profiles,Relative
+    Data,SaaS,Sensors,Technology,Telecommunications
+  properties:
+  - type: x-postman-collection
+    url: /actility/profilesprofileid-get-postman.json
+  - type: x-openapi-spec
+    url: /actility/thingpark-dx-admin-api-openapi.yaml
+- name: ThingPark DX Core API
+  x-api-slug: thingpark-dx-core-api
+  description: 'Actility is the leader in low power wide area (LoRaWAN and 3GPP) network
+    connectivity management for the Internet of Things: the ThingPark platform'
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28250-actility.jpg
+  humanURL: https://www.actility.com
+  baseURL: https://dx-api.thingpark.com//core/v141/api
+  tags: Profile,Retrieval
+  properties:
+  - type: x-openapi-spec
+    url: /actility/thingpark-dx-core-api-openapi.yaml
+- name: ThingPark DX Dataflow API
+  x-api-slug: thingpark-dx-dataflow-api
+  description: 'Actility is the leader in low power wide area (LoRaWAN and 3GPP) network
+    connectivity management for the Internet of Things: the ThingPark platform'
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28250-actility.jpg
+  humanURL: https://www.actility.com
+  baseURL: https://dx-api.thingpark.com//dataflow/v021/api
+  tags: Downlink,Message,Sending
+  properties:
+  - type: x-openapi-spec
+    url: /actility/thingpark-dx-dataflow-api-openapi.yaml
+- name: ThingPark DX Location API
+  x-api-slug: thingpark-dx-location-api
+  description: 'Actility is the leader in low power wide area (LoRaWAN and 3GPP) network
+    connectivity management for the Internet of Things: the ThingPark platform'
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28250-actility.jpg
+  humanURL: https://www.actility.com
+  baseURL: https://dx-api.thingpark.com//location/v110
+  tags: Uplink,Data,Reception
+  properties:
+  - type: x-openapi-spec
+    url: /actility/thingpark-dx-location-api-openapi.yaml
+- name: ThingPark DX Maker API
+  x-api-slug: thingpark-dx-maker-api
+  description: 'Actility is the leader in low power wide area (LoRaWAN and 3GPP) network
+    connectivity management for the Internet of Things: the ThingPark platform'
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28250-actility.jpg
+  humanURL: https://www.actility.com
+  baseURL: https://dx-api.thingpark.com//maker/v011/api
+  tags: Tracker,Command,Sending
+  properties:
+  - type: x-openapi-spec
+    url: /actility/thingpark-dx-maker-api-openapi.yaml
+x-common:
+- type: x-blog-rss
+  url: https://www.actility.com/blog/feed/
+- type: x-github
+  url: https://github.com/actility
+- type: x-openapi
+  url: https://dx-api.thingpark.com/core/latest/tpdx-core-api-contract.json
+- type: x-blog
+  url: https://www.actility.com/blog/
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/actility
+- type: x-developer
+  url: https://www.actility.com/developer/
+- type: x-twitter
+  url: https://twitter.com/Actility
+- type: x-website
+  url: https://www.actility.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

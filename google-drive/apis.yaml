@@ -1,0 +1,58 @@
+name: Google Drive
+x-slug: google-drive
+description: Google Drive is a file storage and synchronization service operated by
+  Google. It allows users to store files in the cloud, synchronize files across devices,
+  and share files. Google Drive encompasses Google Docs, Sheets and Slides, an office
+  suite that permits collaborative editing of documents, spreadsheets, presentations,
+  drawings, forms, and more.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-drive-logo-new.png
+x-kinRank: "9"
+x-alexaRank: "0"
+tags: API Provider,API Service Provider,Documents,Google APIs,Productivity,Profiles,Relative
+  Data,Service API,Stack,Stack Network,Storage
+created: "2019-02-03"
+modified: "2019-02-03"
+url: google-drive/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Google Drive
+  x-api-slug: google-drive
+  description: Google Drive is a file storage and synchronization service operated
+    by Google. It allows users to store files in the cloud, synchronize files across
+    devices, and share files. Google Drive encompasses Google Docs, Sheets and Slides,
+    an office suite that permits collaborative editing of documents, spreadsheets,
+    presentations, drawings, forms, and more.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-drive-logo-new.png
+  humanURL: https://developers.google.com/drive/
+  baseURL: https://www.googleapis.com//drive/v3
+  tags: API Provider,API Service Provider,Documents,Google APIs,Productivity,Profiles,Relative
+    Data,Service API,Stack,Stack Network,Storage
+  properties:
+  - type: x-openapi-spec
+    url: /google-drive/google-drive-openapi.yaml
+x-common:
+- type: x-best-practices
+  url: https://developers.google.com/drive/v3/web/practices
+- type: x-branding-guidelines
+  url: https://developers.google.com/drive/v3/web/marketing
+- type: x-change-log
+  url: https://developers.google.com/drive/release-notes
+- type: x-code
+  url: https://developers.google.com/drive/v3/web/downloads
+- type: x-documentation
+  url: https://developers.google.com/drive/v3/web/about-sdk
+- type: x-github
+  url: https://github.com/googledrive
+- type: x-issues
+  url: https://code.google.com/a/google.com/p/apps-api-issues/issues/list?q=API%3DDrive
+- type: x-performance
+  url: https://developers.google.com/drive/v3/web/performance
+- type: x-support
+  url: https://developers.google.com/drive/v3/web/support
+- type: x-website
+  url: https://developers.google.com/drive/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

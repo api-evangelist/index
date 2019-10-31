@@ -1,0 +1,35 @@
+swagger: "2.0"
+x-collection-name: Predix
+x-complete: 1
+info:
+  title: DTW API
+  description: dynamic-time-warping-dtw-is-an-algorithm-to-calculate-an-optimal-match-between-two-sequences-which-may-vary-in-length-dtw-originates-from-the-speech-regconition-field-and-has-been-applied-to-batch-process-data-due-to-the-presence-of-batchtobatch-disturbance-and-physical-constrains-the-data-sequences-from-batches-may-vary-in-length-and-unsynchronized-with-dtw-data-sequences-from-batches-will-be-aligned-to-the-same-length-and-events-taking-place-during-each-batch-will-be-synchronized-then-they-are-ready-for-further-analysis--dtw-plays-a-key-role-in-process-monitoring-and-optimization-applications-
+  version: 1.0.0
+basePath: /v1
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /warp:
+    post:
+      summary: Warp subject and reference arrays
+      description: Warp subject and reference arrays.
+      operationId: postWarp
+      x-api-path-slug: warp-post
+      parameters:
+      - in: body
+        name: body
+        description: Subject and Reference arrays to be processed
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: Successful response
+      tags:
+      - Warp
+      - Subject
+      - Reference
+      - Arrays

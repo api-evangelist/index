@@ -1,0 +1,271 @@
+name: Predix
+x-slug: predix
+description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+  machines through analytics and data for better business outcomes.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+x-kinRank: "7"
+x-alexaRank: "264121"
+tags: Enterprise,Internet of Things,Relative Data,SaaS,Service API,Technology
+created: "2019-02-03"
+modified: "2019-02-03"
+url: predix/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Predix Access Control
+  x-api-slug: predix-access-control
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https://predix-acs.run.aws-usw02-pr.ice.predix.io//
+  tags: Enterprise,Internet of Things,Relative Data,SaaS,Service API,Technology
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-access-control-openapi.yaml
+- name: Predix Analytics Catalog
+  x-api-slug: predix-analytics-catalog
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https:////
+  tags: S,Subjecta,Given,Zone,,SubjectIdentifier,Must,Be,URL,Encoded,In,Application,X-www-form-urlencoded,Format,UTF-8
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-analytics-catalog-openapi.yaml
+- name: Predix Analytics Framework
+  x-api-slug: predix-analytics-framework
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https:////
+  tags: Load,Taxonomy
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-analytics-framework-openapi.yaml
+- name: Predix Analytics Runtime
+  x-api-slug: predix-analytics-runtime
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https:////
+  tags: Validate,Specified,Orchestration,Health,Of,,Analytics,Used,In,Orchestration
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-analytics-runtime-openapi.yaml
+- name: Predix AppHub ARCS
+  x-api-slug: predix-apphub-arcs
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https://predix-apphub-arcs-prod.run.aws-usw02-pr.ice.predix.io//api
+  tags: Validate,Specified,Orchestration,Health,Of,,Analytics,Used,In,Orchestration
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-apphub-arcs-openapi.yaml
+- name: Predix Assets
+  x-api-slug: predix-assets
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https:////
+  tags: User,Uuid
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-assets-openapi.yaml
+- name: Predix BlockChain
+  x-api-slug: predix-blockchain
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https:////
+  tags: JSON,Schema,Of,Specified,Entity,Type
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-blockchain-openapi.yaml
+- name: Predix Blockchain Data Integrity
+  x-api-slug: predix-blockchain-data-integrity
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https://bcdi-proxy-service.run.aws-usw02-pr.ice.predix.io//
+  tags: Transactions
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-blockchain-data-integrity-openapi.yaml
+- name: Predix Data Services
+  x-api-slug: predix-data-services
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https://time-series-service-doc.grc-apps.svc.ice.ge.com//
+  tags: Proxy,Signature,Extension
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-data-services-openapi.yaml
+- name: Predix Dynamic Mapping
+  x-api-slug: predix-dynamic-mapping
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https:////
+  tags: Tags
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-dynamic-mapping-openapi.yaml
+- name: Predix Dynamic Time Warping
+  x-api-slug: predix-dynamic-time-warping
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https:////v1
+  tags: Return,Locationsan,Asset,By,Query,Conditiongiven,Customer,Id,Collection,Name
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-dynamic-time-warping-openapi.yaml
+- name: Predix Enterprise Connect
+  x-api-slug: predix-enterprise-connect
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https://ec-predix-service-osaka.run.aws-usw02-pr.ice.predix.io//v1
+  tags: Warp,Subject,Reference,Arrays
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-enterprise-connect-openapi.yaml
+- name: Predix Event Audit Trail
+  x-api-slug: predix-event-audit-trail
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https://event-audit-trail.run.aws-usw02-pr.ice.predix.io//
+  tags: EC,Gateway,Setting,In,Account
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-event-audit-trail-openapi.yaml
+- name: Predix Fingerprint of Things Object Tagging Service
+  x-api-slug: predix-fingerprint-of-things-object-tagging-service
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https://fingerprint-of-things-ga1-dast.run.aws-usw02-pr.ice.predix.io//
+  tags: Service,Instances,Service,Bindings,Bindingid
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-fingerprint-of-things-object-tagging-service-openapi.yaml
+- name: Predix Insights
+  x-api-slug: predix-insights
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https://insights-api.data-services.predix.io//api/v1
+  tags: Query,By,Group
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-insights-openapi.yaml
+- name: Predix Intelligent Mapping
+  x-api-slug: predix-intelligent-mapping
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https:////
+  tags: Instances,Instanceid,Submit,Logs
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-intelligent-mapping-openapi.yaml
+- name: Predix Notification Service
+  x-api-slug: predix-notification-service
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https://ev-notification-service.run.aws-usw02-pr.ice.predix.io//
+  tags: Style,Dataa,Layer
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-notification-service-openapi.yaml
+- name: Predix Nurego
+  x-api-slug: predix-nurego
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https://api.nurego.com//
+  tags: Tenants,Usage
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-nurego-openapi.yaml
+- name: Predix SAS ESP Predix Service
+  x-api-slug: predix-sas-esp-predix-service
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https://sas-proxy.run.aws-usw02-pr.ice.predix.io//
+  tags: Offerings
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-sas-esp-predix-service-openapi.yaml
+- name: Predix Tenant Management
+  x-api-slug: predix-tenant-management
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https://predix-tms.run.aws-usw02-pr.ice.predix.io//
+  tags: ESP,Server,Health,Check
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-tenant-management-openapi.yaml
+- name: Predix ThetaRay Predix Service
+  x-api-slug: predix-thetaray-predix-service
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https://thetaray-anomaly-service.run.aws-usw02-pr.ice.predix.io//
+  tags: Lookup,Tenant,Status,By,Subdomain
+  properties:
+  - type: x-postman-collection
+    url: /predix/v1proxydatasourcesprocess-post-postman.json
+  - type: x-openapi-spec
+    url: /predix/predix-thetaray-predix-service-openapi.yaml
+- name: Predix Views
+  x-api-slug: predix-views
+  description: Predix (IoT PaaS) helps you develop apps that connect people with industrial
+    machines through analytics and data for better business outcomes.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https:////v1
+  tags: Proxy,Datasources,Process
+  properties:
+  - type: x-openapi-spec
+    url: /predix/predix-views-openapi.yaml
+x-common:
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/predix
+- type: x-documentation
+  url: https://docs.predix.io/en-US/platform
+- type: x-twitter
+  url: https://twitter.com/Predix
+- type: x-website
+  url: https://www.predix.io
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

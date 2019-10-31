@@ -1,0 +1,53 @@
+name: Google URL Shortener
+x-slug: google-url-shortener
+description: The Google URL Shortener at goo.gl is a service that takes long URLs
+  and squeezes them into fewer characters to make a link that is easier to share,
+  tweet, or email to friends. Users can create these short links through the web interface
+  at goo.gl, or they can programatically create them through the URL Shortener API.
+  With the URL Shortener API you can write applications that use simple HTTP methods
+  to create, inspect, and manage goo.gl short links from desktop, mobile, or web.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-shortener.png
+x-kinRank: "9"
+x-alexaRank: "0"
+tags: API Provider,API Service Provider,DNS,Google APIs,Links,Profiles,Relative Data,Service
+  API,Stack Network,URL Shorteners
+created: "2019-02-03"
+modified: "2019-02-03"
+url: google-url-shortener/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Google URL Shortener API
+  x-api-slug: google-url-shortener-api
+  description: The Google URL Shortener at goo.gl is a service that takes long URLs
+    and squeezes them into fewer characters to make a link that is easier to share,
+    tweet, or email to friends. Users can create these short links through the web
+    interface at goo.gl, or they can programatically create them through the URL Shortener
+    API. With the URL Shortener API you can write applications that use simple HTTP
+    methods to create, inspect, and manage goo.gl short links from desktop, mobile,
+    or web.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-shortener.png
+  humanURL: https://goo.gl/
+  baseURL: ://www.googleapis.com//urlshortener/v1
+  tags: API Provider,API Service Provider,DNS,Google APIs,Links,Profiles,Relative
+    Data,Service API,Stack Network,URL Shorteners
+  properties:
+  - type: x-postman-collection
+    url: /google-url-shortener/urlhistory-get-postman.json
+  - type: x-openapi-spec
+    url: /google-url-shortener/google-url-shortener-api-openapi.yaml
+x-common:
+- type: x-developer
+  url: https://developers.google.com/url-shortener/
+- type: x-documentation
+  url: https://developers.google.com/url-shortener/v1/
+- type: x-getting-started
+  url: https://developers.google.com/url-shortener/v1/getting_started
+- type: x-performance
+  url: https://developers.google.com/url-shortener/v1/performance
+- type: x-website
+  url: https://goo.gl/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

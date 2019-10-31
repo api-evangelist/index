@@ -1,0 +1,53 @@
+name: BC Geographical Names
+x-slug: bc-geographical-names
+description: Geographical names are more than labels on maps and road signs. They
+  can reveal patterns of settlement, exploration and migration, and mirror outside
+  influences to our history - aspects of the heritage and promise of an area that
+  might otherwise be overlooked or forgotten by visitors and later generations.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/british-columbia.png
+x-kinRank: "7"
+x-alexaRank: "0"
+tags: API Provider,General Data,Geo,Geography,Locations,Profiles
+created: "2019-02-03"
+modified: "2019-02-03"
+url: bc-geographical-names/apis.md
+specificationVersion: "0.14"
+apis:
+- name: BC Geographical Names
+  x-api-slug: bc-geographical-names
+  description: Geographical names are more than labels on maps and road signs. They
+    can reveal patterns of settlement, exploration and migration, and mirror outside
+    influences to our history - aspects of the heritage and promise of an area that
+    might otherwise be overlooked or forgotten by visitors and later generations.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/british-columbia.png
+  humanURL: https://apps.gov.bc.ca/pub/bcgnws/
+  baseURL: https://apps.gov.bc.ca//pub/bcgnws
+  tags: API Provider,General Data,Geo,Geography,Locations,Profiles
+  properties:
+  - type: x-postman-collection
+    url: /bc-geographical-names/namesnameid-outputformat-get-postman.json
+  - type: x-openapi-spec
+    url: /bc-geographical-names/bc-geographical-names-openapi.yaml
+- name: Geo Mark Web Service
+  x-api-slug: geo-mark-web-service
+  description: Geographical names are more than labels on maps and road signs. They
+    can reveal patterns of settlement, exploration and migration, and mirror outside
+    influences to our history - aspects of the heritage and promise of an area that
+    might otherwise be overlooked or forgotten by visitors and later generations.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/british-columbia.png
+  humanURL: https://apps.gov.bc.ca/pub/bcgnws/
+  baseURL: https://apps.gov.bc.ca//pub/geomark
+  tags: Names,NameId,OutputFormat
+  properties:
+  - type: x-postman-collection
+    url: /bc-geographical-names/geomarksgeomarkidpoint-fileformatextension-get-postman.json
+  - type: x-openapi-spec
+    url: /bc-geographical-names/geo-mark-web-service-openapi.yaml
+x-common:
+- type: x-website
+  url: https://apps.gov.bc.ca/pub/bcgnws/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

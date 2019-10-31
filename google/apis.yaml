@@ -1,0 +1,78 @@
+name: Google
+x-slug: google
+description: Google LLC is an American multinational technology company that specializes
+  in Internet-related services and products, which include online advertising technologies,
+  search engine, cloud computing, software, and hardware.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/43-google.jpg
+x-kinRank: "9"
+x-alexaRank: "1"
+tags: API Provider,API Service Provider,Data,Databases,internet,Mobile,New,Profiles,Real
+  Time,Relative Data,SaaS,SDIO Competition,Service API,Technology
+created: "2019-02-03"
+modified: "2019-02-03"
+url: google/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Firebase
+  x-api-slug: firebase
+  description: Google LLC is an American multinational technology company that specializes
+    in Internet-related services and products, which include online advertising technologies,
+    search engine, cloud computing, software, and hardware.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/43-google.jpg
+  humanURL: https://Firebase.google.com
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: API Provider,API Service Provider,Data,Databases,internet,Mobile,New,Profiles,Real
+    Time,Relative Data,SaaS,SDIO Competition,Service API,Technology
+  properties:
+  - type: x-openapi-spec
+    url: /google/firebase-openapi.yaml
+x-common:
+- type: x-google-firebase
+  url: Hacker News Search
+- type: x-stack-exchange-search
+  url: Google Firebase
+- type: x-website
+  url: https://Firebase.google.com
+- type: x-blog
+  url: https://firebase.googleblog.com/
+- type: x-blog-rss
+  url: http://firebase.googleblog.com/feeds/posts/default?alt=rss
+- type: x-case-studies
+  url: https://firebase.google.com/customers/
+- type: x-change-log
+  url: https://firebase.google.com/support/releases
+- type: x-code
+  url: https://firebase.google.com/docs/libraries/
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/google
+- type: x-documentation
+  url: https://firebase.google.com/docs/
+- type: x-faq
+  url: https://firebase.google.com/support/faq/
+- type: x-forum
+  url: https://groups.google.com/forum/#!forum/firebase-talk
+- type: x-github
+  url: https://github.com/firebase
+- type: x-pricing
+  url: https://firebase.google.com/pricing/
+- type: x-pricing
+  url: https://adwords.google.com/home/pricing/
+- type: x-slack
+  url: https://firebase.community/
+- type: x-submit-bug
+  url: https://firebase.google.com/support/contact/bugs-features
+- type: x-support
+  url: https://firebase.google.com/support/
+- type: x-twitter
+  url: https://twitter.com/Google
+- type: x-twitter
+  url: https://twitter.com/firebase
+- type: x-website
+  url: http://google.com
+- type: x-website
+  url: https://firebase.google.com/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

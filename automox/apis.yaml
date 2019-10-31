@@ -1,0 +1,50 @@
+name: Automox
+x-slug: automox
+description: Patch any System, any Software, in Any Location with Automox. Our cloud-based
+  patching management software was built for todays IT professionals.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28761-docs-automox-com.jpg
+x-kinRank: "7"
+x-alexaRank: "878532"
+tags: Enterprise,Operations,Relative Data,SaaS,Security,Servers,Service API,Technology
+created: "2019-02-03"
+modified: "2019-02-03"
+url: automox/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Automox
+  x-api-slug: automox
+  description: Patch any System, any Software, in Any Location with Automox. Our cloud-based
+    patching management software was built for todays IT professionals.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28761-docs-automox-com.jpg
+  humanURL: https://automox.com
+  baseURL: https://console.automox.com//api
+  tags: Enterprise,Operations,Relative Data,SaaS,Security,Servers,Service API,Technology
+  properties:
+  - type: x-openapi-spec
+    url: /automox/automox-openapi.yaml
+x-common:
+- type: x-blog
+  url: https://www.automox.com/blog
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/automox
+- type: x-documentation
+  url: https://docs.automox.com/
+- type: x-documentation
+  url: https://docs.automox.com/api/
+- type: x-email
+  url: info@automox.com
+- type: x-openapi
+  url: https://docs.automox.com/api/swagger.yaml
+- type: x-pricing
+  url: https://www.automox.com/pricing
+- type: x-support
+  url: https://support.automox.com/hc/en-us
+- type: x-twitter
+  url: https://twitter.com/AutomoxApp
+- type: x-website
+  url: https://automox.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

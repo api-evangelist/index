@@ -1,0 +1,40 @@
+name: Chicago Illinois 311
+x-slug: chicago-illinois-311
+description: Call 311 for assistance with non-emergency City Services and for information
+  on events, programs and agencies within the City of Chicago.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/6A231614-652B-4334-852C-54261F4B13BD
+x-kinRank: "7"
+x-alexaRank: "0"
+tags: 311,Open311,Streams,Streams
+created: "2019-02-03"
+modified: "2019-02-03"
+url: chicago-illinois-311/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Chicago Illinois 311
+  x-api-slug: chicago-illinois-311
+  description: Call 311 for assistance with non-emergency City Services and for information
+    on events, programs and agencies within the City of Chicago.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/6A231614-652B-4334-852C-54261F4B13BD
+  humanURL: http://cityofchicago.org/311
+  baseURL: http://311api.cityofchicago.org//open311/v2/
+  tags: 311,Open311,Streams,Streams
+  properties:
+  - type: x-postman-collection
+    url: /chicago-illinois-311/tokenstoken-id-response-format-get-postman.json
+  - type: x-openapi-spec
+    url: /chicago-illinois-311/chicago-illinois-311-openapi.yaml
+x-common:
+- type: x-website
+  url: http://cityofchicago.org/311
+- type: x-open-311-feed
+  url: http://311api.cityofchicago.org/open311/v2/services.xml?jurisdiction_id=cityofchicago.org
+- type: x-twitter
+  url: https://twitter.com/Chicago311
+- type: x-website
+  url: https://www.cityofchicago.org/city/en/depts/311.html
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

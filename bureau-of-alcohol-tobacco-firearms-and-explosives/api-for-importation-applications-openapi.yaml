@@ -1,0 +1,36 @@
+swagger: "2.0"
+x-collection-name: Bureau of Alcohol, Tobacco, Firearms, and Explosives
+x-complete: 1
+info:
+  title: API for Importation Applications
+  description: api-for-exhibit-4-of-annual-atf-commerce-report
+  version: v1
+host: data.atf.gov
+basePath: /resource/
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  importation-applications.json:
+    get:
+      summary: Importation Applications
+      description: Importation Applications
+      operationId: ""
+      x-api-path-slug: importationapplications-json-get
+      parameters:
+      - in: query
+        name: fiscal_year
+      - in: query
+        name: licensed_importer
+      - in: query
+        name: military
+      - in: query
+        name: other
+      responses:
+        200:
+          description: OK
+      tags:
+      - ""

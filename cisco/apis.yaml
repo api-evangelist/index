@@ -1,0 +1,70 @@
+name: Cisco
+x-slug: cisco
+description: 954088 Cisco Systems, Inc. is an American multinational technology conglomerate
+  headquartered in San Jose, California, in the center of Silicon Valley, that develops,
+  manufactures and sells networking hardware, telecommunications equipment and other
+  hi...
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1515-cisco-unity-connection-messaging-interface.jpg
+x-kinRank: "7"
+x-alexaRank: "788"
+tags: Collaboration,Enterprise,ISP,Messages,Networking,Relative Data,SaaS,Service
+  API
+created: "2019-02-03"
+modified: "2019-02-03"
+url: cisco/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Cisco PSIRT open Vuln
+  x-api-slug: cisco-psirt-open-vuln
+  description: 954088 Cisco Systems, Inc. is an American multinational technology
+    conglomerate headquartered in San Jose, California, in the center of Silicon Valley,
+    that develops, manufactures and sells networking hardware, telecommunications
+    equipment and other hi...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1515-cisco-unity-connection-messaging-interface.jpg
+  humanURL: http://docwiki.cisco.com/wiki/Cisco_Unity_Connection_Messaging_Interface_%28CUMI%29_API
+  baseURL: https://api.cisco.com//
+  tags: Collaboration,Enterprise,ISP,Messages,Networking,Relative Data,SaaS,Service
+    API
+  properties:
+  - type: x-postman-collection
+    url: /cisco/securityadvisoriesovalseverityseveritylastpublished-get-postman.json
+  - type: x-openapi-spec
+    url: /cisco/cisco-psirt-open-vuln-openapi.yaml
+x-common:
+- type: x-website
+  url: http://docwiki.cisco.com/wiki/Cisco_Unity_Connection_Messaging_Interface_%28CUMI%29_API
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/cisco
+- type: x-developer
+  url: https://developer.cisco.com/
+- type: x-email
+  url: info-pt@cisco.com
+- type: x-email
+  url: info-ru@cisco.com
+- type: x-email
+  url: ciscoj-newgrad@cisco.com
+- type: x-email
+  url: recruit-jp@cisco.com
+- type: x-email
+  url: cin-china@cisco.com
+- type: x-email
+  url: privacy@cisco.com
+- type: x-email
+  url: ethics@cisco.com
+- type: x-email
+  url: web-help@cisco.com
+- type: x-email
+  url: BusinessInsights@cisco.com
+- type: x-email
+  url: hk_assistant@cisco.com
+- type: x-support
+  url: https://developer.cisco.com/site/devnet/support/
+- type: x-twitter
+  url: https://twitter.com/Cisco
+- type: x-website
+  url: http://cisco.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

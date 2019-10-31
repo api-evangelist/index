@@ -1,0 +1,59 @@
+name: VictorOps
+x-slug: victorops
+description: VictorOps incident managament software gives DevOps observability, collaboration,
+  & real-time alerting, to build, deploy, & operate software. Learn more.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20023-victorops.jpg
+x-kinRank: "8"
+x-alexaRank: "196587"
+tags: Enterprise,internet,Orchestration,Relative Data,SaaS,Service API,Stack Network,Technology
+created: "2019-02-03"
+modified: "2019-02-03"
+url: victorops/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Victor Ops
+  x-api-slug: victor-ops
+  description: VictorOps incident managament software gives DevOps observability,
+    collaboration, & real-time alerting, to build, deploy, & operate software. Learn
+    more.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20023-victorops.jpg
+  humanURL: http://victorops.com
+  baseURL: https://api.victorops.com//
+  tags: Enterprise,internet,Orchestration,Relative Data,SaaS,Service API,Stack Network,Technology
+  properties:
+  - type: x-postman-collection
+    url: /victorops/apireportingv2incidents-get-postman.json
+  - type: x-openapi-spec
+    url: /victorops/victor-ops-openapi.yaml
+x-common:
+- type: x-blog
+  url: https://victorops.com/blog/
+- type: x-blog-rss
+  url: https://victorops.com/feed/
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/victorops
+- type: x-email
+  url: support@victorops.com
+- type: x-email
+  url: info@victorops.com
+- type: x-email
+  url: press@victorops.com
+- type: x-email
+  url: sales@victorops.com
+- type: x-github
+  url: https://github.com/victorops
+- type: x-openapi
+  url: https://portal.victorops.com/api-docs/victorops-api-v1.yaml
+- type: x-pricing
+  url: https://victorops.com/pricing/
+- type: x-twitter
+  url: https://twitter.com/VictorOps
+- type: x-website
+  url: http://victorops.com
+- type: x-website
+  url: https://victorops.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

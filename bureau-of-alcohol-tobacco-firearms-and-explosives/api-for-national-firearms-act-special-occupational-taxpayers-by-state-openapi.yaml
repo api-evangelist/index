@@ -1,0 +1,38 @@
+swagger: "2.0"
+x-collection-name: Bureau of Alcohol, Tobacco, Firearms, and Explosives
+x-complete: 1
+info:
+  title: API for National Firearms Act Special Occupational Taxpayers By State
+  description: api-for-exhibit-9-of-annual-atf-commerce-report
+  version: v1
+host: data.atf.gov
+basePath: /resource/
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  national-firearms-act-special-occupational-taxpayers-by-state.json:
+    get:
+      summary: National Firearms Act Special Occupational Taxpayers By State
+      description: National Firearms Act Special Occupational Taxpayers By State
+      operationId: ""
+      x-api-path-slug: nationalfirearmsactspecialoccupationaltaxpayersbystate-json-get
+      parameters:
+      - in: query
+        name: dealers
+      - in: query
+        name: importers
+      - in: query
+        name: location_1
+      - in: query
+        name: manufacturers
+      - in: query
+        name: state
+      responses:
+        200:
+          description: OK
+      tags:
+      - ""

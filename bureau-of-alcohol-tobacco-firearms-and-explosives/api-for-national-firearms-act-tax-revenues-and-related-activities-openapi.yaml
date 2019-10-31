@@ -1,0 +1,38 @@
+swagger: "2.0"
+x-collection-name: Bureau of Alcohol, Tobacco, Firearms, and Explosives
+x-complete: 1
+info:
+  title: API for National Firearms Act Tax Revenues And Related Activities
+  description: api-for-exhibit-6-of-annual-atf-commerce-report
+  version: v1
+host: data.atf.gov
+basePath: /resource/
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  national-firearms-act-tax-revenues-and-related-activities.json:
+    get:
+      summary: National Firearms Act Tax Revenues And Related Activities
+      description: National Firearms Act Tax Revenues And Related Activities
+      operationId: ""
+      x-api-path-slug: nationalfirearmsacttaxrevenuesandrelatedactivities-json-get
+      parameters:
+      - in: query
+        name: enforcement_support_certifications
+      - in: query
+        name: enforcement_support_records_checks
+      - in: query
+        name: fical_year
+      - in: query
+        name: occupational_tax_paid
+      - in: query
+        name: transfer_and_making_tax_paid
+      responses:
+        200:
+          description: OK
+      tags:
+      - ""

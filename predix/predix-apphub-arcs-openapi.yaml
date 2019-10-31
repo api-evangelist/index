@@ -1,0 +1,452 @@
+swagger: "2.0"
+x-collection-name: Predix
+x-complete: 1
+info:
+  title: Predix AppHub ARCS
+  description: bapplication-registry-and-configurationb
+  termsOfService: Terms of service
+  contact:
+    name: 'Digital Predix AppHub ARCS: Development'
+  version: 1.0.0
+host: predix-apphub-arcs-prod.run.aws-usw02-pr.ice.predix.io
+basePath: /api
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /apps:
+    get:
+      summary: Get all the registered microapps
+      description: Get the registered microapps for the given tenant
+      operationId: getAllRegisteredAppsUsingGET
+      x-api-path-slug: apps-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Apps
+    post:
+      summary: Register the microapp
+      description: Register the microapps
+      operationId: registerAppUsingPOST
+      x-api-path-slug: apps-post
+      parameters:
+      - in: body
+        name: request
+        description: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Apps
+    put:
+      summary: Update the microapp
+      description: Update the microapps
+      operationId: updateAppUsingPUT
+      x-api-path-slug: apps-put
+      parameters:
+      - in: body
+        name: request
+        description: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Apps
+  /apps/{uuid}:
+    get:
+      summary: Get the registered microapp
+      description: Get the registered microapp for the given uri
+      operationId: getRegisterAppUsingGET
+      x-api-path-slug: appsuuid-get
+      parameters:
+      - in: path
+        name: uuid
+        description: uuid
+      responses:
+        200:
+          description: OK
+      tags:
+      - Apps
+      - Uuid
+    delete:
+      summary: Unregister the microapp
+      description: Unregister the microapp
+      operationId: unRegisterAppUsingDELETE
+      x-api-path-slug: appsuuid-delete
+      parameters:
+      - in: path
+        name: uuid
+        description: uuid
+      responses:
+        200:
+          description: OK
+      tags:
+      - Apps
+      - Uuid
+  /globalconfig:
+    get:
+      summary: Get global config information
+      description: Get global config information
+      operationId: getGlobalConfigUsingGET
+      x-api-path-slug: globalconfig-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Globalconfig
+    post:
+      summary: Save global config information
+      description: Save global config information
+      operationId: saveGlobalConfigUsingPOST
+      x-api-path-slug: globalconfig-post
+      parameters:
+      - in: body
+        name: config
+        description: config
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Globalconfig
+  /globalconfig/{uuid}:
+    put:
+      summary: Update global config information
+      description: Update global config information
+      operationId: updateGlobalConfigUsingPUT
+      x-api-path-slug: globalconfiguuid-put
+      parameters:
+      - in: body
+        name: config
+        description: config
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: uuid
+        description: uuid
+      responses:
+        200:
+          description: OK
+      tags:
+      - Globalconfig
+      - Uuid
+    delete:
+      summary: Delete global config information
+      description: Delete global config information
+      operationId: deleteGlobalConfigUsingDELETE
+      x-api-path-slug: globalconfiguuid-delete
+      parameters:
+      - in: path
+        name: uuid
+        description: uuid
+      responses:
+        200:
+          description: OK
+      tags:
+      - Globalconfig
+      - Uuid
+  /preferences:
+    get:
+      summary: Get the preferences information
+      description: Get the preferences information
+      operationId: getPreferenceUsingGET
+      x-api-path-slug: preferences-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Preferences
+    post:
+      summary: Save the preferences information
+      description: save the preferences information
+      operationId: savePreferenceUsingPOST
+      x-api-path-slug: preferences-post
+      parameters:
+      - in: body
+        name: request
+        description: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Preferences
+  /preferences/{uuid}:
+    put:
+      summary: Update the preferences information
+      description: Update the preferences information
+      operationId: updatePreferenceUsingPUT
+      x-api-path-slug: preferencesuuid-put
+      parameters:
+      - in: body
+        name: request
+        description: request
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: uuid
+        description: uuid
+      responses:
+        200:
+          description: OK
+      tags:
+      - Preferences
+      - Uuid
+    delete:
+      summary: Delete the preferences information
+      description: Delete the preferences information
+      operationId: deletePreferenceUsingDELETE
+      x-api-path-slug: preferencesuuid-delete
+      parameters:
+      - in: path
+        name: uuid
+        description: uuid
+      responses:
+        200:
+          description: OK
+      tags:
+      - Preferences
+      - Uuid
+  /privileges:
+    get:
+      summary: Get the privileges information
+      description: Get the privileges information
+      operationId: getPrivilegeUsingGET
+      x-api-path-slug: privileges-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Privileges
+    post:
+      summary: Save the privileges information
+      description: Save the privileges information
+      operationId: savePrivilegeUsingPOST
+      x-api-path-slug: privileges-post
+      parameters:
+      - in: body
+        name: request
+        description: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Privileges
+  /privileges/{uuid}:
+    put:
+      summary: Update the privileges information
+      description: Update the privileges information
+      operationId: updatePrivilegeUsingPUT
+      x-api-path-slug: privilegesuuid-put
+      parameters:
+      - in: body
+        name: request
+        description: request
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: uuid
+        description: uuid
+      responses:
+        200:
+          description: OK
+      tags:
+      - Privileges
+      - Uuid
+    delete:
+      summary: Delete the privileges information
+      description: Delete the privileges information
+      operationId: deletePrivilegeUsingDELETE
+      x-api-path-slug: privilegesuuid-delete
+      parameters:
+      - in: path
+        name: uuid
+        description: uuid
+      responses:
+        200:
+          description: OK
+      tags:
+      - Privileges
+      - Uuid
+  /provision:
+    post:
+      summary: postTenantConfig
+      description: ""
+      operationId: postTenantConfigUsingPOST
+      x-api-path-slug: provision-post
+      parameters:
+      - in: body
+        name: tenantConfigReq
+        description: tenantConfigReq
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Provision
+  /provision/{tenantId}:
+    delete:
+      summary: deleteTenantConfig
+      description: ""
+      operationId: deleteTenantConfigUsingDELETE
+      x-api-path-slug: provisiontenantid-delete
+      parameters:
+      - in: path
+        name: tenantId
+        description: tenantId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Provision
+      - TenantId
+  /themes:
+    get:
+      summary: Get theme information for a tenant
+      description: Get theme information
+      operationId: getThemeUsingGET
+      x-api-path-slug: themes-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Themes
+    post:
+      summary: Save theme config information
+      description: Save theme config information
+      operationId: saveThemeUsingPOST
+      x-api-path-slug: themes-post
+      parameters:
+      - in: body
+        name: theme
+        description: theme
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Themes
+    put:
+      summary: Update theme
+      description: Update theme
+      operationId: updateThemeUsingPUT
+      x-api-path-slug: themes-put
+      parameters:
+      - in: body
+        name: theme
+        description: theme
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Themes
+  /themes/{uuid}:
+    get:
+      summary: Get the registered theme by uri
+      description: Get the registered theme infromation for the given uri
+      operationId: getThemeInfoByIdUsingGET
+      x-api-path-slug: themesuuid-get
+      parameters:
+      - in: path
+        name: uuid
+        description: uuid
+      responses:
+        200:
+          description: OK
+      tags:
+      - Themes
+      - Uuid
+    delete:
+      summary: Delete theme
+      description: Delete theme
+      operationId: deleteThemeUsingDELETE
+      x-api-path-slug: themesuuid-delete
+      parameters:
+      - in: path
+        name: uuid
+        description: uuid
+      responses:
+        200:
+          description: OK
+      tags:
+      - Themes
+      - Uuid
+  /user:
+    get:
+      summary: Get the current user information
+      description: Get the current user information
+      operationId: getUserUsingGET
+      x-api-path-slug: user-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - User
+    post:
+      summary: Save the current user information
+      description: Save the current user information
+      operationId: saveUserUsingPOST
+      x-api-path-slug: user-post
+      parameters:
+      - in: body
+        name: request
+        description: request
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - User
+  /user/{uuid}:
+    put:
+      summary: Update the current user information
+      description: Update the current user information
+      operationId: updateUserUsingPUT
+      x-api-path-slug: useruuid-put
+      parameters:
+      - in: body
+        name: request
+        description: request
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: uuid
+        description: uuid
+      responses:
+        200:
+          description: OK
+      tags:
+      - User
+      - Uuid
+    delete:
+      summary: Delete the current user information
+      description: Delete the current user information
+      operationId: deleteUserUsingDELETE
+      x-api-path-slug: useruuid-delete
+      parameters:
+      - in: path
+        name: uuid
+        description: uuid
+      responses:
+        200:
+          description: OK
+      tags:
+      - User
+      - Uuid

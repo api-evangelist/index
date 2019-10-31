@@ -1,0 +1,92 @@
+swagger: "2.0"
+x-collection-name: Coord
+x-complete: 1
+info:
+  title: Parking Search API
+  description: the-parking-search-api-is-a-readonly-service-to-answer-questionsabout-where-and-when-a-person-can-park-in-lots-and-garages--for-onstreet-parkinguse-the-curbs-api-finding-parking-locationsa-place-where-you-can-park-is-called-a-location--this-is-usually-either-a-surface-parkinglot-or-a-parking-garage--to-find-parking-locations-in-a-given-area-use-thelocationreference0getalistoflocations-request--this-will-return-an-object-for-each-open--location-in-that-area-ordered-by-distance-when-we-have-live-parking-availability-for-a-location-we-will-also-fill-inavailability-probability-for-it--this-represents-the-probability-that-there-will-be-at-leastthreshold-spaces-available-at-the-location--we-find-availability-probability-a-prettygreat-way-to-reason-about-parking-locations-which-may-have-uncertainty-around-theiravailability-both-at-the-current-time-and-in-the-future-when-someone-may-be-arriving-aftera-trip-getting-data-on-a-single-locationuse-locationreference0getasinglelocations-requests-to-get-the-same-information-aboutjust-one-location-accessing-a-lotyou-can-allow-your-mobile-users-to-check-into-and-out-of-select-locationsusing-the-parking-access-api--parking-rates-select-locations-will-have-a-rates-field-set-with-a-list-of-rates-which-can-be-displayed-toyour-end-users-for-a-rough-idea-on-the-price-of-parking-all-locations-will-include-a-total-price-if--parking-start-time-and-duration-m-are-setappropriately-
+  version: 1.0.0
+host: api.coord.co
+basePath: /v1/search/parking
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /location:
+    get:
+      summary: Get a list of off-street parking locations.
+      description: |-
+        Find all of the locations within a given are and return their pricing information and
+        (when present) availability. If the `duration_m` parameter is set, total cost for a stay
+        of that duration will also be returned.
+      operationId: get_locations
+      x-api-path-slug: location-get
+      parameters:
+      - in: query
+        name: access_key
+        description: The API access key for the request
+      - in: query
+        name: duration_m
+        description: The expected length of time, in minutes, that the car will remainparked
+          for
+      - in: query
+        name: latitude
+        description: Latitude to return results for
+      - in: query
+        name: location_ids
+        description: Comma separated list of the location IDs to include in the search
+      - in: query
+        name: longitude
+        description: Longitude to return results for
+      - in: query
+        name: parking_start_time
+        description: The ISO-8601 formatted string representing the time when the
+          vehicle will arrive atthe parking location
+      - in: query
+        name: radius_km
+        description: Distance, in kilometers, from (latitude, longitude) we will returnresults
+          for
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+      - Of
+      - Off-street
+      - Parking
+      - Locations
+  /location/{id}:
+    get:
+      summary: Get a list of off-street parking locations.
+      description: |-
+        Find a single locations within a given are and return their pricing information and
+        (when present) availability. If the `duration_m` parameter is set, total cost for a stay
+        of that duration will also be returned.
+      operationId: get_location
+      x-api-path-slug: locationid-get
+      parameters:
+      - in: query
+        name: access_key
+        description: The API access key for the request
+      - in: query
+        name: duration_m
+        description: The expected length of time, in minutes, that the car will remainparked
+          for
+      - in: path
+        name: id
+        description: The ID of the parking location to retrieve
+      - in: query
+        name: parking_start_time
+        description: The ISO-8601 formatted string representing the time when the
+          vehicle will arrive atthe parking location
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+      - Of
+      - Off-street
+      - Parking
+      - Locations

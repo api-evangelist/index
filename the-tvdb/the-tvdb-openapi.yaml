@@ -1,0 +1,451 @@
+swagger: "2.0"
+x-collection-name: The TVDB
+x-complete: 1
+info:
+  title: The TVDB API v2
+  description: api-v2-targets-v1-functionality-with-a-few-minor-additions--the-api-is-accessible-via-httpsapi-thetvdb-com-and-provides-the-following-rest-endpoints-in-json-format-how-to-use-this-api-documentationyou-may-browse-the-api-routes-without-authentication-but-if-you-wish-to-send-requests-to-the-api-and-see-response-data-then-you-must-authenticate-1--obtain-a-jwt-token-by-posting--to-the-login-route-in-the-authentication-section-with-your-api-key-and-credentials-1--paste-the-jwt-token-from-the-response-into-the-jwt-token-field-at-the-top-of-the-page-and-click-the-add-token-button-you-will-now-be-able-to-use-the-remaining-routes-to-send-requests-to-the-api-and-get-a-response-language-selectionlanguage-selection-is-done-via-the-acceptlanguage-header--at-the-moment-you-may-only-pass-one-language-abbreviation-in-the-header-at-a-time--valid-language-abbreviations-can-be-found-at-the-languages-route--authenticationauthentication-to-use-the-api-is-similar-to-the-howto-section-above--users-must-post-to-the-login-route-with-their-api-key-and-credentials-in-the-following-format-in-order-to-obtain-a-jwt-token-apikeyapikeyusernameusernameuserkeyuserkeynote-that-the-username-and-key-are-only-required-for-the-user-routes--the-users-key-is-labled-account-identifier-in-the-account-section-of-the-main-site-the-token-is-then-used-in-all-subsequent-requests-by-providing-it-in-the-authorization-header--the-header-will-look-like-authorization-bearer-yourjwttoken--currently-the-token-expires-after-24-hours--you-can-get-the-refresh-token-route-to-extend-that-expiration-date-versioningyou-may-request-a-different-version-of-the-api-by-including-an-accept-header-in-your-request-with-the-following-format-acceptapplicationvnd-thetvdb-vversion--this-documentation-automatically-uses-the-version-seen-at-the-top-and-bottom-of-the-page-
+  version: 2.1.2
+host: api-dev.thetvdb.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /episodes/{id}:
+    get:
+      summary: Get Episodes
+      description: Returns the full information for a given episode id. __Deprecation
+        Warning:__ The _director_ key will be deprecated in favor of the new _directors_
+        key in a future release.
+      operationId: episodes.id.get
+      x-api-path-slug: episodesid-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Episodes
+  /languages:
+    get:
+      summary: Get Languages
+      description: All available languages. These language abbreviations can be used
+        in the `Accept-Language` header for routes that return translation records.
+      operationId: languages.get
+      x-api-path-slug: languages-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Languages
+  /languages/{id}:
+    get:
+      summary: Get Languages
+      description: Information about a particular language, given the language ID.
+      operationId: languages.id.get
+      x-api-path-slug: languagesid-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Languages
+  /login:
+    post:
+      summary: Post Login
+      description: Returns a session token to be included in the rest of the requests.
+        Note that API key authentication is required for all subsequent requests and
+        user auth is required for routes in the `User` section
+      operationId: login.post
+      x-api-path-slug: login-post
+      parameters:
+      - in: body
+        name: Authentication string
+        description: JSON string containing your authentication details
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Login
+  /refresh_token:
+    get:
+      summary: Get Refresh Token
+      description: Refreshes your current, valid JWT token and returns a new token.
+        Hit this route so that you do not have to post to `/login` with your API key
+        and credentials once you have already been authenticated.
+      operationId: refresh_token.get
+      x-api-path-slug: refresh-token-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Refresh
+      - Token
+  /search/series:
+    get:
+      summary: Get Search Series
+      description: Allows the user to search for a series based on the following parameters.
+      operationId: search.series.get
+      x-api-path-slug: searchseries-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Search
+      - Series
+  /search/series/params:
+    get:
+      summary: Get Search Series Params
+      description: Returns an array of parameters to query by in the `/search/series`
+        route.
+      operationId: search.series.params.get
+      x-api-path-slug: searchseriesparams-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Search
+      - Series
+      - Params
+  /series/{id}:
+    get:
+      summary: Get Series
+      description: Returns a series records that contains all information known about
+        a particular series id.
+      operationId: series.id.get
+      x-api-path-slug: seriesid-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Series
+    head:
+      summary: Head Series
+      description: Returns header information only about the given series ID.
+      operationId: series.id.head
+      x-api-path-slug: seriesid-head
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Series
+  /series/{id}/actors:
+    get:
+      summary: Get Series Actors
+      description: Returns actors for the given series id
+      operationId: series.id.actors.get
+      x-api-path-slug: seriesidactors-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Series
+      - Actors
+  /series/{id}/episodes:
+    get:
+      summary: Get Series Episodes
+      description: All episodes for a given series. Paginated with 100 results per
+        page.
+      operationId: series.id.episodes.get
+      x-api-path-slug: seriesidepisodes-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Series
+      - Episodes
+  /series/{id}/episodes/query:
+    get:
+      summary: Get Series Episodes Query
+      description: This route allows the user to query against episodes for the given
+        series. The response is a paginated array of episode records that have been
+        filtered down to basic information.
+      operationId: series.id.episodes.query.get
+      x-api-path-slug: seriesidepisodesquery-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Series
+      - Episodes
+      - Query
+  /series/{id}/episodes/query/params:
+    get:
+      summary: Get Series Episodes Query Params
+      description: Returns the allowed query keys for the `/series/{id}/episodes/query`
+        route
+      operationId: series.id.episodes.query.params.get
+      x-api-path-slug: seriesidepisodesqueryparams-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Series
+      - Episodes
+      - Query
+      - Params
+  /series/{id}/episodes/summary:
+    get:
+      summary: Get Series Episodes Summary
+      description: |-
+        Returns a summary of the episodes and seasons available for the series.
+
+        __Note__: Season "0" is for all episodes that are considered to be specials.
+      operationId: series.id.episodes.summary.get
+      x-api-path-slug: seriesidepisodessummary-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Series
+      - Episodes
+      - Summary
+  /series/{id}/filter:
+    get:
+      summary: Get Series Filter
+      description: Returns a series records, filtered by the supplied comma-separated
+        list of keys. Query keys can be found at the `/series/{id}/filter/params`
+        route.
+      operationId: series.id.filter.get
+      x-api-path-slug: seriesidfilter-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Series
+      - Filter
+  /series/{id}/filter/params:
+    get:
+      summary: Get Series Filter Params
+      description: Returns the list of keys available for the `/series/{id}/filter`
+        route
+      operationId: series.id.filter.params.get
+      x-api-path-slug: seriesidfilterparams-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Series
+      - Filter
+      - Params
+  /series/{id}/images:
+    get:
+      summary: Get Series Images
+      description: Returns a summary of the images for a particular series
+      operationId: series.id.images.get
+      x-api-path-slug: seriesidimages-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Series
+      - Images
+  /series/{id}/images/query:
+    get:
+      summary: Get Series Images Query
+      description: Query images for the given series ID.
+      operationId: series.id.images.query.get
+      x-api-path-slug: seriesidimagesquery-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Series
+      - Images
+      - Query
+  /series/{id}/images/query/params:
+    get:
+      summary: Get Series Images Query Params
+      description: Returns the allowed query keys for the `/series/{id}/images/query`
+        route. Contains a parameter record for each unique `keyType`, listing values
+        that will return results.
+      operationId: series.id.images.query.params.get
+      x-api-path-slug: seriesidimagesqueryparams-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Series
+      - Images
+      - Query
+      - Params
+  /updated/query:
+    get:
+      summary: Get Updated Query
+      description: |-
+        Returns an array of series that have changed in a maximum of one week blocks since the provided `fromTime`.
+
+
+        The user may specify a `toTime` to grab results for less than a week. Any timespan larger than a week will be reduced down to one week automatically.
+      operationId: updated.query.get
+      x-api-path-slug: updatedquery-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Updated
+      - Query
+  /updated/query/params:
+    get:
+      summary: Get Updated Query Params
+      description: Returns an array of valid query keys for the `/updated/query/params`
+        route.
+      operationId: updated.query.params.get
+      x-api-path-slug: updatedqueryparams-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - Updated
+      - Query
+      - Params
+  /user:
+    get:
+      summary: Get User
+      description: Returns basic information about the currently authenticated user.
+      operationId: user.get
+      x-api-path-slug: user-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - User
+  /user/favorites:
+    get:
+      summary: Get User Favorites
+      description: Returns an array of favorite series for a given user, will be a
+        blank array if no favorites exist.
+      operationId: user.favorites.get
+      x-api-path-slug: userfavorites-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - User
+      - Favorites
+  /user/favorites/{id}:
+    delete:
+      summary: Delete User Favorites
+      description: Deletes the given series ID from the user???s favorite???s list
+        and returns the updated list.
+      operationId: user.favorites.id.delete
+      x-api-path-slug: userfavoritesid-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - User
+      - Favorites
+    put:
+      summary: Put User Favorites
+      description: Adds the supplied series ID to the user???s favorite???s list and
+        returns the updated list.
+      operationId: user.favorites.id.put
+      x-api-path-slug: userfavoritesid-put
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - User
+      - Favorites
+  /user/ratings:
+    get:
+      summary: Get User Ratings
+      description: Returns an array of ratings for the given user.
+      operationId: user.ratings.get
+      x-api-path-slug: userratings-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - User
+      - Ratings
+  /user/ratings/query:
+    get:
+      summary: Get User Ratings Query
+      description: Returns an array of ratings for a given user that match the query.
+      operationId: user.ratings.query.get
+      x-api-path-slug: userratingsquery-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - User
+      - Ratings
+      - Query
+  /user/ratings/query/params:
+    get:
+      summary: Get User Ratings Query Params
+      description: Returns a list of query params for use in the `/user/ratings/query`
+        route.
+      operationId: user.ratings.query.params.get
+      x-api-path-slug: userratingsqueryparams-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - User
+      - Ratings
+      - Query
+      - Params
+  /user/ratings/{itemType}/{itemId}:
+    delete:
+      summary: Delete User Ratings Itemtype Itemid
+      description: This route deletes a given rating of a given type.
+      operationId: user.ratings.itemType.itemId.delete
+      x-api-path-slug: userratingsitemtypeitemid-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - User
+      - Ratings
+      - ItemType
+      - ItemId
+  /user/ratings/{itemType}/{itemId}/{itemRating}:
+    put:
+      summary: Put User Ratings Itemtype Itemid Itemrating
+      description: This route updates a given rating of a given type.
+      operationId: user.ratings.itemType.itemId.itemRating.put
+      x-api-path-slug: userratingsitemtypeitemiditemrating-put
+      responses:
+        200:
+          description: OK
+      tags:
+      - Television
+      - User
+      - Ratings
+      - ItemType
+      - ItemId
+      - ItemRating

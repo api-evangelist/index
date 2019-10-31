@@ -1,0 +1,32 @@
+swagger: "2.0"
+x-collection-name: Xignite
+x-complete: 1
+info:
+  title: Xignite Global Currencies File
+  version: 1.0.0
+host: cloudfiles.xignite.com
+basePath: xGlobalCurrenciesFile.json/XigniteGlobalCurrenciesFile
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /GetFile:
+    get:
+      summary: Get File
+      description: Get File
+      operationId: GetFile
+      x-api-path-slug: getfile-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Files

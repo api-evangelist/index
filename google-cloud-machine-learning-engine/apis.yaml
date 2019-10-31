@@ -1,0 +1,68 @@
+name: Google Cloud Machine Learning Engine
+x-slug: google-cloud-machine-learning-engine
+description: Google Cloud Machine Learning Engine is a managed service that enables
+  you to easily build machine learning models, that work on any type of data, of any
+  size. Create your model with the powerful TensorFlow framework that powers many
+  Google products, from Google Photos to Google Cloud Speech. Build models of any
+  size with our managed scalable infrastructure. Your trained model is immediately
+  available for use with our global prediction platform that can support thousands
+  of users and TBs of data.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-cloud-ml.png
+x-kinRank: "9"
+x-alexaRank: "0"
+tags: API Provider,API Service Provider,Google APIs,Machine Learning,Profiles,Relative
+  Data,Service API,Stack Network
+created: "2019-02-03"
+modified: "2019-02-03"
+url: google-cloud-machine-learning-engine/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Google Cloud Machine Learning API
+  x-api-slug: google-cloud-machine-learning-api
+  description: Google Cloud Machine Learning Engine is a managed service that enables
+    you to easily build machine learning models, that work on any type of data, of
+    any size. Create your model with the powerful TensorFlow framework that powers
+    many Google products, from Google Photos to Google Cloud Speech. Build models
+    of any size with our managed scalable infrastructure. Your trained model is immediately
+    available for use with our global prediction platform that can support thousands
+    of users and TBs of data.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-cloud-ml.png
+  humanURL: https://cloud.google.com/ml-engine/
+  baseURL: ://ml.googleapis.com//
+  tags: API Provider,API Service Provider,Google APIs,Machine Learning,Profiles,Relative
+    Data,Service API,Stack Network
+  properties:
+  - type: x-openapi-spec
+    url: /google-cloud-machine-learning-engine/google-cloud-machine-learning-api-openapi.yaml
+x-common:
+- type: x-change-log
+  url: https://cloud.google.com/ml-engine/docs/resources/release-notes
+- type: x-command-line-interface
+  url: https://cloud.google.com/sdk/gcloud/reference/ml-engine/
+- type: x-concepts
+  url: https://cloud.google.com/ml-engine/docs/concepts/
+- type: x-documentation
+  url: https://cloud.google.com/ml-engine/docs/
+- type: x-getting-started
+  url: https://cloud.google.com/ml-engine/docs/quickstarts/
+- type: x-pricing
+  url: https://cloud.google.com/ml-engine/pricing
+- type: x-rate-limits
+  url: https://cloud.google.com/ml-engine/quotas
+- type: x-service-level-agreements
+  url: https://cloud.google.com/ml-engine/sla
+- type: x-support
+  url: https://cloud.google.com/ml-engine/docs/resources/support
+- type: x-terms-of-service
+  url: https://cloud.google.com/terms/
+- type: x-tutorials
+  url: https://cloud.google.com/ml-engine/docs/tutorials/
+- type: x-versioning
+  url: https://cloud.google.com/ml-engine/docs/concepts/versioning
+- type: x-website
+  url: https://cloud.google.com/ml-engine/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

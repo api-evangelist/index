@@ -1,0 +1,203 @@
+name: Instructure
+x-slug: instructure
+description: Instructure makes software that makes smarter people. Products include
+  Canvas LMS, Bridge and Canvas Network.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/820-instructure.jpg
+x-kinRank: "8"
+x-alexaRank: "367"
+tags: API Provider,Education,Enterprise,Indie EdTech Data Jam,LMS,Profiles,SaaS,Service
+  API,Stack Network,Technology,Webhook Implementations
+created: "2019-02-03"
+modified: "2019-02-03"
+url: instructure/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Instructure Canvas Appointment Groups API
+  x-api-slug: instructure-canvas-appointment-groups-api
+  description: Instructure makes software that makes smarter people. Products include
+    Canvas LMS, Bridge and Canvas Network.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/820-instructure.jpg
+  humanURL: http://instructure.com
+  baseURL: https://canvas.instructure.com//api/v1
+  tags: API Provider,Education,Enterprise,Indie EdTech Data Jam,LMS,Profiles,SaaS,Service
+    API,Stack Network,Technology,Webhook Implementations
+  properties:
+  - type: x-postman-collection
+    url: /instructure/appointment-groupsidusers-get-postman.json
+  - type: x-openapi-spec
+    url: /instructure/instructure-canvas-appointment-groups-api-openapi.yaml
+- name: Instructure Canvas Audit API
+  x-api-slug: instructure-canvas-audit-api
+  description: Instructure makes software that makes smarter people. Products include
+    Canvas LMS, Bridge and Canvas Network.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/820-instructure.jpg
+  humanURL: http://instructure.com
+  baseURL: https://canvas.instructure.com//api/v1
+  tags: Appointment,Groups,Id,Users
+  properties:
+  - type: x-postman-collection
+    url: /instructure/auditgrade-changestudentsstudent-id-get-postman.json
+  - type: x-openapi-spec
+    url: /instructure/instructure-canvas-audit-api-openapi.yaml
+- name: Instructure Canvas Calendar Events API
+  x-api-slug: instructure-canvas-calendar-events-api
+  description: Instructure makes software that makes smarter people. Products include
+    Canvas LMS, Bridge and Canvas Network.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/820-instructure.jpg
+  humanURL: http://instructure.com
+  baseURL: https://canvas.instructure.com//api/v1
+  tags: Audit,Grade,Change,Students,Student,Id
+  properties:
+  - type: x-postman-collection
+    url: /instructure/calendar-eventsidreservationsparticipant-id-post-postman.json
+  - type: x-openapi-spec
+    url: /instructure/instructure-canvas-calendar-events-api-openapi.yaml
+- name: Instructure Canvas Conversations API
+  x-api-slug: instructure-canvas-conversations-api
+  description: Instructure makes software that makes smarter people. Products include
+    Canvas LMS, Bridge and Canvas Network.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/820-instructure.jpg
+  humanURL: http://instructure.com
+  baseURL: https://canvas.instructure.com//api/v1
+  tags: Calendar,Events,Id,Reservations,Participant,Id
+  properties:
+  - type: x-postman-collection
+    url: /instructure/conversationsidremove-messages-post-postman.json
+  - type: x-openapi-spec
+    url: /instructure/instructure-canvas-conversations-api-openapi.yaml
+- name: Instructure Canvas Courses API
+  x-api-slug: instructure-canvas-courses-api
+  description: Instructure makes software that makes smarter people. Products include
+    Canvas LMS, Bridge and Canvas Network.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/820-instructure.jpg
+  humanURL: http://instructure.com
+  baseURL: https://canvas.instructure.com//api/v1
+  tags: Conversations,Id,Remove,Messages
+  properties:
+  - type: x-postman-collection
+    url: /instructure/coursesid-put-postman.json
+  - type: x-openapi-spec
+    url: /instructure/instructure-canvas-courses-api-openapi.yaml
+- name: Instructure Canvas Global API
+  x-api-slug: instructure-canvas-global-api
+  description: Instructure makes software that makes smarter people. Products include
+    Canvas LMS, Bridge and Canvas Network.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/820-instructure.jpg
+  humanURL: http://instructure.com
+  baseURL: https://canvas.instructure.com//api/v1
+  tags: Courses,Id
+  properties:
+  - type: x-postman-collection
+    url: /instructure/globalroot-outcome-group-get-postman.json
+  - type: x-openapi-spec
+    url: /instructure/instructure-canvas-global-api-openapi.yaml
+- name: Instructure Canvas Groups API
+  x-api-slug: instructure-canvas-groups-api
+  description: Instructure makes software that makes smarter people. Products include
+    Canvas LMS, Bridge and Canvas Network.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/820-instructure.jpg
+  humanURL: http://instructure.com
+  baseURL: https://canvas.instructure.com//api/v1
+  tags: Global,Root,Outcome,Group
+  properties:
+  - type: x-postman-collection
+    url: /instructure/group-categoriesgroup-category-idusers-get-postman.json
+  - type: x-openapi-spec
+    url: /instructure/instructure-canvas-groups-api-openapi.yaml
+- name: Instructure Canvas Polls API
+  x-api-slug: instructure-canvas-polls-api
+  description: Instructure makes software that makes smarter people. Products include
+    Canvas LMS, Bridge and Canvas Network.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/820-instructure.jpg
+  humanURL: http://instructure.com
+  baseURL: https://canvas.instructure.com//api/v1
+  tags: Group,Categories,Group,Category,Id,Users
+  properties:
+  - type: x-postman-collection
+    url: /instructure/poll-sessionsopened-get-postman.json
+  - type: x-openapi-spec
+    url: /instructure/instructure-canvas-polls-api-openapi.yaml
+- name: Instructure Canvas Quiz Submissions API
+  x-api-slug: instructure-canvas-quiz-submissions-api
+  description: Instructure makes software that makes smarter people. Products include
+    Canvas LMS, Bridge and Canvas Network.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/820-instructure.jpg
+  humanURL: http://instructure.com
+  baseURL: https://canvas.instructure.com//api/v1
+  tags: Poll,Sessions,Opened
+  properties:
+  - type: x-postman-collection
+    url: /instructure/quiz-submissionsquiz-submission-idquestionsidunflag-put-postman.json
+  - type: x-openapi-spec
+    url: /instructure/instructure-canvas-quiz-submissions-api-openapi.yaml
+- name: Instructure Canvas Sections API
+  x-api-slug: instructure-canvas-sections-api
+  description: Instructure makes software that makes smarter people. Products include
+    Canvas LMS, Bridge and Canvas Network.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/820-instructure.jpg
+  humanURL: http://instructure.com
+  baseURL: https://canvas.instructure.com//api/v1
+  tags: Quiz,Submissions,Quiz,Submission,Id,Questions,Id,Unflag
+  properties:
+  - type: x-postman-collection
+    url: /instructure/sectionssection-idsubmissionsupdate-grades-post-postman.json
+  - type: x-openapi-spec
+    url: /instructure/instructure-canvas-sections-api-openapi.yaml
+- name: Instructure Canvas Users API
+  x-api-slug: instructure-canvas-users-api
+  description: Instructure makes software that makes smarter people. Products include
+    Canvas LMS, Bridge and Canvas Network.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/820-instructure.jpg
+  humanURL: http://instructure.com
+  baseURL: https://canvas.instructure.com//api/v1
+  tags: Sections,Section,Id,Submissions,Update,Grades
+  properties:
+  - type: x-postman-collection
+    url: /instructure/usersuser-idusage-rights-put-postman.json
+  - type: x-openapi-spec
+    url: /instructure/instructure-canvas-users-api-openapi.yaml
+- name: Instructure Canvas Utility APIs
+  x-api-slug: instructure-canvas-utility-apis
+  description: Instructure makes software that makes smarter people. Products include
+    Canvas LMS, Bridge and Canvas Network.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/820-instructure.jpg
+  humanURL: http://instructure.com
+  baseURL: https://canvas.instructure.com//api/v1
+  tags: Users,User,Id,Usage,Rights
+  properties:
+  - type: x-postman-collection
+    url: /instructure/serviceskaltura-session-post-postman.json
+  - type: x-openapi-spec
+    url: /instructure/instructure-canvas-utility-apis-openapi.yaml
+x-common:
+- type: x-blog
+  url: http://blog.instructure.com
+- type: x-blog-rss
+  url: http://voice.instructure.com/CMS/UI/Modules/BizBlogger/rss.aspx?tabid=772438&moduleid=1638884&maxcount=25&t=415c2e5d197a4d6f7cdcc81385b677f1
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/instructure
+- type: x-crunchbase
+  url: http://www.crunchbase.com/company/instructure
+- type: x-email
+  url: info@instructure.com
+- type: x-email
+  url: jobs@instructure.com
+- type: x-email
+  url: privacy@instructure.com
+- type: x-email
+  url: legal@instructure.com
+- type: x-github
+  url: https://github.com/instructure
+- type: x-twitter
+  url: https://twitter.com/instructure
+- type: x-webhook
+  url: https://canvas.instructure.com/doc/api/webhooks_subscriptions.html
+- type: x-website
+  url: http://instructure.com
+- type: x-website
+  url: https://canvas.instructure.com/doc/api/index.html
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

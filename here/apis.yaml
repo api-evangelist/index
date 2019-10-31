@@ -1,0 +1,252 @@
+name: HERE
+x-slug: here
+description: HERE Technologies enables people, enterprises and cities around the world
+  to harness the power of location and create innovative solutions that make our lives
+  safer and more efficient. We transform information from devices, vehicles, infrastructure
+  and...
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20089-here-maps.jpg
+x-kinRank: "7"
+x-alexaRank: "3011"
+tags: API Provider,General Data,internet,Maps,Mobile,Profiles,Relative Data,Technology
+created: "2019-02-03"
+modified: "2019-02-03"
+url: here/apis.md
+specificationVersion: "0.14"
+apis:
+- name: HERE Batch Geocoder API
+  x-api-slug: here-batch-geocoder-api
+  description: HERE Technologies enables people, enterprises and cities around the
+    world to harness the power of location and create innovative solutions that make
+    our lives safer and more efficient. We transform information from devices, vehicles,
+    infrastructure and...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20089-here-maps.jpg
+  humanURL: https://developer.here.com
+  baseURL: https://batch.geocoder.cit.api.here.com//6.2
+  tags: API Provider,General Data,internet,Maps,Mobile,Profiles,Relative Data,Technology
+  properties:
+  - type: x-postman-collection
+    url: /here/jobs-post-postman.json
+  - type: x-openapi-spec
+    url: /here/here-batch-geocoder-api-openapi.yaml
+- name: HERE Custom Location Extension API
+  x-api-slug: here-custom-location-extension-api
+  description: HERE Technologies enables people, enterprises and cities around the
+    world to harness the power of location and create innovative solutions that make
+    our lives safer and more efficient. We transform information from devices, vehicles,
+    infrastructure and...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20089-here-maps.jpg
+  humanURL: https://developer.here.com
+  baseURL: https://customlocation.cit.api.here.com//v1/search
+  tags: Job
+  properties:
+  - type: x-postman-collection
+    url: /here/corridor-get-postman.json
+  - type: x-openapi-spec
+    url: /here/here-custom-location-extension-api-openapi.yaml
+- name: HERE Geocoder API
+  x-api-slug: here-geocoder-api
+  description: HERE Technologies enables people, enterprises and cities around the
+    world to harness the power of location and create innovative solutions that make
+    our lives safer and more efficient. We transform information from devices, vehicles,
+    infrastructure and...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20089-here-maps.jpg
+  humanURL: https://developer.here.com
+  baseURL: https://geocoder.cit.api.here.com//6.2
+  tags: Find,Locations,Using,Corridor
+  properties:
+  - type: x-postman-collection
+    url: /here/multireversegeocode-json-post-postman.json
+  - type: x-openapi-spec
+    url: /here/here-geocoder-api-openapi.yaml
+- name: HERE Map Image API
+  x-api-slug: here-map-image-api
+  description: HERE Technologies enables people, enterprises and cities around the
+    world to harness the power of location and create innovative solutions that make
+    our lives safer and more efficient. We transform information from devices, vehicles,
+    infrastructure and...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20089-here-maps.jpg
+  humanURL: https://developer.here.com
+  baseURL: https://image.maps.cit.api.here.com//mia/1.6
+  tags: Multi-reverse,Geocode,Resses
+  properties:
+  - type: x-postman-collection
+    url: /here/route-get-postman.json
+  - type: x-openapi-spec
+    url: /here/here-map-image-api-openapi.yaml
+- name: HERE Map Tile API
+  x-api-slug: here-map-tile-api
+  description: HERE Technologies enables people, enterprises and cities around the
+    world to harness the power of location and create innovative solutions that make
+    our lives safer and more efficient. We transform information from devices, vehicles,
+    infrastructure and...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20089-here-maps.jpg
+  humanURL: https://developer.here.com
+  baseURL: https://1.aerial.maps.cit.api.here.com//maptile/2.1/maptile/newest
+  tags: Map,Image,Polylines
+  properties:
+  - type: x-postman-collection
+    url: /here/truckonlytilenewestnormal-day1221991342256png8-get-postman.json
+  - type: x-openapi-spec
+    url: /here/here-map-tile-api-openapi.yaml
+- name: HERE Places API
+  x-api-slug: here-places-api
+  description: HERE Technologies enables people, enterprises and cities around the
+    world to harness the power of location and create innovative solutions that make
+    our lives safer and more efficient. We transform information from devices, vehicles,
+    infrastructure and...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20089-here-maps.jpg
+  humanURL: https://developer.here.com
+  baseURL: https://places.demo.api.here.com//places/v1
+  tags: Transparent,Truck,Restrictions,Map
+  properties:
+  - type: x-postman-collection
+    url: /here/discoversearch-get-postman.json
+  - type: x-openapi-spec
+    url: /here/here-places-api-openapi.yaml
+- name: HERE Public Transit API
+  x-api-slug: here-public-transit-api
+  description: HERE Technologies enables people, enterprises and cities around the
+    world to harness the power of location and create innovative solutions that make
+    our lives safer and more efficient. We transform information from devices, vehicles,
+    infrastructure and...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20089-here-maps.jpg
+  humanURL: https://developer.here.com
+  baseURL: https://cit.transit.api.here.com//
+  tags: One-Box,Search
+  properties:
+  - type: x-postman-collection
+    url: /here/metarouterrestboardservicev1multiboardby-geocoord-json-get-postman.json
+  - type: x-openapi-spec
+    url: /here/here-public-transit-api-openapi.yaml
+- name: HERE Route Match Extension API
+  x-api-slug: here-route-match-extension-api
+  description: HERE Technologies enables people, enterprises and cities around the
+    world to harness the power of location and create innovative solutions that make
+    our lives safer and more efficient. We transform information from devices, vehicles,
+    infrastructure and...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20089-here-maps.jpg
+  humanURL: https://developer.here.com
+  baseURL: https://pde.cit.api.here.com//1
+  tags: All,Next,Departures,From,Location
+  properties:
+  - type: x-postman-collection
+    url: /here/doclayer-json-get-postman.json
+  - type: x-openapi-spec
+    url: /here/here-route-match-extension-api-openapi.yaml
+- name: HERE Routing API
+  x-api-slug: here-routing-api
+  description: HERE Technologies enables people, enterprises and cities around the
+    world to harness the power of location and create innovative solutions that make
+    our lives safer and more efficient. We transform information from devices, vehicles,
+    infrastructure and...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20089-here-maps.jpg
+  humanURL: https://developer.here.com
+  baseURL: https://route.cit.api.here.com//routing/7.2
+  tags: Available,Attributes,Within,Map,Data,Layer
+  properties:
+  - type: x-postman-collection
+    url: /here/getroute-json-get-postman.json
+  - type: x-openapi-spec
+    url: /here/here-routing-api-openapi.yaml
+- name: HERE Traffic API
+  x-api-slug: here-traffic-api
+  description: HERE Technologies enables people, enterprises and cities around the
+    world to harness the power of location and create innovative solutions that make
+    our lives safer and more efficient. We transform information from devices, vehicles,
+    infrastructure and...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20089-here-maps.jpg
+  humanURL: https://developer.here.com
+  baseURL: https://tiles.traffic.cit.api.here.com//traffic/6.0/tiles/8/133/86/256
+  tags: Previously,Calculated,Route,Information
+  properties:
+  - type: x-postman-collection
+    url: /here/6-0incidents-json-get-postman.json
+  - type: x-openapi-spec
+    url: /here/here-traffic-api-openapi.yaml
+- name: HERE Venue Maps
+  x-api-slug: here-venue-maps
+  description: HERE Technologies enables people, enterprises and cities around the
+    world to harness the power of location and create innovative solutions that make
+    our lives safer and more efficient. We transform information from devices, vehicles,
+    infrastructure and...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20089-here-maps.jpg
+  humanURL: https://developer.here.com
+  baseURL: https://signature.venue.maps.cit.api.here.com//venues/signature
+  tags: Traffic,Incidents,Via,Proximity
+  properties:
+  - type: x-postman-collection
+    url: /here/0tilesiab64l112022001101210030210-js-get-postman.json
+  - type: x-openapi-spec
+    url: /here/here-venue-maps-openapi.yaml
+- name: HERE Waypoint Sequence Extension API
+  x-api-slug: here-waypoint-sequence-extension-api
+  description: HERE Technologies enables people, enterprises and cities around the
+    world to harness the power of location and create innovative solutions that make
+    our lives safer and more efficient. We transform information from devices, vehicles,
+    infrastructure and...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20089-here-maps.jpg
+  humanURL: https://developer.here.com
+  baseURL: https://wse.cit.api.here.com//2
+  tags: Base64,Encoded,Map,Tiles
+  properties:
+  - type: x-postman-collection
+    url: /here/findsequence-json-get-postman.json
+  - type: x-openapi-spec
+    url: /here/here-waypoint-sequence-extension-api-openapi.yaml
+- name: HERE Weather API
+  x-api-slug: here-weather-api
+  description: HERE Technologies enables people, enterprises and cities around the
+    world to harness the power of location and create innovative solutions that make
+    our lives safer and more efficient. We transform information from devices, vehicles,
+    infrastructure and...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/20089-here-maps.jpg
+  humanURL: https://developer.here.com
+  baseURL: https://weather.cit.api.here.com//weather/1.0
+  tags: Waypoint,SequenceHazardous,Materials
+  properties:
+  - type: x-postman-collection
+    url: /here/report-json-get-postman.json
+  - type: x-openapi-spec
+    url: /here/here-weather-api-openapi.yaml
+x-common:
+- type: x-blog-rss
+  url: https://developer.here.com/blog/feed
+- type: x-github
+  url: https://github.com/heremaps
+- type: x-postman-collection
+  url: https://github.com/heremaps/postman-collections
+- type: x-blog
+  url: https://developer.here.com/blog
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/here-inc
+- type: x-developer
+  url: https://developer.here.com
+- type: x-email
+  url: dirk.popp@here.com
+- type: x-email
+  url: sebastian.kurme@here.com
+- type: x-email
+  url: jordan.stark@here.com
+- type: x-email
+  url: amy.stupavsky@here.com
+- type: x-email
+  url: minna.laub@here.com
+- type: x-email
+  url: stefanie.sirc@here.com
+- type: x-email
+  url: rachel.kuta@here.com
+- type: x-email
+  url: laurel.davis-lyons@here.com
+- type: x-email
+  url: linda.bradley@here.com
+- type: x-email
+  url: press@here.com
+- type: x-twitter
+  url: https://twitter.com/here
+- type: x-website
+  url: https://here.com
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

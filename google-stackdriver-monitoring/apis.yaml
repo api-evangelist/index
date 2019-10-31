@@ -1,0 +1,44 @@
+name: Google Stackdriver Monitoring
+x-slug: google-stackdriver-monitoring
+description: Google Stackdriver provides powerful monitoring, logging, and diagnostics.
+  It equips you with insight into the health, performance, and availability of cloud-powered
+  applications, enabling you to find and fix issues faster. It is natively integrated
+  with Google Cloud Platform, Amazon Web Services, and popular open source packages.
+  Stackdriver provides a wide variety of metrics, dashboards, alerting, log management,
+  reporting, and tracing capabilities.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-stackdriver.png
+x-kinRank: "8"
+x-alexaRank: "0"
+tags: API Provider,API Service Provider,Monitoring,Profiles,Relative Data,Service
+  API,Stack Network
+created: "2019-02-03"
+modified: "2019-02-03"
+url: google-stackdriver-monitoring/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Google Stackdriver Monitoring
+  x-api-slug: google-stackdriver-monitoring
+  description: Google Stackdriver provides powerful monitoring, logging, and diagnostics.
+    It equips you with insight into the health, performance, and availability of cloud-powered
+    applications, enabling you to find and fix issues faster. It is natively integrated
+    with Google Cloud Platform, Amazon Web Services, and popular open source packages.
+    Stackdriver provides a wide variety of metrics, dashboards, alerting, log management,
+    reporting, and tracing capabilities.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-stackdriver.png
+  humanURL: https://cloud.google.com/monitoring/docs/
+  baseURL: https:///
+  tags: API Provider,API Service Provider,Monitoring,Profiles,Relative Data,Service
+    API,Stack Network
+  properties:
+  - type: x-openapi-spec
+    url: /google-stackdriver-monitoring/google-stackdriver-monitoring-openapi.yaml
+x-common:
+- type: x-developer
+  url: https://cloud.google.com/monitoring/api/v3/
+- type: x-website
+  url: https://cloud.google.com/monitoring/docs/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

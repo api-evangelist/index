@@ -1,0 +1,490 @@
+swagger: "2.0"
+x-collection-name: Predix
+x-complete: 1
+info:
+  title: Intelligent Mapping
+  description: intelligent-mapping-services-for-geospatial-data-management-and-viewing
+  version: 1.0.0
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /v1/collections:
+    get:
+      summary: List all data collections for a customer
+      description: |-
+        Returns an array containing the names of all data collections for the
+        specified customer.
+      operationId: returns-an-array-containing-the-names-of-all-data-collections-for-thespecified-customer
+      x-api-path-slug: v1collections-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+      - ""
+      - Data
+      - Collectionsa
+      - Customer
+  /v1/collections/{collectionName}:
+    get:
+      summary: Return all data for a collection
+      description: |-
+        Returns the full GeoJSON FeatureCollection uploaded for this collection.
+        All GeoJSON Features will be as originally uploaded with the addition of
+        a featureId attribute that uniquely identifies the feature across all
+        your collections.
+      operationId: returns-the-full-geojson-featurecollection-uploaded-for-this-collectionall-geojson-features-will-be-
+      x-api-path-slug: v1collectionscollectionname-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Return
+      - ""
+      - Dataa
+      - Collection
+    post:
+      summary: Add a new collection
+      description: |-
+        Add a new collection of data in the form of a GeoJSON FeatureCollection.
+        All coordinates must be in EPSG:4326 (WGS84) (for further details see
+        http://epsg.io/4326). Any feature that is not compliant with the GeoJSON
+        specification will not be stored. If the specified collection already
+        exists, the geospatial data will be appended to the existing data.
+      operationId: add-a-new-collection-of-data-in-the-form-of-a-geojson-featurecollectionall-coordinates-must-be-in-ep
+      x-api-path-slug: v1collectionscollectionname-post
+      parameters:
+      - in: body
+        name: body
+        description: Geospatial data for the collection
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - New
+      - Collection
+    put:
+      summary: Add a new collection
+      description: |-
+        Add a new collection of data in the form of a GeoJSON FeatureCollection.
+        All coordinates must be in EPSG:4326 (WGS84) (for further details see
+        http://epsg.io/4326). Any feature that is not compliant with the GeoJSON
+        specification will not be stored. Any feature that doesn't contain an id
+        will not be stored. If the specified collection already exists, the
+        geospatial data will be appended to the existing data. Features with matching
+        id's are overwritten.
+      operationId: add-a-new-collection-of-data-in-the-form-of-a-geojson-featurecollectionall-coordinates-must-be-in-ep
+      x-api-path-slug: v1collectionscollectionname-put
+      parameters:
+      - in: body
+        name: body
+        description: Geospatial data for the collection
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - New
+      - Collection
+    delete:
+      summary: Delete a collection
+      description: Delete the collection of data specified by the collection name.
+      operationId: delete-the-collection-of-data-specified-by-the-collection-name
+      x-api-path-slug: v1collectionscollectionname-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Collection
+  /v1/collections/{collectionName}/spatial-query/bbox-interacts:
+    get:
+      summary: Return collection features in specified bounding box
+      description: |-
+        Returns all features in the specified collection that exist fully or
+        partially within the specified bounding box. The bounding box is defined
+        by two coordinates in the EPSG:4326 (WGS84) (for further details see
+        http://epsg.io/4326):
+
+        * left (longitude), bottom (latitude)
+
+        * right (longitude), top (latitude)
+      operationId: returns-all-features-in-the-specified-collection-that-exist-fully-orpartially-within-the-specified-b
+      x-api-path-slug: v1collectionscollectionnamespatialquerybboxinteracts-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Return
+      - Collection
+      - Features
+      - In
+      - Specified
+      - Bounding
+      - Box
+  /v1/collections/{collectionName}/features:
+    get:
+      summary: Return feature
+      description: |-
+        Returns GeoJSON of type FeatureCollection containing all GeoJSON features
+        from the named collection with a matching GeoJSON id.
+      operationId: returns-geojson-of-type-featurecollection-containing-all-geojson-featuresfrom-the-named-collection-w
+      x-api-path-slug: v1collectionscollectionnamefeatures-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Return
+      - Feature
+    delete:
+      summary: Delete from the named collection all features with a matching GeoJSON
+        id.
+      description: Delete from the named collection all features with a matching GeoJSON
+        id. This could be 0, 1 or many features.
+      operationId: delete-from-the-named-collection-all-features-with-a-matching-geojson-id-this-could-be-0-1-or-many-f
+      x-api-path-slug: v1collectionscollectionnamefeatures-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - From
+      - Named
+      - Collection
+      - ""
+      - Features
+      - Matching
+      - GeoJSON
+      - Id
+    post:
+      summary: Insert an individual feature into a collection.
+      description: |-
+        Insert a new feature into the the named collection. The GeoJSON id is used to identify the feature.
+        The GeoJSON id included in the url must match the top level id member of the feature provided.
+      operationId: insert-a-new-feature-into-the-the-named-collection-the-geojson-id-is-used-to-identify-the-featurethe
+      x-api-path-slug: v1collectionscollectionnamefeatures-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Insert
+      - Individual
+      - Feature
+      - Into
+      - Collection
+    put:
+      summary: Update all features in a collection with a matching GeoJSON id.
+      description: Updates the attributes and geometry of matching features in the
+        named collection.  This could be 0, 1 or many features.
+      operationId: updates-the-attributes-and-geometry-of-matching-features-in-the-named-collection--this-could-be-0-1-
+      x-api-path-slug: v1collectionscollectionnamefeatures-put
+      responses:
+        200:
+          description: OK
+      tags:
+      - Features
+      - In
+      - Collection
+      - Matching
+      - GeoJSON
+      - Id
+  /v1/collections/{collectionName}/collectionSize:
+    get:
+      summary: Return the size of a collection.
+      description: |-
+        Returns the size of the specified collection to decide whether to use the whole collection for spatial query
+        or not.
+      operationId: returns-the-size-of-the-specified-collection-to-decide-whether-to-use-the-whole-collection-for-spati
+      x-api-path-slug: v1collectionscollectionnamecollectionsize-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Return
+      - Size
+      - Of
+      - Collection
+  /v1/collections/{collectionName}/spatial-query:
+    post:
+      summary: |-
+        For 'within' operator - find all points within an area.
+        For 'nearest' operator - return the nearest point to the one specified.
+        For 'lineIntersectsLine' - find all points of intersection between two linestrings.
+      description: |-
+        'Within' returns GeoGJSON of type FeatureCollection containing all GeoJSON features within the provided polygon.
+        'Nearest' returns a FeatureCollection with the longitude and latitude of the nearest point.
+        'LineIntersectsLine' returns a FeatureCollection containing all points of intersection as GeoJSON features.
+      operationId: within-returns-geogjson-of-type-featurecollection-containing-all-geojson-features-within-the-provide
+      x-api-path-slug: v1collectionscollectionnamespatialquery-post
+      parameters:
+      - in: body
+        name: body
+        description: For within query - a geojson polygon which we wish to search
+        schema:
+          $ref: '#/definitions/holder'
+      - in: query
+        name: operator
+        description: The type of spatial query
+      responses:
+        200:
+          description: OK
+      tags:
+      - For
+      - Within
+      - Operator
+      - '-'
+      - Find
+      - ""
+      - Points
+      - Within
+      - Area
+      - For
+      - Nearest
+      - Operator
+      - '-'
+      - Return
+      - Nearest
+      - Point
+      - To
+      - Specified
+      - For
+      - LineIntersectsLine
+      - '-'
+      - Find
+      - ""
+      - Points
+      - Of
+      - Intersection
+      - Between
+      - Two
+      - Linestrings
+  /v1/collections/{collectionName}/text:
+    get:
+      summary: Free text search of a feature collection
+      description: |-
+        Returns GeoJSON of type FeatureCollection containing all GeoJSON features from the named collection that match
+        the supplied search string.
+
+        The search text consists of one or more strings that can be space or comma separated. A match with a given
+        feature occurs only if an exact match can be found for each of the strings in the search text amongst a
+        concatenation of the values of child members of the top level 'properties' member of the feature,
+        together with the value of its GeoJSON id. The matching is case insensitve, partial matches and
+        wildcard searching is not supported.
+
+        Examples of search text:
+
+         - 28,West End,Histon
+         - 240.000 V
+         - Company Owned
+      operationId: returns-geojson-of-type-featurecollection-containing-all-geojson-features-from-the-named-collection-
+      x-api-path-slug: v1collectionscollectionnametext-get
+      parameters:
+      - in: query
+        name: q
+        description: The search text
+      responses:
+        200:
+          description: OK
+      tags:
+      - Free
+      - Text
+      - Search
+      - Of
+      - Feature
+      - Collection
+  /v1/collections/{collectionName}/cluster:
+    get:
+      summary: Returns clustering data for collection features in specified bounding
+        box
+      description: |-
+        Returns Clustering data for the specified collection that exist fully
+         or partially within the specified bounding box. The bounding box is
+         defined by two coordinates in the EPSG:4326 (WGS84)
+         (for further details see http://epsg.io/4326):
+         * left (longitude), bottom (latitude)
+         * right (longitude), top (latitude)
+      operationId: returns-clustering-data-for-the-specified-collection-that-exist-fully-or-partially-within-the-specif
+      x-api-path-slug: v1collectionscollectionnamecluster-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Returns
+      - Clustering
+      - Datacollection
+      - Features
+      - In
+      - Specified
+      - Bounding
+      - Box
+  /v1/maps:
+    get:
+      summary: List all maps for a customer
+      description: |-
+        Returns an array of maps for the specified customer. The array contains
+        the name and identifier for each map.
+      operationId: returns-an-array-of-maps-for-the-specified-customer-the-array-containsthe-name-and-identifier-for-ea
+      x-api-path-slug: v1maps-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - List
+      - ""
+      - Mapsa
+      - Customer
+    post:
+      summary: Create a map
+      description: Creates a map with the specified name.
+      operationId: creates-a-map-with-the-specified-name
+      x-api-path-slug: v1maps-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Map
+  /v1/maps/{mapId}:
+    get:
+      summary: Return map details
+      description: |-
+        For the specified map identifier, returns the map properties and an
+        array of the associated layers. For each layer, the identifier, name and
+        Uniform Resource Identifier (URI) are returned.
+      operationId: for-the-specified-map-identifier-returns-the-map-properties-and-anarray-of-the-associated-layers-for
+      x-api-path-slug: v1mapsmapid-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Return
+      - Map
+      - Details
+    delete:
+      summary: Delete a map
+      description: |-
+        Deletes the map with the specified identifier. Any layers associated
+        with the map are also deleted.
+      operationId: deletes-the-map-with-the-specified-identifier-any-layers-associatedwith-the-map-are-also-deleted
+      x-api-path-slug: v1mapsmapid-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Map
+    put:
+      summary: Rename a map
+      description: Updates the name of the map that has the specified identifier.
+      operationId: updates-the-name-of-the-map-that-has-the-specified-identifier
+      x-api-path-slug: v1mapsmapid-put
+      responses:
+        200:
+          description: OK
+      tags:
+      - Rename
+      - Map
+  /v1/maps/{mapId}/orderlayers:
+    post:
+      summary: Update order of layers
+      description: Updates the order of layers for a given map.
+      operationId: updates-the-order-of-layers-for-a-given-map
+      x-api-path-slug: v1mapsmapidorderlayers-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Order
+      - Of
+      - Layers
+  /v1/maps/{mapId}/layers:
+    post:
+      summary: Create a new layer
+      description: Creates a new layer and associates it with the specified map.
+      operationId: creates-a-new-layer-and-associates-it-with-the-specified-map
+      x-api-path-slug: v1mapsmapidlayers-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - New
+      - Layer
+  /v1/maps/{mapId}/layers/{layerId}:
+    get:
+      summary: Return layer details
+      description: |-
+        For the layer identified by the map and layer identifiers, returns the
+        layer details (identifier, name, Uniform Resource Identifier (URI), and
+        visibility).
+      operationId: for-the-layer-identified-by-the-map-and-layer-identifiers-returns-thelayer-details-identifier-name-u
+      x-api-path-slug: v1mapsmapidlayerslayerid-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Return
+      - Layer
+      - Details
+    put:
+      summary: Update the layer properties
+      description: |-
+        For the layer identified by the specified map and layer identifiers,
+        updates the layer properties.
+      operationId: for-the-layer-identified-by-the-specified-map-and-layer-identifiersupdates-the-layer-properties
+      x-api-path-slug: v1mapsmapidlayerslayerid-put
+      responses:
+        200:
+          description: OK
+      tags:
+      - Layer
+      - Properties
+    delete:
+      summary: Delete a layer
+      description: Deletes the layer identified by the specified map and layer identifiers.
+      operationId: deletes-the-layer-identified-by-the-specified-map-and-layer-identifiers
+      x-api-path-slug: v1mapsmapidlayerslayerid-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Layer
+  /v1/maps/{mapId}/layers/{layerId}/style:
+    get:
+      summary: Retrieves style data for a layer
+      description: |-
+        Retrieve style data for the layer identified by the specified map and
+        layer identifiers.
+      operationId: retrieve-style-data-for-the-layer-identified-by-the-specified-map-andlayer-identifiers
+      x-api-path-slug: v1mapsmapidlayerslayeridstyle-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Retrieves
+      - Style
+      - Dataa
+      - Layer
+    put:
+      summary: Update the style data for a layer
+      description: |-
+        Update the style data for the layer identified by the specified map and
+        layer identifiers.
+      operationId: update-the-style-data-for-the-layer-identified-by-the-specified-map-andlayer-identifiers
+      x-api-path-slug: v1mapsmapidlayerslayeridstyle-put
+      parameters:
+      - in: body
+        name: body
+        description: Style data
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Style
+      - Dataa
+      - Layer

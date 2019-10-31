@@ -1,0 +1,66 @@
+swagger: "2.0"
+x-collection-name: Coord
+x-complete: 1
+info:
+  title: Multimodal Routing API
+  description: the-multimodal-routing-api-allows-you-to-plan-a-journey-between-two-points-in-the-same-city-depending-on-the-options-you-specify-this-trip-can-include-walking-buses-trains-and-sharedbicycles--trips-and-legsa-trip-is-a-single-option-for-getting-from-the-origin-to-the-destination--the-api-willreturn-multiple-trip-options-you-can-configure-how-many-using-the-num-options-parameter-every-trip-is-composed-of-legs--a-leg-of-a-trip-represents-a-single-mode-the-travelertakes-for-a-continuous-stretch-of-time--for-instance-taking-a-single-bus-or-subway-traincounts-as-one-leg--so-does-renting-a-bike-at-one-dock-and-returning-it-at-another-or-unlockinga-dockless-bike-riding-it-and-locking-it-again--a-public-transit-leg-ends-at-a-transfer-ifyou-take-two-different-bus-routes-we-will-model-that-as-two-legs-even-if-there-is-no-other-modein-between-note-that-for-certain-rare-trips-we-will-direct-the-traveler-to-walk-their-rented-bike-for-abrief-period--when-this-happens-the-bike-rental-will-be-split-over-multiple-legs--there-couldbe-one-bike-leg-when-the-traveler-rents-the-bike-and-rides-it-a-walk-leg-when-the-travelerwalks-the-bike-and-another-bike-leg-when-the-traveler-rides-the-bike-to-the-destination-the-trip-starts-at-the-same-time-as-its-first-leg-and-ends-at-the-same-time-as-its-last-legbut-there-can-be-gaps-between-legs--these-gaps-represent-the-transfer-time-between-arriving-ata-transit-station-and-departing-on-a-bus-or-rail-vehicle--this-means-that-you-cant-add-up-thedurations-of-all-the-legs-to-get-the-duration-of-the-trip-as-a-whole--on-the-other-hand-everyleg-ends-at-exactly-the-same-point-in-space-as-the-next-leg-starts-so-you-can-add-up-thedistance-of-each-leg-to-get-the-distance-traveled-for-the-trip-as-a-whole-
+  version: 1.0.0
+host: api.coord.co
+basePath: /v1/routing
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /route:
+    get:
+      summary: Find a route.
+      description: Find possible trips between two points using either or both of
+        bike-share and transit.
+      operationId: route_search
+      x-api-path-slug: route-get
+      parameters:
+      - in: query
+        name: access_key
+        description: The API access key for the request
+      - in: query
+        name: bike_systems
+        description: A comma-separated list of bike systems (as named in thebike share
+          API)to use when routing
+      - in: query
+        name: destination_latitude
+        description: The latitude of the destination point
+      - in: query
+        name: destination_longitude
+        description: The longitude of the destination point
+      - in: query
+        name: modes
+        description: The modes we can use in returned trip options
+      - in: query
+        name: num_options
+        description: The maximum number of different trip options we should provide
+          at once
+      - in: query
+        name: origin_latitude
+        description: The latitude of the origin point
+      - in: query
+        name: origin_longitude
+        description: The longitude of the origin point
+      - in: query
+        name: priority
+        description: How we choose and sort the trip options
+      - in: query
+        name: time
+        description: The time the trip starts or ends (depending on the `time_mode`
+          flag), in ISO 8601format
+      - in: query
+        name: time_mode
+        description: Whether `time` is the requested departure time or the requested
+          arrival time
+      responses:
+        200:
+          description: OK
+      tags:
+      - Routes

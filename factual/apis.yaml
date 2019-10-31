@@ -1,0 +1,56 @@
+name: Factual
+x-slug: factual
+description: Factual is pioneering how the world uses data to power mobile marketing,
+  digital consumer products, mobile applications and real world analytics.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/139-factual.jpg
+x-kinRank: "9"
+x-alexaRank: "147251"
+tags: API Provider,Business,Data,Data Provider,Enterprise,General Data,Geo,internet,Locations,Places,Profiles,SaaS,Stack
+  Network,Target,Technology
+created: "2019-02-03"
+modified: "2019-02-03"
+url: factual/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Factual
+  x-api-slug: factual
+  description: Factual is pioneering how the world uses data to power mobile marketing,
+    digital consumer products, mobile applications and real world analytics.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/139-factual.jpg
+  humanURL: http://www.factual.com/
+  baseURL: https://api.v3.factual.com//
+  tags: API Provider,Business,Data,Data Provider,Enterprise,General Data,Geo,internet,Locations,Places,Profiles,SaaS,Stack
+    Network,Target,Technology
+  properties:
+  - type: x-postman-collection
+    url: /factual/ttable-namefactual-idflag-post-postman.json
+  - type: x-openapi-spec
+    url: /factual/factual-openapi.yaml
+x-common:
+- type: x-website
+  url: http://www.factual.com/
+- type: x-base
+  url: http://api.v3.factual.com
+- type: x-blog
+  url: http://blog.factual.com
+- type: x-blog-rss
+  url: http://feeds.feedburner.com/FactualBlog
+- type: x-crunchbase
+  url: http://www.crunchbase.com/company/factual
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/factual
+- type: x-email
+  url: media@factual.com
+- type: x-email
+  url: privacy@factual.com
+- type: x-github
+  url: https://github.com/Factual
+- type: x-twitter
+  url: https://twitter.com/factual
+- type: x-website
+  url: https://www.factual.com/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

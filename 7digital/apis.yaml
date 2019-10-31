@@ -1,0 +1,120 @@
+name: 7digital
+x-slug: 7digital
+description: Welcome to 7digital!    Choose from over 30 million high quality tracks
+  in our store; download, sync and play your music on the go.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/294-7digital.jpg
+x-kinRank: "7"
+x-alexaRank: "55455"
+tags: API Provider,Downloads,General Data,Mobile,MP3,Music,Profiles,Publish,Relative
+  Data,SaaS,Stores,Streaming
+created: "2019-02-03"
+modified: "2019-02-03"
+url: 7digital/apis.md
+specificationVersion: "0.14"
+apis:
+- name: 7digital Basket API
+  x-api-slug: 7digital-basket-api
+  description: The basket API allows creation of 7digital hosted baskets which can
+    be populated with items (tracks and releases) from the 7digital catalogue.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/294-7digital.jpg
+  humanURL: http://7digital.com
+  baseURL: https://api.7digital.com/1.2/
+  tags: API Provider,Downloads,General Data,Mobile,MP3,Music,Profiles,Publish,Relative
+    Data,SaaS,Stores,Streaming
+  properties:
+  - type: x-postman-collection
+    url: /7digital/basket-h4-postman.json
+  - type: x-openapi-spec
+    url: /7digital/7digital-basket-api-openapi.yaml
+- name: 7digital Catalogue API
+  x-api-slug: 7digital-catalogue-api
+  description: Access to the 7digital catalogue API
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/294-7digital.jpg
+  humanURL: http://7digital.com
+  baseURL: ://api.7digital.com/1.2/
+  tags: Basket
+  properties:
+  - type: x-postman-collection
+    url: /7digital/trackchart-get-postman.json
+  - type: x-openapi-spec
+    url: /7digital/7digital-catalogue-api-openapi.yaml
+- name: 7digital Playlist API
+  x-api-slug: 7digital-playlist-api
+  description: Welcome to 7digital!    Choose from over 30 million high quality tracks
+    in our store; download, sync and play your music on the go.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/294-7digital.jpg
+  humanURL: http://7digital.com
+  baseURL: https://api.7digital.com/1.2/
+  tags: Track,Chart
+  properties:
+  - type: x-postman-collection
+    url: /7digital/playlistsplaylistidtracksplaylisttrackid-delete-postman.json
+  - type: x-openapi-spec
+    url: /7digital/7digital-playlist-api-openapi.yaml
+- name: 7digital Purchasing API
+  x-api-slug: 7digital-purchasing-api
+  description: The Purchasing API allows 3rd parties to deliver digital content to
+    individual users.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/294-7digital.jpg
+  humanURL: http://7digital.com
+  baseURL: https://api.7digital.com/1.2/
+  tags: Playlists,Tracks,Playlisttrackid
+  properties:
+  - type: x-postman-collection
+    url: /7digital/userpurchasepurchaseidtracktrackid-delete-postman.json
+  - type: x-openapi-spec
+    url: /7digital/7digital-purchasing-api-openapi.yaml
+x-common:
+- type: x--net-sdk
+  url: https://github.com/7digital/SevenDigital.Api.Wrapper
+- type: x-android-sdk
+  url: http://developer.7digital.com/7digital-android-sdk
+- type: x-application-gallery
+  url: http://developer.7digital.com/CaseStudies
+- type: x-base
+  url: http://api.7digital.com/
+- type: x-blog
+  url: http://developer.7digital.com/blog
+- type: x-blog-rss
+  url: http://blogs.7digital.com/dev/feed/
+- type: x-crunchbase
+  url: http://www.crunchbase.com/company/7digital
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/7digital
+- type: x-developer
+  url: http://developer.7digital.net/
+- type: x-email
+  url: api@7digital.com
+- type: x-email
+  url: help@7digital.com
+- type: x-email
+  url: sales@7digital.com
+- type: x-email
+  url: legal@7digital.com
+- type: x-email
+  url: contention-queries@7digital.com
+- type: x-github
+  url: https://github.com/7digital
+- type: x-ios-sdk
+  url: https://github.com/7digital/7digital-iOS-SDK
+- type: x-node-js-sdk
+  url: https://github.com/raoulmillais/node-7digital-api
+- type: x-php-sdk
+  url: https://github.com/gquemener/7digital-client
+- type: x-python-sdk
+  url: https://github.com/jasonrubenstein/python-7Digital
+- type: x-ruby-sdk
+  url: http://github.com/filip7d/7digital
+- type: x-selfservice-registration
+  url: https://api-signup.7digital.com/
+- type: x-twitter
+  url: https://twitter.com/7digital
+- type: x-website
+  url: http://7digital.com
+- type: x-website
+  url: http://7digital.net/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

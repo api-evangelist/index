@@ -1,0 +1,35 @@
+{
+  "info": {
+    "name": "Reverse IP API Reverse IP Whois",
+    "_postman_id": "781bc093-506f-477d-a478-d9c566a834d8",
+    "description": "Provides a list of IP network ranges with Whois records that match a specific query",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/"
+  },
+  "item": [
+    {
+      "name": "Reverse IP Whois",
+      "item": [
+        {
+          "id": "8b759779-e267-4a74-80b1-11e083235c6d",
+          "name": "reverseIPWhois",
+          "request": {
+            "url": "http://api.domaintools.com/v1/reverse-ip-whois/?country=country&include_total_count=include_total_count&ip=ip&page=page&query=query&server=server",
+            "method": "GET",
+            "body": {
+              "mode": "raw"
+            },
+            "description": "Provides a list of IP network ranges with Whois records that match a specific query"
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "name": "Response_200",
+              "id": "38dcff84-17d0-4355-9e13-0e5ea71e5e61"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

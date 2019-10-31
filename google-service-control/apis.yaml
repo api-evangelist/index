@@ -1,0 +1,52 @@
+name: Google Service Control
+x-slug: google-service-control
+description: Google Service Control is a Google Cloud Platform infrastructure service.
+  It provides control plane functionality to managed services, such as logging, monitoring,
+  and status checks. It is widely used by Google APIs and Google Cloud Endpoints.
+  This page provides an overview of what it does and how it works.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Screen
+  Shot 2017-03-17 at 3.49.30 PM.png
+x-kinRank: "9"
+x-alexaRank: "0"
+tags: API Provider,API Service Provider,Google APIs,Logging,Monitoring,Profiles,Relative
+  Data,Service API,Stack Network,Statuses
+created: "2019-02-03"
+modified: "2019-02-03"
+url: google-service-control/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Google Service Control API
+  x-api-slug: google-service-control-api
+  description: Google Service Control is a Google Cloud Platform infrastructure service.
+    It provides control plane functionality to managed services, such as logging,
+    monitoring, and status checks. It is widely used by Google APIs and Google Cloud
+    Endpoints. This page provides an overview of what it does and how it works.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Screen
+    Shot 2017-03-17 at 3.49.30 PM.png
+  humanURL: https://cloud.google.com/service-control/overview
+  baseURL: ://servicecontrol.googleapis.com//
+  tags: API Provider,API Service Provider,Google APIs,Logging,Monitoring,Profiles,Relative
+    Data,Service API,Stack Network,Statuses
+  properties:
+  - type: x-openapi-spec
+    url: /google-service-control/google-service-control-api-openapi.yaml
+x-common:
+- type: x-change-log
+  url: https://cloud.google.com/service-control/release-notes
+- type: x-code
+  url: https://cloud.google.com/service-control/libraries
+- type: x-documentation
+  url: https://cloud.google.com/service-control/docs/
+- type: x-guides
+  url: https://cloud.google.com/service-control/how-to
+- type: x-pricing
+  url: https://cloud.google.com/service-control/pricing-and-quotas
+- type: x-support
+  url: https://cloud.google.com/service-control/support
+- type: x-website
+  url: https://cloud.google.com/service-control/overview
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

@@ -1,0 +1,62 @@
+name: Google Cloud Key Management Service
+x-slug: google-cloud-key-management-service
+description: Cloud KMS is a cloud-hosted key management service that lets you manage
+  encryption for your cloud services the same way you do on-premises. You can generate,
+  use, rotate and destroy AES256 encryption keys. Cloud KMS is integrated with IAM
+  and Cloud Audit Logging so that you can manage permissions on individual keys, and
+  monitor how these are used. Use Cloud KMS to protect secrets and other sensitive
+  data which you need to store in Google Cloud Platform.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/kms-lead.png
+x-kinRank: "9"
+x-alexaRank: "0"
+tags: API Provider,API Service Provider,Authentication,Google APIs,Management,Profiles,Relative
+  Data,Security,Service API,Stack Network
+created: "2019-02-03"
+modified: "2019-02-03"
+url: google-cloud-key-management-service/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Google Cloud Key Management Service API
+  x-api-slug: google-cloud-key-management-service-api
+  description: Cloud KMS is a cloud-hosted key management service that lets you manage
+    encryption for your cloud services the same way you do on-premises. You can generate,
+    use, rotate and destroy AES256 encryption keys. Cloud KMS is integrated with IAM
+    and Cloud Audit Logging so that you can manage permissions on individual keys,
+    and monitor how these are used. Use Cloud KMS to protect secrets and other sensitive
+    data which you need to store in Google Cloud Platform.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/kms-lead.png
+  humanURL: https://cloud.google.com/kms/
+  baseURL: ://cloudkms.googleapis.com//
+  tags: API Provider,API Service Provider,Authentication,Google APIs,Management,Profiles,Relative
+    Data,Security,Service API,Stack Network
+  properties:
+  - type: x-openapi-spec
+    url: /google-cloud-key-management-service/google-cloud-key-management-service-api-openapi.yaml
+x-common:
+- type: x-change-log
+  url: https://cloud.google.com/kms/docs/release-notes
+- type: x-code
+  url: https://cloud.google.com/kms/docs/reference/libraries
+- type: x-concepts
+  url: https://cloud.google.com/kms/docs/concepts
+- type: x-getting-started
+  url: https://cloud.google.com/kms/docs/quickstart
+- type: x-how-to-guides
+  url: https://cloud.google.com/kms/docs/how-tos
+- type: x-issues
+  url: https://cloud.google.com/kms/known-issues
+- type: x-pricing
+  url: https://cloud.google.com/kms/pricing
+- type: x-rate-limits
+  url: https://cloud.google.com/kms/quota
+- type: x-service-level-agreement
+  url: https://cloud.google.com/kms/sla
+- type: x-support
+  url: https://cloud.google.com/kms/docs/support
+- type: x-website
+  url: https://cloud.google.com/kms/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

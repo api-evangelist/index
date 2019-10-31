@@ -1,0 +1,36 @@
+name: 511 Bay Area
+x-slug: 511-bay-area
+description: 511 is your free one-stop phone and web source for up-to-the minute Bay
+  Area traffic, transit, rideshare, bicycling, and parking information.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/logo_511_128x128_400x400.jpg
+x-kinRank: "7"
+x-alexaRank: "0"
+tags: 511,API Provider,Cities,Profiles,Stack Network,Transit
+created: "2019-02-03"
+modified: "2019-02-03"
+url: 511-bay-area/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Bay Area 511 Transit API
+  x-api-slug: bay-area-511-transit-api
+  description: 511 is your free one-stop phone and web source for up-to-the minute
+    Bay Area traffic, transit, rideshare, bicycling, and parking information.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/logo_511_128x128_400x400.jpg
+  humanURL: http://www.511.org/
+  baseURL: https://api.511.org//transit
+  tags: 511,API Provider,Cities,Profiles,Stack Network,Transit
+  properties:
+  - type: x-postman-collection
+    url: /511-bay-area/lines-get-postman.json
+  - type: x-openapi-spec
+    url: /511-bay-area/bay-area-511-transit-api-openapi.yaml
+x-common:
+- type: x-twitter
+  url: https://twitter.com/511SFBay
+- type: x-website
+  url: http://www.511.org/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

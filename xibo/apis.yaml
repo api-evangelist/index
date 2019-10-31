@@ -1,0 +1,48 @@
+name: Xibo
+x-slug: xibo
+description: Xibo Digital Signage is a low-cost, high performance solution to launch
+  your business, workplace or organisation into the future. Xibo doesn&rsquo;t just
+  replicate print media, but actively increases engagement allowing you to deliver
+  your message more effectively than ever before.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/xibo-digital-signage-logo.jpeg
+x-kinRank: "7"
+x-alexaRank: ""
+tags: Display,Relative Data,Service API,Signage,Signs
+created: "2019-02-03"
+modified: "2019-02-03"
+url: xibo/apis.md
+specificationVersion: "0.14"
+apis:
+- name: Xibo API
+  x-api-slug: xibo-api
+  description: Xibo Digital Signage is a low-cost, high performance solution to launch
+    your business, workplace or organisation into the future. Xibo doesn&rsquo;t just
+    replicate print media, but actively increases engagement allowing you to deliver
+    your message more effectively than ever before.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/xibo-digital-signage-logo.jpeg
+  humanURL: http://www.xibo.org.uk
+  baseURL: https:////api
+  tags: Display,Relative Data,Service API,Signage,Signs
+  properties:
+  - type: x-postman-collection
+    url: /xibo/playlistwidgetwebpageplaylistid-post-postman.json
+  - type: x-openapi-spec
+    url: /xibo/xibo-api-openapi.yaml
+x-common:
+- type: x-blog-rss
+  url: https://blog.xibo.org.uk/rss/
+- type: x-github
+  url: https://github.com/xibosignage
+- type: x-twitter
+  url: https://twitter.com/xibosignage
+- type: x-website
+  url: http://www.xibo.org.uk
+- type: x-blog
+  url: https://blog.xibo.org.uk/
+- type: x-website
+  url: https://xibo.org.uk
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com
