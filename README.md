@@ -1,8 +1,8 @@
 # API Evangelist API Index
 This is the current index of the 2323 APIs that I am tracking on. I will be publishing individual GitHub repos for each of the companies, where I will publish OpenAPI and Postman collections, all indexed using APIs.json.
 
-| Name | Website | Twitter | GitHub |
-| ------------- | :-------------: | -----: | -----: |
+| Name | Website | Twitter | GitHub | Repo |
+| ------------- | :-------------: | :-------------: | :-------------: | :-------------: |
 | 123FormBuilder | [Website](http://www.123formbuilder.com) | | [Twitter](https://twitter.com/123formbuilder) | [GitHub](https://github.com/123contactform) | [Repo](https://github.com/api-evangelist/123formbuilder) |
 | 18F | [Website](https://18f.gsa.gov/) | | [Twitter](https://twitter.com/USGSA) | [GitHub](https://github.com/18f) | [Repo](https://github.com/api-evangelist/18f) |
 | 1Forge | [Website](http://1forge.com) | | | [GitHub](https://github.com/1Forge) | [Repo](https://github.com/api-evangelist/1forge) |
@@ -191,117 +191,11 @@ This is the current index of the 2323 APIs that I am tracking on. I will be publ
 | Avi-On | [Website](http://avi-on.com/) | | [Twitter](https://twitter.com/avi_onlabs) | | [Repo](https://github.com/api-evangelist/avion) |
 | Aviary | [Website](https://aviary.com/) | [Developer](https://developers.aviary.com/) | [Twitter](https://twitter.com/aviary) | [GitHub](https://github.com/AviaryInc) | [Repo](https://github.com/api-evangelist/aviary) |
 | aWhere | [Website](http://www.awhere.com) | [Developer](http://developer.awhere.com/) | [Twitter](https://twitter.com/aWhere) | [GitHub](https://github.com/aWhereAPI) | [Repo](https://github.com/api-evangelist/awhere) |
-| AWS API Gateway | [Website](https://aws.amazon.com/api-gateway/) | | | | [Repo](https://github.com/api-evangelist/aws-api-gateway) |
-| AWS AppStream | [Website](https://aws.amazon.com/appstream2/) | | | | [Repo](https://github.com/api-evangelist/aws-appstream) |
-| AWS Auto Scaling | [Website](https://aws.amazon.com/autoscaling/) | | | | [Repo](https://github.com/api-evangelist/aws-auto-scaling) |
-| AWS Batch | [Website](https://aws.amazon.com/batch/) | | | | [Repo](https://github.com/api-evangelist/aws-batch) |
-| AWS Certificate Manager | [Website](https://aws.amazon.com/certificate-manager/) | | | | [Repo](https://github.com/api-evangelist/aws-certificate-manager) |
-| AWS CloudFormation | [Website](https://aws.amazon.com/cloudformation/) | | | | [Repo](https://github.com/api-evangelist/aws-cloudformation) |
-| AWS CloudFront | [Website](https://aws.amazon.com/cloudfront/) | | | | [Repo](https://github.com/api-evangelist/aws-cloudfront) |
-| AWS CloudHSM | [Website](https://aws.amazon.com/cloudhsm/) | | | | [Repo](https://github.com/api-evangelist/aws-cloudhsm) |
-| AWS CloudSearch | [Website](https://aws.amazon.com/cloudsearch/) | | | | [Repo](https://github.com/api-evangelist/aws-cloudsearch) |
-| AWS CloudWatch | [Website](https://aws.amazon.com/cloudwatch/) | [Developer](https://aws.amazon.com/cloudwatch/developer-resources/) | | | [Repo](https://github.com/api-evangelist/aws-cloudwatch) |
-| AWS Code Pipeline | [Website](https://aws.amazon.com/datapipeline/) | | | | [Repo](https://github.com/api-evangelist/aws-code-pipeline) |
-| AWS CodeBuild | [Website](https://aws.amazon.com/codebuild/) | | | | [Repo](https://github.com/api-evangelist/aws-codebuild) |
-| AWS CodeCommit | [Website](https://aws.amazon.com/codecommit/) | | | | [Repo](https://github.com/api-evangelist/aws-codecommit) |
-| AWS CodeDeploy | [Website](https://aws.amazon.com/codedeploy/) | | | | [Repo](https://github.com/api-evangelist/aws-codedeploy) |
-| AWS Cognito | [Website](https://aws.amazon.com/cognito/) | | | | [Repo](https://github.com/api-evangelist/aws-cognito) |
-| AWS Config | [Website](https://aws.amazon.com/config/) | | | | [Repo](https://github.com/api-evangelist/aws-config) |
-| AWS Data Pipeline | [Website](https://aws.amazon.com/datapipeline/) | | | | [Repo](https://github.com/api-evangelist/aws-data-pipeline) |
-| AWS Database Migration Service | [Website](https://aws.amazon.com/dms/) | | | | [Repo](https://github.com/api-evangelist/aws-database-migration-service) |
-| AWS Device Farm | [Website](https://aws.amazon.com/device-farm/) | | | | [Repo](https://github.com/api-evangelist/aws-device-farm) |
-| AWS Direct Connect | [Website](https://aws.amazon.com/directconnect/) | | | | [Repo](https://github.com/api-evangelist/aws-direct-connect) |
-| AWS Directory Service | [Website](https://aws.amazon.com/directoryservice/) | | | | [Repo](https://github.com/api-evangelist/aws-directory-service) |
-| AWS DynamoDB | [Website](https://aws.amazon.com/dynamodb/) | | | | [Repo](https://github.com/api-evangelist/aws-dynamodb) |
-| AWS EC2 | [Website](https://aws.amazon.com/ec2/) | | | | [Repo](https://github.com/api-evangelist/aws-ec2) |
-| AWS EC2 Container Registry Service | [Website](https://aws.amazon.com/ecr/) | | | | [Repo](https://github.com/api-evangelist/aws-ec2-container-registry-service) |
-| AWS EC2 Container Service | [Website](https://aws.amazon.com/ecs/) | | | | [Repo](https://github.com/api-evangelist/aws-ec2-container-service) |
-| AWS EC2 Systems Manager | [Website](https://aws.amazon.com/ec2/systems-manager/) | | | | [Repo](https://github.com/api-evangelist/aws-ec2-systems-manager) |
-| AWS Elastic Beanstalk | [Website](https://aws.amazon.com/elasticbeanstalk/) | | | | [Repo](https://github.com/api-evangelist/aws-elastic-beanstalk) |
-| AWS Elastic Load Balancing | [Website](https://aws.amazon.com/elasticloadbalancing/) | | | | [Repo](https://github.com/api-evangelist/aws-elastic-load-balancing) |
-| AWS Elastic MapReduce | [Website](https://aws.amazon.com/emr/) | | | | [Repo](https://github.com/api-evangelist/aws-elastic-mapreduce) |
-| AWS ElastiCache | [Website](https://aws.amazon.com/elasticache/) | | | | [Repo](https://github.com/api-evangelist/aws-elasticache) |
-| AWS Elasticsearch Service | [Website](https://aws.amazon.com/elasticsearch-service/) | | | | [Repo](https://github.com/api-evangelist/aws-elasticsearch-service) |
-| AWS Glacier | [Website](https://aws.amazon.com/glacier/) | | | | [Repo](https://github.com/api-evangelist/aws-glacier) |
-| AWS Identity and Access Management | [Website](https://aws.amazon.com/iam/) | | | | [Repo](https://github.com/api-evangelist/aws-identity-and-access-management) |
-| AWS Inspector | [Website](https://aws.amazon.com/inspector/) | | | | [Repo](https://github.com/api-evangelist/aws-inspector) |
-| AWS Internet of Things | [Website](https://aws.amazon.com/iot-platform/) | | | | [Repo](https://github.com/api-evangelist/aws-internet-of-things) |
-| AWS Io T Jobs Data Plane | [Website](http://data.jobs.iot.amazonaws.com) | | | | [Repo](https://github.com/api-evangelist/aws-io-t-jobs-data-plane) |
-| AWS Key Management Service | [Website](https://aws.amazon.com/kms/) | | | | [Repo](https://github.com/api-evangelist/aws-key-management-service) |
-| AWS Kinesis | [Website](https://aws.amazon.com/kinesis/) | | | | [Repo](https://github.com/api-evangelist/aws-kinesis) |
-| AWS Kinesis Analytics | [Website](https://aws.amazon.com/kinesis/analytics/) | | | | [Repo](https://github.com/api-evangelist/aws-kinesis-analytics) |
-| AWS Lambda | [Website](http://docs.aws.amazon.com/lambda/) | | | | [Repo](https://github.com/api-evangelist/aws-lambda) |
-| AWS Lightsale | [Website](https://amazonlightsail.com/) | | | | [Repo](https://github.com/api-evangelist/aws-lightsale) |
-| AWS Machine Learning | [Website](https://aws.amazon.com/machine-learning/) | | | | [Repo](https://github.com/api-evangelist/aws-machine-learning) |
-| AWS Marketplace Metering Service | [Website](https://aws.amazon.com/marketplace/) | | | | [Repo](https://github.com/api-evangelist/aws-marketplace-metering-service) |
-| AWS OpsWorks | [Website](https://aws.amazon.com/opsworks/) | | | | [Repo](https://github.com/api-evangelist/aws-opsworks) |
-| AWS Pinpoint | [Website](https://aws.amazon.com/pinpoint/) | | | | [Repo](https://github.com/api-evangelist/aws-pinpoint) |
-| AWS Polly | [Website](https://aws.amazon.com/polly/) | | | | [Repo](https://github.com/api-evangelist/aws-polly) |
-| AWS Price List Service | [Website](http://api.pricing.amazonaws.com) | | [Twitter](https://twitter.com/apachekafka) | | [Repo](https://github.com/api-evangelist/aws-price-list-service) |
-| AWS RDS | [Website](https://aws.amazon.com/rds/) | | | | [Repo](https://github.com/api-evangelist/aws-rds) |
-| AWS Redshift | [Website](https://aws.amazon.com/redshift/) | | | | [Repo](https://github.com/api-evangelist/aws-redshift) |
-| AWS Rekognition | [Website](https://aws.amazon.com/rekognition/) | | | | [Repo](https://github.com/api-evangelist/aws-rekognition) |
-| AWS Route 53 | [Website](https://aws.amazon.com/route53/) | | | | [Repo](https://github.com/api-evangelist/aws-route-53) |
-| AWS S3 | [Website](https://aws.amazon.com/s3/) | | | | [Repo](https://github.com/api-evangelist/aws-s3) |
-| AWS Security Token Service | [Website](http://docs.aws.amazon.com/STS/latest/APIReference/Welcome.html) | | | | [Repo](https://github.com/api-evangelist/aws-security-token-service) |
-| AWS Server Migration Service | [Website](https://aws.amazon.com/server-migration-service/) | | | | [Repo](https://github.com/api-evangelist/aws-server-migration-service) |
-| AWS Service Catalog | [Website](https://aws.amazon.com/servicecatalog/) | | | | [Repo](https://github.com/api-evangelist/aws-service-catalog) |
-| AWS Shield | [Website](https://aws.amazon.com/shield/) | | | | [Repo](https://github.com/api-evangelist/aws-shield) |
-| AWS Simple Email Service | [Website](https://aws.amazon.com/ses/) | | | | [Repo](https://github.com/api-evangelist/aws-simple-email-service) |
-| AWS Simple Notification Service | [Website](https://aws.amazon.com/sns/) | | | | [Repo](https://github.com/api-evangelist/aws-simple-notification-service) |
-| AWS Simple Queue Service | [Website](https://aws.amazon.com/sqs/) | | | | [Repo](https://github.com/api-evangelist/aws-simple-queue-service) |
-| AWS Snowball | [Website](https://aws.amazon.com/snowball/) | | | | [Repo](https://github.com/api-evangelist/aws-snowball) |
-| AWS Step Functions | [Website](https://aws.amazon.com/step-functions/) | | | | [Repo](https://github.com/api-evangelist/aws-step-functions) |
-| AWS Storage Gateway Service | [Website](https://aws.amazon.com/storagegateway/) | | | | [Repo](https://github.com/api-evangelist/aws-storage-gateway-service) |
-| AWS WAF | [Website](https://aws.amazon.com/waf/) | | | | [Repo](https://github.com/api-evangelist/aws-waf) |
-| AWS WorkDocs | [Website](https://aws.amazon.com/workdocs/) | | | | [Repo](https://github.com/api-evangelist/aws-workdocs) |
-| AWS WorkSpaces | [Website](https://aws.amazon.com/workspaces/) | | | | [Repo](https://github.com/api-evangelist/aws-workspaces) |
-| AWS X-Ray | [Website](https://aws.amazon.com/xray/) | | | | [Repo](https://github.com/api-evangelist/aws-xray) |
-| AWSMarketplace Metering | [Website](https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html) | | | | [Repo](https://github.com/api-evangelist/awsmarketplace-metering) |
 | AXA Assistance | [Website](https://www.axa-assistance.com) | [Developer](https://developers.axa-assistance.com/) | [Twitter](https://twitter.com/AXA_Assistance) | | [Repo](https://github.com/api-evangelist/axa-assistance) |
 | Axway | [Website](https://www.axway.com) | | [Twitter](https://twitter.com/axway) | [GitHub](https://github.com/Axway) | [Repo](https://github.com/api-evangelist/axway) |
 | Aylien | [Website](http://aylien.com/) | [Developer](https://newsapi.aylien.com/) | [Twitter](https://twitter.com/_aylien) | [GitHub](https://github.com/AYLIEN) | [Repo](https://github.com/api-evangelist/aylien) |
 | Azuqua | [Website](http://azuqua.com) | | [Twitter](https://twitter.com/azuqua) | | [Repo](https://github.com/api-evangelist/azuqua) |
 | Azuralis | [Website](http://www.azuralis.no/TelecomAPI.html) | | [Twitter](https://twitter.com/azuralis) | [GitHub](https://github.com/azuralis) | [Repo](https://github.com/api-evangelist/azuralis) |
-| Azure Advisor | [Website](https://azure.microsoft.com/en-us/services/advisor/) | | | | [Repo](https://github.com/api-evangelist/azure-advisor) |
-| Azure Analysis Services | [Website](https://azure.microsoft.com/en-us/services/analysis-services/) | | | | [Repo](https://github.com/api-evangelist/azure-analysis-services) |
-| Azure API Management | [Website](https://azure.microsoft.com/en-us/services/api-management/) | | | | [Repo](https://github.com/api-evangelist/azure-api-management) |
-| Azure Application Insights | [Website](https://azure.microsoft.com/en-us/services/application-insights/) | | | | [Repo](https://github.com/api-evangelist/azure-application-insights) |
-| Azure Automation | [Website](https://azure.microsoft.com/en-us/services/automation/) | | | | [Repo](https://github.com/api-evangelist/azure-automation) |
-| Azure Batch | [Website](https://azure.microsoft.com/en-us/services/batch/) | | | | [Repo](https://github.com/api-evangelist/azure-batch) |
-| Azure Billing API | [Website](https://docs.microsoft.com/en-us/azure/billing/billing-usage-rate-card-overview) | | | | [Repo](https://github.com/api-evangelist/azure-billing-api) |
-| Azure Blockchain Workbench | [Website](https://docs.microsoft.com/en-us/rest/api/azure-blockchain-workbench/) | | | | [Repo](https://github.com/api-evangelist/azure-blockchain-workbench) |
-| Azure CDN | [Website](https://azure.microsoft.com/en-us/services/cdn/) | | | | [Repo](https://github.com/api-evangelist/azure-cdn) |
-| Azure Cognitive Services | [Website](https://azure.microsoft.com/en-us/services/cognitive-services/) | | | | [Repo](https://github.com/api-evangelist/azure-cognitive-services) |
-| Azure Container Registry | [Website](https://azure.microsoft.com/en-us/services/container-registry/) | | | | [Repo](https://github.com/api-evangelist/azure-container-registry) |
-| Azure Container Service | [Website](https://azure.microsoft.com/en-us/services/container-service/) | | | | [Repo](https://github.com/api-evangelist/azure-container-service) |
-| Azure Data Lake Analytics | [Website](https://azure.microsoft.com/en-us/services/data-lake-analytics/) | | | | [Repo](https://github.com/api-evangelist/azure-data-lake-analytics) |
-| Azure Data Lake Store | [Website](https://azure.microsoft.com/en-us/services/data-lake-store/) | | | | [Repo](https://github.com/api-evangelist/azure-data-lake-store) |
-| Azure DevTest Labs | [Website](https://azure.microsoft.com/en-us/services/devtest-lab/) | | | | [Repo](https://github.com/api-evangelist/azure-devtest-labs) |
-| Azure DNS | [Website](https://azure.microsoft.com/en-us/services/dns/) | | | | [Repo](https://github.com/api-evangelist/azure-dns) |
-| Azure DocumentDB | [Website](https://azure.microsoft.com/en-us/services/documentdb/) | | | | [Repo](https://github.com/api-evangelist/azure-documentdb) |
-| Azure Event Hubs | [Website](https://azure.microsoft.com/en-us/services/event-hubs/) | | | | [Repo](https://github.com/api-evangelist/azure-event-hubs) |
-| Azure HDInsight | [Website](https://azure.microsoft.com/en-us/services/hdinsight/) | | | | [Repo](https://github.com/api-evangelist/azure-hdinsight) |
-| Azure IoT Hub | [Website](https://azure.microsoft.com/en-us/services/iot-hub/) | | | | [Repo](https://github.com/api-evangelist/azure-iot-hub) |
-| Azure Key Vault | [Website](https://azure.microsoft.com/en-us/services/key-vault/) | | | | [Repo](https://github.com/api-evangelist/azure-key-vault) |
-| Azure Logic Apps | [Website](https://azure.microsoft.com/en-us/services/logic-apps/) | | | | [Repo](https://github.com/api-evangelist/azure-logic-apps) |
-| Azure Machine Learning | [Website](https://azure.microsoft.com/en-us/services/machine-learning/) | | | | [Repo](https://github.com/api-evangelist/azure-machine-learning) |
-| Azure Media Services | [Website](https://azure.microsoft.com/en-us/services/media-services/) | | | | [Repo](https://github.com/api-evangelist/azure-media-services) |
-| Azure Monitor | [Website](http://docs.microsoft.com) | | | | [Repo](https://github.com/api-evangelist/azure-monitor) |
-| Azure Notification Hubs | [Website](https://docs.microsoft.com/en-us/azure/notification-hubs/) | | | | [Repo](https://github.com/api-evangelist/azure-notification-hubs) |
-| Azure Recovery Services | [Website](https://azure.microsoft.com/en-us/services/site-recovery/) | | | | [Repo](https://github.com/api-evangelist/azure-recovery-services) |
-| Azure Redis Cache | [Website](https://azure.microsoft.com/en-us/services/cache/) | | | | [Repo](https://github.com/api-evangelist/azure-redis-cache) |
-| Azure Resource Health | [Website](https://docs.microsoft.com/en-us/azure/resource-health/) | | | | [Repo](https://github.com/api-evangelist/azure-resource-health) |
-| Azure Resource Manager | [Website](https://docs.microsoft.com/en-us/rest/api/resources/) | | | | [Repo](https://github.com/api-evangelist/azure-resource-manager) |
-| Azure Scheduler | [Website](https://azure.microsoft.com/en-us/services/scheduler/) | | | | [Repo](https://github.com/api-evangelist/azure-scheduler) |
-| Azure Search | [Website](https://azure.microsoft.com/en-us/services/search/) | | | | [Repo](https://github.com/api-evangelist/azure-search) |
-| Azure Service Bus | [Website](https://azure.microsoft.com/en-us/services/service-bus/) | | | | [Repo](https://github.com/api-evangelist/azure-service-bus) |
-| Azure Service Fabric | [Website](https://azure.microsoft.com/en-us/services/service-fabric/) | | | | [Repo](https://github.com/api-evangelist/azure-service-fabric) |
-| Azure SignalR | [Website](https://docs.microsoft.com/en-us/azure/azure-signalr/) | | | | [Repo](https://github.com/api-evangelist/azure-signalr) |
-| Azure SQL Database | [Website](https://azure.microsoft.com/en-us/services/sql-database/) | | | | [Repo](https://github.com/api-evangelist/azure-sql-database) |
-| Azure Storage | [Website](https://azure.microsoft.com/en-us/services/storage/) | | | | [Repo](https://github.com/api-evangelist/azure-storage) |
-| Azure Traffic Manager | [Website](https://azure.microsoft.com/en-us/services/traffic-manager/) | | | | [Repo](https://github.com/api-evangelist/azure-traffic-manager) |
-| Azure Virtual Network | [Website](https://azure.microsoft.com/en-us/services/virtual-network/) | | | | [Repo](https://github.com/api-evangelist/azure-virtual-network) |
 | Backendless.com | [Website](https://backendless.com/) | | [Twitter](https://twitter.com/backendless) | [GitHub](https://github.com/Backendless) | [Repo](https://github.com/api-evangelist/backendless-com) |
 | Backupify | [Website](http://backupify.com) | | | | [Repo](https://github.com/api-evangelist/backupify) |
 | BAD TESTING | [Website](http://www.badtesting.com/) | | [Twitter](https://twitter.com/BadTesting) | | [Repo](https://github.com/api-evangelist/bad-testing) |
@@ -325,7 +219,6 @@ This is the current index of the 2323 APIs that I am tracking on. I will be publ
 | BBC News | [Website](http://www.bbc.com/news) | | [Twitter](https://twitter.com/BBCWorld) | | [Repo](https://github.com/api-evangelist/bbc-news) |
 | BBVA Compass | [Website](https://www.bbvaapimarket.com) | [Developer](https://www.bbvaapimarket.com) | [Twitter](https://twitter.com/BBVACompass) | [GitHub](https://github.com/BBVA) | [Repo](https://github.com/api-evangelist/bbva-compass) |
 | BC Geographical Names | [Website](https://apps.gov.bc.ca/pub/bcgnws/) | | | | [Repo](https://github.com/api-evangelist/bc-geographical-names) |
-| BC Laws | [Website](http://bclaws.ca) | | | | [Repo](https://github.com/api-evangelist/bc-laws) |
 | BC Route Planner | [Website](https://catalogue.data.gov.bc.ca/dataset/bc-route-planner) | | | | [Repo](https://github.com/api-evangelist/bc-route-planner) |
 | Beanstalk | [Website](https://beanstalkapp.com/) | | [Twitter](https://twitter.com/beanstalkapp) | | [Repo](https://github.com/api-evangelist/beanstalk) |
 | Beautiful Open | [Website](http://beautifulopen.com/) | | [Twitter](https://twitter.com/Beautiful_Open) | | [Repo](https://github.com/api-evangelist/beautiful-open) |
@@ -961,76 +854,6 @@ This is the current index of the 2323 APIs that I am tracking on. I will be publ
 | GoodData | [Website](http://gooddata.com) | [Developer](https://developer.gooddata.com/) | [Twitter](https://twitter.com/gooddata) | [GitHub](https://github.com/gooddata) | [Repo](https://github.com/api-evangelist/gooddata) |
 | Goodreads | [Website](http://www.goodreads.com) | [Developer](http://www.goodreads.com/api) | [Twitter](https://twitter.com/goodreads) | [GitHub](https://github.com/goodreads) | [Repo](https://github.com/api-evangelist/goodreads) |
 | GoodRx | [Website](http://www.goodrx.com) | [Developer](http://www.goodrx.com/developer) | [Twitter](https://twitter.com/GoodRx) | [GitHub](https://github.com/GoodRx) | [Repo](https://github.com/api-evangelist/goodrx) |
-| Google | [Website](http://google.com) | | [Twitter](https://twitter.com/Google) | [GitHub](https://github.com/firebase) | [Repo](https://github.com/api-evangelist/google) |
-| Google Adsense | [Website](https://www.google.com/adsense/) | [Developer](https://developers.google.com/adsense/) | [Twitter](https://twitter.com/AdSense) | | [Repo](https://github.com/api-evangelist/google-adsense) |
-| Google AdWords | [Website](https://adwords.google.com/home/) | [Developer](https://developers.google.com/adwords/) | [Twitter](https://twitter.com/adwords) | | [Repo](https://github.com/api-evangelist/google-adwords) |
-| Google Analytics | [Website](https://www.google.com/analytics/#?modal_active=none) | [Developer](https://developers.google.com/analytics/) | [Twitter](https://twitter.com/googleanalytics) | [GitHub](https://github.com/googleanalytics/) | [Repo](https://github.com/api-evangelist/google-analytics) |
-| Google API Discovery Service | [Website](https://developers.google.com/discovery/) | | | | [Repo](https://github.com/api-evangelist/google-api-discovery-service) |
-| Google App Engine | [Website](https://cloud.google.com/appengine/) | [Developer](https://cloud.google.com/appengine/docs/admin-api/) | | | [Repo](https://github.com/api-evangelist/google-app-engine) |
-| Google Apps Admin SDK | [Website](https://developers.google.com/admin-sdk/) | | | | [Repo](https://github.com/api-evangelist/google-apps-admin-sdk) |
-| Google Apps Script Execution | [Website](https://developers.google.com/apps-script/execution/rest/v1/scripts/run) | | | | [Repo](https://github.com/api-evangelist/google-apps-script-execution) |
-| Google Beacons | [Website](https://developers.google.com/beacons/) | | | | [Repo](https://github.com/api-evangelist/google-beacons) |
-| Google Biquery | [Website](https://cloud.google.com/bigquery/) | | | | [Repo](https://github.com/api-evangelist/google-biquery) |
-| Google Books | [Website](https://developers.google.com/books/) | | | | [Repo](https://github.com/api-evangelist/google-books) |
-| Google Calendar | [Website](https://developers.google.com/google-apps/calendar/) | | | | [Repo](https://github.com/api-evangelist/google-calendar) |
-| Google Civic Information | [Website](https://developers.google.com/civic-information/) | | | | [Repo](https://github.com/api-evangelist/google-civic-information) |
-| Google Classroom | [Website](https://classroom.google.com/) | [Developer](https://developers.google.com/classroom/) | | | [Repo](https://github.com/api-evangelist/google-classroom) |
-| Google Cloud Billing | [Website](https://cloud.google.com/billing/docs/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-billing) |
-| Google Cloud Container Builder | [Website](https://cloud.google.com/container-builder/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-container-builder) |
-| Google Cloud Dataproc | [Website](https://cloud.google.com/dataproc/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-dataproc) |
-| Google Cloud Datastore | [Website](https://cloud.google.com/datastore/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-datastore) |
-| Google Cloud Deployment Manager | [Website](https://cloud.google.com/deployment-manager/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-deployment-manager) |
-| Google Cloud DNS | [Website](https://cloud.google.com/dns/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-dns) |
-| Google Cloud Functions | [Website](https://cloud.google.com/functions/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-functions) |
-| Google Cloud Identity Access Management | [Website](https://cloud.google.com/iam/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-identity-access-management) |
-| Google Cloud Key Management Service | [Website](https://cloud.google.com/kms/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-key-management-service) |
-| Google Cloud Machine Learning Engine | [Website](https://cloud.google.com/ml-engine/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-machine-learning-engine) |
-| Google Cloud Natural Language | [Website](https://cloud.google.com/natural-language/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-natural-language) |
-| Google Cloud Prediction | [Website](https://cloud.google.com/prediction/docs/developer-guide) | | | | [Repo](https://github.com/api-evangelist/google-cloud-prediction) |
-| Google Cloud Pub Sub | [Website](https://cloud.google.com/pubsub/docs/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-pub-sub) |
-| Google Cloud Resource Manager | [Website](https://cloud.google.com/resource-manager/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-resource-manager) |
-| Google Cloud Source Repositories | [Website](https://cloud.google.com/source-repositories/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-source-repositories) |
-| Google Cloud Spanner | [Website](https://cloud.google.com/spanner/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-spanner) |
-| Google Cloud SQL | [Website](https://cloud.google.com/sql/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-sql) |
-| Google Cloud Storage | [Website](https://cloud.google.com/storage/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-storage) |
-| Google Cloud User Accounts | [Website](https://cloud.google.com/compute/docs/access/user-accounts/api/latest/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-user-accounts) |
-| Google Cloud Vision | [Website](https://cloud.google.com/vision/) | | | | [Repo](https://github.com/api-evangelist/google-cloud-vision) |
-| Google Compute Engine | [Website](https://cloud.google.com/compute/) | | | | [Repo](https://github.com/api-evangelist/google-compute-engine) |
-| Google Consumer Surveys | [Website](https://surveys.withgoogle.com/) | [Developer](https://developers.google.com/surveys/) | | | [Repo](https://github.com/api-evangelist/google-consumer-surveys) |
-| Google Container Engine | [Website](https://cloud.google.com/container-engine/) | | | | [Repo](https://github.com/api-evangelist/google-container-engine) |
-| Google Content API for Shopping | [Website](https://developers.google.com/shopping-content/v2/quickstart) | | | | [Repo](https://github.com/api-evangelist/google-content-api-for-shopping) |
-| Google Dataflow | [Website](https://cloud.google.com/dataflow/) | | | | [Repo](https://github.com/api-evangelist/google-dataflow) |
-| Google Doubleclick | [Website](https://www.doubleclickbygoogle.com/) | [Developer](https://developers.google.com/ad-exchange/buyer-rest/) | | | [Repo](https://github.com/api-evangelist/google-doubleclick) |
-| Google Drive | [Website](https://developers.google.com/drive/) | | | [GitHub](https://github.com/googledrive) | [Repo](https://github.com/api-evangelist/google-drive) |
-| Google Fit | [Website](https://developers.google.com/fit/overview) | | | | [Repo](https://github.com/api-evangelist/google-fit) |
-| Google Fonts | [Website](https://fonts.google.com/) | [Developer](https://developers.google.com/fonts/) | [Twitter](https://twitter.com/googlefonts) | | [Repo](https://github.com/api-evangelist/google-fonts) |
-| Google Fusion Tables | [Website](https://developers.google.com/fusiontables/) | | | | [Repo](https://github.com/api-evangelist/google-fusion-tables) |
-| Google Genomics | [Website](https://cloud.google.com/genomics/) | | | | [Repo](https://github.com/api-evangelist/google-genomics) |
-| Google Glass | [Website](https://developers.google.com/glass/) | | | | [Repo](https://github.com/api-evangelist/google-glass) |
-| Google Knowledge Graph Search | [Website](https://developers.google.com/knowledge-graph/) | | | | [Repo](https://github.com/api-evangelist/google-knowledge-graph-search) |
-| Google Manufacturer Center | [Website](https://www.google.com/retail/manufacturer-center/) | [Developer](https://developers.google.com/manufacturers/quickstart) | | | [Repo](https://github.com/api-evangelist/google-manufacturer-center) |
-| Google OAuth2 | [Website](https://developers.google.com/identity/protocols/OAuth2) | | | | [Repo](https://github.com/api-evangelist/google-oauth2) |
-| Google PageSpeed Insights | [Website](https://developers.google.com/speed/docs/insights/about) | | | | [Repo](https://github.com/api-evangelist/google-pagespeed-insights) |
-| Google Partners | [Website](https://developers.google.com/partners/) | | | | [Repo](https://github.com/api-evangelist/google-partners) |
-| Google People | [Website](https://developers.google.com/people/) | | | | [Repo](https://github.com/api-evangelist/google-people) |
-| Google Play | [Website](https://play.google.com/store) | [Developer](https://developers.google.com/android-publisher/) | [Twitter](https://twitter.com/GooglePlay) | | [Repo](https://github.com/api-evangelist/google-play) |
-| Google Plus | [Website](https://plus.google.com/) | [Developer](https://developers.google.com/+/web/api/rest/) | | | [Repo](https://github.com/api-evangelist/google-plus) |
-| Google QPX Express | [Website](https://developers.google.com/qpx-express/) | | | | [Repo](https://github.com/api-evangelist/google-qpx-express) |
-| Google Safe Browsing | [Website](https://developers.google.com/safe-browsing/) | | | | [Repo](https://github.com/api-evangelist/google-safe-browsing) |
-| Google Search Console | [Website](https://developers.google.com/webmaster-tools/) | | | | [Repo](https://github.com/api-evangelist/google-search-console) |
-| Google Service Control | [Website](https://cloud.google.com/service-control/overview) | | | | [Repo](https://github.com/api-evangelist/google-service-control) |
-| Google Service Management | [Website](https://cloud.google.com/service-management/overview) | | | | [Repo](https://github.com/api-evangelist/google-service-management) |
-| Google Sheets | [Website](https://developers.google.com/sheets/) | | | | [Repo](https://github.com/api-evangelist/google-sheets) |
-| Google Site Verification | [Website](https://developers.google.com/site-verification/) | | | | [Repo](https://github.com/api-evangelist/google-site-verification) |
-| Google Slides | [Website](https://docs.google.com/presentation/) | [Developer](https://developers.google.com/slides/) | | | [Repo](https://github.com/api-evangelist/google-slides) |
-| Google Spectrum Database | [Website](https://www.google.com/get/spectrumdatabase/) | [Developer](https://developers.google.com/spectrum/) | | | [Repo](https://github.com/api-evangelist/google-spectrum-database) |
-| Google Speech | [Website](https://cloud.google.com/speech/) | | | | [Repo](https://github.com/api-evangelist/google-speech) |
-| Google Stackdriver Monitoring | [Website](http://cloud.google.com) | [Developer](https://cloud.google.com/monitoring/api/v3/) | | | [Repo](https://github.com/api-evangelist/google-stackdriver-monitoring) |
-| Google Tag Manager | [Website](https://developers.google.com/tag-manager/) | | | | [Repo](https://github.com/api-evangelist/google-tag-manager) |
-| Google Task Queue | [Website](https://cloud.google.com/appengine/docs/standard/python/taskqueue/) | | | | [Repo](https://github.com/api-evangelist/google-task-queue) |
-| Google Tasks | [Website](https://developers.google.com/google-apps/tasks/) | | | | [Repo](https://github.com/api-evangelist/google-tasks) |
-| Google Translate | [Website](https://translate.google.com/) | [Developer](https://cloud.google.com/translate/) | | | [Repo](https://github.com/api-evangelist/google-translate) |
-| Google URL Shortener | [Website](https://goo.gl/) | [Developer](https://developers.google.com/url-shortener/) | | | [Repo](https://github.com/api-evangelist/google-url-shortener) |
 | Gorilla Group | [Website](http://www.gorillagroup.com) | | [Twitter](https://twitter.com/GorillaCommerce) | | [Repo](https://github.com/api-evangelist/gorilla-group) |
 | GoSquared | [Website](https://www.gosquared.com) | [Developer](https://www.gosquared.com/developer) | [Twitter](https://twitter.com/GoSquared) | [GitHub](https://github.com/gosquared) | [Repo](https://github.com/api-evangelist/gosquared) |
 | GoToMeeting | [Website](http://citrixonline.com) | [Developer](https://developer.citrixonline.com/) | [Twitter](https://twitter.com/citrix) | [GitHub](https://github.com/citrix) | [Repo](https://github.com/api-evangelist/gotomeeting) |
