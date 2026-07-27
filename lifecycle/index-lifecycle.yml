@@ -1,0 +1,19 @@
+generated: '2026-07-19'
+method: searched
+source: https://alloy.app/llms.txt
+versioning:
+  scheme: date-based-changelog
+  current: null
+  notes: >-
+    No semantic API versions published. The product ships continuously; releases are
+    announced as dated entries on the Launches page. No public API is versioned.
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: No published deprecation or sunset policy found.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://indexstatus.com
+changelog: https://alloy.app/launches
+deprecated_operations: []

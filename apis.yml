@@ -1,8 +1,18 @@
 aid: index
 name: Index
-description: 'Index is a company surfaced as a portfolio company of bain-capital-ventures and added to
-  the API Evangelist network as a stub for enrichment. Sector: ai-apps. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Index is the company behind Alloy (alloy.app), an AI-native product-planning and
+  prototyping platform that lets product managers turn any live web app into a
+  pixel-perfect, editable prototype in seconds and ship experiments on real data instead
+  of static mock-ups. Founded by Simon Kubica (ex-Atlassian) and Christian Iacullo
+  (ex-Canva), the company was originally launched as "Index" at index.inc and has since
+  rebranded the product to Alloy. It unifies customer feedback, engineering execution
+  (deep Linear and Jira integration), and design mocks into one workspace of whiteboards,
+  tables, boards, and roadmaps, and exposes an Alloy MCP server so assistants like Claude
+  and Codex can read session design, chat, and code context to accelerate developer
+  handoff. Index is a seed-stage company backed by Bain Capital Ventures. This profile
+  was added to the API Evangelist network as a portfolio-lead stub and enriched from
+  public developer and security surfaces.
 url: https://raw.githubusercontent.com/api-evangelist/index/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,15 +20,79 @@ x-backed-by:
 - bain-capital-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://alloy.app/static/nextjs-alloy/_next/static/media/og-cover.698c36ae.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Ai Apps
+- Product Management
+- Product Planning
+- Prototyping
+- Roadmapping
+- Customer Feedback
+- Developer Tools
+- MCP
+- Linear
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DomainSecurity
+  url: security/index-domain-security.yml
+- type: Website
+  url: https://alloy.app
+- type: Documentation
+  url: https://alloy.app/guide
+- type: GettingStarted
+  url: https://alloy.app/guide
+- type: Pricing
+  url: https://alloy.app/pricing
+- type: SignUp
+  url: https://alloy.app/planning/start
+- type: TermsOfService
+  url: https://alloy.app/legal/terms
+- type: PrivacyPolicy
+  url: https://alloy.app/legal/privacy
+- type: Blog
+  url: https://alloy.app/blog
+- type: Support
+  url: https://alloy.app/contact
+- type: StatusPage
+  url: https://indexstatus.com
+- type: ChangeLog
+  url: https://alloy.app/launches
+- type: Lifecycle
+  url: lifecycle/index-lifecycle.yml
+- type: MCPServer
+  url: mcp/index-mcp.yml
+- type: LLMsTxt
+  url: llms/index-llms.txt
+- type: Security
+  url: https://alloy.app/security
+- type: VulnerabilityDisclosure
+  url: security/index-vulnerability-disclosure.yml
+- type: TrustCenter
+  url: security/index-trust-center.yml
+- type: Compliance
+  url: https://alloy.app/security
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,33 @@
+# Alloy
+
+> Alloy lets Product Managers **turn any live web app into a pixel-perfect, editable prototype in seconds**. Capture real pages and experiment instantly.
+
+Key Benefits:
+- Prototype using your existing product
+- Matches your design system and automatically uses your real components
+- Ship experiments on live data instead of static mock-ups
+- One-click “clone & edit” of *any* web page—keeps fonts, spacing, and responsive behavior
+- No IDEs or terminals: runs entirely in the browser
+
+Key Features:
+- Visual editor to prototype without code
+- Issue-tracker support (Linear, Jira) to pull tickets & context directly into the prototype
+- Instantly share links for feedback
+
+## Documentation
+- [Quick-Start Guide](https://alloy.app/guide)
+- [Security & Data Protection](https://alloy.app/security)
+
+## Resources
+- [Launches / Changelog](https://alloy.app/launches)
+- [Blog](https://alloy.app/blog)
+- [Status](https://indexstatus.com) – live uptime & incident reports
+
+## How to Get Started
+- [Pricing](https://alloy.app/pricing)
+- [Request an Invitation](https://alloy.app/contact) – talk to Sales or Support
+
+## Company Resources
+- [Security & Data Protection](https://alloy.app/security)
+- [Privacy Policy](https://alloy.app/legal/privacy)
+- [Terms of Use](https://alloy.app/legal/terms)

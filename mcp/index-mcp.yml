@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://alloy.app/launches/alloy-mcp
+docs: https://alloy.app/guide/integrations/mcp
+server:
+  name: alloy
+  transport: http
+  url: https://mcp.alloy.app/mcp
+  auth: oauth
+  availability: "Available to all users (launched 2026-06-24)"
+description: >-
+  Alloy MCP lets AI assistants like Claude and Codex securely read Alloy session
+  context - the design, chat, and code context behind prototyping work - to accelerate
+  developer handoff, implement prototypes in a codebase, and create tickets in issue
+  trackers like Linear and Jira. Connect it as a remote connector in Claude or Codex.
+capabilities:
+  - Read Alloy session context (design, chat history, files, code context)
+  - Support the developer-handoff / implement-in-codebase flow
+  - Create tickets in connected issue trackers (Linear, Jira)
+tools: []
+notes: >-
+  Published, first-party hosted MCP server. Tool list is not enumerated in public docs;
+  capabilities captured from the launch announcement and guide. No OpenAPI is published
+  for Index/Alloy, so a candidate tool list cannot be derived.

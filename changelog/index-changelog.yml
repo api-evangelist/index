@@ -1,0 +1,32 @@
+generated: '2026-07-19'
+method: searched
+source: https://alloy.app/launches
+scheme: date-based
+current_version: null
+entries:
+  - date: '2026-06-26'
+    title: Skills
+    type: addition
+    highlights: Reusable instructions accessible via slash commands in the prompt box.
+  - date: '2026-06-24'
+    title: Alloy MCP
+    type: addition
+    highlights: >-
+      Connect AI assistants like Claude and Codex to access Alloy session context
+      directly for accelerated developer handoff.
+  - date: '2026-06-15'
+    title: Conversational Voice Mode
+    type: addition
+    highlights: Talk to Alloy with your voice during sessions for hands-free building.
+  - date: '2026-04-29'
+    title: Slack Integration
+    type: addition
+    highlights: Start Alloy sessions from Slack threads and push code changes to pull requests.
+  - date: '2026-04-27'
+    title: Hide Header in Previews
+    type: addition
+    highlights: Share a preview link that is just the UI for cleaner stakeholder demos.
+  - date: '2026-04-21'
+    title: Codebase Sessions
+    type: addition
+    highlights: Prototype from a GitHub repository and convert iterations into pull requests.

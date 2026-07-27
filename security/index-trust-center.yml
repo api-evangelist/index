@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: searched
+probe: false
+url: https://alloy.app/security
+certifications:
+  - name: SOC 2 Type II
+    status: in-progress
+    detail: Audit in progress, estimated completion Q3 2026.
+data_protection:
+  encryption_at_rest: AES-256
+  encryption_in_transit: HTTPS / TLS 1.2 and 1.3
+  hosting: AWS US (us-west-2 Oregon, replicated to us-west-1 N. California)
+  backups: Daily backups to separate regions with regular recovery testing
+  sso: SAML / OIDC on Enterprise plans
+contact:
+  - security@alloy.app
+  - support@alloy.app
+evidence:
+  - source: https://alloy.app/security
+    keywords: [soc 2, encryption, penetration testing, data protection]
+notes: >-
+  Security & Data Protection page acts as the trust page. SOC 2 Type II is in progress
+  (not yet certified); captured honestly. No ISO 27001 / HIPAA / GDPR certification claimed.
