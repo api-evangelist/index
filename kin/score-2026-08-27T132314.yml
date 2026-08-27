@@ -1,0 +1,44 @@
+# Kin Score artifact — index — 2026-08-27T132314
+# The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
+---
+kin_score:
+  slug: index
+  schema_version: 0.15.1
+  scored_at: '2026-08-27'
+  run_ts: 2026-08-27T132314
+  composite: 26.4
+  band: thin
+  facets:
+    discoverability: 57.4
+    contract_quality: 0.0
+    governance: 0.0
+    operational_transparency: 42.1
+    developer_ergonomics: 28.6
+    commercial_clarity: 47.4
+    contract_governance: 0.0
+    access_clarity: 47.4
+  agent_readiness:
+    score: 8.6
+    band: agent-aware
+    dimensions:
+      spec_presence: false
+      agentic_access: false
+      reversibility_documented: false
+      mcp_server: verified
+      auth_clarity: false
+      idempotency: false
+      error_semantics: false
+      openapi_examples: false
+      rate_limit_signal: false
+      event_surface_described: false
+      agent_skills: false
+      well_known_catalog: false
+      consent_identity: false
+      agent_card: false
+      dry_run_mode: false
+      delegated_identity: false
+      protected_resource_metadata: false
+      dynamic_client_registration: false
+      agentic_commerce: false
+  provenance:
+    mcp: first-party
