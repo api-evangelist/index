@@ -1,16 +1,16 @@
 ---
 kin_checks:
   slug: index
-  schema_version: 0.18.2
-  scored_at: '2026-09-04'
-  run_ts: 2026-09-04T062714
+  schema_version: 0.21.0
+  scored_at: '2026-09-12'
+  run_ts: 2026-09-12T080032
   note: Actionable checks only (missed + partial). earned/na are every other check
-    in rubric/scoring-0.18.2.yml; counts below let you verify that.
+    in rubric/scoring-0.21.0.yml; counts below let you verify that.
   counts:
-    total: 132
+    total: 136
     earned: 25
     partial: 0
-    missed: 63
+    missed: 67
     na: 44
   checks:
   - id: multiple_apis
@@ -103,6 +103,14 @@ kin_checks:
   - id: reg_authentication_documented
     status: missed
   - id: reg_standards_conformance
+    status: missed
+  - id: upsert_outcome_discriminator
+    status: missed
+  - id: upsert_alternate_key
+    status: missed
+  - id: upsert_named
+    status: missed
+  - id: upsert_declared_conflict
     status: missed
   - id: spec_presence
     status: missed
