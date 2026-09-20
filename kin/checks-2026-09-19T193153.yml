@@ -2,16 +2,16 @@
 kin_checks:
   slug: index
   schema_version: 0.22.0
-  scored_at: '2026-09-18'
-  run_ts: 2026-09-18T231945
+  scored_at: '2026-09-19'
+  run_ts: 2026-09-19T193153
   note: Actionable checks (missed + partial) in `checks`, plus the ids that did not
     apply in `na`. Everything else in rubric/scoring-0.22.0.yml was earned; counts
     below let you verify that.
   counts:
     total: 136
-    earned: 25
-    partial: 0
-    missed: 67
+    earned: 29
+    partial: 1
+    missed: 62
     na: 44
   checks:
   - id: multiple_apis
@@ -101,8 +101,6 @@ kin_checks:
     status: missed
   - id: reg_oauth_scopes
     status: missed
-  - id: reg_authentication_documented
-    status: missed
   - id: reg_standards_conformance
     status: missed
   - id: upsert_outcome_discriminator
@@ -118,8 +116,6 @@ kin_checks:
   - id: agentic_access
     status: missed
   - id: reversibility_documented
-    status: missed
-  - id: auth_clarity
     status: missed
   - id: idempotency
     status: missed
@@ -141,14 +137,12 @@ kin_checks:
     status: missed
   - id: dry_run_mode
     status: missed
-  - id: delegated_identity
-    status: missed
-  - id: protected_resource_metadata
-    status: missed
-  - id: dynamic_client_registration
-    status: missed
   - id: agentic_commerce
     status: missed
+  - id: auth_clarity
+    status: partial
+    earned: 9.0
+    detail: 'grade: served'
   na:
   - asyncapi_3_x
   - channels_defined
