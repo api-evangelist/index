@@ -1,0 +1,30 @@
+generated: '2026-09-19'
+method: probed
+hosts:
+- host: https://mcp.alloy.app
+  documents:
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: index-mcp-oauth-protected-resource.json
+    bytes: 172
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: index-mcp-oauth-authorization-server.json
+    bytes: 1494
+  path_echo_control: passed
+x-mcp-probe:
+  probed: '2026-09-19'
+  issue: roadmap#321, roadmap#337
+  documents:
+  - host: https://mcp.alloy.app
+    path: /.well-known/oauth-protected-resource
+    file: index-mcp-oauth-protected-resource.json
+  - host: https://mcp.alloy.app
+    path: /.well-known/oauth-authorization-server
+    file: index-mcp-oauth-authorization-server.json
+  validated_on: resource (RFC 9728) / issuer (RFC 8414, OIDC)
+  negative_control: one per host; a 2xx JSON object at an impossible path discards the host
+note: 'MCP-host OAuth discovery added 2026-09-19 (roadmap#321/#337): the harvest visits a provider''s
+  primary hosts, and RFC 9728 protected-resource metadata lives on the MCP host, so these documents existed
+  and were invisible to the scorer. Fetched live and validated on `resource`/`issuer`; one negative control
+  per host.'

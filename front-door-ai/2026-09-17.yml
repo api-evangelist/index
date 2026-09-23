@@ -1,0 +1,30 @@
+# Front Door AI Index — index — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: index
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: alloy.app
+  final_host: alloy.app
+  ownership: own
+  owner: index
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 12
+  host_score: 12
+  density: 16.78
+  words: 715
+  tiers:
+    agentic: 5
+    core: 4
+    model: 3
+  ambiguous: 2
+  top_terms:
+    AI: 4
+    prompts: 3
+    Claude: 2
+    MCP: 2
+    agent: 2
+    ChatGPT: 1
