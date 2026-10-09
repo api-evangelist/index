@@ -28,3 +28,17 @@ deployment:
   probe: gated
   checked: '2026-08-12'
   source: catalog MCP census
+rfc9728:
+  endpoint: https://mcp.alloy.app/mcp
+  metadata_url: https://mcp.alloy.app/.well-known/oauth-protected-resource/mcp
+  discovered_via: WWW-Authenticate resource_metadata on an anonymous POST initialize
+  fetched: '2026-09-25'
+  http_status: 200
+  content_type: application/json
+  document:
+    resource: https://mcp.alloy.app/mcp
+    authorization_servers:
+    - https://mcp.alloy.app
+    bearer_methods_supported:
+    - header
+    resource_name: Index MCP Resource Server
